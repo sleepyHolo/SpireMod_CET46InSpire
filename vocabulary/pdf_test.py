@@ -48,13 +48,15 @@ def meaning_format(meanings: list) -> list:
         ans.append(a)
     return ans
 
-def read_pdf(file_path: str) -> list:
+def read_pdf(file_path: str, from_: int = 0, to_: int = 9999) -> list:
     with pdfplumber.open(file_path) as pdf:
         tables = []
-        for page in pdf.pages:
+        for id_, page in enumerate(pdf.pages):
+            if id_ < from_:
+                continue
+            if id_ >= to_:
+                break
             tables.extend(page.extract_table())
-        # tables.extend(pdf.pages[0].extract_table())
-        # tables.extend(pdf.pages[1].extract_table())
     return tables
 
 def save(file_path: str, data: dict) -> None:
