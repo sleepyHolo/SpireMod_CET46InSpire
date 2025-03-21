@@ -1,0 +1,14 @@
+{
+    "CET46:WordScreen": {
+        "TEXT": [
+            "检查答案",
+            "我记住了",
+            "得分："
+        ]
+    },
+    "CET46:ConfigPanel": {
+        "TEXT_DICT": {
+            "loadCET4": "加载CET4词库"
+        }
+    }
+}
