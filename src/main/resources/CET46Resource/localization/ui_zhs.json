@@ -8,7 +8,9 @@
     },
     "CET46:ConfigPanel": {
         "TEXT_DICT": {
-            "loadCET4": "加载CET4词库"
+            "fastMode": "加速模式（提高测验面板的下降速度）",
+            "ignoreCheck": "忽略检查（答题后直接关闭测验，不显示得分）",
+            "loadCET4": "加载CET4词库（须重启游戏以更改）"
         }
     }
 }

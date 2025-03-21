@@ -33,7 +33,7 @@ public class CET46Initializer implements
     public CET46Initializer() {
         logger.info("Initialize: {}", MOD_ID);
         BaseMod.subscribe(this);
-        settingsPanel = new CET46Panel();
+        settingsPanel = new CET46Panel("config");
     }
 
     public static void initialize() {
@@ -59,6 +59,8 @@ public class CET46Initializer implements
         BaseMod.loadCustomStringsFile(EventStrings.class, "CET46Resource/localization/events_" + lang + ".json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, "CET46Resource/localization/relics_" + lang + ".json");
         BaseMod.loadCustomStringsFile(UIStrings.class, "CET46Resource/localization/ui_" + lang + ".json");
+
+        loadVocabulary();
     }
 
     public void loadVocabulary() {
@@ -72,8 +74,8 @@ public class CET46Initializer implements
 
     @Override
     public void receivePostInitialize() {
-        loadVocabulary();
         CET46Settings.init();
+        settingsPanel = new CET46Panel();
         BaseMod.registerModBadge(ImageElements.MOD_BADGE,
                 "CET46 In Spire", "__name__", "Do_not_forget_CET46!", settingsPanel);
 

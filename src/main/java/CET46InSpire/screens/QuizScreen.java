@@ -1,5 +1,6 @@
 package CET46InSpire.screens;
 
+import CET46InSpire.ui.CET46Panel;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -175,10 +176,17 @@ public class QuizScreen extends CustomScreen {
         if (this.delta_y == 0.0F) {
             return;
         }
-        this.delta_y = MathUtils.lerp(this.delta_y, Settings.HEIGHT / 2.0F - 540.0F * Settings.yScale,
-                Gdx.graphics.getDeltaTime() * 5.0F);
-        if (Math.abs(this.delta_y - 0.0F) < 0.5F)
-            this.delta_y = 0.0F;
+        if (CET46Panel.fastMode) {
+            this.delta_y = MathUtils.lerp(this.delta_y, Settings.HEIGHT / 2.0F - 540.0F * Settings.yScale,
+                    Gdx.graphics.getDeltaTime() * 5.0F);
+            if (Math.abs(this.delta_y - 0.0F) < 0.5F)
+                this.delta_y = 0.0F;
+        } else {
+            this.delta_y = MathUtils.lerp(this.delta_y, Settings.HEIGHT / 2.0F - 540.0F * Settings.yScale,
+                    Gdx.graphics.getDeltaTime() * 50.0F);
+            if (Math.abs(this.delta_y - 0.0F) < 5.0F)
+                this.delta_y = 0.0F;
+        }
     }
 
     private void renderQuestion(SpriteBatch sb) {
@@ -196,7 +204,6 @@ public class QuizScreen extends CustomScreen {
             return;
         }
         this.ans_checked = true;
-        this.returnButton.showInstantly(TEXT[1]);
         // check
         for (WordButton w: this.wordButtons) {
             if (w.isHidden) {
@@ -211,11 +218,20 @@ public class QuizScreen extends CustomScreen {
                     this.wrong_ans_num++;
                     w.setGlowColor(Color.RED.cpy());
                 }
+            } else if (this.right_ans_list.contains(w.buttonText)) {
+                // right but not chosen
+                w.glowing = true;
+                w.setGlowColor(Color.YELLOW.cpy());
             }
         }
         getScore();
         if (Settings.isDebug) {
             logger.info("Right: {}, Wrong: {}", this.right_ans_num, this.wrong_ans_num);
+        }
+        if (CET46Panel.ignoreCheck) {
+            this.returnButton.buttonClicked();
+        } else {
+            this.returnButton.showInstantly(TEXT[1]);
         }
     }
 
