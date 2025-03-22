@@ -5,9 +5,9 @@ import json
 import zipfile
 import sqlite3
 
-misc = ['</font>', '</br>', '\r', '\n']
+misc = ['</font>', '</br>', '\r', '\n', '<br />']
 cet4_pattern = ["<div style='color:BlueViolet;text-align:center;font-size:16px;'>",
-                '<font style="color:#c4151b;margin-right:.2em;font-weight:bold;font-style:italic;">']
+                "<font style='color:#c4151b;margin-right:.2em;font-weight:bold;font-style:italic;'>"]
 
 def extract_file(zip_path: str, filename: str) -> bool:
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
@@ -32,6 +32,7 @@ def parse(note: tuple) -> list:
     return word
 
 def meaning_parse(html: str, meaning: str, speech: str) -> list:
+    html = html.replace('"', "'")
     if not (meaning_start := re.search(meaning, html)):
         return ['ParseErr']
     meaning_end = re.search('</div>', html[meaning_start.end():])
@@ -43,6 +44,8 @@ def meaning_parse(html: str, meaning: str, speech: str) -> list:
             continue
         for type_ in misc:
             meaning = ''.join(meaning.split(type_))
+        
+        meaning = meaning.replace('&lt;', '<').replace('&gt;', '>').replace('&amp;', '&')
         meaning = '\n'.join(split_string(meaning))
         ans.append(meaning)
     return ans
@@ -73,7 +76,8 @@ if __name__ == '__main__':
     target = 'collection.anki2'
     if not extract_file(zip_path, target):
         raise Exception()
-    a = [parse(note) for note in select_all(target)]
+    tmp = select_all(target)
+    a = [parse(note) for note in tmp]
     save('CET4.json', toUIString(a, 'CET4'))
     
         

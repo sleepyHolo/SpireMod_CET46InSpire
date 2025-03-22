@@ -30,8 +30,6 @@ public class CETRelic extends CustomRelic {
 
     @Override
     public int onPlayerGainedBlock(float blockAmount) {
-        logger.info(blockAmount);
-        logger.info(this.counter);
         return MathUtils.floor(this.counter * blockAmount);
     }
 
