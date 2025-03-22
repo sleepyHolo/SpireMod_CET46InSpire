@@ -1,6 +1,6 @@
 package CET46InSpire.screens;
 
-import CET46InSpire.ui.CET46Panel;
+import CET46InSpire.ui.*;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -17,10 +17,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import CET46InSpire.relics.CETRelic;
-import CET46InSpire.ui.CheckButton;
 import CET46InSpire.helpers.ImageElements;
-import CET46InSpire.ui.ReturnButton;
-import CET46InSpire.ui.WordButton;
 
 import java.util.ArrayList;
 
@@ -46,6 +43,8 @@ public class QuizScreen extends CustomScreen {
     public static final float WORD_BUT_H;
     private static final float BOTTOM_BUT_X;
     private static final float BOTTOM_BUT_Y;
+    private static final float TIP_X;
+    private static final float TIP_Y;
     private float delta_y = 0.0F;
     private String word;
     private ArrayList<String> right_ans_list;
@@ -53,6 +52,7 @@ public class QuizScreen extends CustomScreen {
     private final CheckButton checkButton;
     private final ReturnButton returnButton;
     private final ArrayList<WordButton> wordButtons;
+    private final InfoTip infoTip;
     public boolean ans_checked;
     public int right_ans_num;
     public int wrong_ans_num;
@@ -65,6 +65,8 @@ public class QuizScreen extends CustomScreen {
         this.returnButton = new ReturnButton(BOTTOM_BUT_X,FRAME_Y + BOTTOM_BUT_Y);
         this.returnButton.attached = true;
         this.returnButton.font_center = true;
+        this.infoTip = new InfoTip(FRAME_X + TIP_X,FRAME_Y + TIP_Y);
+        this.infoTip.attached = true;
         this.wordButtons = new ArrayList<>();
         for (int i = 0; i < WORD_COL_MAX * WORD_ROW_MAX; i ++) {
             int col = i % WORD_COL_MAX;
@@ -99,8 +101,11 @@ public class QuizScreen extends CustomScreen {
         AbstractDungeon.screen = curScreen();
         AbstractDungeon.overlayMenu.proceedButton.hide();
         AbstractDungeon.overlayMenu.cancelButton.hide();
+        // fix black screen
+        AbstractDungeon.overlayMenu.hideBlackScreen();
         this.delta_y = Settings.HEIGHT;
 
+        this.infoTip.show("text");
         this.checkButton.show(TEXT[0]);
         for (WordButton w: this.wordButtons) {
             w.reset();
@@ -125,6 +130,7 @@ public class QuizScreen extends CustomScreen {
                 break;
             }
         }
+        this.infoTip.hideInstantly();
         // same as AbstractDungeon.genericScreenOverlayReset
         if (AbstractDungeon.previousScreen == null) {
             if (AbstractDungeon.player.isDead) {
@@ -147,6 +153,7 @@ public class QuizScreen extends CustomScreen {
         } else {
             this.checkButton.attachedUpdate(FRAME_Y + BOTTOM_BUT_Y + this.delta_y);
         }
+        this.infoTip.attachedUpdate(FRAME_Y + TIP_Y + this.delta_y);
         for (WordButton w: this.wordButtons) {
             if (!w.isHidden) {
                 w.attachedRelUpdate(FRAME_Y + this.delta_y);
@@ -158,11 +165,18 @@ public class QuizScreen extends CustomScreen {
     public void render(SpriteBatch sb) {
         sb.draw(ImageElements.WORD_SCREEN_BASE, FRAME_X, FRAME_Y + this.delta_y, FRAME_WIDTH, FRAME_HEIGHT);
         this.renderQuestion(sb);
+        Color font_color = Color.BLACK.cpy();
+        if (CET46Panel.darkMode) {
+            font_color = Color.WHITE.cpy();
+        }
+        this.infoTip.render(sb);
         if (this.ans_checked) {
             FontHelper.renderFontLeft(sb, FontHelper.charDescFont, uiStrings.TEXT[2] + this.score,
-                    SCORE_X, SCORE_Y + this.delta_y, Color.BLACK);
+                    SCORE_X, SCORE_Y + this.delta_y, font_color);
+            this.returnButton.fontColor = font_color;
             this.returnButton.render(sb);
         } else {
+            this.checkButton.fontColor = font_color;
             this.checkButton.render(sb);
         }
     }
@@ -178,22 +192,32 @@ public class QuizScreen extends CustomScreen {
         }
         if (CET46Panel.fastMode) {
             this.delta_y = MathUtils.lerp(this.delta_y, Settings.HEIGHT / 2.0F - 540.0F * Settings.yScale,
-                    Gdx.graphics.getDeltaTime() * 5.0F);
-            if (Math.abs(this.delta_y - 0.0F) < 0.5F)
+                    Gdx.graphics.getDeltaTime() * 50.0F);
+            if (Math.abs(this.delta_y - 0.0F) < 5.0F)
                 this.delta_y = 0.0F;
         } else {
             this.delta_y = MathUtils.lerp(this.delta_y, Settings.HEIGHT / 2.0F - 540.0F * Settings.yScale,
-                    Gdx.graphics.getDeltaTime() * 50.0F);
-            if (Math.abs(this.delta_y - 0.0F) < 5.0F)
+                    Gdx.graphics.getDeltaTime() * 5.0F);
+            if (Math.abs(this.delta_y - 0.0F) < 0.5F)
                 this.delta_y = 0.0F;
         }
     }
 
     private void renderQuestion(SpriteBatch sb) {
-        FontHelper.renderFontCentered(sb, FontHelper.charTitleFont, this.word,
-                QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, Color.BLACK);
+        if (CET46Panel.darkMode) {
+            FontHelper.renderFontCentered(sb, FontHelper.charTitleFont, this.word,
+                    QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, Color.WHITE);
+        } else {
+            FontHelper.renderFontCentered(sb, FontHelper.charTitleFont, this.word,
+                    QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, Color.BLACK);
+        }
         for (WordButton w: this.wordButtons) {
             if (!w.isHidden) {
+                Color font_color = Color.BLACK.cpy();
+                if (CET46Panel.darkMode) {
+                    font_color = Color.WHITE.cpy();
+                }
+                w.fontColor = font_color;
                 w.render(sb);
             }
         }
@@ -266,6 +290,8 @@ public class QuizScreen extends CustomScreen {
         WORD_BUT_H = 0.195F * FRAME_HEIGHT;
         BOTTOM_BUT_X = 0.5F * (Settings.WIDTH - ReturnButton.IMG_W);
         BOTTOM_BUT_Y = 30.0F * Settings.yScale;
+        TIP_X = 0.05F * FRAME_WIDTH;
+        TIP_Y = 0.85F * FRAME_HEIGHT;
         WORD_COL_MAX = 3;
         WORD_ROW_MAX = 3;
     }

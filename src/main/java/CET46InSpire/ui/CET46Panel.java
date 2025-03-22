@@ -4,6 +4,7 @@ import CET46InSpire.CET46Initializer;
 import basemod.EasyConfigPanel;
 
 public class CET46Panel extends EasyConfigPanel {
+    public static boolean darkMode = false;
     public static boolean fastMode = false;
     public static boolean ignoreCheck = false;
     public static boolean loadCET4 = true;
