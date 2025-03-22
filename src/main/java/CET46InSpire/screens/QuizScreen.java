@@ -1,5 +1,6 @@
 package CET46InSpire.screens;
 
+import CET46InSpire.helpers.CET46Settings;
 import CET46InSpire.ui.*;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
@@ -166,7 +167,7 @@ public class QuizScreen extends CustomScreen {
         sb.draw(ImageElements.WORD_SCREEN_BASE, FRAME_X, FRAME_Y + this.delta_y, FRAME_WIDTH, FRAME_HEIGHT);
         this.renderQuestion(sb);
         Color font_color = Color.BLACK.cpy();
-        if (CET46Panel.darkMode) {
+        if (CET46Settings.darkMode) {
             font_color = Color.WHITE.cpy();
         }
         this.infoTip.render(sb);
@@ -204,7 +205,7 @@ public class QuizScreen extends CustomScreen {
     }
 
     private void renderQuestion(SpriteBatch sb) {
-        if (CET46Panel.darkMode) {
+        if (CET46Settings.darkMode) {
             FontHelper.renderFontCentered(sb, FontHelper.charTitleFont, this.word,
                     QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, Color.WHITE);
         } else {
@@ -214,7 +215,7 @@ public class QuizScreen extends CustomScreen {
         for (WordButton w: this.wordButtons) {
             if (!w.isHidden) {
                 Color font_color = Color.BLACK.cpy();
-                if (CET46Panel.darkMode) {
+                if (CET46Settings.darkMode) {
                     font_color = Color.WHITE.cpy();
                 }
                 w.fontColor = font_color;

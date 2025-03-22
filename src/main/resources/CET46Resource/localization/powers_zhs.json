@@ -1,0 +1,9 @@
+{
+    "CET46:ChangePowersApplyPower": {
+        "NAME": "CET之力",
+        "DESCRIPTIONS": [
+            "当你对任意对象施加Buff/Debuff, 施加层数乘 #y",
+            " (你的当前分数)。"
+        ]
+    }
+}

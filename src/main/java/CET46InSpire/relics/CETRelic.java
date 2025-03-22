@@ -1,31 +1,41 @@
 package CET46InSpire.relics;
 
-import basemod.AutoAdd;
+import CET46InSpire.powers.ChangePowersApplyPower;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@AutoAdd.Ignore
 public class CETRelic extends CustomRelic {
     private static final Logger logger = LogManager.getLogger(CETRelic.class.getName());
     public static final int VOCABULARY_CET4;
-
+    public int pre_counter;
 
     public CETRelic(String id, Texture texture, Texture outline, RelicTier tier, LandingSound sfx) {
         super(id, texture, outline, tier, sfx);
         this.counter = 1;   // score
+        this.pre_counter = this.counter;
     }
 
-    public void getScore() {
-        if (Settings.isDebug) {
-            logger.info("Get Score");
+    @Override
+    public void update() {
+        super.update();
+        if (this.pre_counter != this.counter) {
+            this.pre_counter = this.counter;
+            AbstractDungeon.player.getPower(ChangePowersApplyPower.POWER_ID).updateDescription();
         }
-        this.counter = 1;
+    }
+
+    @Override
+    public void atBattleStartPreDraw() {
+        this.flash();
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, null,
+                new ChangePowersApplyPower(AbstractDungeon.player, this)));
     }
 
     @Override
