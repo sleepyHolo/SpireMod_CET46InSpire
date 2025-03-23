@@ -9,6 +9,7 @@
 ## 词库来源
 词库来自AnkiWeb, 通过`re`解析html获取单词释义.  
 CET4: [大学英语四级单词(词典重制完美版)](https://ankiweb.net/shared/info/1378032490)  
+CET6: [大学六级英语单词全集（修订版）](https://ankiweb.net/shared/info/2125686844)  
 如有侵权请告知, 我将立即删除词库.
 
 以下为旧版本词库来源  
