@@ -1,6 +1,7 @@
 package CET46InSpire.events;
 
 import CET46InSpire.helpers.CET46Settings;
+import CET46InSpire.relics.BookOfCET6;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -153,6 +154,8 @@ public class CallOfCETEvent extends AbstractImageEvent {
         switch (b) {
             case CET4:
                 return CET46Settings.CET4Available;
+            case CET6:
+                return CET46Settings.CET6Available;
         }
         logger.info("wtf? what happened?");
         return false;
@@ -162,6 +165,8 @@ public class CallOfCETEvent extends AbstractImageEvent {
         switch (b) {
             case CET4:
                 return eventStrings.OPTIONS[4];
+            case CET6:
+                return eventStrings.OPTIONS[5];
         }
         logger.info("wtf? what happened?");
         return eventStrings.OPTIONS[3];
@@ -171,6 +176,8 @@ public class CallOfCETEvent extends AbstractImageEvent {
         switch (b) {
             case CET4:
                 return RelicLibrary.getRelic(BookOfCET4.ID).makeCopy();
+            case CET6:
+                return RelicLibrary.getRelic(BookOfCET6.ID).makeCopy();
         }
         logger.info("wtf? what happened?");
         return RelicLibrary.getRelic("Circlet").makeCopy();
@@ -214,7 +221,8 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     public enum BookEnum {
-        CET4
+        CET4,
+        CET6
     }
 
 }

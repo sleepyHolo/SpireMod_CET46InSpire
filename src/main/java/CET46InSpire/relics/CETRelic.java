@@ -14,6 +14,7 @@ import org.apache.logging.log4j.Logger;
 public class CETRelic extends CustomRelic {
     private static final Logger logger = LogManager.getLogger(CETRelic.class.getName());
     public static final int VOCABULARY_CET4;
+    public static final int VOCABULARY_CET6;
     public int pre_counter;
 
     public CETRelic(String id, Texture texture, Texture outline, RelicTier tier, LandingSound sfx) {
@@ -60,5 +61,6 @@ public class CETRelic extends CustomRelic {
 
     static {
         VOCABULARY_CET4 = Integer.parseInt(CardCrawlGame.languagePack.getUIString("CET46:CET4_info").TEXT[0]);
+        VOCABULARY_CET6 = Integer.parseInt(CardCrawlGame.languagePack.getUIString("CET46:CET6_info").TEXT[0]);
     }
 }

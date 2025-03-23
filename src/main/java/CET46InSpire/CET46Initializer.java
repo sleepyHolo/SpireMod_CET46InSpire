@@ -2,6 +2,7 @@ package CET46InSpire;
 
 import CET46InSpire.helpers.CET46Settings;
 import CET46InSpire.relics.BookOfCET4;
+import CET46InSpire.relics.BookOfCET6;
 import CET46InSpire.ui.CET46Panel;
 import basemod.BaseMod;
 import basemod.ModPanel;
@@ -47,6 +48,10 @@ public class CET46Initializer implements
             BaseMod.addRelic(new BookOfCET4(), RelicType.SHARED);
             UnlockTracker.markRelicAsSeen(BookOfCET4.ID);
         }
+        if (CET46Panel.loadCET6) {
+            BaseMod.addRelic(new BookOfCET6(), RelicType.SHARED);
+            UnlockTracker.markRelicAsSeen(BookOfCET6.ID);
+        }
     }
 
     @Override
@@ -66,8 +71,11 @@ public class CET46Initializer implements
 
     public void loadVocabulary() {
         long startTime = System.currentTimeMillis();
-        if (CET46Panel.loadCET4) {
+        if (CET46Panel.loadCET4 || CET46Panel.loadCET6) {
             BaseMod.loadCustomStringsFile(UIStrings.class, "CET46Resource/vocabulary/CET4.json");
+        }
+        if (CET46Panel.loadCET6) {
+            BaseMod.loadCustomStringsFile(UIStrings.class, "CET46Resource/vocabulary/CET6.json");
         }
         logger.info("Vocabulary load time: {}ms", System.currentTimeMillis() - startTime);
 
@@ -81,8 +89,6 @@ public class CET46Initializer implements
                 "CET46 In Spire", "__name__", "Do_not_forget_CET46!", settingsPanel);
 
         BaseMod.addCustomScreen(new QuizScreen());
-        // debug only
-//        BaseMod.addEvent(CallOfCETEvent.ID, CallOfCETEvent.class);
     }
 
 }

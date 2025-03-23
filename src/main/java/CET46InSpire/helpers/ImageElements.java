@@ -16,7 +16,8 @@ public class ImageElements {
     public static Texture INFO_TIP;
 
     public static Texture RELIC_CET4_IMG;
-    public static Texture RELIC_CET4_OUTLINE;
+    public static Texture RELIC_CET6_IMG;
+    public static Texture RELIC_CET_OUTLINE;
     public static Texture POWER_CET_32;
     public static Texture POWER_CET_84;
 
@@ -24,7 +25,7 @@ public class ImageElements {
         long startTime = System.currentTimeMillis();
 
         MOD_BADGE = ImageMaster.loadImage("CET46Resource/image/badge.png");
-        if (CET46Settings.darkMode) {
+        if (CET46Panel.darkMode) {
             WORD_SCREEN_BASE = ImageMaster.loadImage("CET46Resource/image/ui/word_screen_base_dark.png");
             INFO_BUTTON = ImageMaster.loadImage("CET46Resource/image/ui/button_dark.png");
             WORD_BUTTON = ImageMaster.loadImage("CET46Resource/image/ui/button_word_dark.png");
@@ -38,7 +39,8 @@ public class ImageElements {
         WORD_BUTTON_OUTLINE = ImageMaster.loadImage("CET46Resource/image/ui/button_word_outline.png");
 
         RELIC_CET4_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_cet4.png");
-        RELIC_CET4_OUTLINE = ImageMaster.loadImage("CET46Resource/image/relics/book_of_cet4_outline.png");
+        RELIC_CET6_IMG = ImageMaster.loadImage("CET46Resource/image/relics/book_of_cet6.png");
+        RELIC_CET_OUTLINE = ImageMaster.loadImage("CET46Resource/image/relics/book_of_cet_outline.png");
 
         POWER_CET_32 = ImageMaster.loadImage("CET46Resource/image/powers/cet_power_32.png");
         POWER_CET_84 = ImageMaster.loadImage("CET46Resource/image/powers/cet_power_84.png");

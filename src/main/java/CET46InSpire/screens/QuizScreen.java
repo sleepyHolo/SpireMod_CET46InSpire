@@ -32,6 +32,8 @@ public class QuizScreen extends CustomScreen {
     private static final float FRAME_HEIGHT;
     private static final float QUESTION_CX;
     private static final float QUESTION_CY;
+    private static final float LEXICON_X;
+    private static final float LEXICON_Y;
     private static final float WORD_CX;
     private static final float WORD_CY;
     private static final float WORD_PAD_CX;
@@ -48,6 +50,7 @@ public class QuizScreen extends CustomScreen {
     private static final float TIP_Y;
     private float delta_y = 0.0F;
     private String word;
+    private String lexicon;
     private ArrayList<String> right_ans_list;
     private ArrayList<String> meaning_list;
     private final CheckButton checkButton;
@@ -85,8 +88,9 @@ public class QuizScreen extends CustomScreen {
         return Enum.WORD_SCREEN;
     }
 
-    public void open(String word, ArrayList<String> right_ans_list, ArrayList<String> meaning_list) {
+    public void open(String word, String lexicon, ArrayList<String> right_ans_list, ArrayList<String> meaning_list) {
         this.word = word;
+        this.lexicon = lexicon;
         this.right_ans_list = right_ans_list;
         this.meaning_list = meaning_list;
         if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.NONE) {
@@ -165,11 +169,11 @@ public class QuizScreen extends CustomScreen {
     @Override
     public void render(SpriteBatch sb) {
         sb.draw(ImageElements.WORD_SCREEN_BASE, FRAME_X, FRAME_Y + this.delta_y, FRAME_WIDTH, FRAME_HEIGHT);
-        this.renderQuestion(sb);
         Color font_color = Color.BLACK.cpy();
         if (CET46Settings.darkMode) {
             font_color = Color.WHITE.cpy();
         }
+        this.renderQuestion(sb, font_color);
         this.infoTip.render(sb);
         if (this.ans_checked) {
             FontHelper.renderFontLeft(sb, FontHelper.charDescFont, uiStrings.TEXT[2] + this.score,
@@ -204,20 +208,15 @@ public class QuizScreen extends CustomScreen {
         }
     }
 
-    private void renderQuestion(SpriteBatch sb) {
-        if (CET46Settings.darkMode) {
-            FontHelper.renderFontCentered(sb, FontHelper.charTitleFont, this.word,
-                    QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, Color.WHITE);
-        } else {
-            FontHelper.renderFontCentered(sb, FontHelper.charTitleFont, this.word,
-                    QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, Color.BLACK);
+    private void renderQuestion(SpriteBatch sb, Color font_color) {
+        FontHelper.renderFontCentered(sb, FontHelper.charTitleFont, this.word,
+                QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, font_color);
+        if (CET46Panel.showLexicon) {
+            FontHelper.renderFontLeftTopAligned(sb, FontHelper.charDescFont, TEXT[3] + this.lexicon,
+                    LEXICON_X, FRAME_Y + LEXICON_Y + this.delta_y, font_color);
         }
         for (WordButton w: this.wordButtons) {
             if (!w.isHidden) {
-                Color font_color = Color.BLACK.cpy();
-                if (CET46Settings.darkMode) {
-                    font_color = Color.WHITE.cpy();
-                }
                 w.fontColor = font_color;
                 w.render(sb);
             }
@@ -281,6 +280,8 @@ public class QuizScreen extends CustomScreen {
         FRAME_Y = 0.5F * (Settings.HEIGHT - FRAME_HEIGHT);
         QUESTION_CX = 0.5F * Settings.WIDTH;
         QUESTION_CY = 680.0F * Settings.yScale;
+        LEXICON_X = QUESTION_CX - 500.0F * Settings.xScale;
+        LEXICON_Y = QUESTION_CY;
         WORD_CX = 0.5F * Settings.WIDTH;
         WORD_CY = 340.0F * Settings.yScale;
         WORD_PAD_CX = 0.305F * FRAME_WIDTH;
