@@ -1,6 +1,6 @@
 package CET46InSpire.actions;
 
-import CET46InSpire.relics.CETRelic;
+import CET46InSpire.helpers.CET46Settings;
 
 public class CET4QuizAction extends QuizAction {
     private static final String LEXICON;
@@ -14,6 +14,6 @@ public class CET4QuizAction extends QuizAction {
     static {
         LEXICON = "CET4";
         VOCABULARY_ID = "CET46:CET4_";
-        VOCABULARY_SIZE = CETRelic.VOCABULARY_CET4;
+        VOCABULARY_SIZE = CET46Settings.VOCABULARY_CET4;
     }
 }
