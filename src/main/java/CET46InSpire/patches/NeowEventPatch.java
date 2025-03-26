@@ -2,13 +2,16 @@ package CET46InSpire.patches;
 
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.RoomEventDialog;
 import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.neow.NeowEvent;
+import com.megacrit.cardcrawl.neow.NeowRoom;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import CET46InSpire.events.CallOfCETRoom;
+import com.megacrit.cardcrawl.saveAndContinue.SaveFile;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -41,8 +44,6 @@ public class NeowEventPatch {
                 AbstractDungeon.nextRoom = node;
                 AbstractDungeon.setCurrMapNode(node);
                 AbstractDungeon.getCurrRoom().onPlayerEntry();
-                // avoid game save
-//                AbstractDungeon.scene.nextRoom(node.room);
                 AbstractDungeon.rs = (node.room.event instanceof com.megacrit.cardcrawl.events.AbstractImageEvent) ? AbstractDungeon.RenderScene.EVENT : AbstractDungeon.RenderScene.NORMAL;
                 AbstractDungeon.nextRoom = null;
 
@@ -51,5 +52,17 @@ public class NeowEventPatch {
                 return SpireReturn.Continue();
             }
         }
+    }
+
+    @SpirePatch(clz = AbstractDungeon.class, method = "populatePathTaken", paramtypez = {SaveFile.class})
+    public static class LocateSaveFile {
+        @SpirePrefixPatch
+        public static void Prefix(AbstractDungeon __instance, SaveFile saveFile) {
+            if (saveFile.current_room.equals(CallOfCETRoom.class.getName())) {
+                logger.info("To Neow room");
+                saveFile.current_room = NeowRoom.class.getName();
+            }
+        }
+
     }
 }
