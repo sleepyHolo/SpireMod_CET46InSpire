@@ -6,9 +6,7 @@ import CET46InSpire.helpers.ImageElements;
 import CET46InSpire.ui.CET46Panel;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 public class BookOfCET6 extends CETRelic {
@@ -30,8 +28,7 @@ public class BookOfCET6 extends CETRelic {
     }
 
     @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        // line 286 in GameActionManager
+    public void triggerQuiz() {
         flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         if (MathUtils.random(0, 99) < CET46Panel.band4RateIn6) {

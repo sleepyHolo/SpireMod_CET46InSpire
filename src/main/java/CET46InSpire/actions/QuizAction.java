@@ -1,5 +1,6 @@
 package CET46InSpire.actions;
 
+import CET46InSpire.ui.CET46Panel;
 import basemod.BaseMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,7 +16,6 @@ public class QuizAction extends AbstractGameAction {
     private final String LEXICON;
     private final String VOCABULARY_ID;
     private final int VOCABULARY_SIZE;
-    private static final int MAX_ANS_NUM;
     private static final int MAX_MEANING_NUM;
 
     public QuizAction(String LEXICON, String VOCABULARY_ID, int VOCABULARY_SIZE) {
@@ -44,7 +44,7 @@ public class QuizAction extends AbstractGameAction {
                 }
                 right_ans_list.add(item);
             }
-            right_ans_list = ArrayListHelper.choose(right_ans_list, MAX_ANS_NUM);
+            right_ans_list = ArrayListHelper.choose(right_ans_list, CET46Panel.maxAnsNum);
 
             ArrayList<String> meaning_list = new ArrayList<>();
             // copy
@@ -76,7 +76,6 @@ public class QuizAction extends AbstractGameAction {
     }
 
     static {
-        MAX_ANS_NUM = 3;
         MAX_MEANING_NUM = 9;
     }
 }

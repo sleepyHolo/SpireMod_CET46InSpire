@@ -61,6 +61,7 @@ public class QuizScreen extends CustomScreen {
     public int right_ans_num;
     public int wrong_ans_num;
     public int score;
+    private boolean isPerfect = false;
 
     public QuizScreen() {
         this.checkButton = new CheckButton(BOTTOM_BUT_X,FRAME_Y + BOTTOM_BUT_Y);
@@ -131,7 +132,8 @@ public class QuizScreen extends CustomScreen {
         // get score
         for (AbstractRelic r: AbstractDungeon.player.relics) {
             if (r instanceof CETRelic) {
-                r.counter = this.score;
+                ((CETRelic) r).scoreCounter = this.score;
+                ((CETRelic) r).updatePerfectCounter(this.isPerfect);
                 break;
             }
         }
@@ -229,6 +231,7 @@ public class QuizScreen extends CustomScreen {
         }
         this.ans_checked = true;
         // check
+        this.isPerfect = true;
         for (WordButton w: this.wordButtons) {
             if (w.isHidden) {
                 continue;
@@ -239,11 +242,13 @@ public class QuizScreen extends CustomScreen {
                     this.right_ans_num++;
                     w.setGlowColor(Color.GREEN.cpy());
                 } else {
+                    this.isPerfect = false;
                     this.wrong_ans_num++;
                     w.setGlowColor(Color.RED.cpy());
                 }
             } else if (this.right_ans_list.contains(w.buttonText)) {
                 // right but not chosen
+                this.isPerfect = false;
                 w.glowing = true;
                 w.setGlowColor(Color.YELLOW.cpy());
             }
@@ -261,6 +266,10 @@ public class QuizScreen extends CustomScreen {
 
     public void getScore() {
         this.score = this.right_ans_num - this.wrong_ans_num;
+        if (CET46Panel.casualMode && this.score < 1) {
+            this.score = 1;
+            return;
+        }
         if (this.score < 0) {
             this.score = 0;
         }
