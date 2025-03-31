@@ -5,6 +5,7 @@ import basemod.EasyConfigPanel;
 
 public class CET46Panel extends EasyConfigPanel {
     public static boolean darkMode = false;
+    public static boolean pureFont = true;
     public static boolean fastMode = false;
     public static boolean casualMode = false;
     public static boolean ignoreCheck = false;
@@ -22,6 +23,8 @@ public class CET46Panel extends EasyConfigPanel {
         super(CET46Initializer.MOD_ID, CET46Initializer.CONFIG_UI);
         setNumberRange("band4RateIn6", 0, 80);
         setNumberRange("maxAnsNum", 1, 3);
+
+        setPadding(7.0F);
     }
 
 }

@@ -42,6 +42,13 @@
             <systemPath>${Steam.path}/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
         </dependency>
         <dependency>
+            <groupId>downfall</groupId>
+            <artifactId>downfall</artifactId>
+            <version>5.2.04</version>
+            <scope>system</scope>
+            <systemPath>${Steam.path}/workshop/content/646570/1610056683/Downfall.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>26.0.1</version>

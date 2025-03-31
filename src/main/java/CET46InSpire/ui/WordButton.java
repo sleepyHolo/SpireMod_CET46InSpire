@@ -2,6 +2,7 @@ package CET46InSpire.ui;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -36,7 +37,7 @@ public class WordButton extends UIButton {
     }
 
     @Override
-    public void render(SpriteBatch sb) {
+    public void render(SpriteBatch sb, BitmapFont font) {
         if (this.glowing) {
             sb.setColor(glowColor);
             sb.draw(ImageElements.WORD_BUTTON_OUTLINE, this.current_x - DELTA_X, this.current_y - DELTA_Y, IMG_W, IMG_H);
@@ -49,7 +50,12 @@ public class WordButton extends UIButton {
             sb.draw(ImageElements.WORD_BUTTON, this.current_x - DELTA_X, this.current_y - DELTA_Y, IMG_W, IMG_H);
             sb.setBlendFunction(770, 771);
         }
-        super.render(sb, FontHelper.charDescFont);
+        super.render(sb, font);
+    }
+
+    @Override
+    public void render(SpriteBatch sb) {
+        this.render(sb, FontHelper.charDescFont);
     }
 
     public void setGlowColor(Color newGlowColor) {

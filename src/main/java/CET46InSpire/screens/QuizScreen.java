@@ -1,10 +1,12 @@
 package CET46InSpire.screens;
 
 import CET46InSpire.helpers.CET46Settings;
+import CET46InSpire.helpers.CNFontHelper;
 import CET46InSpire.ui.*;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -62,6 +64,8 @@ public class QuizScreen extends CustomScreen {
     public int wrong_ans_num;
     public int score;
     private boolean isPerfect = false;
+    private BitmapFont titleFont = CNFontHelper.charTitleFont;
+    private BitmapFont descFont = CNFontHelper.charDescFont;
 
     public QuizScreen() {
         this.checkButton = new CheckButton(BOTTOM_BUT_X,FRAME_Y + BOTTOM_BUT_Y);
@@ -97,6 +101,13 @@ public class QuizScreen extends CustomScreen {
         if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.NONE) {
             logger.info("wtf? why?");
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
+        }
+        if (CET46Panel.pureFont) {
+            this.titleFont = CNFontHelper.pureTitleFont;
+            this.descFont = CNFontHelper.pureDescFont;
+        } else {
+            this.titleFont = CNFontHelper.charTitleFont;
+            this.descFont = CNFontHelper.charDescFont;
         }
         reopen();
     }
@@ -178,7 +189,7 @@ public class QuizScreen extends CustomScreen {
         this.renderQuestion(sb, font_color);
         this.infoTip.render(sb);
         if (this.ans_checked) {
-            FontHelper.renderFontLeft(sb, FontHelper.charDescFont, uiStrings.TEXT[2] + this.score,
+            FontHelper.renderFontLeft(sb, this.descFont, uiStrings.TEXT[2] + this.score,
                     SCORE_X, SCORE_Y + this.delta_y, font_color);
             this.returnButton.fontColor = font_color;
             this.returnButton.render(sb);
@@ -211,16 +222,16 @@ public class QuizScreen extends CustomScreen {
     }
 
     private void renderQuestion(SpriteBatch sb, Color font_color) {
-        FontHelper.renderFontCentered(sb, FontHelper.charTitleFont, this.word,
+        FontHelper.renderFontCentered(sb, this.titleFont, this.word,
                 QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, font_color);
         if (CET46Panel.showLexicon) {
-            FontHelper.renderFontLeftTopAligned(sb, FontHelper.charDescFont, TEXT[3] + this.lexicon,
+            FontHelper.renderFontLeftTopAligned(sb, this.descFont, TEXT[3] + this.lexicon,
                     LEXICON_X, FRAME_Y + LEXICON_Y + this.delta_y, font_color);
         }
         for (WordButton w: this.wordButtons) {
             if (!w.isHidden) {
                 w.fontColor = font_color;
-                w.render(sb);
+                w.render(sb, this.descFont);
             }
         }
     }

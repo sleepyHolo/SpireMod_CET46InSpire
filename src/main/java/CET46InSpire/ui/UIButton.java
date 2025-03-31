@@ -32,6 +32,7 @@ public class UIButton {
     private final float width;
     private final float height;
     public Hitbox hb;
+    public BitmapFont defaultFont = FontHelper.buttonLabelFont;
 
     public UIButton(float pos_x, float pos_y, float hitbox_w, float hitbox_h, Color fontColor, float font_x, float font_y) {
         this.pos_x = pos_x;
@@ -99,7 +100,7 @@ public class UIButton {
     }
 
     public void render(SpriteBatch sb) {
-        this.render(sb, FontHelper.buttonLabelFont);
+        this.render(sb, defaultFont);
     }
 
     public void render(SpriteBatch sb, BitmapFont font) {
