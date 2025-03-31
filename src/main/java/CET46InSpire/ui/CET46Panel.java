@@ -24,7 +24,7 @@ public class CET46Panel extends EasyConfigPanel {
         setNumberRange("band4RateIn6", 0, 80);
         setNumberRange("maxAnsNum", 1, 3);
 
-        setPadding(7.0F);
+        setPadding(20.0F);
     }
 
 }

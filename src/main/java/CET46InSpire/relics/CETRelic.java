@@ -1,10 +1,14 @@
 package CET46InSpire.relics;
 
+import CET46InSpire.actions.CorrectAction;
 import CET46InSpire.powers.ChangePowersApplyPower;
+import CET46InSpire.savedata.CorrectionNote;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,15 +18,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public abstract class CETRelic extends CustomRelic {
+public abstract class CETRelic extends CustomRelic implements ClickableRelic {
     public int pre_counter;
     public int scoreCounter = -1;
+    public CorrectionNote notebook = null;
 
     public CETRelic(String id, Texture texture, Texture outline, RelicTier tier, LandingSound sfx) {
         super(id, texture, outline, tier, sfx);
         this.counter = 0;   // perfect counter
         this.scoreCounter = 1;
         this.pre_counter = this.scoreCounter;
+        this.notebook = new CorrectionNote();
     }
 
     public void updatePerfectCounter(boolean isPerfect) {
@@ -76,6 +82,9 @@ public abstract class CETRelic extends CustomRelic {
     @Override
     public void onPlayerEndTurn() {
         this.scoreCounter = 1;
+        if (Settings.isDebug) {
+            this.notebook.outItem();
+        }
     }
 
     @Override
@@ -93,5 +102,15 @@ public abstract class CETRelic extends CustomRelic {
     }
 
     public abstract void triggerQuiz();
+
+    @Override
+    public void onRightClick() {
+        String target = this.notebook.rndGetId();
+        if (target.isEmpty()) {
+            this.addToBot(new TalkAction(true, "没有错题", 1.0F, 2.0F));
+            return;
+        }
+        this.addToBot(new CorrectAction(target));
+    }
 
 }

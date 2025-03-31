@@ -1,0 +1,16 @@
+{
+    "CET46:BookOfCET4": {
+        "NAME": "Book of CET4",
+        "FLAVOR": "Rumor has it that all the vocabulary mysteries of CET4 are recorded.",
+        "DESCRIPTIONS": [
+            "Whenever you are about to play a card, send a quiz of Grade 4 word. The effect is determined by the accuracy of your answer."
+        ]
+    },
+    "CET46:BookOfCET6": {
+        "NAME": "Book of CET6",
+        "FLAVOR": "Rumor has it that all the vocabulary mysteries of CET6 are recorded.",
+        "DESCRIPTIONS": [
+            "Whenever you are about to play a card, send a quiz of Grade 4 word. The effect is determined by the accuracy of your answer. NL Probability of Grade 4 words can be adjusted in the mod settings."
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "CET46:ChangePowersApplyPower": {
+        "NAME": "CET Power",
+        "DESCRIPTIONS": [
+            "When you apply Buffs/Debuffs on any creature, Number of layers applied multiplied by #y",
+            " (your score). NL Consecutive perfect answers: #y",
+            " , activation effect(s): ",
+            "At beginning of odd turn, apply 1 Weak on all enemies.",
+            "At beginning of even turn, apply 1 Vulnerable on all enemies."
+        ]
+    }
+}

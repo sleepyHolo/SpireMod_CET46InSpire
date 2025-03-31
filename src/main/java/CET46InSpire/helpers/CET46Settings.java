@@ -23,4 +23,16 @@ public class CET46Settings {
             CET46Settings.VOCABULARY_CET6 = Integer.parseInt(CardCrawlGame.languagePack.getUIString("CET46:CET6_info").TEXT[0]);
         }
     }
+
+    public static int getLexiconSize(String lexicon) {
+        switch (lexicon) {
+            case "CET46:CET4_":
+                return CET46Settings.VOCABULARY_CET4;
+            case "CET46:CET6_":
+                return CET46Settings.VOCABULARY_CET6;
+            default:
+                return 0;
+        }
+    }
+
 }

@@ -52,6 +52,7 @@ public class QuizScreen extends CustomScreen {
     private static final float TIP_Y;
     private float delta_y = 0.0F;
     private String word;
+    private String word_id;
     private String lexicon;
     private ArrayList<String> right_ans_list;
     private ArrayList<String> meaning_list;
@@ -93,8 +94,9 @@ public class QuizScreen extends CustomScreen {
         return Enum.WORD_SCREEN;
     }
 
-    public void open(String word, String lexicon, ArrayList<String> right_ans_list, ArrayList<String> meaning_list) {
+    public void open(String word, String lexicon, ArrayList<String> right_ans_list, ArrayList<String> meaning_list, String word_id) {
         this.word = word;
+        this.word_id = word_id;
         this.lexicon = lexicon;
         this.right_ans_list = right_ans_list;
         this.meaning_list = meaning_list;
@@ -145,6 +147,9 @@ public class QuizScreen extends CustomScreen {
             if (r instanceof CETRelic) {
                 ((CETRelic) r).scoreCounter = this.score;
                 ((CETRelic) r).updatePerfectCounter(this.isPerfect);
+                if (this.score == 0) {
+                    ((CETRelic) r).notebook.addItem(this.word_id);
+                }
                 break;
             }
         }

@@ -1,0 +1,25 @@
+{
+    "CET46:CallOfCETEvent": {
+        "NAME": "Call Of CET",
+        "DESCRIPTIONS": [
+            "Opening the door, you suddenly feel a wave of #p@dizziness@ , and way to the Spire is ~gone~ ! NL NL A certain #y~power~ forces you to remember that there are #y~",
+            "~ ~...~ , maybe you need #pBooks in this room?",
+            "[NO DATA]",
+            "You've decided to ignore the #pBooks in room. NL NL Soon you found your way to the Spire.",
+            "Pick up the #pBook , you feel a whole new #y@mystical@ #y@power@ , maybe it works for Spire too? NL NL Anyway, the door is open and you can now move up.",
+            "~ #y~days",
+            "ONLY~ #y~ONE~ #y~DAY",
+            " NL NL Or maybe you should actually go and #y~study~ right away?",
+            " NL NL You don't even want to pretend to be learning. But CET is #ytomorrow. Maybe you'd still like to study for a while?",
+            " NL NL Seriously, you actually know very well that this relic is useless for #ylearning , and ending this game immediately might be of a little more use."
+        ],
+        "OPTIONS": [
+            "[Leave]",
+            "[Refuse]",
+            "[Study] #gGet #ga #gchance #gto #gwitness #ga #ggame #gcrash.",
+            "[Error] This error comes from program, not event design.",
+            "[Offer Book Of CET4] #gObtain #ga #gspecial #gRelic.",
+            "[Offer Book Of CET6] #gObtain #ga #gspecial #gRelic."
+        ]
+    }
+}

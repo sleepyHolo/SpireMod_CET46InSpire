@@ -1,0 +1,29 @@
+{
+    "CET46:WordScreen": {
+        "TEXT": [
+            "Check",
+            "Get it",
+            "Score: ",
+            "Lexicon-"
+        ]
+    },
+    "CET46:ConfigPanel": {
+        "TEXT_DICT": {
+            "darkMode": "Dark quiz panel (restart game to change)",
+            "pureFont": "Non-shadowed fonts",
+            "fastMode": "Fast mode (fasten dropping panel)",
+            "casualMode": "Casual mode (min score of 1, enjoy the game)",
+            "ignoreCheck": "Ignore check (Close panel directly without showing score)",
+            "showLexicon": "Show lexicon on quiz panel",
+            "band4RateIn6": "Percentage of Level 4 words appearing on the Level 6 quiz",
+            "maxAnsNum": "Max number of right answer(s)",
+            "loadCET4": "Load CET4 lexicon (restart game to change)",
+            "loadCET6": "Load CET6 lexicon (restart game to change)"
+        }
+    },
+    "CET46:InfoTip": {
+        "TEXT": [
+            "A word is displayed at the top and your goal is to select all the Chinese meanings from the options below. NL When you have made your choices and clicked on the Check Button, the correct answer becomes #ggreen, the incorrect choice becomes #rred, and the correct omission becomes #yyellow. NL Your score is #ynumber #yof #ycorrect #ychoices #y- #ynumber #yof #yincorrect #ychoices , with a minimum of 0 points. NL Until the next answer, you gain all #yblock x scores, all #ydamage #yfrom #yyou x scores , #ybuffs #y& #ydebuffs #yfrom #yyou x scores. NL Bonus tip: What is the source of damage for certain Ironclad's cards that deal #ydamage to themselves? NL Also, the #ydamage multiplier does not work on the blocked portion."
+        ]
+    }
+}

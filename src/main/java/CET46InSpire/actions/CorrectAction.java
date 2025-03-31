@@ -1,5 +1,8 @@
 package CET46InSpire.actions;
 
+import CET46InSpire.helpers.ArrayListHelper;
+import CET46InSpire.helpers.CET46Settings;
+import CET46InSpire.screens.QuizScreen;
 import CET46InSpire.ui.CET46Panel;
 import basemod.BaseMod;
 import com.badlogic.gdx.math.MathUtils;
@@ -7,34 +10,27 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import CET46InSpire.helpers.ArrayListHelper;
-import CET46InSpire.screens.QuizScreen;
 
 import java.util.ArrayList;
 
-public class QuizAction extends AbstractGameAction {
-    private final String LEXICON;
-    private final String VOCABULARY_ID;
-    private final int VOCABULARY_SIZE;
-    protected static final int MAX_MEANING_NUM;
+public class CorrectAction extends AbstractGameAction {
+    private final String target;
+    private final int target_id;
+    private final String lexicon;
+    private final int size;
 
-    public QuizAction(String LEXICON, String VOCABULARY_ID, int VOCABULARY_SIZE) {
-        this.LEXICON = LEXICON;
-        this.VOCABULARY_ID = VOCABULARY_ID;
-        this.VOCABULARY_SIZE = VOCABULARY_SIZE;
-        this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
-        this.duration = Settings.ACTION_DUR_FASTER;
-    }
-
-    public QuizAction(String VOCABULARY_ID, int VOCABULARY_SIZE) {
-        this("Default", VOCABULARY_ID, VOCABULARY_SIZE);
+    public CorrectAction(String target) {
+        this.target = target;
+        String[] tmp = this.target.split("_");
+        this.target_id = Integer.parseInt(tmp[1]);
+        this.lexicon = tmp[0];
+        this.size = CET46Settings.getLexiconSize(this.lexicon);
     }
 
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FASTER) {
-            int word_id = MathUtils.random(0, VOCABULARY_SIZE - 1);
-            UIStrings tmp = CardCrawlGame.languagePack.getUIString(VOCABULARY_ID + word_id);
+            UIStrings tmp = CardCrawlGame.languagePack.getUIString(this.target);
             String word = null;
             ArrayList<String> right_ans_list = new ArrayList<>();
             for (String item: tmp.TEXT) {
@@ -52,23 +48,24 @@ public class QuizAction extends AbstractGameAction {
                 meaning_list.add(new String(item));
             }
             int choice_num = 3 * right_ans_list.size();
-            if (choice_num > MAX_MEANING_NUM) {
-                choice_num = MAX_MEANING_NUM;
+            if (choice_num > QuizAction.MAX_MEANING_NUM) {
+                choice_num = QuizAction.MAX_MEANING_NUM;
             }
             for (int i = meaning_list.size(); i < choice_num;) {
-                int target_word = MathUtils.random(0, VOCABULARY_SIZE - 1);
-                if (target_word == word_id) {
+                int target_word = MathUtils.random(0, this.size - 1);
+                if (target_word == this.target_id) {
                     continue;
                 }
-                tmp = CardCrawlGame.languagePack.getUIString(VOCABULARY_ID + target_word);
+                tmp = CardCrawlGame.languagePack.getUIString(this.lexicon + target_word);
                 int target_meaning = MathUtils.random(1, tmp.TEXT.length - 1);
                 meaning_list.add(tmp.TEXT[target_meaning]);
                 i++;
             }
             meaning_list = ArrayListHelper.shuffle(meaning_list);
 
-            BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, word, LEXICON,
-                    right_ans_list, meaning_list, VOCABULARY_ID + word_id);
+            BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, word, "Correction",
+                    right_ans_list, meaning_list, target);
+
             tickDuration();
             return;
         }
@@ -76,7 +73,4 @@ public class QuizAction extends AbstractGameAction {
 
     }
 
-    static {
-        MAX_MEANING_NUM = 9;
-    }
 }

@@ -56,8 +56,11 @@ public class CET46Initializer implements
 
     @Override
     public void receiveEditStrings() {
-        String lang = "zhs";
+        String lang = "eng";
         if (Objects.requireNonNull(Settings.language) == Settings.GameLanguage.ZHS) {
+            lang = "zhs";
+        }
+        if (Objects.requireNonNull(Settings.language) == Settings.GameLanguage.ZHT) {
             lang = "zhs";
         }
 
