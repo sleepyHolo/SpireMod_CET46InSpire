@@ -62,6 +62,14 @@ public class CorrectionNote {
 
     public void outItem() {
         logger.info("Item(debug): {}", this.items.toString());
+        logger.info("RemovedItem(debug): {}", this.removedItems.toString());
+    }
+
+    public void resetCount() {
+        this.totalCount = 0;
+        for (Map.Entry<String, Integer> entry : this.items.entrySet()) {
+            this.totalCount += entry.getValue();
+        }
     }
 
 }
