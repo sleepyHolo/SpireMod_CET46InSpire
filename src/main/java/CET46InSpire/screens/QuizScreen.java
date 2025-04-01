@@ -159,6 +159,7 @@ public class QuizScreen extends CustomScreen {
                 }
                 if (this.correction && this.isPerfect) {
                     ((CETRelic) r).notebook.reduceItem(this.word_id);
+                    ((CETRelic) r).givePotion();
                 }
                 break;
             }

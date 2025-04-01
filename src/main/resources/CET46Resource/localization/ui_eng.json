@@ -26,5 +26,14 @@
         "TEXT": [
             "A word is displayed at the top and your goal is to select all the Chinese meanings from the options below. NL When you have made your choices and clicked on the Check Button, the correct answer becomes #ggreen, the incorrect choice becomes #rred, and the correct omission becomes #yyellow. NL Your score is #ynumber #yof #ycorrect #ychoices #y- #ynumber #yof #yincorrect #ychoices , with a minimum of 0 points. NL Until the next answer, you gain all #yblock x scores, all #ydamage #yfrom #yyou x scores , #ybuffs #y& #ydebuffs #yfrom #yyou x scores. NL Bonus tip: What is the source of damage for certain Ironclad's cards that deal #ydamage to themselves? NL Also, the #ydamage multiplier does not work on the blocked portion."
         ]
+    },
+    "CET46:RelicUI": {
+        "TEXT": [
+            "No mistake",
+            "Obtain a bonus potion",
+            "Obtain a bonus potion???",
+            "No more potion slot, reward are still valid",
+            "Rewards for this battle have been awarded"
+        ]
     }
 }

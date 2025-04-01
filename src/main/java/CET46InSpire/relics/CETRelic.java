@@ -10,18 +10,23 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public abstract class CETRelic extends CustomRelic implements ClickableRelic {
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CET46:RelicUI");
     public int pre_counter;
     public int scoreCounter = -1;
     public CorrectionNote notebook = null;
+    private boolean isGivenPotion = false;
 
     public CETRelic(String id, Texture texture, Texture outline, RelicTier tier, LandingSound sfx) {
         super(id, texture, outline, tier, sfx);
@@ -29,6 +34,7 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
         this.scoreCounter = 1;
         this.pre_counter = this.scoreCounter;
         this.notebook = new CorrectionNote();
+        this.isGivenPotion = false;
     }
 
     public void updatePerfectCounter(boolean isPerfect) {
@@ -90,6 +96,7 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
     @Override
     public void onVictory() {
         this.scoreCounter = 1;
+        this.isGivenPotion = false;
     }
 
     @Override
@@ -107,10 +114,37 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
     public void onRightClick() {
         String target = this.notebook.rndGetId();
         if (target.isEmpty()) {
-            this.addToTop(new TalkAction(true, this.DESCRIPTIONS[1], 1.0F, 2.0F));
+            this.givePotion(uiStrings.TEXT[0]);
             return;
         }
         this.addToTop(new CorrectAction(target));
+    }
+
+    public void givePotion(String talk) {
+        String talkStr = talk.isEmpty() ? talk : talk + " NL ";
+        if (this.isGivenPotion) {
+            talkStr += uiStrings.TEXT[4];
+            this.addToTop(new TalkAction(true, talkStr, 1.0F, 2.0F));
+            return;
+        }
+        if (AbstractDungeon.player.hasRelic("Sozu")) {
+            AbstractDungeon.player.getRelic("Sozu").flash();
+            this.isGivenPotion = true;
+            talkStr += uiStrings.TEXT[2];
+            this.addToTop(new TalkAction(true, talkStr, 1.0F, 2.0F));
+            return;
+        }
+        this.isGivenPotion = AbstractDungeon.player.obtainPotion(AbstractDungeon.returnRandomPotion(true));
+        if (this.isGivenPotion) {
+            talkStr += uiStrings.TEXT[1];
+        } else {
+            talkStr += uiStrings.TEXT[3];
+        }
+        this.addToTop(new TalkAction(true, talkStr, 1.0F, 2.0F));
+    }
+
+    public void givePotion() {
+        this.givePotion("");
     }
 
 }

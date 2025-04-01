@@ -36,8 +36,11 @@ public class CorrectionNote {
             if (weight == 0) {
                 this.items.remove(key);
                 this.removedItems.add(key);
+                return;
             }
+            this.items.put(key, weight);
         } else {
+            this.totalCount++;
             logger.info("No such key: {}", key);
         }
     }
@@ -48,7 +51,6 @@ public class CorrectionNote {
         }
         int count = 0;
         int target = MathUtils.random(0, this.totalCount - 1);
-        logger.info("target: {}", target);
         for (Map.Entry<String, Integer> entry : this.items.entrySet()) {
             count += entry.getValue();
             if (count >= target) {
@@ -61,6 +63,7 @@ public class CorrectionNote {
     }
 
     public void outItem() {
+        logger.info("ItemCount(debug): {}", this.totalCount);
         logger.info("Item(debug): {}", this.items.toString());
         logger.info("RemovedItem(debug): {}", this.removedItems.toString());
     }
