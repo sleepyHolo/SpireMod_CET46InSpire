@@ -107,10 +107,10 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
     public void onRightClick() {
         String target = this.notebook.rndGetId();
         if (target.isEmpty()) {
-            this.addToBot(new TalkAction(true, "没有错题", 1.0F, 2.0F));
+            this.addToTop(new TalkAction(true, this.DESCRIPTIONS[1], 1.0F, 2.0F));
             return;
         }
-        this.addToBot(new CorrectAction(target));
+        this.addToTop(new CorrectAction(target));
     }
 
 }

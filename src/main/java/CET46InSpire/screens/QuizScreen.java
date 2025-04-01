@@ -56,6 +56,7 @@ public class QuizScreen extends CustomScreen {
     private String lexicon;
     private ArrayList<String> right_ans_list;
     private ArrayList<String> meaning_list;
+    private boolean correction;
     private final CheckButton checkButton;
     private final ReturnButton returnButton;
     private final ArrayList<WordButton> wordButtons;
@@ -94,12 +95,14 @@ public class QuizScreen extends CustomScreen {
         return Enum.WORD_SCREEN;
     }
 
-    public void open(String word, String lexicon, ArrayList<String> right_ans_list, ArrayList<String> meaning_list, String word_id) {
+    public void open(String word, String lexicon, ArrayList<String> right_ans_list, ArrayList<String> meaning_list,
+                     String word_id, boolean correction) {
         this.word = word;
         this.word_id = word_id;
         this.lexicon = lexicon;
         this.right_ans_list = right_ans_list;
         this.meaning_list = meaning_list;
+        this.correction = correction;
         if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.NONE) {
             logger.info("wtf? why?");
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
@@ -145,10 +148,17 @@ public class QuizScreen extends CustomScreen {
         // get score
         for (AbstractRelic r: AbstractDungeon.player.relics) {
             if (r instanceof CETRelic) {
-                ((CETRelic) r).scoreCounter = this.score;
-                ((CETRelic) r).updatePerfectCounter(this.isPerfect);
+                if (!this.correction) {
+                    ((CETRelic) r).scoreCounter = this.score;
+                    ((CETRelic) r).updatePerfectCounter(this.isPerfect);
+                } else {
+                    ((CETRelic) r).scoreCounter = Math.max(((CETRelic) r).scoreCounter, this.score);
+                }
                 if (this.score == 0) {
                     ((CETRelic) r).notebook.addItem(this.word_id);
+                }
+                if (this.correction && this.isPerfect) {
+                    ((CETRelic) r).notebook.reduceItem(this.word_id);
                 }
                 break;
             }
@@ -230,7 +240,8 @@ public class QuizScreen extends CustomScreen {
         FontHelper.renderFontCentered(sb, this.titleFont, this.word,
                 QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, font_color);
         if (CET46Panel.showLexicon) {
-            FontHelper.renderFontLeftTopAligned(sb, this.descFont, TEXT[3] + this.lexicon,
+            String lexicon = this.correction ? this.lexicon : TEXT[3] + this.lexicon;
+            FontHelper.renderFontLeftTopAligned(sb, this.descFont, lexicon,
                     LEXICON_X, FRAME_Y + LEXICON_Y + this.delta_y, font_color);
         }
         for (WordButton w: this.wordButtons) {

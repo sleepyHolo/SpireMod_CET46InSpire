@@ -10,10 +10,14 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
 public class CorrectAction extends AbstractGameAction {
+    private static final Logger logger = LogManager.getLogger(CorrectAction.class.getName());
+    private static final String LEXICON;
     private final String target;
     private final int target_id;
     private final String lexicon;
@@ -23,8 +27,11 @@ public class CorrectAction extends AbstractGameAction {
         this.target = target;
         String[] tmp = this.target.split("_");
         this.target_id = Integer.parseInt(tmp[1]);
-        this.lexicon = tmp[0];
+        this.lexicon = tmp[0] + "_";
         this.size = CET46Settings.getLexiconSize(this.lexicon);
+        logger.info("lexicon: {}, size: {}", lexicon, size);
+        this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
+        this.duration = Settings.ACTION_DUR_FASTER;
     }
 
     @Override
@@ -63,14 +70,18 @@ public class CorrectAction extends AbstractGameAction {
             }
             meaning_list = ArrayListHelper.shuffle(meaning_list);
 
-            BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, word, "Correction",
-                    right_ans_list, meaning_list, target);
+            BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, word, LEXICON,
+                    right_ans_list, meaning_list, target, true);
 
             tickDuration();
             return;
         }
         tickDuration();
 
+    }
+
+    static {
+        LEXICON = CardCrawlGame.languagePack.getUIString("CET46:WordScreen").TEXT[4];
     }
 
 }

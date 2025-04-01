@@ -98,16 +98,16 @@ public class ChangePowersApplyPower extends AbstractPower {
     @Override
     public void updateDescription() {
         String tmp = DESCRIPTIONS[0] + this.linkedRelic.scoreCounter + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-        tmp += makePowerTag(5, this.amount >= 5) + DESCRIPTIONS[3];
-        tmp += makePowerTag(10, this.amount >= 10) + DESCRIPTIONS[4];
+        tmp += makePowerTag(5, this.amount >= 5, 3);
+        tmp += makePowerTag(10, this.amount >= 10, 4);
         this.description = tmp;
     }
 
-    private String makePowerTag(int number, boolean isActive) {
+    private String makePowerTag(int number, boolean isActive, int index) {
         if (isActive) {
-            return " NL #y[" + number + "+] ";
+            return " NL #y[" + number + "+] " + DESCRIPTIONS[index];
         }
-        return " NL [" + number + "+]";
+        return "";
     }
 
     @Override

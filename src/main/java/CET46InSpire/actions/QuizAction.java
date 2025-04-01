@@ -68,7 +68,7 @@ public class QuizAction extends AbstractGameAction {
             meaning_list = ArrayListHelper.shuffle(meaning_list);
 
             BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, word, LEXICON,
-                    right_ans_list, meaning_list, VOCABULARY_ID + word_id);
+                    right_ans_list, meaning_list, VOCABULARY_ID + word_id, false);
             tickDuration();
             return;
         }
