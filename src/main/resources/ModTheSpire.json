@@ -6,7 +6,7 @@
   "version": "1.0.1",
   "sts_version": "01-23-2019",
   "mts_version": "3.7.0",
-  "dependencies": ["basemod"],
+  "dependencies": ["basemod", "stslib"],
   "optional_dependencies": ["downfall"],
   "credits": "Csx_QAQ_",
   "update_json": ""
