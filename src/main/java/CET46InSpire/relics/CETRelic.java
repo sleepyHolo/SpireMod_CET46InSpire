@@ -1,8 +1,13 @@
 package CET46InSpire.relics;
 
+import CET46InSpire.CET46Initializer;
 import CET46InSpire.actions.CorrectAction;
+import CET46InSpire.actions.GeneralQuizAction;
+import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.powers.ChangePowersApplyPower;
 import CET46InSpire.savedata.CorrectionNote;
+import CET46InSpire.ui.CET46Panel;
+import CET46InSpire.ui.CET46Panel.BookConfig;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -11,6 +16,7 @@ import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.badlogic.gdx.graphics.Texture;
@@ -27,9 +33,14 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
     public int scoreCounter = -1;
     public CorrectionNote notebook = null;
     private boolean isGivenPotion = false;
+    public BookEnum bookEnum;
 
-    public CETRelic(String id, Texture texture, Texture outline, RelicTier tier, LandingSound sfx) {
-        super(id, texture, outline, tier, sfx);
+    public static String toId(BookEnum bookEnum) {
+        return CET46Initializer.JSON_MOD_KEY + bookEnum.name() + "_relic";
+    }
+    public CETRelic(BookEnum bookEnum, Texture texture, Texture outline, RelicTier tier, LandingSound sfx) {
+        super(toId(bookEnum), texture, outline, tier, sfx);
+        this.bookEnum = bookEnum;
         this.counter = 0;   // perfect counter
         this.scoreCounter = 1;
         this.pre_counter = this.scoreCounter;
@@ -108,7 +119,17 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
         triggerQuiz();
     }
 
-    public abstract void triggerQuiz();
+    public void triggerQuiz() {
+        flash();
+        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        BookConfig bookConfig = CET46Initializer.loadBooks.get(bookEnum);
+        if (MathUtils.random(0, 99) < CET46Panel.band4RateIn6 || bookConfig.lowerLevelBooks.isEmpty()) {
+            this.addToTop(new GeneralQuizAction(bookConfig));
+        } else {
+            // TODO 从所有lowerLevelBooks中使用某种策略选其一
+            this.addToTop(new GeneralQuizAction(CET46Initializer.loadBooks.get(bookConfig.lowerLevelBooks.get(0))));
+        }
+    };
 
     @Override
     public void onRightClick() {
