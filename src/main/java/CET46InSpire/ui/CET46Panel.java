@@ -5,6 +5,7 @@ import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import basemod.EasyConfigPanel;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
+import java.lang.reflect.Field;
 import java.util.*;
 import java.util.function.Supplier;
 
@@ -17,6 +18,8 @@ public class CET46Panel extends EasyConfigPanel {
     public static boolean showLexicon = true;
     public static int band4RateIn6 = 50;
     public static int maxAnsNum = 3;
+    public static boolean loadCET4 = true;
+    public static boolean loadCET6 = true;
 
     public static class BookConfig {
         public BookEnum bookEnum;
@@ -29,6 +32,15 @@ public class CET46Panel extends EasyConfigPanel {
             this.relicSupplier = relicSupplier;
         }
 
+        public boolean needLoad(){
+            try {
+                Field field = CET46Panel.class.getField("load" + this.bookEnum.name());
+                return field.getBoolean(null);  // 一定是静态字段
+            } catch (NoSuchFieldException | IllegalAccessException e) {
+                e.printStackTrace();
+                return false;
+            }
+        }
 
     }
 

@@ -40,17 +40,23 @@ public class CET46Initializer implements
     static {
         loadBooks.put(BookEnum.CET4, new BookConfig(BookEnum.CET4, new ArrayList<>(), () -> new BookOfCET4()));
         loadBooks.put(BookEnum.CET6, new BookConfig(BookEnum.CET6, Arrays.asList(BookEnum.CET4), () -> new BookOfCET6()));
+    }
 
-
+    private static void initNeedLoadBooks() {
         CET46Initializer.loadBooks.values().forEach(bookConfig -> {
+            if (!bookConfig.needLoad()) {
+                return;
+            }
             needLoadBooks.add(bookConfig.bookEnum);
             needLoadBooks.addAll(bookConfig.lowerLevelBooks);
         });
     }
+
     public CET46Initializer() {
         logger.info("Initialize: {}", MOD_ID);
         BaseMod.subscribe(this);
         settingsPanel = new CET46Panel("config");
+        initNeedLoadBooks();
     }
 
     public static void initialize() {
@@ -60,6 +66,9 @@ public class CET46Initializer implements
     @Override
     public void receiveEditRelics() {
         CET46Initializer.loadBooks.values().forEach(bookConfig -> {
+            if (!bookConfig.needLoad()) {
+                return;
+            }
             AbstractRelic relic = bookConfig.relicSupplier.get();
             BaseMod.addRelic(relic, RelicType.SHARED);
             UnlockTracker.markRelicAsSeen(relic.relicId);

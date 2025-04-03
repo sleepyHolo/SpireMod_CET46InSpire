@@ -150,7 +150,7 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     public static boolean checkBookAvailable(BookEnum b) {
-        return CET46Initializer.loadBooks.containsKey(b);
+        return CET46Initializer.needLoadBooks.contains(b);
     }
 
     public static String getBookOption(BookEnum b) {
