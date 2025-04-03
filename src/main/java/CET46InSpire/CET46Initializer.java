@@ -44,7 +44,7 @@ public class CET46Initializer implements
 
     private static void initNeedLoadBooks() {
         CET46Initializer.loadBooks.values().forEach(bookConfig -> {
-            if (!bookConfig.needLoad()) {
+            if (bookConfig.needNotLoad()) {
                 return;
             }
             needLoadBooks.add(bookConfig.bookEnum);
@@ -66,7 +66,7 @@ public class CET46Initializer implements
     @Override
     public void receiveEditRelics() {
         CET46Initializer.loadBooks.values().forEach(bookConfig -> {
-            if (!bookConfig.needLoad()) {
+            if (bookConfig.needNotLoad()) {
                 return;
             }
             AbstractRelic relic = bookConfig.relicSupplier.get();

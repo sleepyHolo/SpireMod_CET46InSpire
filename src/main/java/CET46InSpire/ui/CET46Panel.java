@@ -32,10 +32,10 @@ public class CET46Panel extends EasyConfigPanel {
             this.relicSupplier = relicSupplier;
         }
 
-        public boolean needLoad(){
+        public boolean needNotLoad(){
             try {
                 Field field = CET46Panel.class.getField("load" + this.bookEnum.name());
-                return field.getBoolean(null);  // 一定是静态字段
+                return !field.getBoolean(null);  // 一定是静态字段
             } catch (NoSuchFieldException | IllegalAccessException e) {
                 e.printStackTrace();
                 return false;
