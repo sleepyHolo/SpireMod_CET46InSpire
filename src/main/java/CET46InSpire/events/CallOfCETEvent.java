@@ -1,7 +1,7 @@
 package CET46InSpire.events;
 
-import CET46InSpire.helpers.CET46Settings;
-import CET46InSpire.relics.BookOfCET6;
+import CET46InSpire.CET46Initializer;
+import CET46InSpire.relics.CETRelic;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,7 +13,6 @@ import com.megacrit.cardcrawl.ui.buttons.LargeDialogOptionButton;
 import CET46InSpire.helpers.DayBeforeCETPlayGameException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import CET46InSpire.relics.BookOfCET4;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -151,14 +150,7 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     public static boolean checkBookAvailable(BookEnum b) {
-        switch (b) {
-            case CET4:
-                return CET46Settings.CET4Available;
-            case CET6:
-                return CET46Settings.CET6Available;
-        }
-        logger.info("wtf? what happened?");
-        return false;
+        return CET46Initializer.loadBooks.containsKey(b);
     }
 
     public static String getBookOption(BookEnum b) {
@@ -173,14 +165,8 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     public static AbstractRelic getBookRelic(BookEnum b) {
-        switch (b) {
-            case CET4:
-                return RelicLibrary.getRelic(BookOfCET4.ID).makeCopy();
-            case CET6:
-                return RelicLibrary.getRelic(BookOfCET6.ID).makeCopy();
-        }
-        logger.info("wtf? what happened?");
-        return RelicLibrary.getRelic("Circlet").makeCopy();
+        String id = CETRelic.toId(b);
+        return RelicLibrary.getRelic(id).makeCopy();
     }
 
     private void gotoStudyNow() {

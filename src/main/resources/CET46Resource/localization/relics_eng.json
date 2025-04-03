@@ -1,12 +1,12 @@
 {
-    "CET46:BookOfCET4": {
+    "CET46:CET4_relic": {
         "NAME": "Book of CET4",
         "FLAVOR": "Rumor has it that all the vocabulary mysteries of CET4 are recorded.",
         "DESCRIPTIONS": [
             "Whenever you are about to play a card, send a quiz of Grade 4 word. The effect is determined by the accuracy of your answer. NL Right-click on this relic to trigger a quiz of correction."
         ]
     },
-    "CET46:BookOfCET6": {
+    "CET46:CET6_relic": {
         "NAME": "Book of CET6",
         "FLAVOR": "Rumor has it that all the vocabulary mysteries of CET6 are recorded.",
         "DESCRIPTIONS": [
