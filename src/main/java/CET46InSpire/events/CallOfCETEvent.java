@@ -3,6 +3,7 @@ package CET46InSpire.events;
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.helpers.CET46Settings;
 import CET46InSpire.relics.CETRelic;
+import CET46InSpire.ui.CET46Panel;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -155,14 +156,16 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     public static String getBookOption(BookEnum b) {
-        switch (b) {
-            case CET4:
-                return eventStrings.OPTIONS[4];
-            case CET6:
-                return eventStrings.OPTIONS[5];
+        StringBuilder sb = new StringBuilder();
+        sb.append(eventStrings.OPTIONS[4]);
+        CET46Panel.BookConfig config = CET46Initializer.loadBooks.get(b);
+        if (config == null) {
+            logger.info("wtf? what happened?");
+            return eventStrings.OPTIONS[3];
         }
-        logger.info("wtf? what happened?");
-        return eventStrings.OPTIONS[3];
+        sb.append(config.relicSupplier.get().name);
+        sb.append(eventStrings.OPTIONS[5]);
+        return sb.toString();
     }
 
     public static AbstractRelic getBookRelic(BookEnum b) {

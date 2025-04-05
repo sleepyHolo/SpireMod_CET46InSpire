@@ -18,8 +18,8 @@
             "[Refuse]",
             "[Study] #gGet #ga #gchance #gto #gwitness #ga #ggame #gcrash.",
             "[Error] This error comes from program, not event design.",
-            "[Offer Book Of CET4] #gObtain #ga #gspecial #gRelic.",
-            "[Offer Book Of CET6] #gObtain #ga #gspecial #gRelic."
+            "[Offer ",
+            "] #gObtain #ga #gspecial #gRelic."
         ]
     }
 }
