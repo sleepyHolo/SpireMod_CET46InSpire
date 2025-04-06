@@ -7,7 +7,7 @@ import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.powers.ChangePowersApplyPower;
 import CET46InSpire.savedata.CorrectionNote;
 import CET46InSpire.ui.CET46Panel;
-import CET46InSpire.ui.CET46Panel.BookConfig;
+import CET46InSpire.helpers.BookConfig;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -15,7 +15,6 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -122,12 +121,12 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
     public void triggerQuiz() {
         flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        BookConfig bookConfig = CET46Initializer.loadBooks.get(bookEnum);
+        BookConfig bookConfig = CET46Initializer.allBooks.get(bookEnum);
         if (MathUtils.random(0, 99) < CET46Panel.band4RateIn6 || bookConfig.lowerLevelBooks.isEmpty()) {
             this.addToTop(new GeneralQuizAction(bookConfig));
         } else {
             // TODO 从所有lowerLevelBooks中使用某种策略选其一
-            this.addToTop(new GeneralQuizAction(CET46Initializer.loadBooks.get(bookConfig.lowerLevelBooks.get(0))));
+            this.addToTop(new GeneralQuizAction(CET46Initializer.allBooks.get(bookConfig.lowerLevelBooks.get(0))));
         }
     };
 

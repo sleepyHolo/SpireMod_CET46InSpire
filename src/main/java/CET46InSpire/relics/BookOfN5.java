@@ -2,12 +2,14 @@ package CET46InSpire.relics;
 
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.ImageElements;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-public class BookOfCET6 extends CETRelic {
+public class BookOfN5 extends CETRelic {
 
-    public BookOfCET6() {
-        super(BookEnum.CET6, ImageElements.RELIC_CET6_IMG, ImageElements.RELIC_CET_OUTLINE,
+    public BookOfN5() {
+        super(BookEnum.N5, ImageElements.RELIC_CET6_IMG, ImageElements.RELIC_CET_OUTLINE,
                 RelicTier.SPECIAL, LandingSound.CLINK);
     }
 
@@ -18,7 +20,7 @@ public class BookOfCET6 extends CETRelic {
 
     @Override
     public AbstractRelic makeCopy() {
-        return new BookOfCET6();
+        return new BookOfN5();
     }
 
 }

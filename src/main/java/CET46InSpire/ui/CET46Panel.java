@@ -20,29 +20,7 @@ public class CET46Panel extends EasyConfigPanel {
     public static int maxAnsNum = 3;
     public static boolean loadCET4 = true;
     public static boolean loadCET6 = true;
-
-    public static class BookConfig {
-        public BookEnum bookEnum;
-        public List<BookEnum> lowerLevelBooks;
-        public Supplier<AbstractRelic> relicSupplier;
-
-        public BookConfig(BookEnum bookEnum, List<BookEnum> lowerLevelBooks, Supplier<AbstractRelic> relicSupplier) {
-            this.bookEnum = bookEnum;
-            this.lowerLevelBooks = lowerLevelBooks;
-            this.relicSupplier = relicSupplier;
-        }
-
-        public boolean needNotLoad(){
-            try {
-                Field field = CET46Panel.class.getField("load" + this.bookEnum.name());
-                return !field.getBoolean(null);  // 一定是静态字段
-            } catch (NoSuchFieldException | IllegalAccessException e) {
-                e.printStackTrace();
-                return false;
-            }
-        }
-
-    }
+    public static boolean loadN5 = false;
 
 
     public CET46Panel(String configName) {

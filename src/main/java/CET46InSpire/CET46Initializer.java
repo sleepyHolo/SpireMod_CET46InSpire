@@ -4,8 +4,9 @@ import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.CET46Settings;
 import CET46InSpire.relics.BookOfCET4;
 import CET46InSpire.relics.BookOfCET6;
+import CET46InSpire.relics.BookOfN5;
 import CET46InSpire.ui.CET46Panel;
-import CET46InSpire.ui.CET46Panel.BookConfig;
+import CET46InSpire.helpers.BookConfig;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.helpers.RelicType;
@@ -23,6 +24,7 @@ import CET46InSpire.screens.QuizScreen;
 import CET46InSpire.helpers.ImageElements;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @SpireInitializer
 public class CET46Initializer implements
@@ -34,29 +36,40 @@ public class CET46Initializer implements
     public static String JSON_MOD_KEY = "CET46:";
     private ModPanel settingsPanel = null;
 
-    public static Map<BookEnum, BookConfig> loadBooks = new HashMap<>();
-
+    /**
+     * 所有可选范围
+     */
+    public static Map<BookEnum, BookConfig> allBooks = new HashMap<>();
+    /**
+     * 用户已选择范围
+     */
+    public static Set<BookConfig> userBooks = new HashSet<>();
+    /**
+     * 直接+间接需要加载的范围
+     */
     public static Set<BookEnum> needLoadBooks = new HashSet<>();
     static {
-        loadBooks.put(BookEnum.CET4, new BookConfig(BookEnum.CET4, new ArrayList<>(), () -> new BookOfCET4()));
-        loadBooks.put(BookEnum.CET6, new BookConfig(BookEnum.CET6, Arrays.asList(BookEnum.CET4), () -> new BookOfCET6()));
+        allBooks.put(BookEnum.CET4, new BookConfig(BookEnum.CET4, new ArrayList<>(), () -> new BookOfCET4()));
+        allBooks.put(BookEnum.CET6, new BookConfig(BookEnum.CET6, Arrays.asList(BookEnum.CET4), () -> new BookOfCET6()));
+        allBooks.put(BookEnum.N5, new BookConfig(BookEnum.N5, new ArrayList<>(), () -> new BookOfN5()));
     }
-
-    private static void initNeedLoadBooks() {
-        CET46Initializer.loadBooks.values().forEach(bookConfig -> {
+    private static void initBooks() {
+        CET46Initializer.allBooks.values().forEach(bookConfig -> {
             if (bookConfig.needNotLoad()) {
                 return;
             }
+            userBooks.add(bookConfig);
             needLoadBooks.add(bookConfig.bookEnum);
             needLoadBooks.addAll(bookConfig.lowerLevelBooks);
         });
+        logger.info("initBooks: userBooks = {}, needLoadBooks = {}.", userBooks.stream().map(it -> it.bookEnum).collect(Collectors.toList()), needLoadBooks);
     }
 
     public CET46Initializer() {
         logger.info("Initialize: {}", MOD_ID);
         BaseMod.subscribe(this);
         settingsPanel = new CET46Panel("config");
-        initNeedLoadBooks();
+        initBooks();
     }
 
     public static void initialize() {
@@ -65,10 +78,7 @@ public class CET46Initializer implements
 
     @Override
     public void receiveEditRelics() {
-        CET46Initializer.loadBooks.values().forEach(bookConfig -> {
-            if (bookConfig.needNotLoad()) {
-                return;
-            }
+        CET46Initializer.userBooks.forEach(bookConfig -> {
             AbstractRelic relic = bookConfig.relicSupplier.get();
             BaseMod.addRelic(relic, RelicType.SHARED);
             UnlockTracker.markRelicAsSeen(relic.relicId);
@@ -100,7 +110,6 @@ public class CET46Initializer implements
             BaseMod.loadCustomStringsFile(UIStrings.class, "CET46Resource/vocabulary/" + bookEnum.name() + ".json");
         });
         logger.info("Vocabulary load time: {}ms", System.currentTimeMillis() - startTime);
-
     }
 
     @Override

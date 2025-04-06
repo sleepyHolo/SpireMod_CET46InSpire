@@ -19,7 +19,8 @@
             "band4RateIn6": "Percentage of Level 4 words appearing on the Level 6 quiz",
             "maxAnsNum": "Max number of right answer(s)",
             "loadCET4": "Load CET4 lexicon (restart game to change)",
-            "loadCET6": "Load CET6 lexicon (restart game to change)"
+            "loadCET6": "Load CET6 lexicon (restart game to change)",
+            "loadN5": "Load N5 lexicon (restart game to change)"
         }
     },
     "CET46:InfoTip": {

@@ -3,7 +3,7 @@ package CET46InSpire.events;
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.helpers.CET46Settings;
 import CET46InSpire.relics.CETRelic;
-import CET46InSpire.ui.CET46Panel;
+import CET46InSpire.helpers.BookConfig;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -158,7 +158,7 @@ public class CallOfCETEvent extends AbstractImageEvent {
     public static String getBookOption(BookEnum b) {
         StringBuilder sb = new StringBuilder();
         sb.append(eventStrings.OPTIONS[4]);
-        CET46Panel.BookConfig config = CET46Initializer.loadBooks.get(b);
+        BookConfig config = CET46Initializer.allBooks.get(b);
         if (config == null) {
             logger.info("wtf? what happened?");
             return eventStrings.OPTIONS[3];
@@ -212,7 +212,8 @@ public class CallOfCETEvent extends AbstractImageEvent {
 
     public enum BookEnum {
         CET4,
-        CET6
+        CET6,
+        N5
     }
 
 }
