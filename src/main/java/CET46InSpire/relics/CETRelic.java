@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 public abstract class CETRelic extends CustomRelic implements ClickableRelic {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CET46:RelicUI");
@@ -132,6 +133,11 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
 
     @Override
     public void onRightClick() {
+        // 这个只应该在战斗房间触发
+        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT ||
+                AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMPLETE) {
+            return;
+        }
         String target = this.notebook.rndGetId();
         if (target.isEmpty()) {
             this.givePotion(uiStrings.TEXT[0]);

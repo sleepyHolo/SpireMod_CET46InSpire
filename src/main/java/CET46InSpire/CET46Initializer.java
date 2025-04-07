@@ -1,7 +1,6 @@
 package CET46InSpire;
 
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
-import CET46InSpire.helpers.CET46Settings;
 import CET46InSpire.relics.BookOfCET4;
 import CET46InSpire.relics.BookOfCET6;
 import CET46InSpire.relics.BookOfN5;
@@ -114,10 +113,10 @@ public class CET46Initializer implements
 
     @Override
     public void receivePostInitialize() {
-        CET46Settings.init();
+        BookConfig.init_map();
         settingsPanel = new CET46Panel();
         BaseMod.registerModBadge(ImageElements.MOD_BADGE,
-                "CET46 In Spire", "__name__", "Do_not_forget_CET46!", settingsPanel);
+                "CET46 In Spire", "__name__, Dim", "Do_not_forget_CET46!", settingsPanel);
 
         BaseMod.addCustomScreen(new QuizScreen());
     }

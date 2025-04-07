@@ -1,6 +1,5 @@
 package CET46InSpire.screens;
 
-import CET46InSpire.helpers.CET46Settings;
 import CET46InSpire.helpers.CNFontHelper;
 import CET46InSpire.ui.*;
 import basemod.abstracts.CustomScreen;
@@ -199,7 +198,7 @@ public class QuizScreen extends CustomScreen {
     public void render(SpriteBatch sb) {
         sb.draw(ImageElements.WORD_SCREEN_BASE, FRAME_X, FRAME_Y + this.delta_y, FRAME_WIDTH, FRAME_HEIGHT);
         Color font_color = Color.BLACK.cpy();
-        if (CET46Settings.darkMode) {
+        if (ImageElements.darkMode) {
             font_color = Color.WHITE.cpy();
         }
         this.renderQuestion(sb, font_color);

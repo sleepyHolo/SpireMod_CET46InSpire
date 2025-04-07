@@ -12,5 +12,12 @@
         "DESCRIPTIONS": [
             "Whenever you are about to play a card, send a quiz of Grade 4 word. The effect is determined by the accuracy of your answer. NL Probability of Grade 4 words can be adjusted in the mod settings. NL Right-click on this relic to trigger a quiz of correction."
         ]
+    },
+    "CET46:N5_relic": {
+        "NAME": "Book of N5",
+        "FLAVOR": "Rumor has it that all the vocabulary mysteries of JLPT N5 are recorded.",
+        "DESCRIPTIONS": [
+            "Whenever you are about to play a card, send a quiz of N5 word. The effect is determined by the accuracy of your answer. NL Right-click on this relic to trigger a quiz of correction."
+        ]
     }
 }

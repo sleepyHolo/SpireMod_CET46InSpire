@@ -1,7 +1,6 @@
 package CET46InSpire.events;
 
 import CET46InSpire.CET46Initializer;
-import CET46InSpire.helpers.CET46Settings;
 import CET46InSpire.relics.CETRelic;
 import CET46InSpire.helpers.BookConfig;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -152,7 +151,7 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     public static boolean checkBookAvailable(BookEnum b) {
-        return CET46Settings.isLoad(b);
+        return CET46Initializer.userBooks.contains(CET46Initializer.allBooks.get(b));
     }
 
     public static String getBookOption(BookEnum b) {

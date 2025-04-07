@@ -1,7 +1,6 @@
 package CET46InSpire.actions;
 
 import CET46InSpire.CET46Initializer;
-import CET46InSpire.helpers.CET46Settings;
 import CET46InSpire.helpers.BookConfig;
 
 public class GeneralQuizAction extends QuizAction {
@@ -10,7 +9,7 @@ public class GeneralQuizAction extends QuizAction {
         super(
                 bookConfig.bookEnum.name(),
                 CET46Initializer.JSON_MOD_KEY + bookConfig.bookEnum.name() + "_",
-                CET46Settings.VOCABULARY_MAP.get(bookConfig.bookEnum)
+                BookConfig.VOCABULARY_MAP.get(bookConfig.bookEnum)
         );
     }
 }

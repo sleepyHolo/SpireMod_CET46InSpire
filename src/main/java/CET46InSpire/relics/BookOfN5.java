@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 public class BookOfN5 extends CETRelic {
 
     public BookOfN5() {
-        super(BookEnum.N5, ImageElements.RELIC_CET6_IMG, ImageElements.RELIC_CET_OUTLINE,
+        super(BookEnum.N5, ImageElements.RELIC_N5_IMG, ImageElements.RELIC_CET_OUTLINE,
                 RelicTier.SPECIAL, LandingSound.CLINK);
     }
 

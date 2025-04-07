@@ -1,7 +1,7 @@
 package CET46InSpire.actions;
 
 import CET46InSpire.helpers.ArrayListHelper;
-import CET46InSpire.helpers.CET46Settings;
+import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.screens.QuizScreen;
 import CET46InSpire.ui.CET46Panel;
 import basemod.BaseMod;
@@ -28,7 +28,7 @@ public class CorrectAction extends AbstractGameAction {
         String[] tmp = this.target.split("_");
         this.target_id = Integer.parseInt(tmp[1]);
         this.lexicon = tmp[0] + "_";
-        this.size = CET46Settings.getLexiconSize(this.lexicon);
+        this.size = BookConfig.getLexiconSize(this.lexicon);
         logger.info("lexicon: {}, size: {}", lexicon, size);
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FASTER;
