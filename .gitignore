@@ -5,6 +5,8 @@ target/
 vocabulary/*.txt
 vocabulary/*.json
 vocabulary/__pycache__/
+vocabulary/*.anki2
+vocabulary/*.anki21
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
