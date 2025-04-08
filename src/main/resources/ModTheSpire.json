@@ -1,9 +1,9 @@
 {
   "modid": "CET46InSpire",
   "name": "CET46 In Spire",
-  "author_list": ["__name__"],
-  "description": "Do not forget CET46! \n别忘了四六级！",
-  "version": "1.0.1",
+  "author_list": ["__name__", "Dim"],
+  "description": "Do not forget CET46! Also JLPT N5.\n别忘了四六级！当然还有日语N5。",
+  "version": "1.1.0",
   "sts_version": "01-23-2019",
   "mts_version": "3.7.0",
   "dependencies": ["basemod", "stslib"],
