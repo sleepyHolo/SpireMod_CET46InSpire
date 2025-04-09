@@ -1,10 +1,6 @@
 package CET46InSpire.relics;
 
-import CET46InSpire.CET46Initializer;
-import CET46InSpire.actions.GeneralQuizAction;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import CET46InSpire.helpers.ImageElements;
 

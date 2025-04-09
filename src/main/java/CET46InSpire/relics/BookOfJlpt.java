@@ -2,15 +2,15 @@ package CET46InSpire.relics;
 
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.ImageElements;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-public class BookOfN5 extends CETRelic {
-
-    public BookOfN5() {
-        super(BookEnum.N5, ImageElements.RELIC_N5_IMG, ImageElements.RELIC_CET_OUTLINE,
+public class BookOfJlpt extends CETRelic {
+    protected Texture texture;
+    public BookOfJlpt(BookEnum bookEnum, Texture texture) {
+        super(bookEnum, texture, ImageElements.RELIC_CET_OUTLINE,
                 RelicTier.SPECIAL, LandingSound.CLINK);
+        this.texture = texture;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class BookOfN5 extends CETRelic {
 
     @Override
     public AbstractRelic makeCopy() {
-        return new BookOfN5();
+        return new BookOfJlpt(bookEnum, texture);
     }
 
 }

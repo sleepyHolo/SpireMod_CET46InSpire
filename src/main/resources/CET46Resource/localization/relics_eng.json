@@ -19,5 +19,33 @@
         "DESCRIPTIONS": [
             "Whenever you are about to play a card, send a quiz of N5 word. The effect is determined by the accuracy of your answer. NL Right-click on this relic to trigger a quiz of correction."
         ]
+    },
+    "CET46:N4_relic": {
+        "NAME": "Book of N4",
+        "FLAVOR": "Rumor has it that all the vocabulary mysteries of JLPT N5 are recorded.",
+        "DESCRIPTIONS": [
+            "Whenever you are about to play a card, send a quiz of N4 word. The effect is determined by the accuracy of your answer. NL Right-click on this relic to trigger a quiz of correction."
+        ]
+    },
+    "CET46:N3_relic": {
+        "NAME": "Book of N3",
+        "FLAVOR": "Rumor has it that all the vocabulary mysteries of JLPT N5 are recorded.",
+        "DESCRIPTIONS": [
+            "Whenever you are about to play a card, send a quiz of N3 word. The effect is determined by the accuracy of your answer. NL Right-click on this relic to trigger a quiz of correction."
+        ]
+    },
+    "CET46:N2_relic": {
+        "NAME": "Book of N2",
+        "FLAVOR": "Rumor has it that all the vocabulary mysteries of JLPT N2 are recorded.",
+        "DESCRIPTIONS": [
+            "Whenever you are about to play a card, send a quiz of N5 word. The effect is determined by the accuracy of your answer. NL Right-click on this relic to trigger a quiz of correction."
+        ]
+    },
+    "CET46:N1_relic": {
+        "NAME": "Book of N1",
+        "FLAVOR": "Rumor has it that all the vocabulary mysteries of JLPT N1 are recorded.",
+        "DESCRIPTIONS": [
+            "Whenever you are about to play a card, send a quiz of N5 word. The effect is determined by the accuracy of your answer. NL Right-click on this relic to trigger a quiz of correction."
+        ]
     }
 }

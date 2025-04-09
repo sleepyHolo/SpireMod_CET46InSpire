@@ -20,8 +20,11 @@ public class CET46Panel extends EasyConfigPanel {
     public static int maxAnsNum = 3;
     public static boolean loadCET4 = true;
     public static boolean loadCET6 = true;
-    public static boolean loadN5 = false;
-
+    public static boolean loadN5 = true;
+    public static boolean loadN4 = true;
+    public static boolean loadN3 = true;
+    public static boolean loadN2 = true;
+    public static boolean loadN1 = true;
 
     public CET46Panel(String configName) {
         super(CET46Initializer.MOD_ID, null, configName);

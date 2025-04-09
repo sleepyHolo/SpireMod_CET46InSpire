@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import CET46InSpire.helpers.ArrayListHelper;
 import CET46InSpire.screens.QuizScreen;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class QuizAction extends AbstractGameAction {
-    private final String LEXICON;
-    private final String VOCABULARY_ID;
-    private final int VOCABULARY_SIZE;
+public abstract class QuizAction extends AbstractGameAction {
+    protected final String LEXICON;
+    protected final String VOCABULARY_ID;
+    protected final int VOCABULARY_SIZE;
     protected static final int MAX_MEANING_NUM;
 
     public QuizAction(String LEXICON, String VOCABULARY_ID, int VOCABULARY_SIZE) {
@@ -33,47 +33,35 @@ public class QuizAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FASTER) {
-            int word_id = MathUtils.random(0, VOCABULARY_SIZE - 1);
-            UIStrings tmp = CardCrawlGame.languagePack.getUIString(VOCABULARY_ID + word_id);
-            String word = null;
-            ArrayList<String> right_ans_list = new ArrayList<>();
-            for (String item: tmp.TEXT) {
-                if (word == null) {
-                    word = item;
-                    continue;
-                }
-                right_ans_list.add(item);
-            }
-            right_ans_list = ArrayListHelper.choose(right_ans_list, CET46Panel.maxAnsNum);
 
-            ArrayList<String> meaning_list = new ArrayList<>();
-            // copy
-            for (String item: right_ans_list) {
-                meaning_list.add(new String(item));
-            }
-            int choice_num = 3 * right_ans_list.size();
-            if (choice_num > MAX_MEANING_NUM) {
-                choice_num = MAX_MEANING_NUM;
-            }
-            for (int i = meaning_list.size(); i < choice_num;) {
-                int target_word = MathUtils.random(0, VOCABULARY_SIZE - 1);
-                if (target_word == word_id) {
-                    continue;
-                }
-                tmp = CardCrawlGame.languagePack.getUIString(VOCABULARY_ID + target_word);
-                int target_meaning = MathUtils.random(1, tmp.TEXT.length - 1);
-                meaning_list.add(tmp.TEXT[target_meaning]);
-                i++;
-            }
-            meaning_list = ArrayListHelper.shuffle(meaning_list);
+            QuizData quizData = nextQuiz();
 
-            BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, word, LEXICON,
-                    right_ans_list, meaning_list, VOCABULARY_ID + word_id, false);
+            BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.show, LEXICON,
+                    quizData.correctOptions, quizData.allOptions, VOCABULARY_ID + quizData.wordId, false);
             tickDuration();
             return;
         }
         tickDuration();
 
+    }
+
+    protected abstract QuizData nextQuiz();
+
+    public static class QuizData {
+        public int wordId;
+        public String show;
+        public List<String> correctOptions;
+        public List<String> allOptions;
+
+        public QuizData() {
+        }
+
+        public QuizData(int wordId, String show, List<String> correctOptions, List<String> allOptions) {
+            this.wordId = wordId;
+            this.show = show;
+            this.correctOptions = correctOptions;
+            this.allOptions = allOptions;
+        }
     }
 
     static {
