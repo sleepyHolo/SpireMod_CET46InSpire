@@ -2,7 +2,9 @@ package CET46InSpire.relics;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.actions.CorrectAction;
-import CET46InSpire.actions.GeneralQuizAction;
+import CET46InSpire.actions.Cet46QuizAction;
+import CET46InSpire.actions.JlptQuizAction;
+import CET46InSpire.actions.QuizAction;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.powers.ChangePowersApplyPower;
 import CET46InSpire.savedata.CorrectionNote;
@@ -123,12 +125,24 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
         flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         BookConfig bookConfig = CET46Initializer.allBooks.get(bookEnum);
+        BookConfig usingBookConfig;
         if (MathUtils.random(0, 99) < CET46Panel.band4RateIn6 || bookConfig.lowerLevelBooks.isEmpty()) {
-            this.addToTop(new GeneralQuizAction(bookConfig));
+            usingBookConfig = bookConfig;
         } else {
             // TODO 从所有lowerLevelBooks中使用某种策略选其一
-            this.addToTop(new GeneralQuizAction(CET46Initializer.allBooks.get(bookConfig.lowerLevelBooks.get(0))));
+            usingBookConfig = CET46Initializer.allBooks.get(bookConfig.lowerLevelBooks.get(0));
         }
+        QuizAction quizAction;
+        // TODO 临时使用switch，待遗物合并重构完成后再优化写法
+        switch (usingBookConfig.bookEnum) {
+            case CET4:
+            case CET6:
+                quizAction = new Cet46QuizAction(usingBookConfig);
+                break;
+            default:
+                quizAction = new JlptQuizAction(usingBookConfig);
+        }
+        this.addToTop(quizAction);
     };
 
     @Override

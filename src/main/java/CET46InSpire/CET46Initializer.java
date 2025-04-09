@@ -3,7 +3,7 @@ package CET46InSpire;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.relics.BookOfCET4;
 import CET46InSpire.relics.BookOfCET6;
-import CET46InSpire.relics.BookOfN5;
+import CET46InSpire.relics.BookOfJlpt;
 import CET46InSpire.ui.CET46Panel;
 import CET46InSpire.helpers.BookConfig;
 import basemod.BaseMod;
@@ -50,7 +50,12 @@ public class CET46Initializer implements
     static {
         allBooks.put(BookEnum.CET4, new BookConfig(BookEnum.CET4, new ArrayList<>(), () -> new BookOfCET4()));
         allBooks.put(BookEnum.CET6, new BookConfig(BookEnum.CET6, Arrays.asList(BookEnum.CET4), () -> new BookOfCET6()));
-        allBooks.put(BookEnum.N5, new BookConfig(BookEnum.N5, new ArrayList<>(), () -> new BookOfN5()));
+        allBooks.put(BookEnum.N5, new BookConfig(BookEnum.N5, new ArrayList<>(), () -> new BookOfJlpt(BookEnum.N5, ImageElements.RELIC_N5_IMG)));
+        // TODO 使用对应的Texture
+        allBooks.put(BookEnum.N4, new BookConfig(BookEnum.N4, Arrays.asList(BookEnum.N5), () -> new BookOfJlpt(BookEnum.N4, ImageElements.RELIC_N5_IMG)));
+        allBooks.put(BookEnum.N3, new BookConfig(BookEnum.N3, Arrays.asList(BookEnum.N4), () -> new BookOfJlpt(BookEnum.N3, ImageElements.RELIC_N5_IMG)));
+        allBooks.put(BookEnum.N2, new BookConfig(BookEnum.N2, Arrays.asList(BookEnum.N3), () -> new BookOfJlpt(BookEnum.N2, ImageElements.RELIC_N5_IMG)));
+        allBooks.put(BookEnum.N1, new BookConfig(BookEnum.N1, Arrays.asList(BookEnum.N2), () -> new BookOfJlpt(BookEnum.N1, ImageElements.RELIC_N5_IMG)));
     }
     private static void initBooks() {
         CET46Initializer.allBooks.values().forEach(bookConfig -> {
