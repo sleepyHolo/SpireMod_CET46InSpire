@@ -38,4 +38,17 @@ public class CET46Panel extends EasyConfigPanel {
         setPadding(2.0F);
     }
 
+    public static void readVars() {
+        // 临时测试用, 不会动态更新字段
+        try {
+            for (Field f: CET46Panel.class.getDeclaredFields()) {
+                Field lf = ModConfigPanel.class.getField(f.getName());
+                f.set(null, lf.get(null));
+            }
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 }

@@ -6,6 +6,7 @@ import CET46InSpire.relics.BookOfCET6;
 import CET46InSpire.relics.BookOfJlpt;
 import CET46InSpire.ui.CET46Panel;
 import CET46InSpire.helpers.BookConfig;
+import CET46InSpire.ui.ModConfigPanel;
 import basemod.BaseMod;
 import basemod.ModPanel;
 import basemod.helpers.RelicType;
@@ -66,13 +67,17 @@ public class CET46Initializer implements
             needLoadBooks.add(bookConfig.bookEnum);
             needLoadBooks.addAll(bookConfig.lowerLevelBooks);
         });
+        // test
+        ModConfigPanel.addRelicPage("loadCET6", Arrays.asList(BookEnum.CET4, BookEnum.CET6));
+
         logger.info("initBooks: userBooks = {}, needLoadBooks = {}.", userBooks.stream().map(it -> it.bookEnum).collect(Collectors.toList()), needLoadBooks);
     }
 
     public CET46Initializer() {
         logger.info("Initialize: {}", MOD_ID);
         BaseMod.subscribe(this);
-        settingsPanel = new CET46Panel("config");
+//        settingsPanel = new CET46Panel("config");
+        settingsPanel = new ModConfigPanel();
         initBooks();
     }
 
@@ -119,7 +124,8 @@ public class CET46Initializer implements
     @Override
     public void receivePostInitialize() {
         BookConfig.init_map();
-        settingsPanel = new CET46Panel();
+        ((ModConfigPanel) settingsPanel).initPanel();
+        CET46Panel.readVars();
         BaseMod.registerModBadge(ImageElements.MOD_BADGE,
                 "CET46 In Spire", "__name__, Dim", "Do_not_forget_CET46!", settingsPanel);
 
