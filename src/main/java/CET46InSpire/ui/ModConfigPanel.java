@@ -2,17 +2,16 @@ package CET46InSpire.ui;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
-import basemod.IUIElement;
-import basemod.ModLabel;
-import basemod.ModLabeledButton;
-import basemod.ModLabeledToggleButton;
-import basemod.ModPanel;
+import basemod.*;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -41,7 +40,7 @@ public class ModConfigPanel extends ModPanel {
     private static final float PAGE_TITLE_Y;
     private static final float ELEMENT_X;
     private static final float ELEMENT_Y;
-    private static final float PADDING_Y;
+    private static final List<Float> PADDINGS_Y;
     private static final float PAGE_BUTTON_X1;
     private static final float PAGE_BUTTON_X2;
     private static final float PAGE_BUTTON_Y;
@@ -83,7 +82,7 @@ public class ModConfigPanel extends ModPanel {
 
     static {
         pages = new ArrayList<>();
-        pages.add(Arrays.asList("darkMode", "pureFont"));
+        pages.add(Arrays.asList("darkMode", "pureFont", "fastMode", "casualMode", "ignoreCheck", "showLexicon"));
         List<String> page2 = new ArrayList<>();     // 第二页不能用Arrays.asList 因为预计将修改其内容
         page2.add("loadCET4");
         page2.add("loadCET6");
@@ -123,7 +122,8 @@ public class ModConfigPanel extends ModPanel {
         this.elementData = new HashMap<>();
         this.initUIElements();
         this.initRelicPages();
-        setPage(0);
+        this.setPage(0);
+        this.checkReset();
     }
 
     private void initUIElements() {
@@ -141,7 +141,7 @@ public class ModConfigPanel extends ModPanel {
                         element.setY(pagePos);
                         this.elementData.put(name, element);
                         // 更新位置
-                        pagePos -= PADDING_Y;
+                        pagePos -= PADDINGS_Y.get(i);
                     }
                 }
             }
@@ -149,15 +149,16 @@ public class ModConfigPanel extends ModPanel {
             throw new RuntimeException(e);
         }
         // 翻页按钮
-        // TODO 修复非致命bug: 点击pageForward时ModPanel line132报错java.util.ConcurrentModificationException(不会导致游戏崩溃)
         pageForward = new ModLabeledButton(">", PAGE_BUTTON_X1, PAGE_BUTTON_Y, Settings.CREAM_COLOR, Color.WHITE,
                 FontHelper.cardEnergyFont_L, this, (button) -> {this.nextPage(true);});
         pageBackward = new ModLabeledButton("<", PAGE_BUTTON_X2, PAGE_BUTTON_Y, Settings.CREAM_COLOR, Color.WHITE,
                 FontHelper.cardEnergyFont_L, this, (button) -> {this.nextPage(false);});
-        pageReturn = new ModLabeledButton("Save And Return", PAGE_BUTTON_X2, PAGE_BUTTON_Y, Settings.CREAM_COLOR, Color.WHITE,
-                FontHelper.cardEnergyFont_L, this, (button) -> {
+        pageReturn = new ModLabeledButton(uiStrings.EXTRA_TEXT[1], PAGE_BUTTON_X2, PAGE_BUTTON_Y, Settings.CREAM_COLOR,
+                Color.WHITE, FontHelper.cardEnergyFont_L, this, (button) -> {
             try {
-                // TODO 检查是否合法(主要是必须保证权重不全为零)
+                if (!this.checkWeights()) {
+                    return;
+                }
                 for (String s: pages.get(this.pageNum)) {
                     if (lexiconData.containsKey(s)) {
                         this.config.setString(s, String.valueOf(lexiconData.get(s)));
@@ -181,16 +182,22 @@ public class ModConfigPanel extends ModPanel {
                 continue;
             }
             int target = pages.size();
-            // TODO 改成本地化字段
-            tmp = new ModLabeledButton("LEXICON", base.getX() + 600.0F, base.getY(), Settings.CREAM_COLOR,
-                    Color.WHITE, FontHelper.cardEnergyFont_L, this, (button) -> {this.setPage(target);});
+            tmp = new ModLabeledButton(uiStrings.EXTRA_TEXT[0], Math.max(base.getX() + 200.0F, 1000.0F), base.getY() - 2.0F,
+                    Settings.CREAM_COLOR, Color.WHITE, FontHelper.cardEnergyFont_L, this, (button) -> {this.setPage(target);});
             // 目前来说Relic肯定是第二页
-            (pages.get(1)).add(entry.getKey() + "jump");
-            elementData.put(entry.getKey() + "jump", tmp);
+            (pages.get(1)).add(entry.getKey() + "_jump");
+            elementData.put(entry.getKey() + "_jump", tmp);
+            // 设置显示比例的部分
+            tmp = new ModLabel("", base.getX() + 25.0F, base.getY() - PADDINGS_Y.get(0), this, (text) -> {});
+            (pages.get(1)).add(entry.getKey() + "_display");
+            elementData.put(entry.getKey() + "_display", tmp);
 
             for (int i = 0; i < entry.getValue().size(); i++) {
                 BookEnum b = entry.getValue().get(i);
                 String tmp_name = entry.getKey() + "_" + b.name();
+                // load weights
+                lexiconData.put(tmp_name, Integer.parseInt(this.config.getString(tmp_name)));
+
                 float x = LEXICON_X + LEXICON_PAD_X * (float) (i % 3);
                 float y = LEXICON_Y + LEXICON_PAD_Y * (float) (i / 3);
                 // lexicon text
@@ -258,27 +265,33 @@ public class ModConfigPanel extends ModPanel {
         id %= pages.size();
 
         this.pageNum = id;
-        this.getUpdateElements().clear();
-        this.getRenderElements().clear();
+        List<IUIElement> tmp = new ArrayList<>();
         if (uiStrings != null && id < uiStrings.TEXT.length && !uiStrings.TEXT[id].isEmpty()) {
             this.pageTitle.text = uiStrings.TEXT[id];
-            this.addUIElement(this.pageTitle);
+            tmp.add(this.pageTitle);
         }
         for (String name: pages.get(id)) {
-            this.addUIElement(this.elementData.get(name));
+            tmp.add(this.elementData.get(name));
         }
         if (this.pageNum < configPageNum) {
             // 翻页按钮
-            this.addUIElement(this.pageForward);
-            this.addUIElement(this.pageBackward);
+            tmp.add(this.pageForward);
+            tmp.add(this.pageBackward);
         } else {
             // 返回按钮
-            this.addUIElement(this.pageReturn);
+            tmp.add(this.pageReturn);
+        }
+        this.resetElements(tmp);
+        // update weight display
+        if (id == 1) {
+            this.updateWeights();
         }
     }
 
     private IUIElement buildElement(Field field, String name) throws IllegalAccessException {
         if (field.getType() == boolean.class) {
+            // load
+            field.set(null, Boolean.parseBoolean(this.config.getString(field.getName())));
             return new ModLabeledToggleButton(uiStrings.TEXT_DICT.get(name), ELEMENT_X, 0.0F,
                     Settings.CREAM_COLOR, FontHelper.charDescFont, (Boolean)field.get(null), this, (label) -> {},
                     (button) -> {saveVar(button.enabled, field, s -> {field.set(null, Boolean.parseBoolean(s));});});
@@ -296,14 +309,116 @@ public class ModConfigPanel extends ModPanel {
         }
     }
 
+    /**
+     * 用来避免update迭代时修改元素
+     */
+    private boolean updateStop = false;
+    private List<IUIElement> tmpCache = null;
+    private void resetElements(List<IUIElement> list) {
+        this.tmpCache = list;
+        this.updateStop = true;
+    }
+    private void checkReset() {
+        if (!this.updateStop) {
+            return;
+        }
+        this.getUpdateElements().clear();
+        this.getRenderElements().clear();
+        if (tmpCache != null) {
+            for (IUIElement element: tmpCache) {
+                this.addUIElement(element);
+            }
+            tmpCache = null;
+        }
+        this.updateStop = false;
+    }
+
+    @Override
+    public void update() {
+        for (IUIElement element: this.getUpdateElements()) {
+            element.update();
+        }
+        this.checkReset();
+
+        if (InputHelper.pressedEscape) {
+            InputHelper.pressedEscape = false;
+            BaseMod.modSettingsUp = false;
+            // 将面板返回首页
+            this.setPage(0);
+            this.checkReset();
+        }
+
+        if (!BaseMod.modSettingsUp) {
+            this.waitingOnEvent = false;
+            Gdx.input.setInputProcessor(this.oldInputProcessor);
+            CardCrawlGame.mainMenuScreen.lighten();
+            CardCrawlGame.mainMenuScreen.screen = MainMenuScreen.CurScreen.MAIN_MENU;
+            CardCrawlGame.cancelButton.hideInstantly();
+            this.isUp = false;
+        }
+
+    }
+
+    private void updateWeights() {
+        // 开摆了, 直接一坨循环搞定得了, 自己搓优化不如求大佬重写逻辑
+        for (Map.Entry<String, List<BookEnum>> entry: lexiconMap.entrySet()) {
+            IUIElement element = elementData.getOrDefault(entry.getKey() + "_display", null);
+            if (!(element instanceof ModLabel)) {
+                continue;
+            }
+            int total = 0;
+            List<BookEnum> notZeroList = new ArrayList<>();
+            for (BookEnum b: entry.getValue()) {
+                int tmp = lexiconData.getOrDefault(entry.getKey() + "_" + b.name(), 0);
+                if (tmp != 0) {
+                    notZeroList.add(b);
+                    total += tmp;
+                }
+            }
+            float k = total == 0 ? 0.0F : 100.0F / total;
+            StringBuilder sb = new StringBuilder();
+            // update text
+            for (BookEnum b: notZeroList) {
+                sb.append(uiStrings.TEXT_DICT.getOrDefault(b.name(), b.name())).append(": ");
+                sb.append(Math.round(k * lexiconData.get(entry.getKey() + "_" + b.name()))).append("%. ");
+            }
+            ((ModLabel) element).text = sb.toString();
+
+        }
+    }
+
+    private boolean checkWeights() {
+        for (Map.Entry<String, List<BookEnum>> entry: lexiconMap.entrySet()) {
+            int total = 0;
+            for (BookEnum b : entry.getValue()) {
+                total += lexiconData.getOrDefault(entry.getKey() + "_" + b.name(), 0);
+            }
+            if (total == 0) {
+                this.updateColor(entry, Color.RED);
+                return false;
+            }
+            this.updateColor(entry, Color.WHITE);
+        }
+        return true;
+    }
+
+    private void updateColor(Map.Entry<String, List<BookEnum>> entry, Color c) {
+        for (BookEnum b : entry.getValue()) {
+            IUIElement e = elementData.getOrDefault(entry.getKey() + "_" + b.name(), null);
+            if (e instanceof ModLabel) {
+                ((ModLabel) e).color = c;
+            }
+        }
+    }
+
     static {
         PAGE_TITLE_X = 360.0F;
         PAGE_TITLE_Y = 815.0F;
         ELEMENT_X = 355.0F;
         ELEMENT_Y = 730.0F;
-        PADDING_Y = 55.0F;
+        PADDINGS_Y = Arrays.asList(55.0F, 125.0F);
         PAGE_BUTTON_X1 = 1015.0F;
-        PAGE_BUTTON_X2 = 915.0F;
+        PAGE_BUTTON_X2 = 815.0F;
         PAGE_BUTTON_Y = 280.0F;
 
         LEXICON_X = 380.0F;

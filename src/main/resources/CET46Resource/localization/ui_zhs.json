@@ -13,6 +13,10 @@
             "模组设置",
             "词库设置"
         ],
+        "EXTRA_TEXT": [
+            "Modify Weights",
+            "Save & Back"
+        ],
         "TEXT_DICT": {
             "darkMode": "深色测验面板（须重启游戏以更改）",
             "pureFont": "使用无阴影字体",

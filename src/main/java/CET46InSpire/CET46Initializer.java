@@ -77,8 +77,9 @@ public class CET46Initializer implements
         logger.info("Initialize: {}", MOD_ID);
         BaseMod.subscribe(this);
 //        settingsPanel = new CET46Panel("config");
-        settingsPanel = new ModConfigPanel();
         initBooks();
+        // 放在init books 后面来保证注册遗物设置页面成功
+        settingsPanel = new ModConfigPanel();
     }
 
     public static void initialize() {
