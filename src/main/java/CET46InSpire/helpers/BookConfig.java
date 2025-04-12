@@ -53,4 +53,17 @@ public class BookConfig {
         return VOCABULARY_MAP.getOrDefault(BookEnum.valueOf(key), 0);
     }
 
+    /**
+     * 这个是词库的
+     */
+    public enum LexiconEnum {
+        CET4,
+        CET6,
+        N5,
+        N4,
+        N3,
+        N2,
+        N1
+    }
+
 }

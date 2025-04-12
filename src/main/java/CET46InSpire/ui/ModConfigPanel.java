@@ -2,6 +2,7 @@ package CET46InSpire.ui;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
+import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import basemod.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -25,7 +26,7 @@ public class ModConfigPanel extends ModPanel {
      */
     private static List<List<String>> pages;
     private static final int configPageNum;
-    private static HashMap<String, List<BookEnum>> lexiconMap;
+    private static HashMap<String, List<LexiconEnum>> lexiconMap;
     private int pageNum = 0;
     private HashMap<String, IUIElement> elementData;
     private UIStrings uiStrings = null;
@@ -79,6 +80,7 @@ public class ModConfigPanel extends ModPanel {
      * lexiconData Map<RelicName_LexiconName, Weight>>>
      */
     public static HashMap<String, Integer> lexiconData;
+    public static HashMap<BookEnum, HashMap<LexiconEnum, Integer>> relicLexicon;
 
     static {
         pages = new ArrayList<>();
@@ -91,6 +93,7 @@ public class ModConfigPanel extends ModPanel {
         configPageNum = 2;
         lexiconMap = new HashMap<>();
         lexiconData = new HashMap<>();
+        relicLexicon = new HashMap<>();
     }
 
 
@@ -116,6 +119,10 @@ public class ModConfigPanel extends ModPanel {
 
     }
 
+    public Map<LexiconEnum, Integer> getRelicWeights(BookEnum b) {
+        return relicLexicon.getOrDefault(b, new HashMap<>());
+    }
+
     public void initPanel() {
         // 用于初始化界面元素, 配置变量读取由类初始化完成. 须保证调用时languagePack初始化已经完成
         this.uiStrings = CardCrawlGame.languagePack.getUIString(CET46Initializer.JSON_MOD_KEY + "ConfigPanel");
@@ -124,6 +131,7 @@ public class ModConfigPanel extends ModPanel {
         this.initRelicPages();
         this.setPage(0);
         this.checkReset();
+        this.updateWeights();   // 保证更新词库权重
     }
 
     private void initUIElements() {
@@ -174,7 +182,7 @@ public class ModConfigPanel extends ModPanel {
     }
 
     private void initRelicPages() {
-        for (Map.Entry<String, List<BookEnum>> entry: lexiconMap.entrySet()) {
+        for (Map.Entry<String, List<LexiconEnum>> entry: lexiconMap.entrySet()) {
             List<String> page = new ArrayList<>();
             IUIElement tmp = null;
             IUIElement base = elementData.getOrDefault(entry.getKey(), null);
@@ -193,15 +201,15 @@ public class ModConfigPanel extends ModPanel {
             elementData.put(entry.getKey() + "_display", tmp);
 
             for (int i = 0; i < entry.getValue().size(); i++) {
-                BookEnum b = entry.getValue().get(i);
-                String tmp_name = entry.getKey() + "_" + b.name();
+                LexiconEnum l = entry.getValue().get(i);
+                String tmp_name = entry.getKey() + "_" + l.name();
                 // load weights
                 lexiconData.put(tmp_name, Integer.parseInt(this.config.getString(tmp_name)));
 
                 float x = LEXICON_X + LEXICON_PAD_X * (float) (i % 3);
                 float y = LEXICON_Y + LEXICON_PAD_Y * (float) (i / 3);
                 // lexicon text
-                tmp = new ModLabel(uiStrings.TEXT_DICT.getOrDefault(b.name(), b.name()), x, y, this, (label) -> {});
+                tmp = new ModLabel(uiStrings.TEXT_DICT.getOrDefault(l.name(), l.name()), x, y, this, (label) -> {});
                 page.add(tmp_name + "_name");
                 elementData.put(tmp_name + "_name", tmp);
                 // lexicon button
@@ -228,16 +236,18 @@ public class ModConfigPanel extends ModPanel {
         }
     }
 
-    public static void addRelicPage(String varName, List<BookEnum> list, int default_) {
+    public static void addRelicPage(BookEnum relicBook, List<LexiconEnum> list, int default_) {
+        relicLexicon.put(relicBook, new HashMap<>());
         // varName是挂靠的字段名, 需要在elementData里面, 否则没有效果
+        String varName = "load" + relicBook.name();
         lexiconMap.put(varName, list);
-        for (BookEnum b: list) {
-            lexiconData.put(varName + "_" + b.name(), default_);
+        for (LexiconEnum l: list) {
+            lexiconData.put(varName + "_" + l.name(), default_);
         }
     }
 
-    public static void addRelicPage(String varName, List<BookEnum> list) {
-        addRelicPage(varName, list, 1);
+    public static void addRelicPage(BookEnum relicBook, List<LexiconEnum> list) {
+        addRelicPage(relicBook, list, 1);
     }
 
     public void nextPage(boolean forward) {
@@ -343,9 +353,6 @@ public class ModConfigPanel extends ModPanel {
         if (InputHelper.pressedEscape) {
             InputHelper.pressedEscape = false;
             BaseMod.modSettingsUp = false;
-            // 将面板返回首页
-            this.setPage(0);
-            this.checkReset();
         }
 
         if (!BaseMod.modSettingsUp) {
@@ -355,43 +362,50 @@ public class ModConfigPanel extends ModPanel {
             CardCrawlGame.mainMenuScreen.screen = MainMenuScreen.CurScreen.MAIN_MENU;
             CardCrawlGame.cancelButton.hideInstantly();
             this.isUp = false;
+            // 将面板返回首页, 放在前面那个逻辑块就不行, but why?
+            this.setPage(0);
+            this.checkReset();
         }
 
     }
 
     private void updateWeights() {
         // 开摆了, 直接一坨循环搞定得了, 自己搓优化不如求大佬重写逻辑
-        for (Map.Entry<String, List<BookEnum>> entry: lexiconMap.entrySet()) {
+        for (Map.Entry<String, List<LexiconEnum>> entry: lexiconMap.entrySet()) {
             IUIElement element = elementData.getOrDefault(entry.getKey() + "_display", null);
             if (!(element instanceof ModLabel)) {
                 continue;
             }
             int total = 0;
-            List<BookEnum> notZeroList = new ArrayList<>();
-            for (BookEnum b: entry.getValue()) {
-                int tmp = lexiconData.getOrDefault(entry.getKey() + "_" + b.name(), 0);
+            List<LexiconEnum> notZeroList = new ArrayList<>();
+            for (LexiconEnum l: entry.getValue()) {
+                int tmp = lexiconData.getOrDefault(entry.getKey() + "_" + l.name(), 0);
                 if (tmp != 0) {
-                    notZeroList.add(b);
+                    notZeroList.add(l);
                     total += tmp;
                 }
             }
             float k = total == 0 ? 0.0F : 100.0F / total;
             StringBuilder sb = new StringBuilder();
+            BookEnum relic = BookEnum.valueOf(entry.getKey().substring(4));     // 去掉前面的 load
+            HashMap<LexiconEnum, Integer> tmpMap = new HashMap<>();
             // update text
-            for (BookEnum b: notZeroList) {
-                sb.append(uiStrings.TEXT_DICT.getOrDefault(b.name(), b.name())).append(": ");
-                sb.append(Math.round(k * lexiconData.get(entry.getKey() + "_" + b.name()))).append("%. ");
+            for (LexiconEnum l: notZeroList) {
+                tmpMap.put(l, lexiconData.get(entry.getKey() + "_" + l.name()));
+                sb.append(uiStrings.TEXT_DICT.getOrDefault(l.name(), l.name())).append(": ");
+                sb.append(Math.round(k * lexiconData.get(entry.getKey() + "_" + l.name()))).append("%. ");
             }
+            relicLexicon.put(relic, tmpMap);
             ((ModLabel) element).text = sb.toString();
 
         }
     }
 
     private boolean checkWeights() {
-        for (Map.Entry<String, List<BookEnum>> entry: lexiconMap.entrySet()) {
+        for (Map.Entry<String, List<LexiconEnum>> entry: lexiconMap.entrySet()) {
             int total = 0;
-            for (BookEnum b : entry.getValue()) {
-                total += lexiconData.getOrDefault(entry.getKey() + "_" + b.name(), 0);
+            for (LexiconEnum l: entry.getValue()) {
+                total += lexiconData.getOrDefault(entry.getKey() + "_" + l.name(), 0);
             }
             if (total == 0) {
                 this.updateColor(entry, Color.RED);
@@ -402,9 +416,9 @@ public class ModConfigPanel extends ModPanel {
         return true;
     }
 
-    private void updateColor(Map.Entry<String, List<BookEnum>> entry, Color c) {
-        for (BookEnum b : entry.getValue()) {
-            IUIElement e = elementData.getOrDefault(entry.getKey() + "_" + b.name(), null);
+    private void updateColor(Map.Entry<String, List<LexiconEnum>> entry, Color c) {
+        for (LexiconEnum l: entry.getValue()) {
+            IUIElement e = elementData.getOrDefault(entry.getKey() + "_" + l.name(), null);
             if (e instanceof ModLabel) {
                 ((ModLabel) e).color = c;
             }

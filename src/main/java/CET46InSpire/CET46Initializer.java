@@ -6,6 +6,7 @@ import CET46InSpire.relics.BookOfCET6;
 import CET46InSpire.relics.BookOfJlpt;
 import CET46InSpire.ui.CET46Panel;
 import CET46InSpire.helpers.BookConfig;
+import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.ui.ModConfigPanel;
 import basemod.BaseMod;
 import basemod.ModPanel;
@@ -68,7 +69,7 @@ public class CET46Initializer implements
             needLoadBooks.addAll(bookConfig.lowerLevelBooks);
         });
         // test
-        ModConfigPanel.addRelicPage("loadCET6", Arrays.asList(BookEnum.CET4, BookEnum.CET6));
+        ModConfigPanel.addRelicPage(BookEnum.CET4, Arrays.asList(LexiconEnum.CET4, LexiconEnum.CET6));
 
         logger.info("initBooks: userBooks = {}, needLoadBooks = {}.", userBooks.stream().map(it -> it.bookEnum).collect(Collectors.toList()), needLoadBooks);
     }
