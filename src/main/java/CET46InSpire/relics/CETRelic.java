@@ -29,6 +29,8 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
+import java.util.Arrays;
+
 public abstract class CETRelic extends CustomRelic implements ClickableRelic {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CET46:RelicUI");
     public int pre_counter;
@@ -125,13 +127,11 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
         flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         BookConfig bookConfig = CET46Initializer.allBooks.get(bookEnum);
-        BookConfig usingBookConfig;
-        if (MathUtils.random(0, 99) < CET46Panel.band4RateIn6 || bookConfig.lowerLevelBooks.isEmpty()) {
-            usingBookConfig = bookConfig;
-        } else {
-            // TODO 从所有lowerLevelBooks中使用某种策略选其一
-            usingBookConfig = CET46Initializer.allBooks.get(bookConfig.lowerLevelBooks.get(0));
-        }
+        // TODO 从所有lexicons根据权重选其一
+        BookConfig.LexiconEnum l = bookConfig.lexicons.get(0);
+        // 临时使用booConfig写法, 后面直接改成传递LexiconEnum
+        BookEnum b = BookEnum.valueOf(l.name());
+        BookConfig usingBookConfig = new BookConfig(b, Arrays.asList(b), () -> null);
         QuizAction quizAction;
         // TODO 临时使用switch，待遗物合并重构完成后再优化写法
         switch (usingBookConfig.bookEnum) {

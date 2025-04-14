@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.*;
 
-import static basemod.EasyConfigPanel.*;
+import static basemod.EasyConfigPanel.ConfigField.FieldSetter;
 
 public class ModConfigPanel extends ModPanel {
     /**
@@ -87,7 +87,7 @@ public class ModConfigPanel extends ModPanel {
         pages.add(Arrays.asList("darkMode", "pureFont", "fastMode", "casualMode", "ignoreCheck", "showLexicon"));
         List<String> page2 = new ArrayList<>();     // 第二页不能用Arrays.asList 因为预计将修改其内容
         page2.add("loadCET4");
-        page2.add("loadCET6");
+        page2.add("loadN1");
         pages.add(page2);
 
         configPageNum = 2;
@@ -119,7 +119,7 @@ public class ModConfigPanel extends ModPanel {
 
     }
 
-    public Map<LexiconEnum, Integer> getRelicWeights(BookEnum b) {
+    public static Map<LexiconEnum, Integer> getRelicWeights(BookEnum b) {
         return relicLexicon.getOrDefault(b, new HashMap<>());
     }
 
@@ -309,7 +309,7 @@ public class ModConfigPanel extends ModPanel {
         return null;
     }
 
-    private void saveVar(Object var, Field field, ConfigField.FieldSetter setter) {
+    private void saveVar(Object var, Field field, FieldSetter setter) {
         try {
             setter.set(var.toString());
             this.config.setString(field.getName(), field.get(null).toString());
@@ -438,7 +438,7 @@ public class ModConfigPanel extends ModPanel {
         LEXICON_X = 380.0F;
         LEXICON_Y = 720.0F;
         LEXICON_PAD_X = 400.0F;
-        LEXICON_PAD_Y = 120.0F;
+        LEXICON_PAD_Y = -160.0F;
         BUTTON_DELTA_X1 = 200.0F;
         BUTTON_DELTA_X2 = 0.0F;
         BUTTON_DELTA_Y = -80.0F;

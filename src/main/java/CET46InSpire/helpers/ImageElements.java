@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.lang.reflect.Field;
+
 public class ImageElements {
     private static final Logger logger = LogManager.getLogger(ImageElements.class.getName());
     public static Texture MOD_BADGE;
@@ -63,6 +65,16 @@ public class ImageElements {
         logger.info("Texture load time: {}ms", System.currentTimeMillis() - startTime);
 
         ImageElements.darkMode = CET46Panel.darkMode;
+    }
+
+    public static Texture getLexiconTexture(BookConfig.LexiconEnum l) {
+        try {
+            Field field = ImageElements.class.getField("RELIC_" + l.name() + "_IMG");
+            return (Texture) field.get(null);
+        } catch (Exception e) {
+            logger.info("No texture for lexicon: {}, err: {}", l.name(), e);
+            return RELIC_CET4_IMG;
+        }
     }
 
 }

@@ -1,7 +1,6 @@
 package CET46InSpire.helpers;
 
 import CET46InSpire.CET46Initializer;
-import CET46InSpire.actions.CorrectAction;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.ui.CET46Panel;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,12 +18,16 @@ import java.util.function.Supplier;
 public class BookConfig {
     private static final Logger logger = LogManager.getLogger(BookConfig.class.getName());
     public BookEnum bookEnum;
-    public List<BookEnum> lowerLevelBooks;
+    public List<LexiconEnum> lexicons;
     public Supplier<AbstractRelic> relicSupplier;
 
-    public BookConfig(BookEnum bookEnum, List<BookEnum> lowerLevelBooks, Supplier<AbstractRelic> relicSupplier) {
+    public BookConfig(BookEnum bookEnum, List lexicons, Supplier<AbstractRelic> relicSupplier) {
         this.bookEnum = bookEnum;
-        this.lowerLevelBooks = lowerLevelBooks;
+        // TODO 临时处理一下, 后续需要直接使用List<LexiconEnum>赋值
+        this.lexicons = new ArrayList<>();
+        for (Object var: lexicons) {
+            this.lexicons.add(LexiconEnum.valueOf(var.toString()));
+        }
         this.relicSupplier = relicSupplier;
     }
 

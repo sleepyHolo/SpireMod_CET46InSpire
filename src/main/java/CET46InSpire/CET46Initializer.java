@@ -66,10 +66,11 @@ public class CET46Initializer implements
             }
             userBooks.add(bookConfig);
             needLoadBooks.add(bookConfig.bookEnum);
-            needLoadBooks.addAll(bookConfig.lowerLevelBooks);
+//            needLoadBooks.addAll(bookConfig.lowerLevelBooks);
         });
         // test
         ModConfigPanel.addRelicPage(BookEnum.CET4, Arrays.asList(LexiconEnum.CET4, LexiconEnum.CET6));
+        ModConfigPanel.addRelicPage(BookEnum.N1, Arrays.asList(LexiconEnum.N1, LexiconEnum.N2, LexiconEnum.N3, LexiconEnum.N4, LexiconEnum.N5));
 
         logger.info("initBooks: userBooks = {}, needLoadBooks = {}.", userBooks.stream().map(it -> it.bookEnum).collect(Collectors.toList()), needLoadBooks);
     }
