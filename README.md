@@ -11,6 +11,7 @@
 CET4: [大学英语四级单词(词典重制完美版)](https://ankiweb.net/shared/info/1378032490)  
 CET6: [大学六级英语单词全集（修订版）](https://ankiweb.net/shared/info/2125686844)  
 如有侵权请告知, 我将立即删除词库.
+JLPT: 感谢5mdld的授权, 词库仓库: https://github.com/5mdld/anki-jlpt-decks
 
 以下为旧版本词库来源  
 ~~原始词库来自新东方的pdf版本: [新东方-2024最新英语四六级词汇完整版](https://cet4-6.xdf.cn/202409/13925649.html).~~  
