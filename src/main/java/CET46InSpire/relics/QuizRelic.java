@@ -9,7 +9,6 @@ import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.helpers.ImageElements;
-import CET46InSpire.powers.ChangePowersApplyPower;
 import CET46InSpire.savedata.CorrectionNote;
 import CET46InSpire.ui.ModConfigPanel;
 import com.badlogic.gdx.graphics.Color;
@@ -38,14 +37,15 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CET46:RelicUI");
     public int preScoreCounter;
     public int scoreCounter;
+    private AbstractCard currentCard;
     protected final BookEnum book;
-    public CorrectionNote notebook = null;
-    private boolean isGivenPotion = false;
+    public CorrectionNote notebook;
+    private boolean isGivenPotion;
     public QuizRelic(BookEnum b, RelicTier tier, LandingSound sfx) {
         super(toId(b), "", tier, sfx);
         this.book = b;
         this.counter = 0;   // perfect counter
-        this.scoreCounter = 1;
+        //this.scoreCounter = 1;
         this.preScoreCounter = this.scoreCounter;
         this.notebook = new CorrectionNote();
         this.isGivenPotion = false;
@@ -66,19 +66,28 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     /**
      * 在打出牌之前进行测验, 但目前不清楚是否需要检查是否已经进行测验
      */
-    public void sendQuizPrePlay() {
+    public void sendQuizPrePlay(AbstractCard currentCard) {
         logger.info("There should be a quiz, but now u get a 0!");
         this.scoreCounter = 0;
+        this.currentCard = currentCard;
     }
 
     /**
-     * 在牌进入 Manager 队列之前进行数据修正
+     * 答题后进行数据修正
      */
-    public void changeCardPrePlay(AbstractCard c) {
-        c.damage *= c.damage > 0 ? this.scoreCounter : 1;
-        c.block *= c.block > 0 ? this.scoreCounter : 1;
-        c.magicNumber *= c.magicNumber > 0 ? this.scoreCounter : 1;
-        logger.info("Change Card: {}: D: {}, B: {}, M: {}", c, c.damage, c.block, c.magicNumber);
+    public void changeCardAfterQuiz(int newScore, boolean isPerfect) {
+        logger.info("changeCardAfterQuiz newScore = {}", newScore);
+        this.scoreCounter = newScore;
+        if (isPerfect) {
+            this.counter++;
+        } else {
+            this.counter = 0;
+        }
+
+        currentCard.damage *= currentCard.damage > 0 ? this.scoreCounter : 1;
+        currentCard.block *= currentCard.block > 0 ? this.scoreCounter : 1;
+        currentCard.magicNumber *= currentCard.magicNumber > 0 ? this.scoreCounter : 1;
+        logger.info("Change Card: {}: D: {}, B: {}, M: {}", currentCard, currentCard.damage, currentCard.block, currentCard.magicNumber);
     }
 
     public void resetTexture() {
@@ -97,16 +106,6 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
 
     public String updateDesByLexicon(LexiconEnum lexiconEnum) {
         return "";
-    }
-    public void updatePerfectCounter(boolean isPerfect) {
-        if (isPerfect) {
-            this.counter++;
-        } else {
-            this.counter = 0;
-        }
-        // TODO 是否改用patch，不需要此处了？
-        // ((ChangePowersApplyPower) AbstractDungeon.player.getPower(ChangePowersApplyPower.POWER_ID)).updatePerfectCounter();
-        // AbstractDungeon.player.getPower(ChangePowersApplyPower.POWER_ID).updateDescription();
     }
 
     @Override
@@ -151,7 +150,7 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
 
     @Override
     public void onPlayerEndTurn() {
-        this.scoreCounter = 1;
+        //this.scoreCounter = 1;
         if (Settings.isDebug) {
             this.notebook.outItem();
         }
@@ -159,7 +158,7 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
 
     @Override
     public void onVictory() {
-        this.scoreCounter = 1;
+        //this.scoreCounter = 1;
         this.isGivenPotion = false;
     }
 

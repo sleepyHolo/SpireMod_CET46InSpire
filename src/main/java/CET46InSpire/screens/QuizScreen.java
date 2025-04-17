@@ -148,13 +148,13 @@ public class QuizScreen extends CustomScreen {
         for (AbstractRelic r: AbstractDungeon.player.relics) {
             if (r instanceof QuizRelic) {
                 QuizRelic quizRelic = (QuizRelic) r;
+                int newScore;
                 if (!this.correction) {
-                    quizRelic.scoreCounter = this.score;
-                    quizRelic.updatePerfectCounter(this.isPerfect);
+                    newScore = this.score;
                 } else {
-                    quizRelic.scoreCounter = Math.max(quizRelic.scoreCounter, this.score);
+                    newScore = Math.max(quizRelic.scoreCounter, this.score);
                 }
-                logger.info("quizRelic.scoreCounter set to {}", quizRelic.scoreCounter);
+                quizRelic.changeCardAfterQuiz(newScore, this.isPerfect);
                 if (this.score == 0) {
                     quizRelic.notebook.addItem(this.word_id);
                 }

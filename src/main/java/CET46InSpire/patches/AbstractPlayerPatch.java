@@ -23,14 +23,13 @@ public class AbstractPlayerPatch {
         public static void Prefix(AbstractPlayer __instance, AbstractCard c, AbstractMonster m, int energyOnUse) {
             for (AbstractRelic r: __instance.relics) {
                 if (r instanceof QuizRelic) {
-                    ((QuizRelic) r).sendQuizPrePlay();
+                    ((QuizRelic) r).sendQuizPrePlay(c);
                     return;
                 }
             }
-
         }
 
-        @SpireInsertPatch(locator = Locator.class)
+/*        @SpireInsertPatch(locator = Locator.class)
         public static void Insert(AbstractPlayer __instance, AbstractCard c, AbstractMonster m, int energyOnUse) {
             for (AbstractRelic r: __instance.relics) {
                 if (r instanceof QuizRelic) {
@@ -39,7 +38,7 @@ public class AbstractPlayerPatch {
                 }
             }
 
-        }
+        }*/
 
         public static class Locator extends SpireInsertLocator {
             public int[] Locate(CtBehavior ctBehavior) throws Exception {

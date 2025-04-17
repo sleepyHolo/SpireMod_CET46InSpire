@@ -42,14 +42,5 @@ public class TestJLPT extends QuizRelic {
         return "???";
     }
 
-    @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        // line 286 in GameActionManager
-        if (card.type == AbstractCard.CardType.CURSE || card.type == AbstractCard.CardType.STATUS) {
-            return;
-        }
-        triggerQuiz();
-    }
-
 
 }
