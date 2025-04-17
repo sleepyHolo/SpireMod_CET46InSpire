@@ -128,19 +128,15 @@ public abstract class CETRelic extends CustomRelic implements ClickableRelic {
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         BookConfig bookConfig = CET46Initializer.allBooks.get(bookEnum);
         // TODO 从所有lexicons根据权重选其一
-        BookConfig.LexiconEnum l = bookConfig.lexicons.get(0);
-        // 临时使用booConfig写法, 后面直接改成传递LexiconEnum
-        BookEnum b = BookEnum.valueOf(l.name());
-        BookConfig usingBookConfig = new BookConfig(b, Arrays.asList(b), () -> null);
+        BookConfig.LexiconEnum usingLexicon = bookConfig.lexicons.get(0);
         QuizAction quizAction;
-        // TODO 临时使用switch，待遗物合并重构完成后再优化写法
-        switch (usingBookConfig.bookEnum) {
+        switch (usingLexicon) {
             case CET4:
             case CET6:
-                quizAction = new Cet46QuizAction(usingBookConfig);
+                quizAction = new Cet46QuizAction(bookConfig, usingLexicon);
                 break;
             default:
-                quizAction = new JlptQuizAction(usingBookConfig);
+                quizAction = new JlptQuizAction(bookConfig, usingLexicon);
         }
         this.addToTop(quizAction);
     };

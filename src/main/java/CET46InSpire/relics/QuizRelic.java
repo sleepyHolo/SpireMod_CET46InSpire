@@ -21,8 +21,7 @@ public abstract class QuizRelic extends AbstractRelic {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CET46:RelicUI");
     public int pre_counter = 0;
     public int scoreCounter = 0;
-    private final BookEnum book;
-    private List<LexiconEnum> lexicons;
+    protected final BookEnum book;
 
     public QuizRelic(BookEnum b, RelicTier tier, LandingSound sfx) {
         super(toId(b), "", tier, sfx);

@@ -2,6 +2,7 @@ package CET46InSpire.actions;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.helpers.BookConfig;
+import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.helpers.JapaneseCharacterTool;
 import CET46InSpire.helpers.JapaneseKanaConfuser;
 import com.badlogic.gdx.math.MathUtils;
@@ -14,11 +15,11 @@ import java.util.List;
 
 public class JlptQuizAction extends QuizAction {
 
-    public JlptQuizAction(BookConfig bookConfig) {
+    public JlptQuizAction(BookConfig bookConfig, LexiconEnum usingLexicon) {
         super(
                 bookConfig.bookEnum.name(),
-                CET46Initializer.JSON_MOD_KEY + bookConfig.bookEnum.name() + "_",
-                BookConfig.VOCABULARY_MAP.get(bookConfig.bookEnum)
+                CET46Initializer.JSON_MOD_KEY + usingLexicon.name() + "_",
+                BookConfig.VOCABULARY_MAP.get(usingLexicon)
         );
     }
 

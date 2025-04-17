@@ -31,10 +31,17 @@ public class ModConfigPanel extends ModPanel {
     /**
      * pages用于标记参数的显示页数
      */
-    private static List<List<String>> pages;
+    private static final List<List<String>> pages;
     private static final int configPageNum;
-    private static HashMap<String, List<LexiconEnum>> lexiconMap;
+    /**
+     * key: Button的elementId，内部定义；
+     * value: 点击这个Button影响的List<LexiconEnum>
+     */
+    private static final HashMap<String, List<LexiconEnum>> lexiconMap;
     private int pageNum = 0;
+    /**
+     * 所有IUIElement的elementId映射，elementId是内部定义（开发者自行约定，非框架规定）；
+     */
     private HashMap<String, IUIElement> elementData;
     private UIStrings uiStrings = null;
     private final SpireConfig config;
@@ -289,23 +296,23 @@ public class ModConfigPanel extends ModPanel {
         id %= pages.size();
 
         this.pageNum = id;
-        List<IUIElement> tmp = new ArrayList<>();
+        List<IUIElement> pageElements = new ArrayList<>();
         if (uiStrings != null && id < uiStrings.TEXT.length && !uiStrings.TEXT[id].isEmpty()) {
             this.pageTitle.text = uiStrings.TEXT[id];
-            tmp.add(this.pageTitle);
+            pageElements.add(this.pageTitle);
         }
         for (String name: pages.get(id)) {
-            tmp.add(this.elementData.get(name));
+            pageElements.add(this.elementData.get(name));
         }
         if (this.pageNum < configPageNum) {
             // 翻页按钮
-            tmp.add(this.pageForward);
-            tmp.add(this.pageBackward);
+            pageElements.add(this.pageForward);
+            pageElements.add(this.pageBackward);
         } else {
             // 返回按钮
-            tmp.add(this.pageReturn);
+            pageElements.add(this.pageReturn);
         }
-        this.resetElements(tmp);
+        this.resetElements(pageElements);
         // update weight display
         if (id == 1) {
             this.updateWeights();
@@ -396,6 +403,9 @@ public class ModConfigPanel extends ModPanel {
         }
     }
 
+    /**
+     * relicLexicon和weightedLexicon被赋值
+     */
     private void updateWeights() {
         // 开摆了, 直接一坨循环搞定得了, 自己搓优化不如求大佬重写逻辑
         for (Map.Entry<String, List<LexiconEnum>> entry: lexiconMap.entrySet()) {
