@@ -212,7 +212,8 @@ public class CallOfCETEvent extends AbstractImageEvent {
     public enum BookEnum {
         CET4,
         CET6,
-        N4, N3, N2, N1, N5
+        N4, N3, N2, N1, N5,
+        JLPT
     }
 
 }

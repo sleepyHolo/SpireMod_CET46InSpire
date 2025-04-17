@@ -1,4 +1,37 @@
 package CET46InSpire.relics;
 
-public class TestJLPT {
+import CET46InSpire.events.CallOfCETEvent;
+import CET46InSpire.helpers.BookConfig;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+
+public class TestJLPT extends QuizRelic {
+    public TestJLPT() {
+        super(CallOfCETEvent.BookEnum.JLPT);
+    }
+
+    @Override
+    public AbstractRelic makeCopy() {
+        return new TestJLPT();
+    }
+
+    @Override
+    public String updateDesByLexicon(BookConfig.LexiconEnum lexiconEnum) {
+        if (lexiconEnum == null) {
+            return "NULL";
+        }
+        switch (lexiconEnum) {
+            case N1:
+                return DESCRIPTIONS[0];
+            case N2:
+                return DESCRIPTIONS[1];
+            case N3:
+                return DESCRIPTIONS[2];
+            case N4:
+                return DESCRIPTIONS[3];
+            case N5:
+                return DESCRIPTIONS[4];
+        }
+        return "???";
+    }
+
 }

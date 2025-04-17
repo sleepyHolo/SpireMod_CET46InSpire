@@ -1,9 +1,7 @@
 package CET46InSpire;
 
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
-import CET46InSpire.relics.BookOfCET4;
-import CET46InSpire.relics.BookOfCET6;
-import CET46InSpire.relics.BookOfJlpt;
+import CET46InSpire.relics.TestJLPT;
 import CET46InSpire.ui.CET46Panel;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
@@ -46,18 +44,21 @@ public class CET46Initializer implements
      */
     public static Set<BookConfig> userBooks = new HashSet<>();
     /**
-     * 直接+间接需要加载的范围
+     * 需要加载的范围, 指词库范围
      */
-    public static Set<BookEnum> needLoadBooks = new HashSet<>();
+    public static Set<LexiconEnum> needLoadBooks = new HashSet<LexiconEnum>();
     static {
-        allBooks.put(BookEnum.CET4, new BookConfig(BookEnum.CET4, new ArrayList<>(), () -> new BookOfCET4()));
-        allBooks.put(BookEnum.CET6, new BookConfig(BookEnum.CET6, Arrays.asList(BookEnum.CET4), () -> new BookOfCET6()));
-        allBooks.put(BookEnum.N5, new BookConfig(BookEnum.N5, new ArrayList<>(), () -> new BookOfJlpt(BookEnum.N5, ImageElements.RELIC_N5_IMG)));
-        // TODO 使用对应的Texture
-        allBooks.put(BookEnum.N4, new BookConfig(BookEnum.N4, Arrays.asList(BookEnum.N5), () -> new BookOfJlpt(BookEnum.N4, ImageElements.RELIC_N5_IMG)));
-        allBooks.put(BookEnum.N3, new BookConfig(BookEnum.N3, Arrays.asList(BookEnum.N4), () -> new BookOfJlpt(BookEnum.N3, ImageElements.RELIC_N5_IMG)));
-        allBooks.put(BookEnum.N2, new BookConfig(BookEnum.N2, Arrays.asList(BookEnum.N3), () -> new BookOfJlpt(BookEnum.N2, ImageElements.RELIC_N5_IMG)));
-        allBooks.put(BookEnum.N1, new BookConfig(BookEnum.N1, Arrays.asList(BookEnum.N2), () -> new BookOfJlpt(BookEnum.N1, ImageElements.RELIC_N5_IMG)));
+        // test
+        allBooks.put(BookEnum.JLPT, new BookConfig(BookEnum.JLPT,
+                Arrays.asList(LexiconEnum.N1, LexiconEnum.N2, LexiconEnum.N3, LexiconEnum.N4, LexiconEnum.N5), () -> new TestJLPT()));
+//        allBooks.put(BookEnum.CET4, new BookConfig(BookEnum.CET4, new ArrayList<>(), () -> new BookOfCET4()));
+//        allBooks.put(BookEnum.CET6, new BookConfig(BookEnum.CET6, Arrays.asList(BookEnum.CET4), () -> new BookOfCET6()));
+//        allBooks.put(BookEnum.N5, new BookConfig(BookEnum.N5, new ArrayList<>(), () -> new BookOfJlpt(BookEnum.N5, ImageElements.RELIC_N5_IMG)));
+//        // TODO 使用对应的Texture
+//        allBooks.put(BookEnum.N4, new BookConfig(BookEnum.N4, Arrays.asList(BookEnum.N5), () -> new BookOfJlpt(BookEnum.N4, ImageElements.RELIC_N5_IMG)));
+//        allBooks.put(BookEnum.N3, new BookConfig(BookEnum.N3, Arrays.asList(BookEnum.N4), () -> new BookOfJlpt(BookEnum.N3, ImageElements.RELIC_N5_IMG)));
+//        allBooks.put(BookEnum.N2, new BookConfig(BookEnum.N2, Arrays.asList(BookEnum.N3), () -> new BookOfJlpt(BookEnum.N2, ImageElements.RELIC_N5_IMG)));
+//        allBooks.put(BookEnum.N1, new BookConfig(BookEnum.N1, Arrays.asList(BookEnum.N2), () -> new BookOfJlpt(BookEnum.N1, ImageElements.RELIC_N5_IMG)));
     }
     private static void initBooks() {
         CET46Initializer.allBooks.values().forEach(bookConfig -> {
@@ -65,12 +66,12 @@ public class CET46Initializer implements
                 return;
             }
             userBooks.add(bookConfig);
-            needLoadBooks.add(bookConfig.bookEnum);
-//            needLoadBooks.addAll(bookConfig.lowerLevelBooks);
+//            needLoadBooks.add(bookConfig.bookEnum);
+            needLoadBooks.addAll(bookConfig.lexicons);
         });
         // test
-        ModConfigPanel.addRelicPage(BookEnum.CET4, Arrays.asList(LexiconEnum.CET4, LexiconEnum.CET6));
-        ModConfigPanel.addRelicPage(BookEnum.N1, Arrays.asList(LexiconEnum.N1, LexiconEnum.N2, LexiconEnum.N3, LexiconEnum.N4, LexiconEnum.N5));
+//        ModConfigPanel.addRelicPage(BookEnum.CET4, Arrays.asList(LexiconEnum.CET4, LexiconEnum.CET6));
+        ModConfigPanel.addRelicPage(BookEnum.JLPT, Arrays.asList(LexiconEnum.N1, LexiconEnum.N2, LexiconEnum.N3, LexiconEnum.N4, LexiconEnum.N5));
 
         logger.info("initBooks: userBooks = {}, needLoadBooks = {}.", userBooks.stream().map(it -> it.bookEnum).collect(Collectors.toList()), needLoadBooks);
     }
@@ -118,8 +119,8 @@ public class CET46Initializer implements
     public void loadVocabulary() {
         long startTime = System.currentTimeMillis();
 
-        needLoadBooks.forEach(bookEnum -> {
-            BaseMod.loadCustomStringsFile(UIStrings.class, "CET46Resource/vocabulary/" + bookEnum.name() + ".json");
+        needLoadBooks.forEach(lexiconEnum -> {
+            BaseMod.loadCustomStringsFile(UIStrings.class, "CET46Resource/vocabulary/" + lexiconEnum.name() + ".json");
         });
         logger.info("Vocabulary load time: {}ms", System.currentTimeMillis() - startTime);
     }
@@ -128,6 +129,7 @@ public class CET46Initializer implements
     public void receivePostInitialize() {
         BookConfig.init_map();
         ((ModConfigPanel) settingsPanel).initPanel();
+        ((ModConfigPanel) settingsPanel).resetAllQuizRelics();
         CET46Panel.readVars();
         BaseMod.registerModBadge(ImageElements.MOD_BADGE,
                 "CET46 In Spire", "__name__, Dim", "Do_not_forget_CET46!", settingsPanel);

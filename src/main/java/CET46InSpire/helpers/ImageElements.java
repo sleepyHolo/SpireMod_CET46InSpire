@@ -72,7 +72,7 @@ public class ImageElements {
             Field field = ImageElements.class.getField("RELIC_" + l.name() + "_IMG");
             return (Texture) field.get(null);
         } catch (Exception e) {
-            logger.info("No texture for lexicon: {}, err: {}", l.name(), e);
+            logger.info("No texture for lexicon: {}, err: {}", l == null ? "NULL" : l.name(), e);
             return RELIC_CET4_IMG;
         }
     }

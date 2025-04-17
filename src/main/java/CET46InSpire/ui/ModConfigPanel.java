@@ -3,6 +3,8 @@ package CET46InSpire.ui;
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
+import CET46InSpire.helpers.ImageElements;
+import CET46InSpire.relics.QuizRelic;
 import basemod.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -10,9 +12,13 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -21,6 +27,7 @@ import java.util.*;
 import static basemod.EasyConfigPanel.ConfigField.FieldSetter;
 
 public class ModConfigPanel extends ModPanel {
+    private static final Logger logger = LogManager.getLogger(ModConfigPanel.class.getName());
     /**
      * pages用于标记参数的显示页数
      */
@@ -74,25 +81,27 @@ public class ModConfigPanel extends ModPanel {
     public static boolean loadN3 = true;
     public static boolean loadN2 = true;
     public static boolean loadN1 = true;
+    public static boolean loadJLPT = true;
 
     /**
      * 这个是遗物对应的词库权重
      * lexiconData Map<RelicName_LexiconName, Weight>>>
      */
     public static HashMap<String, Integer> lexiconData;
+    public static HashMap<BookEnum, LexiconEnum> weightedLexicon;
     public static HashMap<BookEnum, HashMap<LexiconEnum, Integer>> relicLexicon;
 
     static {
         pages = new ArrayList<>();
         pages.add(Arrays.asList("darkMode", "pureFont", "fastMode", "casualMode", "ignoreCheck", "showLexicon"));
         List<String> page2 = new ArrayList<>();     // 第二页不能用Arrays.asList 因为预计将修改其内容
-        page2.add("loadCET4");
-        page2.add("loadN1");
+        page2.add("loadJLPT");
         pages.add(page2);
 
         configPageNum = 2;
         lexiconMap = new HashMap<>();
         lexiconData = new HashMap<>();
+        weightedLexicon = new HashMap<>();
         relicLexicon = new HashMap<>();
     }
 
@@ -121,6 +130,10 @@ public class ModConfigPanel extends ModPanel {
 
     public static Map<LexiconEnum, Integer> getRelicWeights(BookEnum b) {
         return relicLexicon.getOrDefault(b, new HashMap<>());
+    }
+
+    public static LexiconEnum getWeightedLexicon(BookEnum b) {
+        return weightedLexicon.getOrDefault(b, null);
     }
 
     public void initPanel() {
@@ -233,6 +246,7 @@ public class ModConfigPanel extends ModPanel {
                 elementData.put(tmp_name, tmp);
             }
             pages.add(page);
+            logger.info("Successfully initialize page for: {}", entry.getKey());
         }
     }
 
@@ -302,7 +316,7 @@ public class ModConfigPanel extends ModPanel {
         if (field.getType() == boolean.class) {
             // load
             field.set(null, Boolean.parseBoolean(this.config.getString(field.getName())));
-            return new ModLabeledToggleButton(uiStrings.TEXT_DICT.get(name), ELEMENT_X, 0.0F,
+            return new ModLabeledToggleButton(uiStrings.TEXT_DICT.getOrDefault(name, name), ELEMENT_X, 0.0F,
                     Settings.CREAM_COLOR, FontHelper.charDescFont, (Boolean)field.get(null), this, (label) -> {},
                     (button) -> {saveVar(button.enabled, field, s -> {field.set(null, Boolean.parseBoolean(s));});});
         }
@@ -365,8 +379,21 @@ public class ModConfigPanel extends ModPanel {
             // 将面板返回首页, 放在前面那个逻辑块就不行, but why?
             this.setPage(0);
             this.checkReset();
+            this.resetAllQuizRelics();
         }
 
+    }
+
+    /**
+     * 在 RelicLibrary 中更新所有位于 specialList 的 QuizRelic 的图片和描述
+     */
+    public void resetAllQuizRelics() {
+        for (AbstractRelic r: RelicLibrary.specialList) {
+            if (r instanceof QuizRelic) {
+                ((QuizRelic) r).resetTexture();
+                ((QuizRelic) r).resetDescription();
+            }
+        }
     }
 
     private void updateWeights() {
@@ -377,6 +404,7 @@ public class ModConfigPanel extends ModPanel {
                 continue;
             }
             int total = 0;
+            int max = 0;    // 用于记录最大权重, 在下一个循环获取第一次出现的最大lexicon, 这样就不需要使用pair
             List<LexiconEnum> notZeroList = new ArrayList<>();
             for (LexiconEnum l: entry.getValue()) {
                 int tmp = lexiconData.getOrDefault(entry.getKey() + "_" + l.name(), 0);
@@ -384,19 +412,29 @@ public class ModConfigPanel extends ModPanel {
                     notZeroList.add(l);
                     total += tmp;
                 }
+                if (tmp > max) {
+                    max = tmp;
+                }
             }
             float k = total == 0 ? 0.0F : 100.0F / total;
             StringBuilder sb = new StringBuilder();
             BookEnum relic = BookEnum.valueOf(entry.getKey().substring(4));     // 去掉前面的 load
             HashMap<LexiconEnum, Integer> tmpMap = new HashMap<>();
+            LexiconEnum weighted = null;
             // update text
             for (LexiconEnum l: notZeroList) {
-                tmpMap.put(l, lexiconData.get(entry.getKey() + "_" + l.name()));
+                int tmp = lexiconData.get(entry.getKey() + "_" + l.name());
+                if (weighted == null && tmp == max) {
+                    weighted = l;
+                }
+                tmpMap.put(l, tmp);
                 sb.append(uiStrings.TEXT_DICT.getOrDefault(l.name(), l.name())).append(": ");
-                sb.append(Math.round(k * lexiconData.get(entry.getKey() + "_" + l.name()))).append("%. ");
+                sb.append(Math.round(k * tmp)).append("%. ");
             }
             relicLexicon.put(relic, tmpMap);
             ((ModLabel) element).text = sb.toString();
+            weightedLexicon.put(relic, weighted);   // 注意 weighted 有可能是 null
+            logger.info("Weights updated.");
 
         }
     }
@@ -409,6 +447,7 @@ public class ModConfigPanel extends ModPanel {
             }
             if (total == 0) {
                 this.updateColor(entry, Color.RED);
+                logger.error("Weights should not be ZEROS.");
                 return false;
             }
             this.updateColor(entry, Color.WHITE);
