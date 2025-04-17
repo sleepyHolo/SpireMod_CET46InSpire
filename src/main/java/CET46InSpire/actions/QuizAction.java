@@ -1,5 +1,6 @@
 package CET46InSpire.actions;
 
+import CET46InSpire.patches.AbstractPlayerPatch;
 import CET46InSpire.ui.CET46Panel;
 import basemod.BaseMod;
 import com.badlogic.gdx.math.MathUtils;
@@ -9,10 +10,17 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import CET46InSpire.helpers.ArrayListHelper;
 import CET46InSpire.screens.QuizScreen;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.List;
 
 public abstract class QuizAction extends AbstractGameAction {
+    private static final Logger logger = LogManager.getLogger(AbstractPlayerPatch.class);
     protected final String LEXICON;
     protected final String VOCABULARY_ID;
     protected final int VOCABULARY_SIZE;
@@ -35,7 +43,7 @@ public abstract class QuizAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FASTER) {
 
             QuizData quizData = nextQuiz();
-
+            logger.info("quizData = {}", quizData);
             BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.show, LEXICON,
                     quizData.correctOptions, quizData.allOptions, VOCABULARY_ID + quizData.wordId, false);
             tickDuration();
@@ -47,21 +55,14 @@ public abstract class QuizAction extends AbstractGameAction {
 
     protected abstract QuizData nextQuiz();
 
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class QuizData {
-        public int wordId;
-        public String show;
-        public List<String> correctOptions;
-        public List<String> allOptions;
-
-        public QuizData() {
-        }
-
-        public QuizData(int wordId, String show, List<String> correctOptions, List<String> allOptions) {
-            this.wordId = wordId;
-            this.show = show;
-            this.correctOptions = correctOptions;
-            this.allOptions = allOptions;
-        }
+        private int wordId;
+        private String show;
+        private List<String> correctOptions;
+        private List<String> allOptions;
     }
 
     static {

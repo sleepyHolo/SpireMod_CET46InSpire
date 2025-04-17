@@ -7,12 +7,15 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import javassist.CtBehavior;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 /**
  * 在打出卡牌之前触发小测, 并进行数据修正
  */
 public class AbstractPlayerPatch {
+    private static final Logger logger = LogManager.getLogger(AbstractPlayerPatch.class);
     @SpirePatch(clz = AbstractPlayer.class, method = "useCard",
             paramtypez = {AbstractCard.class, AbstractMonster.class, int.class})
     public static class ChangeCardDataPrePlay {

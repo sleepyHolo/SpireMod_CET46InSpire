@@ -51,22 +51,5 @@ public class TestJLPT extends QuizRelic {
         triggerQuiz();
     }
 
-    public void triggerQuiz() {
-        flash();
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        BookConfig bookConfig = CET46Initializer.allBooks.get(book);
-        // TODO 从所有lexicons根据权重选其一
-        BookConfig.LexiconEnum usingLexicon = bookConfig.lexicons.get(0);
-        QuizAction quizAction;
-        switch (usingLexicon) {
-            case CET4:
-            case CET6:
-                quizAction = new Cet46QuizAction(bookConfig, usingLexicon);
-                break;
-            default:
-                quizAction = new JlptQuizAction(bookConfig, usingLexicon);
-        }
-        this.addToTop(quizAction);
-    }
 
 }

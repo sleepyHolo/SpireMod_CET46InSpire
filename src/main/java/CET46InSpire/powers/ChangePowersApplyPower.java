@@ -1,7 +1,7 @@
 package CET46InSpire.powers;
 
 import CET46InSpire.helpers.ImageElements;
-import CET46InSpire.relics.CETRelic;
+import CET46InSpire.relics.QuizRelic;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -20,16 +20,20 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.lang.reflect.Field;
 
+/**
+ * 是否改用patch，不需要此处了？
+ */
+@Deprecated
 public class ChangePowersApplyPower extends AbstractPower {
     public static final String POWER_ID = "CET46:ChangePowersApplyPower";
     private static final PowerStrings powerStrings;
     private static final String NAME;
     private static final String[] DESCRIPTIONS;
-    private final CETRelic linkedRelic;
+    private final QuizRelic linkedRelic;
     private final Color color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
     private boolean oddTurn = true;
 
-    public ChangePowersApplyPower(AbstractCreature owner, CETRelic linkedRelic) {
+    public ChangePowersApplyPower(AbstractCreature owner, QuizRelic linkedRelic) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;

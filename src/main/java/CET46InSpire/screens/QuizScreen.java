@@ -1,6 +1,7 @@
 package CET46InSpire.screens;
 
 import CET46InSpire.helpers.CNFontHelper;
+import CET46InSpire.relics.QuizRelic;
 import CET46InSpire.ui.*;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
@@ -18,7 +19,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import CET46InSpire.relics.CETRelic;
 import CET46InSpire.helpers.ImageElements;
 
 import java.util.ArrayList;
@@ -146,19 +146,21 @@ public class QuizScreen extends CustomScreen {
     public void close() {
         // get score
         for (AbstractRelic r: AbstractDungeon.player.relics) {
-            if (r instanceof CETRelic) {
+            if (r instanceof QuizRelic) {
+                QuizRelic quizRelic = (QuizRelic) r;
                 if (!this.correction) {
-                    ((CETRelic) r).scoreCounter = this.score;
-                    ((CETRelic) r).updatePerfectCounter(this.isPerfect);
+                    quizRelic.scoreCounter = this.score;
+                    quizRelic.updatePerfectCounter(this.isPerfect);
                 } else {
-                    ((CETRelic) r).scoreCounter = Math.max(((CETRelic) r).scoreCounter, this.score);
+                    quizRelic.scoreCounter = Math.max(quizRelic.scoreCounter, this.score);
                 }
+                logger.info("quizRelic.scoreCounter set to {}", quizRelic.scoreCounter);
                 if (this.score == 0) {
-                    ((CETRelic) r).notebook.addItem(this.word_id);
+                    quizRelic.notebook.addItem(this.word_id);
                 }
                 if (this.correction && this.isPerfect) {
-                    ((CETRelic) r).notebook.reduceItem(this.word_id);
-                    ((CETRelic) r).givePotion();
+                    quizRelic.notebook.reduceItem(this.word_id);
+                    quizRelic.givePotion();
                 }
                 break;
             }
