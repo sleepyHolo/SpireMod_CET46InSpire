@@ -4,7 +4,7 @@ import CET46InSpire.CET46Initializer;
 import CET46InSpire.helpers.ArrayListHelper;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
-import CET46InSpire.ui.CET46Panel;
+import CET46InSpire.ui.ModConfigPanel;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -35,7 +35,7 @@ public class Cet46QuizAction extends QuizAction {
             }
             right_ans_list.add(item);
         }
-        right_ans_list = ArrayListHelper.choose(right_ans_list, CET46Panel.maxAnsNum);
+        right_ans_list = ArrayListHelper.choose(right_ans_list, ModConfigPanel.maxAnsNum);
 
         ArrayList<String> meaning_list = new ArrayList<>();
         // copy

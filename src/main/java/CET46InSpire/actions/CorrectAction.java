@@ -3,7 +3,7 @@ package CET46InSpire.actions;
 import CET46InSpire.helpers.ArrayListHelper;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.screens.QuizScreen;
-import CET46InSpire.ui.CET46Panel;
+import CET46InSpire.ui.ModConfigPanel;
 import basemod.BaseMod;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -47,7 +47,7 @@ public class CorrectAction extends AbstractGameAction {
                 }
                 right_ans_list.add(item);
             }
-            right_ans_list = ArrayListHelper.choose(right_ans_list, CET46Panel.maxAnsNum);
+            right_ans_list = ArrayListHelper.choose(right_ans_list, ModConfigPanel.maxAnsNum);
 
             ArrayList<String> meaning_list = new ArrayList<>();
             // copy

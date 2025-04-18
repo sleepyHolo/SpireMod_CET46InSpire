@@ -2,7 +2,6 @@ package CET46InSpire;
 
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.relics.TestJLPT;
-import CET46InSpire.ui.CET46Panel;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.ui.ModConfigPanel;
@@ -130,7 +129,6 @@ public class CET46Initializer implements
         BookConfig.init_map();
         ((ModConfigPanel) settingsPanel).initPanel();
         ((ModConfigPanel) settingsPanel).resetAllQuizRelics();
-        CET46Panel.readVars();
         BaseMod.registerModBadge(ImageElements.MOD_BADGE,
                 "CET46 In Spire", "__name__, Dim", "Do_not_forget_CET46!", settingsPanel);
 

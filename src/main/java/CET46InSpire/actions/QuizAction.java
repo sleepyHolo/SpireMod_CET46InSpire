@@ -1,17 +1,11 @@
 package CET46InSpire.actions;
 
 import CET46InSpire.patches.AbstractPlayerPatch;
-import CET46InSpire.ui.CET46Panel;
 import basemod.BaseMod;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.localization.UIStrings;
-import CET46InSpire.helpers.ArrayListHelper;
 import CET46InSpire.screens.QuizScreen;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.logging.log4j.LogManager;

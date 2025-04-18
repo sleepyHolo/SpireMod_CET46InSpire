@@ -106,7 +106,7 @@ public class QuizScreen extends CustomScreen {
             logger.info("wtf? why?");
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
         }
-        if (CET46Panel.pureFont) {
+        if (ModConfigPanel.pureFont) {
             this.titleFont = CNFontHelper.pureTitleFont;
             this.descFont = CNFontHelper.pureDescFont;
         } else {
@@ -225,7 +225,7 @@ public class QuizScreen extends CustomScreen {
         if (this.delta_y == 0.0F) {
             return;
         }
-        if (CET46Panel.fastMode) {
+        if (ModConfigPanel.fastMode) {
             this.delta_y = MathUtils.lerp(this.delta_y, Settings.HEIGHT / 2.0F - 540.0F * Settings.yScale,
                     Gdx.graphics.getDeltaTime() * 50.0F);
             if (Math.abs(this.delta_y - 0.0F) < 5.0F)
@@ -241,7 +241,7 @@ public class QuizScreen extends CustomScreen {
     private void renderQuestion(SpriteBatch sb, Color font_color) {
         FontHelper.renderFontCentered(sb, this.titleFont, this.word,
                 QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, font_color);
-        if (CET46Panel.showLexicon) {
+        if (ModConfigPanel.showLexicon) {
             String lexicon = this.correction ? this.lexicon : TEXT[3] + this.lexicon;
             FontHelper.renderFontLeftTopAligned(sb, this.descFont, lexicon,
                     LEXICON_X, FRAME_Y + LEXICON_Y + this.delta_y, font_color);
@@ -286,7 +286,7 @@ public class QuizScreen extends CustomScreen {
         if (Settings.isDebug) {
             logger.info("Right: {}, Wrong: {}", this.right_ans_num, this.wrong_ans_num);
         }
-        if (CET46Panel.ignoreCheck) {
+        if (ModConfigPanel.ignoreCheck) {
             this.returnButton.buttonClicked();
         } else {
             this.returnButton.showInstantly(TEXT[1]);
@@ -295,7 +295,7 @@ public class QuizScreen extends CustomScreen {
 
     public void getScore() {
         this.score = this.right_ans_num - this.wrong_ans_num;
-        if (CET46Panel.casualMode && this.score < 1) {
+        if (ModConfigPanel.casualMode && this.score < 1) {
             this.score = 1;
             return;
         }

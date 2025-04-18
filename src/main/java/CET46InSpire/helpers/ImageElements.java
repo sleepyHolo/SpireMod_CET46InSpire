@@ -1,6 +1,6 @@
 package CET46InSpire.helpers;
 
-import CET46InSpire.ui.CET46Panel;
+import CET46InSpire.ui.ModConfigPanel;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import org.apache.logging.log4j.LogManager;
@@ -41,7 +41,7 @@ public class ImageElements {
         long startTime = System.currentTimeMillis();
 
         MOD_BADGE = ImageMaster.loadImage("CET46Resource/image/badge.png");
-        if (CET46Panel.darkMode) {
+        if (ModConfigPanel.darkMode) {
             WORD_SCREEN_BASE = ImageMaster.loadImage("CET46Resource/image/ui/word_screen_base_dark.png");
             INFO_BUTTON = ImageMaster.loadImage("CET46Resource/image/ui/button_dark.png");
             WORD_BUTTON = ImageMaster.loadImage("CET46Resource/image/ui/button_word_dark.png");
@@ -64,7 +64,7 @@ public class ImageElements {
 
         logger.info("Texture load time: {}ms", System.currentTimeMillis() - startTime);
 
-        ImageElements.darkMode = CET46Panel.darkMode;
+        ImageElements.darkMode = ModConfigPanel.darkMode;
     }
 
     public static Texture getLexiconTexture(BookConfig.LexiconEnum l) {

@@ -29,12 +29,16 @@ import static basemod.EasyConfigPanel.ConfigField.FieldSetter;
 public class ModConfigPanel extends ModPanel {
     private static final Logger logger = LogManager.getLogger(ModConfigPanel.class.getName());
     /**
-     * pages用于标记参数的显示页数
+     * pages用于标记参数的显示页数, String是 elementData 的 key
      */
     private static final List<List<String>> pages;
     private static final int configPageNum;
     /**
-     * key: Button的elementId，内部定义；
+     * intRange 用于记录 int 型数据的滑块范围，key是 pages的字段
+     */
+    private static final HashMap<String, List<Integer>> intRange;
+    /**
+     * key: Button的elementId，内部定义；是 load + BooEnum.name
      * value: 点击这个Button影响的List<LexiconEnum>
      */
     private static final HashMap<String, List<LexiconEnum>> lexiconMap;
@@ -79,15 +83,7 @@ public class ModConfigPanel extends ModPanel {
     public static boolean casualMode = false;
     public static boolean ignoreCheck = false;
     public static boolean showLexicon = true;
-    public static int band4RateIn6 = 50;
     public static int maxAnsNum = 3;
-    public static boolean loadCET4 = true;
-    public static boolean loadCET6 = true;
-    public static boolean loadN5 = true;
-    public static boolean loadN4 = true;
-    public static boolean loadN3 = true;
-    public static boolean loadN2 = true;
-    public static boolean loadN1 = true;
     public static boolean loadJLPT = true;
 
     /**
@@ -100,7 +96,7 @@ public class ModConfigPanel extends ModPanel {
 
     static {
         pages = new ArrayList<>();
-        pages.add(Arrays.asList("darkMode", "pureFont", "fastMode", "casualMode", "ignoreCheck", "showLexicon"));
+        pages.add(Arrays.asList("darkMode", "pureFont", "fastMode", "casualMode", "ignoreCheck", "showLexicon", "maxAnsNum"));
         List<String> page2 = new ArrayList<>();     // 第二页不能用Arrays.asList 因为预计将修改其内容
         page2.add("loadJLPT");
         pages.add(page2);
@@ -110,6 +106,10 @@ public class ModConfigPanel extends ModPanel {
         lexiconData = new HashMap<>();
         weightedLexicon = new HashMap<>();
         relicLexicon = new HashMap<>();
+
+        // 只读数据 int range
+        intRange = new HashMap<>();
+        intRange.put("maxAnsNum", Arrays.asList(1, 3));
     }
 
 
@@ -168,6 +168,12 @@ public class ModConfigPanel extends ModPanel {
                     if (element != null) {
                         element.setY(pagePos);
                         this.elementData.put(name, element);
+                        // 处理整数部分, 这个时候 element 是 slider, 还有个 label 没有设置位置
+                        if (elementData.containsKey(name + "_label")) {
+                            elementData.get(name + "_label").set(ELEMENT_X + 40.0F, pagePos);
+                            pagePos -= PADDINGS_Y.get(i);
+                            element.set(ELEMENT_X + 40.0F, pagePos);
+                        }
                         // 更新位置
                         pagePos -= PADDINGS_Y.get(i);
                     }
@@ -303,6 +309,10 @@ public class ModConfigPanel extends ModPanel {
         }
         for (String name: pages.get(id)) {
             pageElements.add(this.elementData.get(name));
+            // 哪个智障设计的, 补丁打到这里来了; 啊 原来我是智障啊
+            if (this.elementData.containsKey(name + "_label")) {
+                pageElements.add(this.elementData.get(name + "_label"));
+            }
         }
         if (this.pageNum < configPageNum) {
             // 翻页按钮
@@ -326,6 +336,17 @@ public class ModConfigPanel extends ModPanel {
             return new ModLabeledToggleButton(uiStrings.TEXT_DICT.getOrDefault(name, name), ELEMENT_X, 0.0F,
                     Settings.CREAM_COLOR, FontHelper.charDescFont, (Boolean)field.get(null), this, (label) -> {},
                     (button) -> {saveVar(button.enabled, field, s -> {field.set(null, Boolean.parseBoolean(s));});});
+        }
+        if (field.getType() == int.class) {
+            // load
+            field.set(null, Integer.parseInt(this.config.getString(field.getName())));
+            // label, 这块处理的有点糟糕了
+            elementData.put(name + "_label",
+                    new ModLabel(uiStrings.TEXT_DICT.getOrDefault(name, name), ELEMENT_X, 0.0F,
+                            Settings.CREAM_COLOR, FontHelper.charDescFont, this, (text) -> {}));
+            return new ModMinMaxSlider("", ELEMENT_X, 10.0F, intRange.get(name).get(0), intRange.get(name).get(1),
+                    (Integer)field.get(null), "%.0f", this,
+                    (slider) -> {saveVar(slider.getValue(), field, s -> {field.set(null, Math.round(Float.parseFloat(s)));});});
         }
         return null;
     }
