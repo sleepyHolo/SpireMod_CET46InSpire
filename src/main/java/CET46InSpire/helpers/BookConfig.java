@@ -52,10 +52,6 @@ public class BookConfig {
         logger.info("CET46Settings init called");
     }
 
-    public static int getLexiconSize(String lexicon) {
-        String key = lexicon.substring(CET46Initializer.JSON_MOD_KEY.length(), lexicon.length() - 1);
-        return VOCABULARY_MAP.getOrDefault(LexiconEnum.valueOf(key), 0);
-    }
 
     /**
      * 这个是词库的

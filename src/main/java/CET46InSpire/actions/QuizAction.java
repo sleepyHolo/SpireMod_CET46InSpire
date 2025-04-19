@@ -1,6 +1,8 @@
 package CET46InSpire.actions;
 
-import CET46InSpire.patches.AbstractPlayerPatch;
+import CET46InSpire.helpers.BookConfig.LexiconEnum;
+import CET46InSpire.relics.BuildQuizDataRequest;
+import CET46InSpire.relics.QuizRelic;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.Settings;
@@ -15,31 +17,22 @@ import java.util.List;
 
 public abstract class QuizAction extends AbstractGameAction {
     private static final Logger logger = LogManager.getLogger(QuizAction.class);
-    protected final String LEXICON;
-    protected final String VOCABULARY_ID;
-    protected final int VOCABULARY_SIZE;
-    protected static final int MAX_MEANING_NUM;
-
-    public QuizAction(String LEXICON, String VOCABULARY_ID, int VOCABULARY_SIZE) {
-        this.LEXICON = LEXICON;
-        this.VOCABULARY_ID = VOCABULARY_ID;
-        this.VOCABULARY_SIZE = VOCABULARY_SIZE;
+    protected final LexiconEnum lexicon;
+    private final QuizRelic quizRelic;
+    public QuizAction(QuizRelic quizRelic, LexiconEnum lexicon) {
+        this.lexicon = lexicon;
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FASTER;
-    }
-
-    public QuizAction(String VOCABULARY_ID, int VOCABULARY_SIZE) {
-        this("Default", VOCABULARY_ID, VOCABULARY_SIZE);
+        this.quizRelic = quizRelic;
     }
 
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FASTER) {
-
-            QuizData quizData = nextQuiz();
+            QuizData quizData = quizRelic.buildQuizData(BuildQuizDataRequest.Factory.fromRandom(lexicon));
             logger.info("quizData = {}", quizData);
-            BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.show, LEXICON,
-                    quizData.correctOptions, quizData.allOptions, VOCABULARY_ID + quizData.wordId, false);
+            BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.show, lexicon.name(),
+                    quizData.correctOptions, quizData.allOptions, quizData.getWordUiStringsId(), false);
             tickDuration();
             return;
         }
@@ -47,19 +40,15 @@ public abstract class QuizAction extends AbstractGameAction {
 
     }
 
-    protected abstract QuizData nextQuiz();
-
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
     public static class QuizData {
         private int wordId;
+        private String wordUiStringsId;
         private String show;
         private List<String> correctOptions;
         private List<String> allOptions;
     }
 
-    static {
-        MAX_MEANING_NUM = 9;
-    }
 }
