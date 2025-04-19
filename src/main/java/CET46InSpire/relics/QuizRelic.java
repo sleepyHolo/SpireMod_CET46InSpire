@@ -1,10 +1,10 @@
 package CET46InSpire.relics;
 
 import CET46InSpire.CET46Initializer;
-import CET46InSpire.actions.Cet46QuizAction;
+import CET46InSpire.actions.GeneralQuizAction;
 import CET46InSpire.actions.CorrectAction;
-import CET46InSpire.actions.JlptQuizAction;
 import CET46InSpire.actions.QuizAction;
+import CET46InSpire.actions.QuizAction.QuizData;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
@@ -15,12 +15,10 @@ import CET46InSpire.ui.ModConfigPanel;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -41,6 +39,9 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     protected final BookEnum book;
     public CorrectionNote notebook;
     private boolean isGivenPotion;
+
+
+
     public QuizRelic(BookEnum b, RelicTier tier, LandingSound sfx) {
         super(toId(b), "", tier, sfx);
         this.book = b;
@@ -172,15 +173,7 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         BookConfig bookConfig = CET46Initializer.allBooks.get(book);
         // TODO 从所有lexicons根据权重选其一
         BookConfig.LexiconEnum usingLexicon = bookConfig.lexicons.get(0);
-        QuizAction quizAction;
-        switch (usingLexicon) {
-            case CET4:
-            case CET6:
-                quizAction = new Cet46QuizAction(bookConfig, usingLexicon);
-                break;
-            default:
-                quizAction = new JlptQuizAction(bookConfig, usingLexicon);
-        }
+        QuizAction quizAction = new GeneralQuizAction(this, bookConfig, usingLexicon);
         this.addToTop(quizAction);
     };
 
@@ -196,7 +189,7 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
             this.givePotion(uiStrings.TEXT[0]);
             return;
         }
-        this.addToTop(new CorrectAction(target));
+        this.addToTop(new CorrectAction(target, this));
     }
 
     public void givePotion(String talk) {
@@ -225,4 +218,9 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     public void givePotion() {
         this.givePotion("");
     }
+
+    /**
+     * 根据request及Relic策略，构造QuizData
+     */
+    public abstract QuizData buildQuizData(BuildQuizDataRequest request);
 }
