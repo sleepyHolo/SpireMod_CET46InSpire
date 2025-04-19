@@ -17,7 +17,7 @@ public class JlptQuizAction extends QuizAction {
 
     public JlptQuizAction(BookConfig bookConfig, LexiconEnum usingLexicon) {
         super(
-                bookConfig.bookEnum.name(),
+                usingLexicon.name(),     // 我希望显示词库的名字所以这里改成词库的
                 CET46Initializer.JSON_MOD_KEY + usingLexicon.name() + "_",
                 BookConfig.VOCABULARY_MAP.get(usingLexicon)
         );

@@ -127,8 +127,7 @@ public class CET46Initializer implements
     @Override
     public void receivePostInitialize() {
         BookConfig.init_map();
-        ((ModConfigPanel) settingsPanel).initPanel();
-        ((ModConfigPanel) settingsPanel).resetAllQuizRelics();
+        ((ModConfigPanel) settingsPanel).receivePostInitialize();
         BaseMod.registerModBadge(ImageElements.MOD_BADGE,
                 "CET46 In Spire", "__name__, Dim", "Do_not_forget_CET46!", settingsPanel);
 

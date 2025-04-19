@@ -3,7 +3,6 @@ package CET46InSpire.ui;
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
-import CET46InSpire.helpers.ImageElements;
 import CET46InSpire.relics.QuizRelic;
 import basemod.*;
 import com.badlogic.gdx.Gdx;
@@ -143,8 +142,10 @@ public class ModConfigPanel extends ModPanel {
         return weightedLexicon.getOrDefault(b, null);
     }
 
-    public void initPanel() {
-        // 用于初始化界面元素, 配置变量读取由类初始化完成. 须保证调用时languagePack初始化已经完成
+    /**
+     * 初始化界面元素, 配置变量读取由类初始化完成; 须保证调用时languagePack初始化已经完成
+     */
+    public void receivePostInitialize() {
         this.uiStrings = CardCrawlGame.languagePack.getUIString(CET46Initializer.JSON_MOD_KEY + "ConfigPanel");
         this.elementData = new HashMap<>();
         this.initUIElements();
@@ -152,6 +153,7 @@ public class ModConfigPanel extends ModPanel {
         this.setPage(0);
         this.checkReset();
         this.updateWeights();   // 保证更新词库权重
+        this.resetAllQuizRelics();      // 从 initializer 搬过来的
     }
 
     private void initUIElements() {

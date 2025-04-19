@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.List;
 
 public abstract class QuizAction extends AbstractGameAction {
-    private static final Logger logger = LogManager.getLogger(AbstractPlayerPatch.class);
+    private static final Logger logger = LogManager.getLogger(QuizAction.class);
     protected final String LEXICON;
     protected final String VOCABULARY_ID;
     protected final int VOCABULARY_SIZE;

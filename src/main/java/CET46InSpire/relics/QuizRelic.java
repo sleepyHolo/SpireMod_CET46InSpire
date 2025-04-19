@@ -9,6 +9,7 @@ import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.helpers.ImageElements;
+import CET46InSpire.patches.AbstractPlayerPatch;
 import CET46InSpire.savedata.CorrectionNote;
 import CET46InSpire.ui.ModConfigPanel;
 import com.badlogic.gdx.graphics.Color;
@@ -26,7 +27,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
@@ -37,7 +37,7 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CET46:RelicUI");
     public int preScoreCounter;
     public int scoreCounter;
-    private AbstractCard currentCard;
+    public boolean quizzed = false;
     protected final BookEnum book;
     public CorrectionNote notebook;
     private boolean isGivenPotion;
@@ -67,9 +67,11 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
      * 在打出牌之前进行测验, 但目前不清楚是否需要检查是否已经进行测验
      */
     public void sendQuizPrePlay(AbstractCard currentCard) {
-        logger.info("There should be a quiz, but now u get a 0!");
-        this.scoreCounter = 0;
-        this.currentCard = currentCard;
+        if (currentCard.type == AbstractCard.CardType.CURSE || currentCard.type == AbstractCard.CardType.STATUS) {
+            return;
+        }
+        this.triggerQuiz();
+        this.quizzed = true;
     }
 
     /**
@@ -83,11 +85,23 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         } else {
             this.counter = 0;
         }
+        AbstractPlayerPatch.p.useCard(AbstractPlayerPatch.c, AbstractPlayerPatch.m, AbstractPlayerPatch.energy);
+    }
 
-        currentCard.damage *= currentCard.damage > 0 ? this.scoreCounter : 1;
-        currentCard.block *= currentCard.block > 0 ? this.scoreCounter : 1;
-        currentCard.magicNumber *= currentCard.magicNumber > 0 ? this.scoreCounter : 1;
-        logger.info("Change Card: {}: D: {}, B: {}, M: {}", currentCard, currentCard.damage, currentCard.block, currentCard.magicNumber);
+    /**
+     * 更新卡牌,同时更新currentCard
+     * 如果用之前的记录 currentCard 的方法, 在这里给 card 赋值就不行, but why?
+     */
+    public void changeCardPrePlay(AbstractCard card) {
+        if (!this.quizzed) {
+            logger.error("Not quizzed!! But why?");
+            return;
+        }
+        card.damage *= card.damage > 0 ? this.scoreCounter : 1;
+        card.block *= card.block > 0 ? this.scoreCounter : 1;
+        card.magicNumber *= card.magicNumber > 0 ? this.scoreCounter : 1;
+        logger.info("Change Card: {}: D: {}, B: {}, M: {}", card, card.damage, card.block, card.magicNumber);
+        this.quizzed = false;
     }
 
     public void resetTexture() {
@@ -133,19 +147,9 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     @Override
     public void atBattleStartPreDraw() {
         this.flash();
-        // TODO 是否改用patch，不需要此处了？
+        // TODO 是否改用patch，不需要此处了？ ans:改用patch后实际需要的Power仅用于加完美作答奖励, 因此在Power重制前确实不需要;
         // this.addToTop(new ApplyPowerAction(AbstractDungeon.player, null,
         //         new ChangePowersApplyPower(AbstractDungeon.player, this)));
-    }
-
-    @Override
-    public int onPlayerGainedBlock(float blockAmount) {
-        return MathUtils.floor(this.scoreCounter * blockAmount);
-    }
-
-    @Override
-    public int onAttackToChangeDamage(DamageInfo info, int damageAmount) {
-        return this.scoreCounter * damageAmount;
     }
 
     @Override
@@ -160,15 +164,6 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     public void onVictory() {
         //this.scoreCounter = 1;
         this.isGivenPotion = false;
-    }
-
-    @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        // line 286 in GameActionManager
-        if (card.type == AbstractCard.CardType.CURSE || card.type == AbstractCard.CardType.STATUS) {
-            return;
-        }
-        triggerQuiz();
     }
 
     public void triggerQuiz() {

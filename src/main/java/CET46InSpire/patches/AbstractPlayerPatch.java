@@ -7,29 +7,42 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import javassist.CtBehavior;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 
 /**
  * 在打出卡牌之前触发小测, 并进行数据修正
  */
 public class AbstractPlayerPatch {
-    private static final Logger logger = LogManager.getLogger(AbstractPlayerPatch.class);
+    public static AbstractPlayer p = null;
+    public static AbstractMonster m = null;
+    public static AbstractCard c = null;
+    public static int energy = 0;
+
+    /**
+     * 这个部分在玩家须接受测验时会终止打出卡牌, 卡牌只有在玩家接受测验后才能打出
+     */
     @SpirePatch(clz = AbstractPlayer.class, method = "useCard",
             paramtypez = {AbstractCard.class, AbstractMonster.class, int.class})
     public static class ChangeCardDataPrePlay {
         @SpirePrefixPatch
-        public static void Prefix(AbstractPlayer __instance, AbstractCard c, AbstractMonster m, int energyOnUse) {
+        public static SpireReturn<Void> Prefix(AbstractPlayer __instance, AbstractCard c, AbstractMonster m, int energyOnUse) {
             for (AbstractRelic r: __instance.relics) {
-                if (r instanceof QuizRelic) {
+                if (r instanceof QuizRelic && !((QuizRelic) r).quizzed) {
                     ((QuizRelic) r).sendQuizPrePlay(c);
-                    return;
+                    // 记录状态
+                    AbstractPlayerPatch.p = __instance;
+                    AbstractPlayerPatch.c = c;
+                    AbstractPlayerPatch.m = m;
+                    AbstractPlayerPatch.energy = energyOnUse;
+                    return SpireReturn.Return();
                 }
             }
+            return SpireReturn.Continue();
         }
 
-/*        @SpireInsertPatch(locator = Locator.class)
+        /**
+         * 为了修改实际使用的卡牌的数据, 这个部分是必须的, 因为只有传入的 c 才是玩家实际打出的牌
+         */
+        @SpireInsertPatch(locator = Locator.class)
         public static void Insert(AbstractPlayer __instance, AbstractCard c, AbstractMonster m, int energyOnUse) {
             for (AbstractRelic r: __instance.relics) {
                 if (r instanceof QuizRelic) {
@@ -38,7 +51,7 @@ public class AbstractPlayerPatch {
                 }
             }
 
-        }*/
+        }
 
         public static class Locator extends SpireInsertLocator {
             public int[] Locate(CtBehavior ctBehavior) throws Exception {
