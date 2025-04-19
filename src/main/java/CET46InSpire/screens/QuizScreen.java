@@ -151,10 +151,12 @@ public class QuizScreen extends CustomScreen {
                 int newScore;
                 if (!this.correction) {
                     newScore = this.score;
+                    quizRelic.changeCardAfterQuiz(newScore, this.isPerfect);
                 } else {
-                    newScore = Math.max(quizRelic.scoreCounter, this.score);
+                    // TODO 错题回顾现在似乎没有更新分数的意义了? 因为分数现在不会影响开药之类的效果
+                    quizRelic.scoreCounter = Math.max(quizRelic.scoreCounter, this.score);
+                    quizRelic.quizzed = false;  // 用于避免下一次无法触发测验
                 }
-                quizRelic.changeCardAfterQuiz(newScore, this.isPerfect);
                 if (this.score == 0) {
                     quizRelic.notebook.addItem(this.word_id);
                 }

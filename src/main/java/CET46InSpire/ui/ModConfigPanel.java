@@ -84,6 +84,7 @@ public class ModConfigPanel extends ModPanel {
     public static boolean showLexicon = true;
     public static int maxAnsNum = 3;
     public static boolean loadJLPT = true;
+    public static boolean loadCET = true;
 
     /**
      * 这个是遗物对应的词库权重
@@ -97,6 +98,7 @@ public class ModConfigPanel extends ModPanel {
         pages = new ArrayList<>();
         pages.add(Arrays.asList("darkMode", "pureFont", "fastMode", "casualMode", "ignoreCheck", "showLexicon", "maxAnsNum"));
         List<String> page2 = new ArrayList<>();     // 第二页不能用Arrays.asList 因为预计将修改其内容
+        page2.add("loadCET");
         page2.add("loadJLPT");
         pages.add(page2);
 

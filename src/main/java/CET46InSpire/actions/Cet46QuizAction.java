@@ -15,7 +15,7 @@ public class Cet46QuizAction extends QuizAction {
 
     public Cet46QuizAction(BookConfig bookConfig, LexiconEnum usingLexicon) {
         super(
-                bookConfig.bookEnum.name(),
+                usingLexicon.name(),
                 CET46Initializer.JSON_MOD_KEY + usingLexicon.name() + "_",
                 BookConfig.VOCABULARY_MAP.get(usingLexicon)
         );

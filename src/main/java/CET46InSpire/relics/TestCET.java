@@ -2,24 +2,20 @@ package CET46InSpire.relics;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.actions.Cet46QuizAction;
-import CET46InSpire.actions.JlptQuizAction;
-import CET46InSpire.actions.QuizAction;
 import CET46InSpire.events.CallOfCETEvent;
 import CET46InSpire.helpers.BookConfig;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-public class TestJLPT extends QuizRelic {
-    public TestJLPT() {
-        super(CallOfCETEvent.BookEnum.JLPT);
+public class TestCET extends QuizRelic {
+    public TestCET() {
+        super(CallOfCETEvent.BookEnum.CET);
     }
 
     @Override
     public AbstractRelic makeCopy() {
-        return new TestJLPT();
+        return new TestCET();
     }
 
     @Override
@@ -28,24 +24,22 @@ public class TestJLPT extends QuizRelic {
             return "NULL";
         }
         switch (lexiconEnum) {
-            case N1:
+            case CET4:
                 return DESCRIPTIONS[0];
-            case N2:
+            case CET6:
                 return DESCRIPTIONS[1];
-            case N3:
-                return DESCRIPTIONS[2];
-            case N4:
-                return DESCRIPTIONS[3];
-            case N5:
-                return DESCRIPTIONS[4];
         }
         return "???";
     }
 
     @Override
-    public void onRightClick() {
-        // TODO 目前日语似乎不支持回顾错题,真的会爆的(也可能是我爆改改炸了)
+    public void triggerQuiz() {
+        flash();
+        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        BookConfig bookConfig = CET46Initializer.allBooks.get(book);
+        // TODO 从所有lexicons根据权重选其一
+        BookConfig.LexiconEnum usingLexicon = bookConfig.lexicons.get(0);
+        this.addToTop(new Cet46QuizAction(bookConfig, usingLexicon));
     }
-
 
 }
