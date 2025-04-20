@@ -31,7 +31,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public abstract class QuizRelic extends AbstractRelic implements ClickableRelic {
-    private static final Logger logger = LogManager.getLogger(QuizRelic.class.getName());
+    protected static final Logger logger = LogManager.getLogger(QuizRelic.class.getName());
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CET46:RelicUI");
     public int preScoreCounter;
     public int scoreCounter;
