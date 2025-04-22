@@ -46,9 +46,9 @@ public abstract class QuizAction extends AbstractGameAction {
     public static class QuizData {
         private int wordId;
         private String wordUiStringsId;
-        private String show;
-        private List<String> correctOptions;
-        private List<String> allOptions;
+        public String show;
+        public List<String> correctOptions;
+        public List<String> allOptions;
     }
 
 }

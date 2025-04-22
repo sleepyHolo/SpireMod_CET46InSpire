@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -92,7 +93,7 @@ public class ModConfigPanel extends ModPanel {
      */
     public static HashMap<String, Integer> lexiconData;
     public static HashMap<BookEnum, LexiconEnum> weightedLexicon;
-    public static HashMap<BookEnum, HashMap<LexiconEnum, Integer>> relicLexicon;
+    public static HashMap<BookEnum, List<LexiconEnum>> relicLexicon;
 
     static {
         pages = new ArrayList<>();
@@ -136,10 +137,14 @@ public class ModConfigPanel extends ModPanel {
 
     }
 
-    public static Map<LexiconEnum, Integer> getRelicWeights(BookEnum b) {
-        return relicLexicon.getOrDefault(b, new HashMap<>());
+    /**
+     * @return 返回加权后的词库列表,即权重等于元素在列表出现的数量
+     */
+    public static List<LexiconEnum> getRelicLexicons(BookEnum b) {
+        return relicLexicon.getOrDefault(b, new ArrayList<>());
     }
 
+    @Nullable
     public static LexiconEnum getWeightedLexicon(BookEnum b) {
         return weightedLexicon.getOrDefault(b, null);
     }
@@ -268,7 +273,7 @@ public class ModConfigPanel extends ModPanel {
     }
 
     public static void addRelicPage(BookEnum relicBook, List<LexiconEnum> list, int default_) {
-        relicLexicon.put(relicBook, new HashMap<>());
+        relicLexicon.put(relicBook, new ArrayList<>());
         // varName是挂靠的字段名, 需要在elementData里面, 否则没有效果
         String varName = "load" + relicBook.name();
         lexiconMap.put(varName, list);
@@ -454,7 +459,10 @@ public class ModConfigPanel extends ModPanel {
             float k = total == 0 ? 0.0F : 100.0F / total;
             StringBuilder sb = new StringBuilder();
             BookEnum relic = BookEnum.valueOf(entry.getKey().substring(4));     // 去掉前面的 load
-            HashMap<LexiconEnum, Integer> tmpMap = new HashMap<>();
+            // 更新权重列表
+            ArrayList<LexiconEnum> lexicons = (ArrayList<LexiconEnum>) getRelicLexicons(relic);
+            lexicons.clear();
+
             LexiconEnum weighted = null;
             // update text
             for (LexiconEnum l: notZeroList) {
@@ -462,16 +470,34 @@ public class ModConfigPanel extends ModPanel {
                 if (weighted == null && tmp == max) {
                     weighted = l;
                 }
-                tmpMap.put(l, tmp);
+                for (int i = 0; i < tmp; i++) {
+                    lexicons.add(l);    // 添加权重个词库
+                }
                 sb.append(uiStrings.TEXT_DICT.getOrDefault(l.name(), l.name())).append(": ");
                 sb.append(Math.round(k * tmp)).append("%. ");
             }
-            relicLexicon.put(relic, tmpMap);
+            relicLexicon.put(relic, lexicons);
             ((ModLabel) element).text = sb.toString();
             weightedLexicon.put(relic, weighted);   // 注意 weighted 有可能是 null
             logger.info("Weights updated.");
+            logLexicons();
 
         }
+    }
+
+    /**
+     * debug, 输出目前所有加权词库列表和使用的最大权词库
+     */
+    public static void logLexicons() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n====== Lexicons Info ======");
+        weightedLexicon.forEach((book, weightedL) -> {
+            sb.append("\n---- Book-").append(book.name()).append(" (")
+                    .append(weightedL == null ? "NULL" : weightedL.name()).append(") ----");
+            sb.append("\n> Lexicons: ").append(getRelicLexicons(book).toString());
+        });
+        sb.append("\n======== Info  End ========");
+        logger.info(sb.toString());
     }
 
     private boolean checkWeights() {

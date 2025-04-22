@@ -6,15 +6,18 @@ import CET46InSpire.actions.CorrectAction;
 import CET46InSpire.actions.QuizAction;
 import CET46InSpire.actions.QuizAction.QuizData;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
+import CET46InSpire.helpers.ArrayListHelper;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.helpers.ImageElements;
 import CET46InSpire.patches.AbstractPlayerPatch;
 import CET46InSpire.savedata.CorrectionNote;
 import CET46InSpire.ui.ModConfigPanel;
+import basemod.TopPanelGroup;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -29,6 +32,8 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.List;
 
 public abstract class QuizRelic extends AbstractRelic implements ClickableRelic {
     protected static final Logger logger = LogManager.getLogger(QuizRelic.class.getName());
@@ -86,7 +91,12 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         } else {
             this.counter = 0;
         }
+        if (AbstractPlayerPatch.c == null) {
+            logger.info("No card data. Quiz from console?");
+            return;
+        }
         AbstractPlayerPatch.p.useCard(AbstractPlayerPatch.c, AbstractPlayerPatch.m, AbstractPlayerPatch.energy);
+        AbstractPlayerPatch.c = null;
     }
 
     /**
@@ -171,8 +181,13 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         BookConfig bookConfig = CET46Initializer.allBooks.get(book);
-        // TODO 从所有lexicons根据权重选其一
         BookConfig.LexiconEnum usingLexicon = bookConfig.lexicons.get(0);
+        List<LexiconEnum> list = ModConfigPanel.getRelicLexicons(book);
+        if (!list.isEmpty()) {
+            usingLexicon = list.get(MathUtils.random(list.size() - 1));
+        } else {
+            logger.error("Relic Lexicon is EMPTY: {}!", book.name());
+        }
         QuizAction quizAction = new GeneralQuizAction(this, bookConfig, usingLexicon);
         this.addToTop(quizAction);
     };
