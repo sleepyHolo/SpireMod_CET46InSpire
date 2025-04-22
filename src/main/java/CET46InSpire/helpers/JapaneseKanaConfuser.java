@@ -58,7 +58,7 @@ public class JapaneseKanaConfuser {
         return result;
     }
 
-    static final int STRATEGY_SIZE = 4;
+    static final int STRATEGY_SIZE = 2;
 
     /**
      * @return 返回null表示所有策略均无法混淆
@@ -67,16 +67,26 @@ public class JapaneseKanaConfuser {
         if (kana.isEmpty()) {
             return null;
         }
-
-        int strategy = random.nextInt(4); // 选择混淆策略
-        String result = null;
-        int retry = 0;
-        while (result == null && retry < STRATEGY_SIZE) {
-            result = confuseKana(kana, random, strategy, existList);
-            strategy = (strategy + 1) % STRATEGY_SIZE;
-            retry++;
+        String input = kana;
+        String subResult = null;
+        String allResult = null;
+        // 随机1~2次
+        int repeat = 1 + random.nextInt(2);
+        for (; repeat > 0; repeat--) {
+            int strategy = random.nextInt(STRATEGY_SIZE); // 选择混淆策略
+            int retry = 0;
+            while (subResult == null && retry < STRATEGY_SIZE) {
+                subResult = confuseKana(input, random, strategy, existList);
+                strategy = (strategy + 1) % STRATEGY_SIZE;
+                retry++;
+            }
+            if (subResult != null) {
+                allResult = subResult;
+                input = subResult;
+            }
         }
-        return result;
+
+        return allResult;
     }
     /**
      * @return 返回null表示输入策略无法混淆
@@ -113,6 +123,9 @@ public class JapaneseKanaConfuser {
                     break;
 
                 case 1: // 拗音变换
+                    if (pos == 0) {
+                        break;
+                    }
                     for (String[] pair : SMALL_KANA_PAIRS) {
                         if (pair[0].equals(target)) {
                             result = replaceChar(kana, pos, pair[1]);
@@ -128,7 +141,7 @@ public class JapaneseKanaConfuser {
                     }
                     break;
 
-                case 2: // 类似假名替换
+/*                case 2: // 类似假名替换
                     for (String[] pair : SIMILAR_KANA) {
                         if (pair[0].equals(target)) {
                             result = replaceChar(kana, pos, pair[1]);
@@ -142,9 +155,8 @@ public class JapaneseKanaConfuser {
                             }
                         }
                     }
-                    break;
-
-                case 3: // 随机替换一个假名
+                    break;*/
+/*                case 3: // 随机替换一个假名
                     String randomKana = getRandomSimilarKana(target, random);
                     if (randomKana != null) {
                         result = replaceChar(kana, pos, randomKana);
@@ -152,7 +164,8 @@ public class JapaneseKanaConfuser {
                             return result;
                         }
                     }
-                    break;
+                    break;*/
+                default:
             }
         }
 
