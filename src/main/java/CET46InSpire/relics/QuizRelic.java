@@ -11,6 +11,7 @@ import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.helpers.ImageElements;
 import CET46InSpire.patches.AbstractPlayerPatch;
+import CET46InSpire.powers.PerfectAnsPower;
 import CET46InSpire.savedata.CorrectionNote;
 import CET46InSpire.ui.ModConfigPanel;
 import basemod.TopPanelGroup;
@@ -20,14 +21,17 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.TheBomb;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.powers.TheBombPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
@@ -97,6 +101,10 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         }
         AbstractPlayerPatch.p.useCard(AbstractPlayerPatch.c, AbstractPlayerPatch.m, AbstractPlayerPatch.energy);
         AbstractPlayerPatch.c = null;
+        if (AbstractDungeon.player.hasPower(PerfectAnsPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(PerfectAnsPower.POWER_ID).updateDescription();
+        }
+
     }
 
     /**
@@ -111,6 +119,14 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         card.damage *= card.damage > 0 ? this.scoreCounter : 1;
         card.block *= card.block > 0 ? this.scoreCounter : 1;
         card.magicNumber *= card.magicNumber > 0 ? this.scoreCounter : 1;
+        // fix: 炸弹的逻辑问题
+        if (card instanceof TheBomb) {
+            card.magicNumber = this.scoreCounter == 0 ? 0 : card.baseMagicNumber;
+            for (int i = 1; i < this.scoreCounter; i++) {
+                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, null,
+                        new TheBombPower(AbstractDungeon.player, 3, card.magicNumber)));
+            }
+        }
         logger.info("Change Card: {}: D: {}, B: {}, M: {}", card, card.damage, card.block, card.magicNumber);
         this.quizzed = false;
     }
@@ -136,11 +152,7 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     @Override
     public void update() {
         super.update();
-        if (this.preScoreCounter != this.scoreCounter) {
-            this.preScoreCounter = this.scoreCounter;
-            // TODO 是否改用patch，不需要此处了？
-            // AbstractDungeon.player.getPower(ChangePowersApplyPower.POWER_ID).updateDescription();
-        }
+        // 不再需要更新 PerfectAnsPower 因为那个只和 PerfectCounter 有关;
     }
 
     @Override
@@ -158,9 +170,7 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     @Override
     public void atBattleStartPreDraw() {
         this.flash();
-        // TODO 是否改用patch，不需要此处了？ ans:改用patch后实际需要的Power仅用于加完美作答奖励, 因此在Power重制前确实不需要;
-        // this.addToTop(new ApplyPowerAction(AbstractDungeon.player, null,
-        //         new ChangePowersApplyPower(AbstractDungeon.player, this)));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, null, new PerfectAnsPower(AbstractDungeon.player, this)));
     }
 
     @Override
