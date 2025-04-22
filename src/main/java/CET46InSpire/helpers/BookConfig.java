@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.Nullable;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -64,6 +65,16 @@ public class BookConfig {
         N3,
         N2,
         N1
+    }
+
+    @Nullable
+    public static LexiconEnum getLexicon(String lexicon) {
+        for (LexiconEnum l: LexiconEnum.values()) {
+            if (l.name().equalsIgnoreCase(lexicon)) {
+                return l;
+            }
+        }
+        return null;
     }
 
 }

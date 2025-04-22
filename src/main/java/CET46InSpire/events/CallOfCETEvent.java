@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.ui.buttons.LargeDialogOptionButton;
 import CET46InSpire.helpers.DayBeforeCETPlayGameException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.Nullable;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -208,6 +209,16 @@ public class CallOfCETEvent extends AbstractImageEvent {
     public enum BookEnum {
         CET,
         JLPT
+    }
+
+    @Nullable
+    public static BookEnum getBook(String book) {
+        for (BookEnum b: BookEnum.values()) {
+            if (b.name().equalsIgnoreCase(book)) {
+                return b;
+            }
+        }
+        return null;
     }
 
 }

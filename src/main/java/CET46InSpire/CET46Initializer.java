@@ -1,17 +1,22 @@
 package CET46InSpire;
 
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
+import CET46InSpire.helpers.QuizCommand;
 import CET46InSpire.relics.TestCET;
 import CET46InSpire.relics.TestJLPT;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.ui.ModConfigPanel;
 import basemod.BaseMod;
+import basemod.DevConsole;
 import basemod.ModPanel;
+import basemod.devcommands.ConsoleCommand;
 import basemod.helpers.RelicType;
 import basemod.interfaces.EditRelicsSubscriber;
 import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.localization.*;
@@ -135,6 +140,15 @@ public class CET46Initializer implements
                 "CET46 In Spire", "__name__, Dim", "Do_not_forget_CET46!", settingsPanel);
 
         BaseMod.addCustomScreen(new QuizScreen());
+
+        // 注册命令
+        ConsoleCommand.addCommand("quiz", QuizCommand.class);
+        // 修改 BaseMod 控制台字体
+        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("CET46Resource/font/VictorMono-Medium.ttf"));
+        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+        parameter.size = (int)(22.0F * Settings.scale);
+        DevConsole.consoleFont = generator.generateFont(parameter);
+        generator.dispose();
     }
 
 }

@@ -91,7 +91,12 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         } else {
             this.counter = 0;
         }
+        if (AbstractPlayerPatch.c == null) {
+            logger.info("No card data. Quiz from console?");
+            return;
+        }
         AbstractPlayerPatch.p.useCard(AbstractPlayerPatch.c, AbstractPlayerPatch.m, AbstractPlayerPatch.energy);
+        AbstractPlayerPatch.c = null;
     }
 
     /**

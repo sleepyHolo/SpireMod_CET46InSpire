@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.mainMenu.MainMenuScreen;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
@@ -143,6 +144,7 @@ public class ModConfigPanel extends ModPanel {
         return relicLexicon.getOrDefault(b, new ArrayList<>());
     }
 
+    @Nullable
     public static LexiconEnum getWeightedLexicon(BookEnum b) {
         return weightedLexicon.getOrDefault(b, null);
     }
