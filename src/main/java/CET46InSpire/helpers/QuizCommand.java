@@ -19,7 +19,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class QuizCommand extends ConsoleCommand {
     private static final Logger logger = LogManager.getLogger(QuizCommand.class.getName());
@@ -29,7 +28,7 @@ public class QuizCommand extends ConsoleCommand {
      * relic: str, optional; name in BookEnum or rnd (default)
      * lexicon: str, optional; name in LexiconEnum or rnd (default)
      * id: (str)int, optional; quiz id or rnd (default).
-     *                         should be within range, and MUST be rnd if relic or lexicon is rnd
+     *                         should be within range, and MUST be ignored if relic or lexicon is rnd
      */
     public QuizCommand() {
         this.minExtraTokens = 0;
@@ -159,7 +158,7 @@ public class QuizCommand extends ConsoleCommand {
                 return result;
             }
             case 4: {
-                if (tokens[2].equalsIgnoreCase("rnd")) {
+                if (tokens[1].equalsIgnoreCase("rnd") || tokens[2].equalsIgnoreCase("rnd")) {
                     complete = true;
                     return result;
                 }
