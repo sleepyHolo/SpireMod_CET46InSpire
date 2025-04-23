@@ -1,8 +1,8 @@
 package CET46InSpire.events;
 
 import CET46InSpire.CET46Initializer;
-import CET46InSpire.relics.CETRelic;
 import CET46InSpire.helpers.BookConfig;
+import CET46InSpire.relics.QuizRelic;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,11 +14,11 @@ import com.megacrit.cardcrawl.ui.buttons.LargeDialogOptionButton;
 import CET46InSpire.helpers.DayBeforeCETPlayGameException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.Nullable;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class CallOfCETEvent extends AbstractImageEvent {
     private static final Logger logger = LogManager.getLogger(CallOfCETEvent.class.getName());
@@ -34,7 +34,7 @@ public class CallOfCETEvent extends AbstractImageEvent {
     private static final LocalDateTime NEXT_NEXT_CET;
     private ArrayList<BookEnum> validBooks;
     private EventState state;
-    private boolean tomorrowCET = false;
+    private boolean tomorrowCET;
 
     public CallOfCETEvent() {
         super(eventStrings.NAME, "test", "CET46Resource/image/events/call_of_cet.png");
@@ -168,7 +168,7 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     public static AbstractRelic getBookRelic(BookEnum b) {
-        String id = CETRelic.toId(b);
+        String id = QuizRelic.toId(b);
         return RelicLibrary.getRelic(id).makeCopy();
     }
 
@@ -177,14 +177,11 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     public void clearOptions(int remainNum) {
-        for(int i = this.imageEventText.optionList.size() - 1; i > remainNum - 1; --i) {
-            this.imageEventText.optionList.remove(i);
+        if (this.imageEventText.optionList.size() > remainNum) {
+            this.imageEventText.optionList.subList(remainNum, this.imageEventText.optionList.size()).clear();
         }
 
-        Iterator var3 = this.imageEventText.optionList.iterator();
-
-        while(var3.hasNext()) {
-            LargeDialogOptionButton b = (LargeDialogOptionButton)var3.next();
+        for (LargeDialogOptionButton b : this.imageEventText.optionList) {
             b.calculateY(this.imageEventText.optionList.size());
         }
 
@@ -210,9 +207,18 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     public enum BookEnum {
-        CET4,
-        CET6,
-        N5
+        CET,
+        JLPT
+    }
+
+    @Nullable
+    public static BookEnum getBook(String book) {
+        for (BookEnum b: BookEnum.values()) {
+            if (b.name().equalsIgnoreCase(book)) {
+                return b;
+            }
+        }
+        return null;
     }
 
 }

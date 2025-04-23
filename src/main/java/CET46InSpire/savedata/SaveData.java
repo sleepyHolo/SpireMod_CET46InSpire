@@ -1,6 +1,6 @@
 package CET46InSpire.savedata;
 
-import CET46InSpire.relics.CETRelic;
+import CET46InSpire.relics.QuizRelic;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -26,10 +26,10 @@ public class SaveData {
     public static class SaveTheSaveData {
         @SpirePostfixPatch
         public static void saveAllTheSaveData(SaveFile __instance, SaveFile.SaveType type) {
-            CETRelic relic = null;
+            QuizRelic relic = null;
             for (AbstractRelic r: AbstractDungeon.player.relics) {
-                if (r instanceof CETRelic) {
-                    relic = (CETRelic) r;
+                if (r instanceof QuizRelic) {
+                    relic = (QuizRelic) r;
                     break;
                 }
             }
@@ -85,10 +85,10 @@ public class SaveData {
     public static class LoadSave {
         @SpirePostfixPatch
         public static void LoadCETSave(AbstractDungeon __instance, SaveFile file) {
-            CETRelic relic = null;
+            QuizRelic relic = null;
             for (AbstractRelic r: AbstractDungeon.player.relics) {
-                if (r instanceof CETRelic) {
-                    relic = (CETRelic) r;
+                if (r instanceof QuizRelic) {
+                    relic = (QuizRelic) r;
                     break;
                 }
             }

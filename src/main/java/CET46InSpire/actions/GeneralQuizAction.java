@@ -2,14 +2,16 @@ package CET46InSpire.actions;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.helpers.BookConfig;
+import CET46InSpire.helpers.BookConfig.LexiconEnum;
+import CET46InSpire.relics.QuizRelic;
 
 public class GeneralQuizAction extends QuizAction {
 
-    public GeneralQuizAction(BookConfig bookConfig) {
+    public GeneralQuizAction(QuizRelic quizRelic, BookConfig bookConfig, LexiconEnum usingLexicon) {
         super(
-                bookConfig.bookEnum.name(),
-                CET46Initializer.JSON_MOD_KEY + bookConfig.bookEnum.name() + "_",
-                BookConfig.VOCABULARY_MAP.get(bookConfig.bookEnum)
+                quizRelic,
+                usingLexicon
         );
     }
+
 }

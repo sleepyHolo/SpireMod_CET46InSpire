@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,18 +13,11 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.TheBombPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
-import java.lang.reflect.Field;
-
-/**
- * 是否改用patch，不需要此处了？
- */
-@Deprecated
-public class ChangePowersApplyPower extends AbstractPower {
-    public static final String POWER_ID = "CET46:ChangePowersApplyPower";
+public class PerfectAnsPower extends AbstractPower {
+    public static final String POWER_ID = "CET46:PerfectAnsPower";
     private static final PowerStrings powerStrings;
     private static final String NAME;
     private static final String[] DESCRIPTIONS;
@@ -33,7 +25,7 @@ public class ChangePowersApplyPower extends AbstractPower {
     private final Color color = new Color(1.0F, 1.0F, 1.0F, 1.0F);
     private boolean oddTurn = true;
 
-    public ChangePowersApplyPower(AbstractCreature owner, QuizRelic linkedRelic) {
+    public PerfectAnsPower(AbstractCreature owner, QuizRelic linkedRelic) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
@@ -44,32 +36,6 @@ public class ChangePowersApplyPower extends AbstractPower {
         this.region48 = new TextureAtlas.AtlasRegion(ImageElements.POWER_CET_32, 0, 0, 32, 32);
         this.updateDescription();
         this.oddTurn = true;
-    }
-
-    @Override
-    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (source != AbstractDungeon.player) {
-            return;
-        }
-        if (this.linkedRelic.scoreCounter == 0) {
-            this.addToBot(new ReducePowerAction(target, null, power, power.amount));
-            return;
-        }
-        for (int i = 1; i < this.linkedRelic.scoreCounter; i++) {
-            if (power instanceof TheBombPower) {
-                // new bomb power
-                try {
-                    Field ___damage = TheBombPower.class.getDeclaredField("damage");
-                    ___damage.setAccessible(true);
-                    this.addToBot(new ApplyPowerAction(target, null,
-                            new TheBombPower(target, power.amount, ___damage.getInt(power)), power.amount));
-                } catch (NoSuchFieldException | IllegalAccessException e) {
-                    throw new RuntimeException(e);
-                }
-                continue;
-            }
-            this.addToBot(new ApplyPowerAction(target, null, power, power.amount));
-        }
     }
 
     @Override
@@ -95,13 +61,10 @@ public class ChangePowersApplyPower extends AbstractPower {
         }
     }
 
-    public void updatePerfectCounter() {
-        this.amount = linkedRelic.counter;
-    }
-
     @Override
     public void updateDescription() {
-        String tmp = DESCRIPTIONS[0] + this.linkedRelic.scoreCounter + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        this.amount = linkedRelic.counter;
+        String tmp = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         tmp += makePowerTag(5, this.amount >= 5, 3);
         tmp += makePowerTag(10, this.amount >= 10, 4);
         this.description = tmp;

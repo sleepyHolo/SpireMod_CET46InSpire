@@ -1,6 +1,7 @@
 package CET46InSpire.screens;
 
 import CET46InSpire.helpers.CNFontHelper;
+import CET46InSpire.relics.QuizRelic;
 import CET46InSpire.ui.*;
 import basemod.abstracts.CustomScreen;
 import com.badlogic.gdx.Gdx;
@@ -18,7 +19,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import CET46InSpire.relics.CETRelic;
 import CET46InSpire.helpers.ImageElements;
 
 import java.util.ArrayList;
@@ -106,7 +106,7 @@ public class QuizScreen extends CustomScreen {
             logger.info("wtf? why?");
             AbstractDungeon.previousScreen = AbstractDungeon.screen;
         }
-        if (CET46Panel.pureFont) {
+        if (ModConfigPanel.pureFont) {
             this.titleFont = CNFontHelper.pureTitleFont;
             this.descFont = CNFontHelper.pureDescFont;
         } else {
@@ -146,19 +146,23 @@ public class QuizScreen extends CustomScreen {
     public void close() {
         // get score
         for (AbstractRelic r: AbstractDungeon.player.relics) {
-            if (r instanceof CETRelic) {
+            if (r instanceof QuizRelic) {
+                QuizRelic quizRelic = (QuizRelic) r;
+                int newScore;
                 if (!this.correction) {
-                    ((CETRelic) r).scoreCounter = this.score;
-                    ((CETRelic) r).updatePerfectCounter(this.isPerfect);
+                    newScore = this.score;
+                    quizRelic.changeCardAfterQuiz(newScore, this.isPerfect);
                 } else {
-                    ((CETRelic) r).scoreCounter = Math.max(((CETRelic) r).scoreCounter, this.score);
+                    // TODO 错题回顾现在似乎没有更新分数的意义了? 因为分数现在不会影响开药之类的效果
+                    quizRelic.scoreCounter = Math.max(quizRelic.scoreCounter, this.score);
+                    quizRelic.quizzed = false;  // 用于避免下一次无法触发测验
                 }
                 if (this.score == 0) {
-                    ((CETRelic) r).notebook.addItem(this.word_id);
+                    quizRelic.notebook.addItem(this.word_id);
                 }
                 if (this.correction && this.isPerfect) {
-                    ((CETRelic) r).notebook.reduceItem(this.word_id);
-                    ((CETRelic) r).givePotion();
+                    quizRelic.notebook.reduceItem(this.word_id);
+                    quizRelic.givePotion();
                 }
                 break;
             }
@@ -223,7 +227,7 @@ public class QuizScreen extends CustomScreen {
         if (this.delta_y == 0.0F) {
             return;
         }
-        if (CET46Panel.fastMode) {
+        if (ModConfigPanel.fastMode) {
             this.delta_y = MathUtils.lerp(this.delta_y, Settings.HEIGHT / 2.0F - 540.0F * Settings.yScale,
                     Gdx.graphics.getDeltaTime() * 50.0F);
             if (Math.abs(this.delta_y - 0.0F) < 5.0F)
@@ -239,7 +243,7 @@ public class QuizScreen extends CustomScreen {
     private void renderQuestion(SpriteBatch sb, Color font_color) {
         FontHelper.renderFontCentered(sb, this.titleFont, this.word,
                 QUESTION_CX, FRAME_Y + QUESTION_CY + this.delta_y, font_color);
-        if (CET46Panel.showLexicon) {
+        if (ModConfigPanel.showLexicon) {
             String lexicon = this.correction ? this.lexicon : TEXT[3] + this.lexicon;
             FontHelper.renderFontLeftTopAligned(sb, this.descFont, lexicon,
                     LEXICON_X, FRAME_Y + LEXICON_Y + this.delta_y, font_color);
@@ -284,7 +288,7 @@ public class QuizScreen extends CustomScreen {
         if (Settings.isDebug) {
             logger.info("Right: {}, Wrong: {}", this.right_ans_num, this.wrong_ans_num);
         }
-        if (CET46Panel.ignoreCheck) {
+        if (ModConfigPanel.ignoreCheck) {
             this.returnButton.buttonClicked();
         } else {
             this.returnButton.showInstantly(TEXT[1]);
@@ -293,7 +297,7 @@ public class QuizScreen extends CustomScreen {
 
     public void getScore() {
         this.score = this.right_ans_num - this.wrong_ans_num;
-        if (CET46Panel.casualMode && this.score < 1) {
+        if (ModConfigPanel.casualMode && this.score < 1) {
             this.score = 1;
             return;
         }
