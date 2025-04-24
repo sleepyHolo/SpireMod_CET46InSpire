@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class TestJLPT extends QuizRelic {
@@ -95,13 +96,15 @@ public class TestJLPT extends QuizRelic {
         // allOptions里填充错误的kana，来自工具
         int size = Math.min(choice_num, request.getMaxOptionNum() - allOptions.size());
         List<String> confusingList = JapaneseKanaConfuser.generateConfusingKana(kana, size);
+        Collections.shuffle(confusingList);
         allOptions.addAll(confusingList);
     }
     private void addAskMeaning(List<String> correctOptions, List<String> allOptions, UIStrings wordUiStrings, int choice_num, BuildQuizDataRequest request) {
         String meaning = wordUiStrings.TEXT[MEANING_UISTRINGS_INDEX];
 
         correctOptions.add(meaning);
-        allOptions.add(meaning);
+        List<String> tmp = new ArrayList<>();
+        tmp.add(meaning);
         // allOptions里填充错误的meaning，来自其他单词
         for (int i = 0; i < choice_num && allOptions.size() < request.getMaxOptionNum(); i++) {
             int target_word = MathUtils.random(0, request.getVocabularySize() - 1);
@@ -110,8 +113,9 @@ public class TestJLPT extends QuizRelic {
             }
             UIStrings otherWord = CardCrawlGame.languagePack.getUIString(request.getUiStringsIdStart() + target_word);
             String otherWordMeaning = otherWord.TEXT[MEANING_UISTRINGS_INDEX];
-            allOptions.add(otherWordMeaning);
-
+            tmp.add(otherWordMeaning);
         }
+        Collections.shuffle(tmp);
+        allOptions.addAll(tmp);
     }
 }
