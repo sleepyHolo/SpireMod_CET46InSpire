@@ -91,20 +91,23 @@ public class TestJLPT extends QuizRelic {
     private void addAskKana(List<String> correctOptions, List<String> allOptions, UIStrings wordUiStrings, int choice_num, BuildQuizDataRequest request) {
         String kana = wordUiStrings.TEXT[KANA_UISTRINGS_INDEX];
 
-        correctOptions.add(kana);
-        allOptions.add(kana);
+
         // allOptions里填充错误的kana，来自工具
+        List<String> confusingList = new ArrayList<>();
+        confusingList.add(kana);
         int size = Math.min(choice_num, request.getMaxOptionNum() - allOptions.size());
-        List<String> confusingList = JapaneseKanaConfuser.generateConfusingKana(kana, size);
+        JapaneseKanaConfuser.generateConfusingKana(kana, size, confusingList);
         Collections.shuffle(confusingList);
-        allOptions.addAll(confusingList);
+        if (confusingList.size() > 1) {
+            correctOptions.add(kana);
+            allOptions.addAll(confusingList);
+        }
     }
     private void addAskMeaning(List<String> correctOptions, List<String> allOptions, UIStrings wordUiStrings, int choice_num, BuildQuizDataRequest request) {
         String meaning = wordUiStrings.TEXT[MEANING_UISTRINGS_INDEX];
 
-        correctOptions.add(meaning);
-        List<String> tmp = new ArrayList<>();
-        tmp.add(meaning);
+        List<String> confusingList = new ArrayList<>();
+        confusingList.add(meaning);
         // allOptions里填充错误的meaning，来自其他单词
         for (int i = 0; i < choice_num && allOptions.size() < request.getMaxOptionNum(); i++) {
             int target_word = MathUtils.random(0, request.getVocabularySize() - 1);
@@ -113,9 +116,12 @@ public class TestJLPT extends QuizRelic {
             }
             UIStrings otherWord = CardCrawlGame.languagePack.getUIString(request.getUiStringsIdStart() + target_word);
             String otherWordMeaning = otherWord.TEXT[MEANING_UISTRINGS_INDEX];
-            tmp.add(otherWordMeaning);
+            confusingList.add(otherWordMeaning);
         }
-        Collections.shuffle(tmp);
-        allOptions.addAll(tmp);
+        Collections.shuffle(confusingList);
+        if (confusingList.size() > 1) {
+            correctOptions.add(meaning);
+            allOptions.addAll(confusingList);
+        }
     }
 }
