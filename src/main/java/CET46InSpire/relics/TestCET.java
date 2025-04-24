@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class TestCET extends QuizRelic {
     public TestCET() {
@@ -69,7 +70,7 @@ public class TestCET extends QuizRelic {
             meaning_list.add(tmp.TEXT[target_meaning]);
             i++;
         }
-        meaning_list = ArrayListHelper.shuffle(meaning_list);
+        Collections.shuffle(meaning_list);
         return new QuizData(request.getTargetId(), request.getTargetUiStringsId(), word, right_ans_list, meaning_list);
     }
 
