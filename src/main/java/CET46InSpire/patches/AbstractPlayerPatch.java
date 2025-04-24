@@ -27,12 +27,13 @@ public class AbstractPlayerPatch {
         public static SpireReturn<Void> Prefix(AbstractPlayer __instance, AbstractCard c, AbstractMonster m, int energyOnUse) {
             for (AbstractRelic r: __instance.relics) {
                 if (r instanceof QuizRelic && !((QuizRelic) r).quizzed) {
-                    ((QuizRelic) r).sendQuizPrePlay(c);
-                    // 记录状态
+                    // 记录状态, 改一下顺序以免诅咒和状态卡未被记录
                     AbstractPlayerPatch.p = __instance;
                     AbstractPlayerPatch.c = c;
                     AbstractPlayerPatch.m = m;
                     AbstractPlayerPatch.energy = energyOnUse;
+                    
+                    ((QuizRelic) r).sendQuizPrePlay(c);
                     return SpireReturn.Return();
                 }
             }

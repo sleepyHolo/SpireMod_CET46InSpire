@@ -78,6 +78,9 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
      */
     public void sendQuizPrePlay(AbstractCard currentCard) {
         if (currentCard.type == AbstractCard.CardType.CURSE || currentCard.type == AbstractCard.CardType.STATUS) {
+            // bug fix: 此处直接ret会导致卡牌无法打出
+            this.quizzed = true;
+            this.autoUseCard();
             return;
         }
         this.triggerQuiz();
@@ -95,15 +98,19 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         } else {
             this.counter = 0;
         }
+        this.autoUseCard();
+        if (AbstractDungeon.player.hasPower(PerfectAnsPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(PerfectAnsPower.POWER_ID).updateDescription();
+        }
+    }
+
+    private void autoUseCard() {
         if (AbstractPlayerPatch.c == null) {
             logger.info("No card data. Quiz from console?");
             return;
         }
         AbstractPlayerPatch.p.useCard(AbstractPlayerPatch.c, AbstractPlayerPatch.m, AbstractPlayerPatch.energy);
         AbstractPlayerPatch.c = null;
-        if (AbstractDungeon.player.hasPower(PerfectAnsPower.POWER_ID)) {
-            AbstractDungeon.player.getPower(PerfectAnsPower.POWER_ID).updateDescription();
-        }
 
     }
 
@@ -114,6 +121,11 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     public void changeCardPrePlay(AbstractCard card) {
         if (!this.quizzed) {
             logger.error("Not quizzed!! But why?");
+            return;
+        }
+        if (card.type == AbstractCard.CardType.CURSE || card.type == AbstractCard.CardType.STATUS) {
+            this.quizzed = false;
+            logger.info("Curse or Status Return.");
             return;
         }
         card.damage *= card.damage > 0 ? this.scoreCounter : 1;
