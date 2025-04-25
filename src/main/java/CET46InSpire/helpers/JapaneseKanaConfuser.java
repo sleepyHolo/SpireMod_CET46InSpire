@@ -1,6 +1,8 @@
 package CET46InSpire.helpers;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class JapaneseKanaConfuser {
     // 清音-浊音-半浊音对应表（支持三向替换）
@@ -27,8 +29,8 @@ public class JapaneseKanaConfuser {
     private static final String[][] SMALL_KANA_PAIRS = {
             {"や", "ゃ"}, {"ゆ", "ゅ"}, {"よ", "ょ"},
             {"ヤ", "ャ"}, {"ユ", "ュ"}, {"ヨ", "ョ"},
-            {"あ", "ぁ"}, {"い", "ぃ"}, {"う", "ぅ"}, {"え", "ぇ"}, {"お", "ぉ"},
-            {"ア", "ァ"}, {"イ", "ィ"}, {"ウ", "ゥ"}, {"Э", "ェ"}, {"オ", "ォ"},
+            //{"あ", "ぁ"}, {"い", "ぃ"}, {"う", "ぅ"}, {"え", "ぇ"}, {"お", "ぉ"},
+            //{"ア", "ァ"}, {"イ", "ィ"}, {"ウ", "ゥ"}, {"Э", "ェ"}, {"オ", "ォ"},
             {"つ", "っ"}, {"ツ", "ッ"}
     };
 
@@ -40,22 +42,21 @@ public class JapaneseKanaConfuser {
             {"ク", "ケ"}, {"タ", "ナ"}, {"ヒ", "ビ"}, {"フ", "ワ"}
     };
 
-    public static List<String> generateConfusingKana(String correctAnswer, int n) {
+    public static List<String> generateConfusingKana(String correctAnswer, int n, List<String> confusingList) {
         if (correctAnswer == null || correctAnswer.isEmpty()) {
             return null;
         }
-        List<String> result = new ArrayList<>();
         Set<String> existList = new HashSet<>();
         existList.add(correctAnswer);
         Random random = new Random();
         for (int i = 0; i < n ;i ++) {
             String confused = confuseKana(correctAnswer, random, existList);
             if (confused != null && !confused.equals(correctAnswer)) {
-                result.add(confused);
+                confusingList.add(confused);
                 existList.add(confused);
             }
         }
-        return result;
+        return confusingList;
     }
 
     static final int STRATEGY_SIZE = 2;
@@ -73,16 +74,18 @@ public class JapaneseKanaConfuser {
         // 随机1~2次
         int repeat = 1 + random.nextInt(2);
         for (; repeat > 0; repeat--) {
-            int strategy = random.nextInt(STRATEGY_SIZE); // 选择混淆策略
-            int retry = 0;
-            while (subResult == null && retry < STRATEGY_SIZE) {
+            List<Integer> tryStrategyOrderedList = IntStream.range(0, STRATEGY_SIZE)
+                    .mapToObj(it -> it)
+                    .collect(Collectors.toList());
+            // 以随机顺序尝试所有策略
+            Collections.shuffle(tryStrategyOrderedList);
+            for (Integer strategy : tryStrategyOrderedList) {
                 subResult = confuseKana(input, random, strategy, existList);
-                strategy = (strategy + 1) % STRATEGY_SIZE;
-                retry++;
-            }
-            if (subResult != null) {
-                allResult = subResult;
-                input = subResult;
+                if (subResult != null) {
+                    allResult = subResult;
+                    input = subResult;
+                    break;
+                }
             }
         }
 
@@ -93,8 +96,13 @@ public class JapaneseKanaConfuser {
      */
     private static String confuseKana(String kana, Random random, int strategy, Collection<String> existList) {
         String result;
-        // 尝试所有位置
-        for (int pos = 0; pos < kana.length(); pos++) {
+        List<Integer> tryPosOrderedList = IntStream.range(0, kana.length())
+                .mapToObj(it -> it)
+                .collect(Collectors.toList());
+        Collections.shuffle(tryPosOrderedList);
+
+        // 以随机顺序尝试所有位置
+        for (int pos : tryPosOrderedList) {
             String target = kana.substring(pos, pos + 1);
 
             switch (strategy) {
@@ -219,16 +227,29 @@ public class JapaneseKanaConfuser {
 
         for (String testCase : testCases) {
             System.out.println("\n测试输入: " + testCase);
-            List<String> confusingAnswers = generateConfusingKana(testCase, 5);
+            List<String> confusingAnswers = generateConfusingKana(testCase, 5, new ArrayList<>());
 
             if (confusingAnswers == null) {
                 System.out.println("无法生成混淆答案");
             } else {
                 System.out.println("生成混淆答案 (" + confusingAnswers.size() + "个):");
                 for (String answer : confusingAnswers) {
-                    System.out.println(answer);
+                    int diff = countCharDifference(answer, testCase);
+                    System.out.println(answer + ", diff = " + diff);
                 }
             }
         }
+    }
+
+    public static int countCharDifference(String s1, String s2) {
+        int length = Math.min(s1.length(), s2.length());
+        int diff = 0;
+        for (int i = 0; i < length; i++) {
+            if (s1.charAt(i) != s2.charAt(i)) {
+                diff++;
+            }
+        }
+        diff += Math.abs(s1.length() - s2.length());
+        return diff;
     }
 }
