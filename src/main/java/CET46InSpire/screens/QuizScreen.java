@@ -200,6 +200,7 @@ public class QuizScreen extends CustomScreen {
 
     @Override
     public void render(SpriteBatch sb) {
+        sb.setColor(Color.WHITE);   // 如果没有这个, 上次画了黑色背景的话这次的背景就画不出来 (应该是这个原因)
         sb.draw(ImageElements.WORD_SCREEN_BASE, FRAME_X, FRAME_Y + this.delta_y, FRAME_WIDTH, FRAME_HEIGHT);
         Color font_color = Color.BLACK.cpy();
         if (ImageElements.darkMode) {
@@ -228,13 +229,11 @@ public class QuizScreen extends CustomScreen {
             return;
         }
         if (ModConfigPanel.fastMode) {
-            this.delta_y = MathUtils.lerp(this.delta_y, Settings.HEIGHT / 2.0F - 540.0F * Settings.yScale,
-                    Gdx.graphics.getDeltaTime() * 50.0F);
+            this.delta_y = MathUtils.lerp(this.delta_y, 0.0F, Gdx.graphics.getDeltaTime() * 50.0F);
             if (Math.abs(this.delta_y - 0.0F) < 5.0F)
                 this.delta_y = 0.0F;
         } else {
-            this.delta_y = MathUtils.lerp(this.delta_y, Settings.HEIGHT / 2.0F - 540.0F * Settings.yScale,
-                    Gdx.graphics.getDeltaTime() * 5.0F);
+            this.delta_y = MathUtils.lerp(this.delta_y, 0.0F, Gdx.graphics.getDeltaTime() * 5.0F);
             if (Math.abs(this.delta_y - 0.0F) < 0.5F)
                 this.delta_y = 0.0F;
         }
@@ -317,7 +316,7 @@ public class QuizScreen extends CustomScreen {
         FRAME_WIDTH = 1520.0F * Settings.xScale;
         FRAME_HEIGHT = 800.0F * Settings.yScale;
         FRAME_X = 0.5F * (Settings.WIDTH - FRAME_WIDTH);
-        FRAME_Y = 0.5F * (Settings.HEIGHT - FRAME_HEIGHT);
+        FRAME_Y = 0.5F * (Settings.HEIGHT - FRAME_HEIGHT) + 60.0F * Settings.yScale;
         QUESTION_CX = 0.5F * Settings.WIDTH;
         QUESTION_CY = 680.0F * Settings.yScale;
         LEXICON_X = QUESTION_CX - 500.0F * Settings.xScale;

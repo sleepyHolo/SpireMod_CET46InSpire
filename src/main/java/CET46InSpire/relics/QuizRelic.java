@@ -13,6 +13,7 @@ import CET46InSpire.helpers.ImageElements;
 import CET46InSpire.patches.AbstractPlayerPatch;
 import CET46InSpire.powers.PerfectAnsPower;
 import CET46InSpire.savedata.CorrectionNote;
+import CET46InSpire.screens.QuizScreen;
 import CET46InSpire.ui.ModConfigPanel;
 import basemod.TopPanelGroup;
 import com.badlogic.gdx.graphics.Color;
@@ -216,6 +217,10 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
 
     @Override
     public void onRightClick() {
+        // 避免重复触发
+        if (AbstractDungeon.screen == QuizScreen.Enum.WORD_SCREEN) {
+            return;
+        }
         // 这个只应该在战斗房间触发
         if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT ||
                 AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMPLETE) {
