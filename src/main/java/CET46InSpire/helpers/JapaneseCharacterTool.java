@@ -212,7 +212,7 @@ public class JapaneseCharacterTool {
         return romaji[c - 0x3041];
     }
 
-    public boolean hasKanji(String text) {
+    public static boolean hasAnyKanji(String text) {
         for (int i = 0; i < text.length(); i++) {
             if (JapaneseCharacterTool.isKanji(text.charAt(i))) {
                 return true;
