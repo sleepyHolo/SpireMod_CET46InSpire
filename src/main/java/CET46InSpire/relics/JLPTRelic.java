@@ -10,18 +10,27 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
-public class TestJLPT extends QuizRelic {
+public class JLPTRelic extends QuizRelic {
 
+    /**
+     * 展示形式；假名或汉字
+     */
     public static final int NORMAL_UISTRINGS_INDEX = 0;
+    /**
+     * 释义
+     */
     public static final int MEANING_UISTRINGS_INDEX = 1;
+    /**
+     * （已预处理）一定是假名
+     */
     public static final int KANA_UISTRINGS_INDEX = 2;
+    /**
+     * （已预处理）一定是汉字；若无汉字形式则为null
+     */
     public static final int PLUS_UISTRINGS_INDEX = 3;
-
+    public static final String WRONG_KANA_KEY = "ConfusedFurigana";
     public enum JlptQuizType {
         ASK_KANA,
         ASK_MEANING,
@@ -32,13 +41,13 @@ public class TestJLPT extends QuizRelic {
             JlptQuizType.ASK_MEANING
     );
 
-    public TestJLPT() {
+    public JLPTRelic() {
         super(CallOfCETEvent.BookEnum.JLPT);
     }
 
     @Override
     public AbstractRelic makeCopy() {
-        return new TestJLPT();
+        return new JLPTRelic();
     }
 
     @Override
@@ -65,10 +74,10 @@ public class TestJLPT extends QuizRelic {
     public QuizData buildQuizData(BuildQuizDataRequest request) {
         UIStrings wordUiStrings = CardCrawlGame.languagePack.getUIString(request.getTargetUiStringsId());
         String normal = wordUiStrings.TEXT[NORMAL_UISTRINGS_INDEX];
-        boolean allKanji = JapaneseCharacterTool.isAllKanji(normal.replace("〜", ""));
+        boolean showHasKanji = JapaneseCharacterTool.hasAnyKanji(normal.replace("〜", ""));
         List<JlptQuizType> jlptQuizTypes = new ArrayList<>();
         jlptQuizTypes.add(JlptQuizType.ASK_MEANING);
-        if (allKanji) {
+        if (showHasKanji) {
             jlptQuizTypes.add(JlptQuizType.ASK_KANA);
         }
         logger.info("jlptQuizTypes = {}", jlptQuizTypes);
@@ -88,21 +97,29 @@ public class TestJLPT extends QuizRelic {
         return new QuizData(request.targetId, request.getTargetUiStringsId(), show, correctOptions, allOptions);
     }
 
+    /**
+     * 若无法生成错误答案，则correctOptions和allOptions不变；
+     */
     private void addAskKana(List<String> correctOptions, List<String> allOptions, UIStrings wordUiStrings, int choice_num, BuildQuizDataRequest request) {
         String kana = wordUiStrings.TEXT[KANA_UISTRINGS_INDEX];
-
-
-        // allOptions里填充错误的kana，来自工具
+        List<String> wrongKanaList = Optional.ofNullable(wordUiStrings.TEXT_DICT)
+                .map(it -> it.get(WRONG_KANA_KEY))
+                .map(it -> Arrays.asList(it.split("\\|")))
+                .orElseGet(() -> new ArrayList<>(0));
         List<String> confusingList = new ArrayList<>();
         confusingList.add(kana);
         int size = Math.min(choice_num, request.getMaxOptionNum() - allOptions.size());
-        JapaneseKanaConfuser.generateConfusingKana(kana, size, confusingList);
-        Collections.shuffle(confusingList);
+        confusingList.addAll(wrongKanaList.subList(0, size));
         if (confusingList.size() > 1) {
             correctOptions.add(kana);
+            Collections.shuffle(confusingList);
             allOptions.addAll(confusingList);
         }
     }
+
+    /**
+     * 若无法生成错误答案，则correctOptions和allOptions不变；
+     */
     private void addAskMeaning(List<String> correctOptions, List<String> allOptions, UIStrings wordUiStrings, int choice_num, BuildQuizDataRequest request) {
         String meaning = wordUiStrings.TEXT[MEANING_UISTRINGS_INDEX];
 
@@ -110,11 +127,11 @@ public class TestJLPT extends QuizRelic {
         confusingList.add(meaning);
         // allOptions里填充错误的meaning，来自其他单词
         for (int i = 0; i < choice_num && allOptions.size() < request.getMaxOptionNum(); i++) {
-            int target_word = MathUtils.random(0, request.getVocabularySize() - 1);
-            if (target_word == request.getTargetId()) {
+            int otherWordId = MathUtils.random(0, request.getVocabularySize() - 1);
+            if (otherWordId == request.getTargetId()) {
                 continue;
             }
-            UIStrings otherWord = CardCrawlGame.languagePack.getUIString(request.getUiStringsIdStart() + target_word);
+            UIStrings otherWord = CardCrawlGame.languagePack.getUIString(request.getUiStringsIdStart() + otherWordId);
             String otherWordMeaning = otherWord.TEXT[MEANING_UISTRINGS_INDEX];
             confusingList.add(otherWordMeaning);
         }

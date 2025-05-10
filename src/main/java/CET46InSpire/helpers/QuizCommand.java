@@ -124,9 +124,8 @@ public class QuizCommand extends ConsoleCommand {
         }
         QuizAction.QuizData quizData = ((QuizRelic) relic).buildQuizData(BuildQuizDataRequest.Factory.fromTargetId(lexicon, id));
         logger.info("quizData = {}", quizData);
-        // TODO 有可能这里不应该把 quizData 的相关字段改成 public
-        BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.show, lexicon.name(),
-                quizData.correctOptions, quizData.allOptions, quizData.getWordUiStringsId(), false);
+        BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.getShow(), lexicon.name(),
+                quizData.getCorrectOptions(), quizData.getAllOptions(), quizData.getWordUiStringsId(), false);
     }
 
     @Override

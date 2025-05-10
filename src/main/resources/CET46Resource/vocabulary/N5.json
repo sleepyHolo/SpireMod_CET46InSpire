@@ -1,2618 +1,5664 @@
 {
   "CET46:N5_info" : {
-    "TEXT" : [ "871" ]
+    "TEXT" : [ "871" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_0" : {
-    "TEXT" : [ "〜やすい", "简单的，容易……的", "〜やすい", "〜易い" ]
+    "TEXT" : [ "〜やすい", "简单的，容易……的", "〜やすい", "〜易い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_1" : {
-    "TEXT" : [ "〜か月", "……个月", "〜かげつ", null ]
+    "TEXT" : [ "〜か月", "……个月", "〜かげつ", "〜か月" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜かぜつ|〜かげす|〜かっげつ"
+    }
   },
   "CET46:N5_2" : {
-    "TEXT" : [ "キログラム", "千克，公斤", "(英) kilogram；(法) kilogramme", null ]
+    "TEXT" : [ "キログラム", "千克，公斤", "キログラム", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_3" : {
-    "TEXT" : [ "キロメートル", "……千米，……公里", "(法) kilomètre", null ]
+    "TEXT" : [ "キロメートル", "……千米，……公里", "キロメートル", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_4" : {
-    "TEXT" : [ "グラム", "克", "(英) gram；(法) gramme", null ]
+    "TEXT" : [ "グラム", "克", "グラム", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_5" : {
-    "TEXT" : [ "〜さん", "（表达敬意或亲近感）……先生，……女士", "〜さん", null ]
+    "TEXT" : [ "〜さん", "（表达敬意或亲近感）……先生，……女士", "〜さん", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_6" : {
-    "TEXT" : [ "〜すぎ", "过分……，过度……", "〜すぎ", "〜過ぎ" ]
+    "TEXT" : [ "〜すぎ", "过分……，过度……", "〜すぎ", "〜過ぎ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_7" : {
-    "TEXT" : [ "〜にくい", "难……", "〜にくい", null ]
+    "TEXT" : [ "〜にくい", "难……", "〜にくい", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_8" : {
-    "TEXT" : [ "〜回", "……回，次", "〜かい", null ]
+    "TEXT" : [ "〜回", "……回，次", "〜かい", "〜回" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜たい|〜かえ|〜っかい|〜かいー"
+    }
   },
   "CET46:N5_9" : {
-    "TEXT" : [ "〜階", "……层，……楼", "〜かい", null ]
+    "TEXT" : [ "〜階", "……层，……楼", "〜かい", "〜階" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜たい|〜かえ|〜っかい|〜かいー"
+    }
   },
   "CET46:N5_10" : {
-    "TEXT" : [ "〜君", "（用于同辈或下级男性姓名后）小……，……位", "〜くん", null ]
+    "TEXT" : [ "〜君", "（用于同辈或下级男性姓名后）小……，……位", "〜くん", "〜君" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ぐん|〜こん|〜きん|〜くんん"
+    }
   },
   "CET46:N5_11" : {
-    "TEXT" : [ "〜個", "……个，用于数小而圆的物体", "〜こ", null ]
+    "TEXT" : [ "〜個", "……个，用于数小而圆的物体", "〜こ", "〜個" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ご|〜そ|〜と|〜こお"
+    }
   },
   "CET46:N5_12" : {
-    "TEXT" : [ "〜頃", "大概……，……左右", "〜ごろ", null ]
+    "TEXT" : [ "〜頃", "大概……，……左右", "〜ごろ", "〜頃" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ころ|〜ごろう|〜ごろお|〜ごっろ"
+    }
   },
   "CET46:N5_13" : {
-    "TEXT" : [ "〜冊", "（用来数笔记本，书本等）……册，……本", "〜さつ", null ]
+    "TEXT" : [ "〜冊", "（用来数笔记本，书本等）……册，……本", "〜さつ", "〜冊" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜たつ|〜かつ|〜ざつ|〜さっつ"
+    }
   },
   "CET46:N5_14" : {
-    "TEXT" : [ "〜山", "……山", "〜さん", null ]
+    "TEXT" : [ "〜山", "……山", "〜さん", "〜山" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜せん|〜ざん|〜たん|〜さんん"
+    }
   },
   "CET46:N5_15" : {
-    "TEXT" : [ "〜時", "……点（钟）；……时候", "〜じ", null ]
+    "TEXT" : [ "〜時", "……点（钟）；……时候", "〜じ", "〜時" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ち|〜し|〜き|〜ず"
+    }
   },
   "CET46:N5_16" : {
-    "TEXT" : [ "〜 人[にん]", "……个人；……人", "〜にん", null ]
+    "TEXT" : [ "〜 人", "……个人；……人", "〜にん", "〜 人" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜じん|〜りん|〜みん|〜にんん"
+    }
   },
   "CET46:N5_17" : {
-    "TEXT" : [ "台", "（家具、汽车、机器等）……台，……辆；台子", "だい", null ]
+    "TEXT" : [ "台", "（家具、汽车、机器等）……台，……辆；台子", "だい", "台" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たい|だん|たいん|だいい"
+    }
   },
   "CET46:N5_18" : {
-    "TEXT" : [ "〜達", "……们（人的复数）", "〜たち", null ]
+    "TEXT" : [ "〜達", "……们（人的复数）", "〜たち", "〜達" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜だち|〜たっち|〜たちい|〜たちいい"
+    }
   },
   "CET46:N5_19" : {
-    "TEXT" : [ "〜 中[じゅう]", "（附在表示年月、时间、地点的词语后）整整……，整个……", "〜じゅう", null ]
+    "TEXT" : [ "〜 中", "（附在表示年月、时间、地点的词语后）整整……，整个……", "〜じゅう", "〜 中" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ちゅう|〜じゅん|〜じゅうう|〜じゅううう"
+    }
   },
   "CET46:N5_20" : {
-    "TEXT" : [ "中[ちゅう]", "正在……；中间，中", "ちゅう", null ]
+    "TEXT" : [ "中", "正在……；中间，中", "ちゅう", "中" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちょう|しゅう|きゅう"
+    }
   },
   "CET46:N5_21" : {
-    "TEXT" : [ "度[ど]", "（角度，经纬度，温度等）……度；……次", "ど", null ]
+    "TEXT" : [ "度", "（角度，经纬度，温度等）……度；……次", "ど", "度" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "と|どこ|どう"
+    }
   },
   "CET46:N5_22" : {
-    "TEXT" : [ "〜ら", "……们，……等", "〜ら", null ]
+    "TEXT" : [ "〜ら", "……们，……等", "〜ら", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_23" : {
-    "TEXT" : [ "日[にち]", "……号；……天；日本；星期日", "にち", null ]
+    "TEXT" : [ "日", "……号；……天；日本；星期日", "にち", "日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "みち|りち|にじ|につ"
+    }
   },
   "CET46:N5_24" : {
-    "TEXT" : [ "〜杯", "……杯", "〜はい", null ]
+    "TEXT" : [ "〜杯", "……杯", "〜はい", "〜杯" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ぱい|〜ばい|〜はえ"
+    }
   },
   "CET46:N5_25" : {
-    "TEXT" : [ "〜番", "（表达顺序或序号）……号", "〜ばん", null ]
+    "TEXT" : [ "〜番", "（表达顺序或序号）……号", "〜ばん", "〜番" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ぱん|〜まん|〜ばむ"
+    }
   },
   "CET46:N5_26" : {
-    "TEXT" : [ "〜番目", "第……号，第……个", "〜ばんめ", null ]
+    "TEXT" : [ "〜番目", "第……号，第……个", "〜ばんめ", "〜番目" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ぱんめ|〜まんめ|〜ばむめ|〜ばんべ"
+    }
   },
   "CET46:N5_27" : {
-    "TEXT" : [ "〜匹", "（猫、狗、鸟、鱼、虫等小动物）……只，……条", "〜ひき", null ]
+    "TEXT" : [ "〜匹", "（猫、狗、鸟、鱼、虫等小动物）……只，……条", "〜ひき", "〜匹" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ぴき|〜びき|〜ひく"
+    }
   },
   "CET46:N5_28" : {
-    "TEXT" : [ "〜分", "……分钟", "〜ふん", null ]
+    "TEXT" : [ "〜分", "……分钟", "〜ふん", "〜分" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ぷん|〜ぶん|〜ほん"
+    }
   },
   "CET46:N5_29" : {
-    "TEXT" : [ "〜本", "（细长物的）……支，把，瓶", "〜ほん", null ]
+    "TEXT" : [ "〜本", "（细长物的）……支，把，瓶", "〜ほん", "〜本" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ぽん|〜ぼん|〜ふん"
+    }
   },
   "CET46:N5_30" : {
-    "TEXT" : [ "〜枚", "……张，……枚", "〜まい", null ]
+    "TEXT" : [ "〜枚", "……张，……枚", "〜まい", "〜枚" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜めい|〜まいり|〜まいめ"
+    }
   },
   "CET46:N5_31" : {
-    "TEXT" : [ "〜末", "……末，……尾", "〜まつ", null ]
+    "TEXT" : [ "〜末", "……末，……尾", "〜まつ", "〜末" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ます|〜まつり|〜まつもと"
+    }
   },
   "CET46:N5_32" : {
-    "TEXT" : [ "〜様", "（表达敬意）……先生，……女士", "〜さま", null ]
+    "TEXT" : [ "〜様", "（表达敬意）……先生，……女士", "〜さま", "〜様" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜さまざま|〜さまよう|〜さまー"
+    }
   },
   "CET46:N5_33" : {
-    "TEXT" : [ "ああ(嘆)", "（悲伤、快乐或惊讶时）啊，哎呀；（答应时）啊", "ああ", null ]
+    "TEXT" : [ "ああ(嘆)", "（悲伤、快乐或惊讶时）啊，哎呀；（答应时）啊", "ああ", "ああ(嘆)" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_34" : {
-    "TEXT" : [ "アイスクリーム", "冰激凌", "(英) ice cream", null ]
+    "TEXT" : [ "アイスクリーム", "冰激凌", "アイスクリーム", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_35" : {
-    "TEXT" : [ "あさって", "后天", "あさって", "明後日" ]
+    "TEXT" : [ "あさって", "后天", "あさって", "明後日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_36" : {
-    "TEXT" : [ "あそこ", "（指代远处）那里；（指代自己和对方都知道的地方）那里", "あそこ", null ]
+    "TEXT" : [ "あそこ", "（指代远处）那里；（指代自己和对方都知道的地方）那里", "あそこ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_37" : {
-    "TEXT" : [ "あたし", "（女性用语）我", "あたし", null ]
+    "TEXT" : [ "あたし", "（女性用语）我", "あたし", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_38" : {
-    "TEXT" : [ "あちら", "（远处）那边；那个人，那位", "あちら", null ]
+    "TEXT" : [ "あちら", "（远处）那边；那个人，那位", "あちら", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_39" : {
-    "TEXT" : [ "あっち", "（“あちら”的口语）那边；那个人", "あっち", null ]
+    "TEXT" : [ "あっち", "（“あちら”的口语）那边；那个人", "あっち", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_40" : {
-    "TEXT" : [ "あなた", "你", "あなた", null ]
+    "TEXT" : [ "あなた", "你", "あなた", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_41" : {
-    "TEXT" : [ "あの", "（指代远处事物）那个；（指代自己和对方都知道的事物）那个", "あの", null ]
+    "TEXT" : [ "あの", "（指代远处事物）那个；（指代自己和对方都知道的事物）那个", "あの", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_42" : {
-    "TEXT" : [ "あのう", "（带着顾虑和犹豫的心情呼唤对方）不好意思，那个……", "あのう", null ]
+    "TEXT" : [ "あのう", "（带着顾虑和犹豫的心情呼唤对方）不好意思，那个……", "あのう", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_43" : {
-    "TEXT" : [ "アパート", "公寓", "(英) apartment house", null ]
+    "TEXT" : [ "アパート", "公寓", "アパート", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_44" : {
-    "TEXT" : [ "あまり", "（后接否定）不太，不很；（后接肯定）太，过分", "あまり", null ]
+    "TEXT" : [ "あまり", "（后接否定）不太，不很；（后接肯定）太，过分", "あまり", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_45" : {
-    "TEXT" : [ "飴[あめ]", "糖果；麦芽糖", "あめ", null ]
+    "TEXT" : [ "飴", "糖果；麦芽糖", "あめ", "飴" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おめ|かめ|あね|あけ"
+    }
   },
   "CET46:N5_46" : {
-    "TEXT" : [ "ある", "（无生命物体）存在；有；发生；处于某种状态", "ある", "有る｜在る" ]
+    "TEXT" : [ "ある", "（无生命物体）存在；有；发生；处于某种状态", "ある", "有る｜在る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_47" : {
-    "TEXT" : [ "アルバム", "相册，纪念册", "(英) album", null ]
+    "TEXT" : [ "アルバム", "相册，纪念册", "アルバム", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_48" : {
-    "TEXT" : [ "あれ(代)", "（表示离双方都有距离的）那个；（指之前发生过的，你和对方都熟悉的事情）那时", "あれ", null ]
+    "TEXT" : [ "あれ(代)", "（表示离双方都有距离的）那个；（指之前发生过的，你和对方都熟悉的事情）那时", "あれ", "あれ(代)" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_49" : {
-    "TEXT" : [ "いい", "（「よい」的口语形式）好的；可以；合适，足够", "いい", null ]
+    "TEXT" : [ "いい", "（「よい」的口语形式）好的；可以；合适，足够", "いい", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_50" : {
-    "TEXT" : [ "いいえ", "（否定回答时）不是，不对", "いいえ", null ]
+    "TEXT" : [ "いいえ", "（否定回答时）不是，不对", "いいえ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_51" : {
-    "TEXT" : [ "イーメール", "电子邮件", "(英) E-mail", "Eメール" ]
+    "TEXT" : [ "イーメール", "电子邮件", "イーメール", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_52" : {
-    "TEXT" : [ "イエス", "是", "(英) yes", null ]
+    "TEXT" : [ "イエス", "是", "イエス", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_53" : {
-    "TEXT" : [ "イギリス", "英国", "(葡) inglez", null ]
+    "TEXT" : [ "イギリス", "英国", "イギリス", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_54" : {
-    "TEXT" : [ "いくつ", "几个；几岁", "いくつ", "幾つ" ]
+    "TEXT" : [ "いくつ", "几个；几岁", "いくつ", "幾つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_55" : {
-    "TEXT" : [ "いくら", "（数量或价钱）多少；即使……也……", "いくら", null ]
+    "TEXT" : [ "いくら", "（数量或价钱）多少；即使……也……", "いくら", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_56" : {
-    "TEXT" : [ "いつ", "什么时候", "いつ", "何時" ]
+    "TEXT" : [ "いつ", "什么时候", "いつ", "何時" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_57" : {
-    "TEXT" : [ "いつも", "经常，总是；平时", "いつも", null ]
+    "TEXT" : [ "いつも", "经常，总是；平时", "いつも", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_58" : {
-    "TEXT" : [ "いる", "（有生命的物体的）存在，有", "いる", "居る" ]
+    "TEXT" : [ "いる", "（有生命的物体的）存在，有", "いる", "居る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_59" : {
-    "TEXT" : [ "いろいろ", "各种各样，形形色色", "いろいろ", "色々" ]
+    "TEXT" : [ "いろいろ", "各种各样，形形色色", "いろいろ", "色々" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_60" : {
-    "TEXT" : [ "インターネット", "互联网", "(英) internet", null ]
+    "TEXT" : [ "インターネット", "互联网", "インターネット", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_61" : {
-    "TEXT" : [ "ウーロン茶", "乌龙茶", "うーろんちゃ", "烏竜茶" ]
+    "TEXT" : [ "ウーロン茶", "乌龙茶", "うーろんちゃ", "烏竜茶" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ううろんちゃ|うーらんちゃ|うーろむちゃ|うーろちゃ"
+    }
   },
   "CET46:N5_62" : {
-    "TEXT" : [ "ううん", "（“いいえ”的口语）不，不是", "ううん", null ]
+    "TEXT" : [ "ううん", "（“いいえ”的口语）不，不是", "ううん", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_63" : {
-    "TEXT" : [ "うどん", "乌冬面", "うどん", null ]
+    "TEXT" : [ "うどん", "乌冬面", "うどん", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_64" : {
-    "TEXT" : [ "うるさい", "吵的，令人烦躁的；爱唠叨的", "うるさい", null ]
+    "TEXT" : [ "うるさい", "吵的，令人烦躁的；爱唠叨的", "うるさい", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_65" : {
-    "TEXT" : [ "エアコン", "空调", "(英) air conditioner", null ]
+    "TEXT" : [ "エアコン", "空调", "エアコン", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_66" : {
-    "TEXT" : [ "ええ", "嗯，是的；唉", "ええ", null ]
+    "TEXT" : [ "ええ", "嗯，是的；唉", "ええ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_67" : {
-    "TEXT" : [ "おいしい", "美味的，好吃的", "おいしい", "美味しい" ]
+    "TEXT" : [ "おいしい", "美味的，好吃的", "おいしい", "美味しい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_68" : {
-    "TEXT" : [ "オーストラリア", "澳大利亚", "(英) Australia", null ]
+    "TEXT" : [ "オーストラリア", "澳大利亚", "オーストラリア", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_69" : {
-    "TEXT" : [ "おじ", "（伯父）父母的哥哥；（叔父）父母的弟弟", "おじ", "伯父｜叔父" ]
+    "TEXT" : [ "おじ", "（伯父）父母的哥哥；（叔父）父母的弟弟", "おじ", "伯父｜叔父" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_70" : {
-    "TEXT" : [ "おじいさん", "祖父；外公；对年长男性的昵称", "おじいさん", "お祖父さん｜お爺さん" ]
+    "TEXT" : [ "おじいさん", "祖父；外公；对年长男性的昵称", "おじいさん", "お祖父さん｜お爺さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_71" : {
-    "TEXT" : [ "おじさん", "叔叔，伯伯；对其他成年男性的昵称", "おじさん", "伯父さん｜叔父さん" ]
+    "TEXT" : [ "おじさん", "叔叔，伯伯；对其他成年男性的昵称", "おじさん", "伯父さん｜叔父さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_72" : {
-    "TEXT" : [ "おととい", "前天", "おととい", "一昨日" ]
+    "TEXT" : [ "おととい", "前天", "おととい", "一昨日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_73" : {
-    "TEXT" : [ "おととし", "前年", "おととし", "一昨年" ]
+    "TEXT" : [ "おととし", "前年", "おととし", "一昨年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_74" : {
-    "TEXT" : [ "おなか", "肚子，肠胃", "おなか", null ]
+    "TEXT" : [ "おなか", "肚子，肠胃", "おなか", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_75" : {
-    "TEXT" : [ "おにぎり", "饭团", "おにぎり", "お握り" ]
+    "TEXT" : [ "おにぎり", "饭团", "おにぎり", "お握り" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_76" : {
-    "TEXT" : [ "おば", "（伯母）父母的姐姐；（叔母）父母的妹妹", "おば", "伯母｜叔母" ]
+    "TEXT" : [ "おば", "（伯母）父母的姐姐；（叔母）父母的妹妹", "おば", "伯母｜叔母" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_77" : {
-    "TEXT" : [ "おばあさん", "祖母；外婆；对年长女性的昵称", "おばあさん", null ]
+    "TEXT" : [ "おばあさん", "祖母；外婆；对年长女性的昵称", "おばあさん", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_78" : {
-    "TEXT" : [ "お菓子", "点心，糕点", "おかし", null ]
+    "TEXT" : [ "お菓子", "点心，糕点", "おかし", "お菓子" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おがし|おこし|おかす"
+    }
   },
   "CET46:N5_79" : {
-    "TEXT" : [ "お客さん", "客人，顾客", "おきゃくさん", null ]
+    "TEXT" : [ "お客さん", "客人，顾客", "おきゃくさん", "お客さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おきやくさん|おかくさん|おきゃつさん|おきゃきさん"
+    }
   },
   "CET46:N5_80" : {
-    "TEXT" : [ "お兄さん", "哥哥；对年轻男子的称呼", "おにいさん", null ]
+    "TEXT" : [ "お兄さん", "哥哥；对年轻男子的称呼", "おにいさん", "お兄さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おみいさん|おりいさん|おにえさん|おにさん"
+    }
   },
   "CET46:N5_81" : {
-    "TEXT" : [ "お姉さん", "姐姐；对年轻女子的称呼", "おねえさん", null ]
+    "TEXT" : [ "お姉さん", "姐姐；对年轻女子的称呼", "おねえさん", "お姉さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おめえさん|おれえさん|おねいさん|おねさん"
+    }
   },
   "CET46:N5_82" : {
-    "TEXT" : [ "お手洗い", "洗手间", "おてあらい", null ]
+    "TEXT" : [ "お手洗い", "洗手间", "おてあらい", "お手洗い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おであらい|おたあらい|おておらい|おてあだい"
+    }
   },
   "CET46:N5_83" : {
-    "TEXT" : [ "お茶", "茶；工作间隙中的短暂休息", "おちゃ", null ]
+    "TEXT" : [ "お茶", "茶；工作间隙中的短暂休息", "おちゃ", "お茶" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おしゃ|おちや|おた"
+    }
   },
   "CET46:N5_84" : {
-    "TEXT" : [ "お父さん", "爸爸；父亲", "おとうさん", null ]
+    "TEXT" : [ "お父さん", "爸爸；父亲", "おとうさん", "お父さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おどうさん|おつうさん|おとおさん|おとさん"
+    }
   },
   "CET46:N5_85" : {
-    "TEXT" : [ "お母さん", "妈妈，母亲", "おかあさん", null ]
+    "TEXT" : [ "お母さん", "妈妈，母亲", "おかあさん", "お母さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おがあさん|おこあさん|おかおさん|おかすさん"
+    }
   },
   "CET46:N5_86" : {
-    "TEXT" : [ "カップ", "（带把手的）杯子；奖杯", "(英) cup", null ]
+    "TEXT" : [ "カップ", "（带把手的）杯子；奖杯", "カップ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_87" : {
-    "TEXT" : [ "かばん", "（皮革或布等制作的）书包，提包", "かばん", "鞄" ]
+    "TEXT" : [ "かばん", "（皮革或布等制作的）书包，提包", "かばん", "鞄" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_88" : {
-    "TEXT" : [ "カメラ", "照相机", "(英) camera", null ]
+    "TEXT" : [ "カメラ", "照相机", "カメラ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_89" : {
-    "TEXT" : [ "粥[かゆ]", "粥，稀饭", "かゆ", null ]
+    "TEXT" : [ "粥", "粥，稀饭", "かゆ", "粥" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がゆ|こゆ|かよ|かう"
+    }
   },
   "CET46:N5_90" : {
-    "TEXT" : [ "カラオケ", "卡拉OK，KTV", "からおけ", null ]
+    "TEXT" : [ "カラオケ", "卡拉OK，KTV", "カラオケ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_91" : {
-    "TEXT" : [ "カレー", "咖喱", "(英) curry", null ]
+    "TEXT" : [ "カレー", "咖喱", "カレー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_92" : {
-    "TEXT" : [ "可愛い", "可爱的", "かわいい", null ]
+    "TEXT" : [ "可愛い", "可爱的", "かわいい", "可愛い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かあいい|かわい|くわいい|かゆい"
+    }
   },
   "CET46:N5_93" : {
-    "TEXT" : [ "ギター", "吉他", "(英) guitar", null ]
+    "TEXT" : [ "ギター", "吉他", "ギター", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_94" : {
-    "TEXT" : [ "昨日[きのう]", "昨天", "きのう", null ]
+    "TEXT" : [ "昨日", "昨天", "きのう", "昨日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きよう|けのう|きのお|きんう"
+    }
   },
   "CET46:N5_95" : {
-    "TEXT" : [ "ギョーザ", "饺子", "ぎょーざ", "餃子" ]
+    "TEXT" : [ "ギョーザ", "饺子", "ギョーザ", "餃子" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_96" : {
-    "TEXT" : [ "きれい", "好看，美丽；干净，整洁", "きれい", "奇麗｜綺麗" ]
+    "TEXT" : [ "きれい", "好看，美丽；干净，整洁", "きれい", "奇麗｜綺麗" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_97" : {
-    "TEXT" : [ "キロ", "千", "(法) kilo", null ]
+    "TEXT" : [ "キロ", "千", "キロ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_98" : {
-    "TEXT" : [ "クラス", "班级；等级", "(英) class", null ]
+    "TEXT" : [ "クラス", "班级；等级", "クラス", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_99" : {
-    "TEXT" : [ "クリスマス", "圣诞节", "(英) Christmas", null ]
+    "TEXT" : [ "クリスマス", "圣诞节", "クリスマス", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_100" : {
-    "TEXT" : [ "コート", "外套，大衣", "(英) coat", null ]
+    "TEXT" : [ "コート", "外套，大衣", "コート", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_101" : {
-    "TEXT" : [ "コーヒー", "咖啡", "(英) coffee", null ]
+    "TEXT" : [ "コーヒー", "咖啡", "コーヒー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_102" : {
-    "TEXT" : [ "コーラ", "可乐", "(英) cola", null ]
+    "TEXT" : [ "コーラ", "可乐", "コーラ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_103" : {
-    "TEXT" : [ "ここ", "（指代自己附近的事物）这里；（自己所指的地方）这里", "ここ", null ]
+    "TEXT" : [ "ここ", "（指代自己附近的事物）这里；（自己所指的地方）这里", "ここ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_104" : {
-    "TEXT" : [ "こちら", "（指示说话者所在的方向或地点）这里；（说话者或说话者旁边的人）这个，这位", "こちら", null ]
+    "TEXT" : [ "こちら", "（指示说话者所在的方向或地点）这里；（说话者或说话者旁边的人）这个，这位", "こちら", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_105" : {
-    "TEXT" : [ "こっち", "（「こちら」的口语）这边；这个；我，我们", "こっち", null ]
+    "TEXT" : [ "こっち", "（「こちら」的口语）这边；这个；我，我们", "こっち", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_106" : {
-    "TEXT" : [ "コップ", "玻璃杯，杯子", "(荷) kop", null ]
+    "TEXT" : [ "コップ", "玻璃杯，杯子", "コップ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_107" : {
-    "TEXT" : [ "この", "（指代靠近说话者的事物）这个", "この", null ]
+    "TEXT" : [ "この", "（指代靠近说话者的事物）这个", "この", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_108" : {
-    "TEXT" : [ "コピー", "复印；复印件", "(英) copy", null ]
+    "TEXT" : [ "コピー", "复印；复印件", "コピー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_109" : {
-    "TEXT" : [ "ごみ箱", "垃圾箱", "ごみばこ", null ]
+    "TEXT" : [ "ごみ箱", "垃圾箱", "ごみばこ", "ごみ箱" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ごみはこ|ごみぱこ|ごみばご|ごみばく"
+    }
   },
   "CET46:N5_110" : {
-    "TEXT" : [ "ゴルフ", "高尔夫", "(英) golf", null ]
+    "TEXT" : [ "ゴルフ", "高尔夫", "ゴルフ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_111" : {
-    "TEXT" : [ "これ", "（指代靠近说话者的事物）这个", "これ", null ]
+    "TEXT" : [ "これ", "（指代靠近说话者的事物）这个", "これ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_112" : {
-    "TEXT" : [ "こんな", "这样；这种", "こんな", null ]
+    "TEXT" : [ "こんな", "这样；这种", "こんな", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_113" : {
-    "TEXT" : [ "コンビニ", "便利店", "(英) convenience store", "コンビニエンスストア" ]
+    "TEXT" : [ "コンビニ", "便利店", "コンビニ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_114" : {
-    "TEXT" : [ "ご飯", "米饭；吃饭", "ごはん", null ]
+    "TEXT" : [ "ご飯", "米饭；吃饭", "ごはん", "ご飯" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ごほん|ごはんん|ごはんま"
+    }
   },
   "CET46:N5_115" : {
-    "TEXT" : [ "さあ", "（催促或邀请别人）快，喂；（犹豫或感到为难时）唉", "さあ", null ]
+    "TEXT" : [ "さあ", "（催促或邀请别人）快，喂；（犹豫或感到为难时）唉", "さあ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_116" : {
-    "TEXT" : [ "サッカー", "足球", "(英) soccer", null ]
+    "TEXT" : [ "サッカー", "足球", "サッカー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_117" : {
-    "TEXT" : [ "シーディー", "CD唱片", "(英) CD", null ]
+    "TEXT" : [ "シーディー", "CD唱片", "シーディー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_118" : {
-    "TEXT" : [ "ジェーアール", "日本铁道公司", "(英) JR", null ]
+    "TEXT" : [ "ジェーアール", "日本铁道公司", "ジェーアール", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_119" : {
-    "TEXT" : [ "しかし", "可是，不过", "しかし", null ]
+    "TEXT" : [ "しかし", "可是，不过", "しかし", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_120" : {
-    "TEXT" : [ "じゃ", "（“では”的口语）那么", "じゃ", null ]
+    "TEXT" : [ "じゃ", "（“では”的口语）那么", "じゃ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_121" : {
-    "TEXT" : [ "じゃがいも", "土豆，马铃薯", "じゃがいも", "じゃが芋" ]
+    "TEXT" : [ "じゃがいも", "土豆，马铃薯", "じゃがいも", "じゃが芋" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_122" : {
-    "TEXT" : [ "シャツ", "衬衫，衬衣", "(英) shirt", null ]
+    "TEXT" : [ "シャツ", "衬衫，衬衣", "シャツ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_123" : {
-    "TEXT" : [ "シャワー", "淋浴", "(英) shower", null ]
+    "TEXT" : [ "シャワー", "淋浴", "シャワー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_124" : {
-    "TEXT" : [ "ジュース", "果汁", "(英) juice", null ]
+    "TEXT" : [ "ジュース", "果汁", "ジュース", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_125" : {
-    "TEXT" : [ "しょうゆ", "酱油", "しょうゆ", "醤油" ]
+    "TEXT" : [ "しょうゆ", "酱油", "しょうゆ", "醤油" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_126" : {
-    "TEXT" : [ "ショッピング", "购物", "(英) shopping", null ]
+    "TEXT" : [ "ショッピング", "购物", "ショッピング", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_127" : {
-    "TEXT" : [ "すいか", "西瓜", "すいか", "西瓜" ]
+    "TEXT" : [ "すいか", "西瓜", "すいか", "西瓜" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_128" : {
-    "TEXT" : [ "スープ", "（西式）汤", "(英) soup", null ]
+    "TEXT" : [ "スープ", "（西式）汤", "スープ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_129" : {
-    "TEXT" : [ "スカート", "裙子", "(英) skirt", null ]
+    "TEXT" : [ "スカート", "裙子", "スカート", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_130" : {
-    "TEXT" : [ "スキー", "滑雪", "(英) ski", null ]
+    "TEXT" : [ "スキー", "滑雪", "スキー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_131" : {
-    "TEXT" : [ "すぐ", "立刻，马上；很近", "すぐ", "直ぐ" ]
+    "TEXT" : [ "すぐ", "立刻，马上；很近", "すぐ", "直ぐ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_132" : {
-    "TEXT" : [ "ずつ", "每……", "ずつ", null ]
+    "TEXT" : [ "ずつ", "每……", "ずつ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_133" : {
-    "TEXT" : [ "ストーブ", "暖炉，炉子", "(英) stove", null ]
+    "TEXT" : [ "ストーブ", "暖炉，炉子", "ストーブ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_134" : {
-    "TEXT" : [ "スプーン", "汤匙，调羹", "(英) spoon", null ]
+    "TEXT" : [ "スプーン", "汤匙，调羹", "スプーン", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_135" : {
-    "TEXT" : [ "スポーツ", "运动，游戏", "(英) sport", null ]
+    "TEXT" : [ "スポーツ", "运动，游戏", "スポーツ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_136" : {
-    "TEXT" : [ "ズボン", "裤子", "(法) jupon", null ]
+    "TEXT" : [ "ズボン", "裤子", "ズボン", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_137" : {
-    "TEXT" : [ "スリッパ", "拖鞋", "(英) slipper", null ]
+    "TEXT" : [ "スリッパ", "拖鞋", "スリッパ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_138" : {
-    "TEXT" : [ "する", "做，干", "する", null ]
+    "TEXT" : [ "する", "做，干", "する", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_139" : {
-    "TEXT" : [ "セーター", "毛衣", "(英) sweater", null ]
+    "TEXT" : [ "セーター", "毛衣", "セーター", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_140" : {
-    "TEXT" : [ "石 鹸[けん]", "肥皂", "せっけん", null ]
+    "TEXT" : [ "石 鹸", "肥皂", "せっけん", "石 鹸" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "せけん|ぜっけん|てっけん|そっけん"
+    }
   },
   "CET46:N5_141" : {
-    "TEXT" : [ "ゼロ", "零，零点；什么都没有", "(英) zero", null ]
+    "TEXT" : [ "ゼロ", "零，零点；什么都没有", "ゼロ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_142" : {
-    "TEXT" : [ "そうだ", "是啊，就是；（突然想到）对了", "そうだ", null ]
+    "TEXT" : [ "そうだ", "是啊，就是；（突然想到）对了", "そうだ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_143" : {
-    "TEXT" : [ "そこ", "（指代对方附近）那里", "そこ", null ]
+    "TEXT" : [ "そこ", "（指代对方附近）那里", "そこ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_144" : {
-    "TEXT" : [ "そして", "于是，然后", "そして", null ]
+    "TEXT" : [ "そして", "于是，然后", "そして", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_145" : {
-    "TEXT" : [ "そちら", "（指代离对方近的事物）那里；指代对方或对方那边的人", "そちら", null ]
+    "TEXT" : [ "そちら", "（指代离对方近的事物）那里；指代对方或对方那边的人", "そちら", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_146" : {
-    "TEXT" : [ "そっち", "（“そちら”的口语）那边；那个，那个人", "そっち", null ]
+    "TEXT" : [ "そっち", "（“そちら”的口语）那边；那个，那个人", "そっち", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_147" : {
-    "TEXT" : [ "その", "（指代对方附近的物品）那个", "その", null ]
+    "TEXT" : [ "その", "（指代对方附近的物品）那个", "その", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_148" : {
-    "TEXT" : [ "その後", "然后，从那以后", "そのご", null ]
+    "TEXT" : [ "その後", "然后，从那以后", "そのご", "その後" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "そのこ|そのそ|そのど|そのろ"
+    }
   },
   "CET46:N5_149" : {
-    "TEXT" : [ "蕎麦[そば]", "荞麦面", "そば", null ]
+    "TEXT" : [ "蕎麦", "荞麦面", "そば", "蕎麦" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こば|とば|そは|そだ"
+    }
   },
   "CET46:N5_150" : {
-    "TEXT" : [ "側[そば]", "旁边，附近", "そば", "傍" ]
+    "TEXT" : [ "側", "旁边，附近", "そば", "傍" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こば|とば|そは|そだ"
+    }
   },
   "CET46:N5_151" : {
-    "TEXT" : [ "それ", "（表示离对方近的东西）那个；那样", "それ", null ]
+    "TEXT" : [ "それ", "（表示离对方近的东西）那个；那样", "それ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_152" : {
-    "TEXT" : [ "それから", "然后；还有", "それから", null ]
+    "TEXT" : [ "それから", "然后；还有", "それから", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_153" : {
-    "TEXT" : [ "それでは", "那么，那样的话", "それでは", null ]
+    "TEXT" : [ "それでは", "那么，那样的话", "それでは", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_154" : {
-    "TEXT" : [ "だいぶ", "几乎，相当", "だいぶ", "大分" ]
+    "TEXT" : [ "だいぶ", "几乎，相当", "だいぶ", "大分" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_155" : {
-    "TEXT" : [ "たくさん", "许多，相当多", "たくさん", "沢山" ]
+    "TEXT" : [ "たくさん", "许多，相当多", "たくさん", "沢山" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_156" : {
-    "TEXT" : [ "タクシー", "出租车，的士", "(英) taxi", null ]
+    "TEXT" : [ "タクシー", "出租车，的士", "タクシー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_157" : {
-    "TEXT" : [ "だけ", "只，仅", "だけ", null ]
+    "TEXT" : [ "だけ", "只，仅", "だけ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_158" : {
-    "TEXT" : [ "ただ今", "刚刚；现在；立刻；（常写作“ただいま”）我回来了", "ただいま", "只今" ]
+    "TEXT" : [ "ただ今", "刚刚；现在；立刻；（常写作“ただいま”）我回来了", "ただいま", "只今" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ただいまごろ|ただいままで|ただいまにも"
+    }
   },
   "CET46:N5_159" : {
-    "TEXT" : [ "タバコ", "烟草，香烟", "(葡) tabaco", "煙草" ]
+    "TEXT" : [ "タバコ", "烟草，香烟", "タバコ", "煙草" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_160" : {
-    "TEXT" : [ "ダンス", "（西洋风格的）舞蹈", "(英) dance", null ]
+    "TEXT" : [ "ダンス", "（西洋风格的）舞蹈", "ダンス", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_161" : {
-    "TEXT" : [ "だんだん", "渐渐地，慢慢地", "だんだん", null ]
+    "TEXT" : [ "だんだん", "渐渐地，慢慢地", "だんだん", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_162" : {
-    "TEXT" : [ "チーズ", "乳酪，奶酪", "(英) cheese", null ]
+    "TEXT" : [ "チーズ", "乳酪，奶酪", "チーズ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_163" : {
-    "TEXT" : [ "チーム", "队，组", "(英) team", null ]
+    "TEXT" : [ "チーム", "队，组", "チーム", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_164" : {
-    "TEXT" : [ "チケット", "票", "(英) ticket", null ]
+    "TEXT" : [ "チケット", "票", "チケット", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_165" : {
-    "TEXT" : [ "ちょうど", "正好，恰好", "ちょうど", "丁度" ]
+    "TEXT" : [ "ちょうど", "正好，恰好", "ちょうど", "丁度" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_166" : {
-    "TEXT" : [ "チョコレート", "巧克力", "(英) chocolate", null ]
+    "TEXT" : [ "チョコレート", "巧克力", "チョコレート", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_167" : {
-    "TEXT" : [ "ちょっと", "稍微，一点点", "ちょっと", null ]
+    "TEXT" : [ "ちょっと", "稍微，一点点", "ちょっと", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_168" : {
-    "TEXT" : [ "つまらない", "无聊的；不值钱的，微薄的", "つまらない", null ]
+    "TEXT" : [ "つまらない", "无聊的；不值钱的，微薄的", "つまらない", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_169" : {
-    "TEXT" : [ "ディズニーランド", "迪士尼乐园", "(英) Disneyland", null ]
+    "TEXT" : [ "ディズニーランド", "迪士尼乐园", "ディズニーランド", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_170" : {
-    "TEXT" : [ "テープ", "磁带，录音带；窄长的布、纸等", "(英) tape", null ]
+    "TEXT" : [ "テープ", "磁带，录音带；窄长的布、纸等", "テープ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_171" : {
-    "TEXT" : [ "テーブル", "桌子，饭桌；表格", "(英) table", null ]
+    "TEXT" : [ "テーブル", "桌子，饭桌；表格", "テーブル", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_172" : {
-    "TEXT" : [ "テープレコーダー", "录音机", "(英) tape recorder", null ]
+    "TEXT" : [ "テープレコーダー", "录音机", "テープレコーダー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_173" : {
-    "TEXT" : [ "できる", "可以，会；做好，完成", "できる", "出来る" ]
+    "TEXT" : [ "できる", "可以，会；做好，完成", "できる", "出来る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_174" : {
-    "TEXT" : [ "テスト", "考试；测验", "(英) test", null ]
+    "TEXT" : [ "テスト", "考试；测验", "テスト", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_175" : {
-    "TEXT" : [ "では", "那么，那样的话", "では", null ]
+    "TEXT" : [ "では", "那么，那样的话", "では", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_176" : {
-    "TEXT" : [ "デパート", "百货商店", "(英) department store", null ]
+    "TEXT" : [ "デパート", "百货商店", "デパート", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_177" : {
-    "TEXT" : [ "でも", "然而，可是", "でも", null ]
+    "TEXT" : [ "でも", "然而，可是", "でも", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_178" : {
-    "TEXT" : [ "テレビ", "电视", "(英) television", null ]
+    "TEXT" : [ "テレビ", "电视", "テレビ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_179" : {
-    "TEXT" : [ "天ぷら", "天妇罗（一种鱼和蔬菜等裹上面粉后油炸的食物）", "てんぷら", "天麩羅" ]
+    "TEXT" : [ "天ぷら", "天妇罗（一种鱼和蔬菜等裹上面粉后油炸的食物）", "てんぷら", "天麩羅" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "でんぷら|せんぷら|たんぷら|てむぷら"
+    }
   },
   "CET46:N5_180" : {
-    "TEXT" : [ "ドア", "门", "(英) door", null ]
+    "TEXT" : [ "ドア", "门", "ドア", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_181" : {
-    "TEXT" : [ "トイレ", "卫生间", "(英) toilet", null ]
+    "TEXT" : [ "トイレ", "卫生间", "トイレ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_182" : {
-    "TEXT" : [ "どう", "怎么样", "どう", null ]
+    "TEXT" : [ "どう", "怎么样", "どう", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_183" : {
-    "TEXT" : [ "どうして", "为什么", "どうして", null ]
+    "TEXT" : [ "どうして", "为什么", "どうして", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_184" : {
-    "TEXT" : [ "どうぞ", "请", "どうぞ", null ]
+    "TEXT" : [ "どうぞ", "请", "どうぞ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_185" : {
-    "TEXT" : [ "どうも", "非常，很", "どうも", null ]
+    "TEXT" : [ "どうも", "非常，很", "どうも", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_186" : {
-    "TEXT" : [ "どうやって", "怎么（做）", "どうやって", null ]
+    "TEXT" : [ "どうやって", "怎么（做）", "どうやって", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_187" : {
-    "TEXT" : [ "どこ", "哪里", "どこ", null ]
+    "TEXT" : [ "どこ", "哪里", "どこ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_188" : {
-    "TEXT" : [ "どちら", "哪里；哪个；哪位", "どちら", null ]
+    "TEXT" : [ "どちら", "哪里；哪个；哪位", "どちら", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_189" : {
-    "TEXT" : [ "どっち", "（“どちら”的口语）哪边；哪个，哪个人", "どっち", null ]
+    "TEXT" : [ "どっち", "（“どちら”的口语）哪边；哪个，哪个人", "どっち", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_190" : {
-    "TEXT" : [ "とても", "很，非常", "とても", null ]
+    "TEXT" : [ "とても", "很，非常", "とても", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_191" : {
-    "TEXT" : [ "どなた", "（“だれ”的尊他语）谁，哪位", "どなた", null ]
+    "TEXT" : [ "どなた", "（“だれ”的尊他语）谁，哪位", "どなた", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_192" : {
-    "TEXT" : [ "どの", "哪一个", "どの", null ]
+    "TEXT" : [ "どの", "哪一个", "どの", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_193" : {
-    "TEXT" : [ "ドリンク", "饮料", "(英) drink", null ]
+    "TEXT" : [ "ドリンク", "饮料", "ドリンク", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_194" : {
-    "TEXT" : [ "どれ", "哪一个", "どれ", null ]
+    "TEXT" : [ "どれ", "哪一个", "どれ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_195" : {
-    "TEXT" : [ "どれぐらい", "多少", "どれぐらい", null ]
+    "TEXT" : [ "どれぐらい", "多少", "どれぐらい", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_196" : {
-    "TEXT" : [ "どんな", "什么样的，哪种", "どんな", null ]
+    "TEXT" : [ "どんな", "什么样的，哪种", "どんな", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_197" : {
-    "TEXT" : [ "ない", "没有，没", "ない", "無い" ]
+    "TEXT" : [ "ない", "没有，没", "ない", "無い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_198" : {
-    "TEXT" : [ "ナイフ", "小刀；餐刀", "(英) knife", null ]
+    "TEXT" : [ "ナイフ", "小刀；餐刀", "ナイフ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_199" : {
-    "TEXT" : [ "ながら", "一边……一边……", "ながら", null ]
+    "TEXT" : [ "ながら", "一边……一边……", "ながら", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_200" : {
-    "TEXT" : [ "なぜ", "为什么，为何", "なぜ", "何故" ]
+    "TEXT" : [ "なぜ", "为什么，为何", "なぜ", "何故" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_201" : {
-    "TEXT" : [ "など", "（表示例举）……等，……之类的", "など", "等" ]
+    "TEXT" : [ "など", "（表示例举）……等，……之类的", "など", "等" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_202" : {
-    "TEXT" : [ "なる", "变成，成为", "なる", null ]
+    "TEXT" : [ "なる", "变成，成为", "なる", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_203" : {
-    "TEXT" : [ "ニュース", "新闻", "(英) news", null ]
+    "TEXT" : [ "ニュース", "新闻", "ニュース", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_204" : {
-    "TEXT" : [ "ねえ", "（打招呼时）喂，唉", "ねえ", null ]
+    "TEXT" : [ "ねえ", "（打招呼时）喂，唉", "ねえ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_205" : {
-    "TEXT" : [ "ネクタイ", "领带", "(英) necktie", null ]
+    "TEXT" : [ "ネクタイ", "领带", "ネクタイ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_206" : {
-    "TEXT" : [ "ノー", "不", "(英) no", null ]
+    "TEXT" : [ "ノー", "不", "ノー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_207" : {
-    "TEXT" : [ "ノート", "笔记本，备忘录；记下来", "(英) note", null ]
+    "TEXT" : [ "ノート", "笔记本，备忘录；记下来", "ノート", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_208" : {
-    "TEXT" : [ "ノートパソコン", "笔记本电脑，笔电", "(英) notebook personal computer", null ]
+    "TEXT" : [ "ノートパソコン", "笔记本电脑，笔电", "ノートパソコン", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_209" : {
-    "TEXT" : [ "パーティー", "派对", "(英) party", null ]
+    "TEXT" : [ "パーティー", "派对", "パーティー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_210" : {
-    "TEXT" : [ "はい", "是的，对的", "はい", null ]
+    "TEXT" : [ "はい", "是的，对的", "はい", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_211" : {
-    "TEXT" : [ "バイク", "自行车；摩托车", "(英) bike", null ]
+    "TEXT" : [ "バイク", "自行车；摩托车", "バイク", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_212" : {
-    "TEXT" : [ "バイバイ", "再见，拜拜", "(英) bye-bye", null ]
+    "TEXT" : [ "バイバイ", "再见，拜拜", "バイバイ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_213" : {
-    "TEXT" : [ "穿[は]く", "穿（下身衣物）", "はく", null ]
+    "TEXT" : [ "穿く", "穿（下身衣物）", "はく", "穿[は]く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひく|ふく|へく|ほく"
+    }
   },
   "CET46:N5_214" : {
-    "TEXT" : [ "バス[bus]", "巴士，公交车", "(英) bus", null ]
+    "TEXT" : [ "バス", "巴士，公交车", "バス[bus]", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_215" : {
-    "TEXT" : [ "バナナ", "香蕉", "(英) banana", null ]
+    "TEXT" : [ "バナナ", "香蕉", "バナナ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_216" : {
-    "TEXT" : [ "パン", "面包", "(葡) pão", null ]
+    "TEXT" : [ "パン", "面包", "パン", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_217" : {
-    "TEXT" : [ "ハンカチ", "手帕", "(英) handkerchief", null ]
+    "TEXT" : [ "ハンカチ", "手帕", "ハンカチ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_218" : {
-    "TEXT" : [ "ビール", "啤酒", "(荷) bier", null ]
+    "TEXT" : [ "ビール", "啤酒", "ビール", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_219" : {
-    "TEXT" : [ "プール", "游泳池", "(英) pool", null ]
+    "TEXT" : [ "プール", "游泳池", "プール", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_220" : {
-    "TEXT" : [ "フォーク", "叉子", "(英) fork", null ]
+    "TEXT" : [ "フォーク", "叉子", "フォーク", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_221" : {
-    "TEXT" : [ "ふるさと", "故乡，家乡", "ふるさと", "故郷｜故里｜古里" ]
+    "TEXT" : [ "ふるさと", "故乡，家乡", "ふるさと", "故郷｜故里｜古里" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_222" : {
-    "TEXT" : [ "ページ", "页，页面", "(英) page", null ]
+    "TEXT" : [ "ページ", "页，页面", "ページ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_223" : {
-    "TEXT" : [ "ベッド", "床", "(英) bed", null ]
+    "TEXT" : [ "ベッド", "床", "ベッド", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_224" : {
-    "TEXT" : [ "ペン", "笔", "(英) pen", null ]
+    "TEXT" : [ "ペン", "笔", "ペン", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_225" : {
-    "TEXT" : [ "ボールペン", "圆珠笔", "(英) ball pen", null ]
+    "TEXT" : [ "ボールペン", "圆珠笔", "ボールペン", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_226" : {
-    "TEXT" : [ "ポケット", "口袋", "(英) pocket", null ]
+    "TEXT" : [ "ポケット", "口袋", "ポケット", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_227" : {
-    "TEXT" : [ "ポスト", "信箱；职位", "(英) post", null ]
+    "TEXT" : [ "ポスト", "信箱；职位", "ポスト", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_228" : {
-    "TEXT" : [ "ボタン", "纽扣；按钮", "(英) button", null ]
+    "TEXT" : [ "ボタン", "纽扣；按钮", "ボタン", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_229" : {
-    "TEXT" : [ "ポテト", "土豆，马铃薯", "(英) potato", null ]
+    "TEXT" : [ "ポテト", "土豆，马铃薯", "ポテト", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_230" : {
-    "TEXT" : [ "ホテル", "（西式）宾馆，旅馆", "(英) hotel", null ]
+    "TEXT" : [ "ホテル", "（西式）宾馆，旅馆", "ホテル", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_231" : {
-    "TEXT" : [ "まずい", "难吃的", "まずい", null ]
+    "TEXT" : [ "まずい", "难吃的", "まずい", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_232" : {
-    "TEXT" : [ "また", "另外；又，再", "また", "又" ]
+    "TEXT" : [ "また", "另外；又，再", "また", "又" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_233" : {
-    "TEXT" : [ "まだ", "还，仍然", "まだ", null ]
+    "TEXT" : [ "まだ", "还，仍然", "まだ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_234" : {
-    "TEXT" : [ "まっすぐ", "笔直；直接", "まっすぐ", "真っ直ぐ" ]
+    "TEXT" : [ "まっすぐ", "笔直；直接", "まっすぐ", "真っ直ぐ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_235" : {
-    "TEXT" : [ "マンション", "（钢筋混凝土建造的）高级公寓，居民楼", "(英) mansion", null ]
+    "TEXT" : [ "マンション", "（钢筋混凝土建造的）高级公寓，居民楼", "マンション", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_236" : {
-    "TEXT" : [ "みそ汁", "味噌汤", "みそしる", "味噌汁" ]
+    "TEXT" : [ "みそ汁", "味噌汤", "みそしる", "味噌汁" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "みそせる|みそそる|みそしゅる"
+    }
   },
   "CET46:N5_237" : {
-    "TEXT" : [ "ミルク", "牛乳，牛奶", "(英) milk", null ]
+    "TEXT" : [ "ミルク", "牛乳，牛奶", "ミルク", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_238" : {
-    "TEXT" : [ "みんな", "（“みな”的口语）大家，诸位；全部", "みんな", "皆" ]
+    "TEXT" : [ "みんな", "（“みな”的口语）大家，诸位；全部", "みんな", "皆" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_239" : {
-    "TEXT" : [ "メートル", "米", "(英) metre", null ]
+    "TEXT" : [ "メートル", "米", "メートル", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_240" : {
-    "TEXT" : [ "メール", "邮件；电子邮件", "(英) mail", null ]
+    "TEXT" : [ "メール", "邮件；电子邮件", "メール", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_241" : {
-    "TEXT" : [ "メールアドレス", "邮箱地址", "(英) mail address", null ]
+    "TEXT" : [ "メールアドレス", "邮箱地址", "メールアドレス", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_242" : {
-    "TEXT" : [ "もう", "已经；再", "もう", null ]
+    "TEXT" : [ "もう", "已经；再", "もう", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_243" : {
-    "TEXT" : [ "もしもし", "（打电话时）喂", "もしもし", null ]
+    "TEXT" : [ "もしもし", "（打电话时）喂", "もしもし", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_244" : {
-    "TEXT" : [ "もっと", "更加", "もっと", null ]
+    "TEXT" : [ "もっと", "更加", "もっと", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_245" : {
-    "TEXT" : [ "夕べ", "昨晚", "ゆうべ", null ]
+    "TEXT" : [ "夕べ", "昨晚", "ゆうべ", "夕べ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ようべ|ゆいべ|ゆっうべ|ゆべ"
+    }
   },
   "CET46:N5_246" : {
-    "TEXT" : [ "ゆっくり", "缓慢地；悠闲地，舒服地", "ゆっくり", null ]
+    "TEXT" : [ "ゆっくり", "缓慢地；悠闲地，舒服地", "ゆっくり", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_247" : {
-    "TEXT" : [ "ヨーロッパ", "欧洲", "(葡) Europa", null ]
+    "TEXT" : [ "ヨーロッパ", "欧洲", "ヨーロッパ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_248" : {
-    "TEXT" : [ "ラーメン", "拉面", "らーめん", "拉麺" ]
+    "TEXT" : [ "ラーメン", "拉面", "ラーメン", "拉麺" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_249" : {
-    "TEXT" : [ "ラジオ", "收音机；广播", "(英) radio", null ]
+    "TEXT" : [ "ラジオ", "收音机；广播", "ラジオ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_250" : {
-    "TEXT" : [ "ラジカセ", "收录音机", "(和) radio＋cassette", "ラジオカセット" ]
+    "TEXT" : [ "ラジカセ", "收录音机", "ラジカセ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_251" : {
-    "TEXT" : [ "りんご", "苹果", "りんご", "林檎" ]
+    "TEXT" : [ "りんご", "苹果", "りんご", "林檎" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_252" : {
-    "TEXT" : [ "レストラン", "西餐厅，饭店", "(法) restaurant", null ]
+    "TEXT" : [ "レストラン", "西餐厅，饭店", "レストラン", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_253" : {
-    "TEXT" : [ "ワイシャツ", "男式衬衫", "(英) white shirt", null ]
+    "TEXT" : [ "ワイシャツ", "男式衬衫", "ワイシャツ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_254" : {
-    "TEXT" : [ "悪い", "坏的；不好的，劣质的", "わるい", null ]
+    "TEXT" : [ "悪い", "坏的；不好的，劣质的", "わるい", "悪い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がるい|わろい|わっるい|わりい"
+    }
   },
   "CET46:N5_255" : {
-    "TEXT" : [ "安い", "便宜的", "やすい", null ]
+    "TEXT" : [ "安い", "便宜的", "やすい", "安い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "よすい|やしい|やせい|わすい"
+    }
   },
   "CET46:N5_256" : {
-    "TEXT" : [ "暗い", "黑的，发暗的", "くらい", null ]
+    "TEXT" : [ "暗い", "黑的，发暗的", "くらい", "暗い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こらい|くりい|くろい|けらい"
+    }
   },
   "CET46:N5_257" : {
-    "TEXT" : [ "以前", "以前，之前", "いぜん", null ]
+    "TEXT" : [ "以前", "以前，之前", "いぜん", "以前" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えぜん|いせん|いでん|いぜむ"
+    }
   },
   "CET46:N5_258" : {
-    "TEXT" : [ "意味", "意思；表示", "いみ", null ]
+    "TEXT" : [ "意味", "意思；表示", "いみ", "意味" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えみ|いま|いむ|うみ"
+    }
   },
   "CET46:N5_259" : {
-    "TEXT" : [ "易しい", "容易的；简单的", "やさしい", null ]
+    "TEXT" : [ "易しい", "容易的；简单的", "やさしい", "易しい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "よさしい|やたしい|やざしい|わさしい"
+    }
   },
   "CET46:N5_260" : {
-    "TEXT" : [ "椅子", "椅子；地位", "いす", null ]
+    "TEXT" : [ "椅子", "椅子；地位", "いす", "椅子" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あす|うす|いし|いつ"
+    }
   },
   "CET46:N5_261" : {
-    "TEXT" : [ "違う", "不一样；错误", "ちがう", null ]
+    "TEXT" : [ "違う", "不一样；错误", "ちがう", "違う" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つがう|ちかう|ちぎう|ちゃがう"
+    }
   },
   "CET46:N5_262" : {
-    "TEXT" : [ "医者", "医生", "いしゃ", null ]
+    "TEXT" : [ "医者", "医生", "いしゃ", "医者" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えしゃ|いさ|いじゃ|いそ"
+    }
   },
   "CET46:N5_263" : {
-    "TEXT" : [ "一つ", "一个；一岁", "ひとつ", null ]
+    "TEXT" : [ "一つ", "一个；一岁", "ひとつ", "一つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふたつ|ひろつ|ひたつ|ぴとつ"
+    }
   },
   "CET46:N5_264" : {
-    "TEXT" : [ "一月", "一个月", "ひとつき", null ]
+    "TEXT" : [ "一月", "一个月", "ひとつき", "一月" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふたつき|ひとつぎ|ひとつち|ひととき"
+    }
   },
   "CET46:N5_265" : {
-    "TEXT" : [ "一緒", "同样的；一起", "いっしょ", null ]
+    "TEXT" : [ "一緒", "同样的；一起", "いっしょ", "一緒" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いしょ|いっそ|いっちょ|えっしょ"
+    }
   },
   "CET46:N5_266" : {
-    "TEXT" : [ "一人", "一个人；独自", "ひとり", null ]
+    "TEXT" : [ "一人", "一个人；独自", "ひとり", "一人" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふとり|ひとろ|ひたり|ひどり"
+    }
   },
   "CET46:N5_267" : {
-    "TEXT" : [ "一日[いちにち]", "一天；一整天；某一天", "いちにち", null ]
+    "TEXT" : [ "一日", "一天；一整天；某一天", "いちにち", "一日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にちにち|いちちち|いちみち|いちじつ"
+    }
   },
   "CET46:N5_268" : {
-    "TEXT" : [ "一日[ついたち]", "一号，一个月的第一天", "ついたち", null ]
+    "TEXT" : [ "一日", "一号，一个月的第一天", "ついたち", "一日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "すいたち|ついたし|ついたつ|つたち"
+    }
   },
   "CET46:N5_269" : {
-    "TEXT" : [ "一番", "第一，最好；最", "いちばん", null ]
+    "TEXT" : [ "一番", "第一，最好；最", "いちばん", "一番" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にちばん|いちまん|いちはん|いちば"
+    }
   },
   "CET46:N5_270" : {
-    "TEXT" : [ "引く", "拉；减；画（线）；吸引", "ひく", null ]
+    "TEXT" : [ "引く", "拉；减；画（线）；吸引", "ひく", "引く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "はく|ふく|びく"
+    }
   },
   "CET46:N5_271" : {
-    "TEXT" : [ "飲み会", "酒会，聚会", "のみかい", null ]
+    "TEXT" : [ "飲み会", "酒会，聚会", "のみかい", "飲み会" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぬみかい|にみかい|のみけい|のみこい"
+    }
   },
   "CET46:N5_272" : {
-    "TEXT" : [ "飲み物", "饮料", "のみもの", null ]
+    "TEXT" : [ "飲み物", "饮料", "のみもの", "飲み物" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぬみもの|にみもの|のみろ"
+    }
   },
   "CET46:N5_273" : {
-    "TEXT" : [ "飲む", "喝", "のむ", null ]
+    "TEXT" : [ "飲む", "喝", "のむ", "飲む" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "もむ|ろむ|こむ"
+    }
   },
   "CET46:N5_274" : {
-    "TEXT" : [ "右", "右边", "みぎ", null ]
+    "TEXT" : [ "右", "右边", "みぎ", "右" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひぎ|みき|まぎ|むぎ"
+    }
   },
   "CET46:N5_275" : {
-    "TEXT" : [ "雨", "雨，雨天", "あめ", null ]
+    "TEXT" : [ "雨", "雨，雨天", "あめ", "雨" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かめ|あま|あけ|うめ"
+    }
   },
   "CET46:N5_276" : {
-    "TEXT" : [ "運動会", "运动会", "うんどうかい", null ]
+    "TEXT" : [ "運動会", "运动会", "うんどうかい", "運動会" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えんどうかい|うんとうかい|うんどうけい|うんどうがい"
+    }
   },
   "CET46:N5_277" : {
-    "TEXT" : [ "運動場", "运动场，操场", "うんどうじょう", null ]
+    "TEXT" : [ "運動場", "运动场，操场", "うんどうじょう", "運動場" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "うんとうじょう|うんどうしょ|うんどうじょ|うんどうじょーう"
+    }
   },
   "CET46:N5_278" : {
-    "TEXT" : [ "映画", "电影", "えいが", null ]
+    "TEXT" : [ "映画", "电影", "えいが", "映画" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いいが|えいか|えいっが|えいがー"
+    }
   },
   "CET46:N5_279" : {
-    "TEXT" : [ "映画館", "电影院，剧院", "えいがかん", null ]
+    "TEXT" : [ "映画館", "电影院，剧院", "えいがかん", "映画館" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えいかかん|えいがたん|えいっがかん|えいがかんー"
+    }
   },
   "CET46:N5_280" : {
-    "TEXT" : [ "泳ぐ", "游泳", "およぐ", null ]
+    "TEXT" : [ "泳ぐ", "游泳", "およぐ", "泳ぐ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あよぐ|こよぐ|おやぐ|おゆぐ"
+    }
   },
   "CET46:N5_281" : {
-    "TEXT" : [ "英語", "英语", "えいご", null ]
+    "TEXT" : [ "英語", "英语", "えいご", "英語" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あいご|えあご|えいか|えいぞ"
+    }
   },
   "CET46:N5_282" : {
-    "TEXT" : [ "駅", "车站", "えき", null ]
+    "TEXT" : [ "駅", "车站", "えき", "駅" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あき|いき|えか|えぎ"
+    }
   },
   "CET46:N5_283" : {
-    "TEXT" : [ "駅前", "（电车、地铁的）车站周边", "えきまえ", null ]
+    "TEXT" : [ "駅前", "（电车、地铁的）车站周边", "えきまえ", "駅前" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あきまえ|えかまえ|えきみえ|えきまあ"
+    }
   },
   "CET46:N5_284" : {
-    "TEXT" : [ "円", "圆形；日元", "えん", null ]
+    "TEXT" : [ "円", "圆形；日元", "えん", "円" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いん|うん|えむ|えっん"
+    }
   },
   "CET46:N5_285" : {
-    "TEXT" : [ "遠い", "远的", "とおい", null ]
+    "TEXT" : [ "遠い", "远的", "とおい", "遠い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こおい|とうい|とおーい|とっおい"
+    }
   },
   "CET46:N5_286" : {
-    "TEXT" : [ "鉛筆", "铅笔", "えんぴつ", null ]
+    "TEXT" : [ "鉛筆", "铅笔", "えんぴつ", "鉛筆" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いんぴつ|えんびつ|えんぴす|えんぴっつ"
+    }
   },
   "CET46:N5_287" : {
-    "TEXT" : [ "塩", "食盐", "しお", null ]
+    "TEXT" : [ "塩", "食盐", "しお", "塩" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちお|すお|しう|しょ"
+    }
   },
   "CET46:N5_288" : {
-    "TEXT" : [ "汚い", "脏的；凌乱的；卑鄙的", "きたない", null ]
+    "TEXT" : [ "汚い", "脏的；凌乱的；卑鄙的", "きたない", "汚い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かたない|ぎたない|きつない|きになない"
+    }
   },
   "CET46:N5_289" : {
-    "TEXT" : [ "奥さん", "您妻子；夫人，太太", "おくさん", null ]
+    "TEXT" : [ "奥さん", "您妻子；夫人，太太", "おくさん", "奥さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あくさん|こくさん|おかくさん|おぎくさん"
+    }
   },
   "CET46:N5_290" : {
-    "TEXT" : [ "押す", "压，按，摁", "おす", null ]
+    "TEXT" : [ "押す", "压，按，摁", "おす", "押す" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あす|いす|うす|えす"
+    }
   },
   "CET46:N5_291" : {
-    "TEXT" : [ "横", "横；侧面；旁边", "よこ", null ]
+    "TEXT" : [ "横", "横；侧面；旁边", "よこ", "横" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やこ|ゆこ|よか|よご"
+    }
   },
   "CET46:N5_292" : {
-    "TEXT" : [ "横断歩道", "人行横道", "おうだんほどう", null ]
+    "TEXT" : [ "横断歩道", "人行横道", "おうだんほどう", "横断歩道" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あうだんほどう|こうだんほどう|おうたんほどう|おうだんぼどう"
+    }
   },
   "CET46:N5_293" : {
-    "TEXT" : [ "黄色い", "黄色的", "きいろい", null ]
+    "TEXT" : [ "黄色い", "黄色的", "きいろい", "黄色い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かいろい|けいろい|きあろい|きりろい"
+    }
   },
   "CET46:N5_294" : {
-    "TEXT" : [ "屋", "房屋；店铺", "や", null ]
+    "TEXT" : [ "屋", "房屋；店铺", "や", "屋" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ゆ|よ|わ|ら"
+    }
   },
   "CET46:N5_295" : {
-    "TEXT" : [ "俺", "（男子自称）我", "おれ", null ]
+    "TEXT" : [ "俺", "（男子自称）我", "おれ", "俺" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あれ|これ|おら|おり"
+    }
   },
   "CET46:N5_296" : {
-    "TEXT" : [ "温かい", "温暖的，热情的", "あたたかい", null ]
+    "TEXT" : [ "温かい", "温暖的，热情的", "あたたかい", "温かい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いたたかい|あつたかい|あだたかい"
+    }
   },
   "CET46:N5_297" : {
-    "TEXT" : [ "温泉", "温泉", "おんせん", null ]
+    "TEXT" : [ "温泉", "温泉", "おんせん", "温泉" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あんせん|こんせん|おんさん|おんぜん"
+    }
   },
   "CET46:N5_298" : {
-    "TEXT" : [ "音楽", "音乐", "おんがく", null ]
+    "TEXT" : [ "音楽", "音乐", "おんがく", "音楽" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あんがく|こんがく|おんかく|おんざく"
+    }
   },
   "CET46:N5_299" : {
-    "TEXT" : [ "下", "下面；里面；（年龄、地位、程度、能力等）低", "した", null ]
+    "TEXT" : [ "下", "下面；里面；（年龄、地位、程度、能力等）低", "した", "下" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さた|すた|しち|しつ"
+    }
   },
   "CET46:N5_300" : {
-    "TEXT" : [ "下手", "不擅长，笨拙", "へた", null ]
+    "TEXT" : [ "下手", "不擅长，笨拙", "へた", "下手" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "へだ|へさ|へか|べた"
+    }
   },
   "CET46:N5_301" : {
-    "TEXT" : [ "何[なに]", "什么", "なに", null ]
+    "TEXT" : [ "何", "什么", "なに", "何" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なち|なじ|なみ|はに"
+    }
   },
   "CET46:N5_302" : {
-    "TEXT" : [ "何[なん]", "什么", "なん", null ]
+    "TEXT" : [ "何", "什么", "なん", "何" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なんん|なむ|なう|はん"
+    }
   },
   "CET46:N5_303" : {
-    "TEXT" : [ "何か", "（不确定的）什么，某些", "なにか", null ]
+    "TEXT" : [ "何か", "（不确定的）什么，某些", "なにか", "何か" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なのか|なぬか|なねか"
+    }
   },
   "CET46:N5_304" : {
-    "TEXT" : [ "夏", "夏天，夏季", "なつ", null ]
+    "TEXT" : [ "夏", "夏天，夏季", "なつ", "夏" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なつう|なつし|なつた"
+    }
   },
   "CET46:N5_305" : {
-    "TEXT" : [ "夏休み", "暑假", "なつやすみ", null ]
+    "TEXT" : [ "夏休み", "暑假", "なつやすみ", "夏休み" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なちやすみ|なとやすみ|かつやすみ|たつやすみ"
+    }
   },
   "CET46:N5_306" : {
-    "TEXT" : [ "家[いえ]", "房子；家庭", "いえ", null ]
+    "TEXT" : [ "家", "房子；家庭", "いえ", "家" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いいう|いいうえ|いえい"
+    }
   },
   "CET46:N5_307" : {
-    "TEXT" : [ "家[うち]", "家，家庭；自己家（家人）", "うち", null ]
+    "TEXT" : [ "家", "家，家庭；自己家（家人）", "うち", "家" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "うちん|うつ|うし|おち"
+    }
   },
   "CET46:N5_308" : {
-    "TEXT" : [ "家具", "家具", "かぐ", null ]
+    "TEXT" : [ "家具", "家具", "かぐ", "家具" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かく|かず|かぶ|かぐん"
+    }
   },
   "CET46:N5_309" : {
-    "TEXT" : [ "家族", "家族，家属", "かぞく", null ]
+    "TEXT" : [ "家族", "家族，家属", "かぞく", "家族" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かそく|かどく|かぞつ|かぞん"
+    }
   },
   "CET46:N5_310" : {
-    "TEXT" : [ "家庭", "家庭", "かてい", null ]
+    "TEXT" : [ "家庭", "家庭", "かてい", "家庭" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きてい|かたい|かとい|かでい"
+    }
   },
   "CET46:N5_311" : {
-    "TEXT" : [ "暇", "闲空，余暇", "ひま", null ]
+    "TEXT" : [ "暇", "闲空，余暇", "ひま", "暇" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "はま|ひみ|ひむ|へま"
+    }
   },
   "CET46:N5_312" : {
-    "TEXT" : [ "果物", "水果", "くだもの", null ]
+    "TEXT" : [ "果物", "水果", "くだもの", "果物" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "くたもの|こだもの|くだもん|くだまの"
+    }
   },
   "CET46:N5_313" : {
-    "TEXT" : [ "歌", "歌曲；诗歌", "うた", null ]
+    "TEXT" : [ "歌", "歌曲；诗歌", "うた", "歌" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あた|うつ|うと|かた"
+    }
   },
   "CET46:N5_314" : {
-    "TEXT" : [ "歌う", "唱歌；咏", "うたう", null ]
+    "TEXT" : [ "歌う", "唱歌；咏", "うたう", "歌う" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あたう|うだう|いたう"
+    }
   },
   "CET46:N5_315" : {
-    "TEXT" : [ "火曜日", "周二", "かようび", null ]
+    "TEXT" : [ "火曜日", "周二", "かようび", "火曜日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がようび|たようび|さようび"
+    }
   },
   "CET46:N5_316" : {
-    "TEXT" : [ "花", "花", "はな", null ]
+    "TEXT" : [ "花", "花", "はな", "花" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばな|はま|はた"
+    }
   },
   "CET46:N5_317" : {
-    "TEXT" : [ "荷物", "行李", "にもつ", null ]
+    "TEXT" : [ "荷物", "行李", "にもつ", "荷物" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ねもつ|にまつ|にもと"
+    }
   },
   "CET46:N5_318" : {
-    "TEXT" : [ "会う", "见面；偶遇", "あう", null ]
+    "TEXT" : [ "会う", "见面；偶遇", "あう", "会う" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いう|かう|さう|たう"
+    }
   },
   "CET46:N5_319" : {
-    "TEXT" : [ "会社", "公司", "かいしゃ", null ]
+    "TEXT" : [ "会社", "公司", "かいしゃ", "会社" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かえしゃ|こうしゃ|かいじゃ|かいしょ"
+    }
   },
   "CET46:N5_320" : {
-    "TEXT" : [ "会社員", "公司职员", "かいしゃいん", null ]
+    "TEXT" : [ "会社員", "公司职员", "かいしゃいん", "会社員" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かえしゃいん|かいじゃいん|かいしゃえん|こうしゃいん"
+    }
   },
   "CET46:N5_321" : {
-    "TEXT" : [ "海", "大海，海洋", "うみ", null ]
+    "TEXT" : [ "海", "大海，海洋", "うみ", "海" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おいみ|あいみ|うまい|うむ"
+    }
   },
   "CET46:N5_322" : {
-    "TEXT" : [ "海外", "海外，国外", "かいがい", null ]
+    "TEXT" : [ "海外", "海外，国外", "かいがい", "海外" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きいがい|けいがい|かいかい|かいがいがい"
+    }
   },
   "CET46:N5_323" : {
-    "TEXT" : [ "灰皿", "烟灰缸", "はいざら", null ]
+    "TEXT" : [ "灰皿", "烟灰缸", "はいざら", "灰皿" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "はいさら|はいだら|はいいざら|はいざらあ"
+    }
   },
   "CET46:N5_324" : {
-    "TEXT" : [ "皆さん", "各位，诸位", "みなさん", null ]
+    "TEXT" : [ "皆さん", "各位，诸位", "みなさん", "皆さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "みんあさん|みいなさん|みなんさん|みななさん"
+    }
   },
   "CET46:N5_325" : {
-    "TEXT" : [ "絵", "绘画", "え", null ]
+    "TEXT" : [ "絵", "绘画", "え", "絵" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あ|い|う|お"
+    }
   },
   "CET46:N5_326" : {
-    "TEXT" : [ "開[あ]く", "打开；开张", "あく", null ]
+    "TEXT" : [ "開く", "打开；开张", "あく", "開[あ]く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いく|かく|さく|たく"
+    }
   },
   "CET46:N5_327" : {
-    "TEXT" : [ "開ける", "打开，翻开；开张", "あける", null ]
+    "TEXT" : [ "開ける", "打开，翻开；开张", "あける", "開ける" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いける|うける|えける|おける"
+    }
   },
   "CET46:N5_328" : {
-    "TEXT" : [ "階段", "楼梯；等级", "かいだん", null ]
+    "TEXT" : [ "階段", "楼梯；等级", "かいだん", "階段" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きいだん|けいだん|かいたん|かいだんん"
+    }
   },
   "CET46:N5_329" : {
-    "TEXT" : [ "外", "室外；外面", "そと", null ]
+    "TEXT" : [ "外", "室外；外面", "そと", "外" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さと|しと|すと|そた"
+    }
   },
   "CET46:N5_330" : {
-    "TEXT" : [ "外国", "外国，国外", "がいこく", null ]
+    "TEXT" : [ "外国", "外国，国外", "がいこく", "外国" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かいこく|がいごく|がいこくう|がいこくこ"
+    }
   },
   "CET46:N5_331" : {
-    "TEXT" : [ "外国人", "外国人，海外人士", "がいこくじん", null ]
+    "TEXT" : [ "外国人", "外国人，海外人士", "がいこくじん", "外国人" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かいこくじん|がいごくじん|がいこくしん|がいこくにん"
+    }
   },
   "CET46:N5_332" : {
-    "TEXT" : [ "角[かど]", "（道路等）拐角；（桌子等）棱角", "かど", null ]
+    "TEXT" : [ "角", "（道路等）拐角；（桌子等）棱角", "かど", "角" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がど|きど|かだ|かと"
+    }
   },
   "CET46:N5_333" : {
-    "TEXT" : [ "学校", "学校", "がっこう", null ]
+    "TEXT" : [ "学校", "学校", "がっこう", "学校" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かっこう|がくこう|がっかい|がっけい"
+    }
   },
   "CET46:N5_334" : {
-    "TEXT" : [ "学生", "学生", "がくせい", null ]
+    "TEXT" : [ "学生", "学生", "がくせい", "学生" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かくせい|がくさい|がくすい|がくぜい"
+    }
   },
   "CET46:N5_335" : {
-    "TEXT" : [ "楽しい", "愉快的，快乐的", "たのしい", null ]
+    "TEXT" : [ "楽しい", "愉快的，快乐的", "たのしい", "楽しい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "てのしい|だのしい|たなしい|たにしい"
+    }
   },
   "CET46:N5_336" : {
-    "TEXT" : [ "掛かる", "花费；悬挂；上锁", "かかる", null ]
+    "TEXT" : [ "掛かる", "花费；悬挂；上锁", "かかる", "掛かる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きかる|くかる|けかる|こかる"
+    }
   },
   "CET46:N5_337" : {
-    "TEXT" : [ "活動", "活动", "かつどう", null ]
+    "TEXT" : [ "活動", "活动", "かつどう", "活動" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がっどう|かつとう|かつだう|かつどお"
+    }
   },
   "CET46:N5_338" : {
-    "TEXT" : [ "寒い", "（天气）冷的", "さむい", null ]
+    "TEXT" : [ "寒い", "（天气）冷的", "さむい", "寒い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しむい|せむい|さまい|さもい"
+    }
   },
   "CET46:N5_339" : {
-    "TEXT" : [ "歓迎会", "迎新会", "かんげいかい", null ]
+    "TEXT" : [ "歓迎会", "迎新会", "かんげいかい", "歓迎会" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がんげいかい|かんけいかい|かんげいこう|かんげいさい"
+    }
   },
   "CET46:N5_340" : {
-    "TEXT" : [ "漢字", "汉字", "かんじ", null ]
+    "TEXT" : [ "漢字", "汉字", "かんじ", "漢字" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がんじ|けんじ|かんざ|かんち"
+    }
   },
   "CET46:N5_341" : {
-    "TEXT" : [ "甘い", "甜的；宽松的，不严厉的", "あまい", null ]
+    "TEXT" : [ "甘い", "甜的；宽松的，不严厉的", "あまい", "甘い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いまい|えまい|あみい|あもい"
+    }
   },
   "CET46:N5_342" : {
-    "TEXT" : [ "丸い", "圆的；圆滑的", "まるい", "円い" ]
+    "TEXT" : [ "丸い", "圆的；圆滑的", "まるい", "円い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "みるい|まりい|もるい|まらい"
+    }
   },
   "CET46:N5_343" : {
-    "TEXT" : [ "眼鏡", "眼镜", "めがね", null ]
+    "TEXT" : [ "眼鏡", "眼镜", "めがね", "眼鏡" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "めかね|めばね|めがけ"
+    }
   },
   "CET46:N5_344" : {
-    "TEXT" : [ "顔", "脸；表情", "かお", null ]
+    "TEXT" : [ "顔", "脸；表情", "かお", "顔" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こお|けお|かご"
+    }
   },
   "CET46:N5_345" : {
-    "TEXT" : [ "危ない", "危险的；岌岌可危的", "あぶない", null ]
+    "TEXT" : [ "危ない", "危险的；岌岌可危的", "あぶない", "危ない" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あむない|あびない|あぽない|あふない"
+    }
   },
   "CET46:N5_346" : {
-    "TEXT" : [ "机", "桌子，书桌", "つくえ", null ]
+    "TEXT" : [ "机", "桌子，书桌", "つくえ", "机" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : ""
+    }
   },
   "CET46:N5_347" : {
-    "TEXT" : [ "帰る", "回家，回去", "かえる", null ]
+    "TEXT" : [ "帰る", "回家，回去", "かえる", "帰る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かいる|かける|こえる"
+    }
   },
   "CET46:N5_348" : {
-    "TEXT" : [ "帰国", "回国", "きこく", null ]
+    "TEXT" : [ "帰国", "回国", "きこく", "帰国" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きごく"
+    }
   },
   "CET46:N5_349" : {
-    "TEXT" : [ "気温", "气温", "きおん", null ]
+    "TEXT" : [ "気温", "气温", "きおん", "気温" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けおん|こおん|きおむ"
+    }
   },
   "CET46:N5_350" : {
-    "TEXT" : [ "記念品", "纪念品", "きねんひん", null ]
+    "TEXT" : [ "記念品", "纪念品", "きねんひん", "記念品" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : ""
+    }
   },
   "CET46:N5_351" : {
-    "TEXT" : [ "起きる", "起床；站起来；没睡觉", "おきる", null ]
+    "TEXT" : [ "起きる", "起床；站起来；没睡觉", "おきる", "起きる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あきる|いきる|うきる"
+    }
   },
   "CET46:N5_352" : {
-    "TEXT" : [ "喫茶店", "咖啡厅，茶馆", "きっさてん", null ]
+    "TEXT" : [ "喫茶店", "咖啡厅，茶馆", "きっさてん", "喫茶店" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : ""
+    }
   },
   "CET46:N5_353" : {
-    "TEXT" : [ "休む", "休息；睡觉；缺席", "やすむ", null ]
+    "TEXT" : [ "休む", "休息；睡觉；缺席", "やすむ", "休む" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やさむ|やそむ|やちむ"
+    }
   },
   "CET46:N5_354" : {
-    "TEXT" : [ "吸う", "吸，喝；抽烟", "すう", null ]
+    "TEXT" : [ "吸う", "吸，喝；抽烟", "すう", "吸う" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つう|しゅう|すっう"
+    }
   },
   "CET46:N5_355" : {
-    "TEXT" : [ "牛肉", "牛肉", "ぎゅうにく", null ]
+    "TEXT" : [ "牛肉", "牛肉", "ぎゅうにく", "牛肉" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぎゅうにっく|ぎゅうにゅく|ぎゅうにくう|ぎゅうにくる"
+    }
   },
   "CET46:N5_356" : {
-    "TEXT" : [ "牛乳", "牛奶", "ぎゅうにゅう", null ]
+    "TEXT" : [ "牛乳", "牛奶", "ぎゅうにゅう", "牛乳" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぎゅうにゅ|ぎゅうにゅうう|ぎゅうにゅうい|ぎゅうにゅる"
+    }
   },
   "CET46:N5_357" : {
-    "TEXT" : [ "去年", "去年", "きょねん", null ]
+    "TEXT" : [ "去年", "去年", "きょねん", "去年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こねん|きょなん|きょねえん|きょねむ"
+    }
   },
   "CET46:N5_358" : {
-    "TEXT" : [ "魚[さかな]", "鱼，鱼类", "さかな", null ]
+    "TEXT" : [ "魚", "鱼，鱼类", "さかな", "魚" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たかな|さかなあ|さかなか|さかなな"
+    }
   },
   "CET46:N5_359" : {
-    "TEXT" : [ "魚屋", "水产店", "さかなや", null ]
+    "TEXT" : [ "魚屋", "水产店", "さかなや", "魚屋" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たかなや|さかなあや|さかなかや"
+    }
   },
   "CET46:N5_360" : {
-    "TEXT" : [ "強い", "强的，激烈的", "つよい", null ]
+    "TEXT" : [ "強い", "强的，激烈的", "つよい", "強い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "とよい|つやい|つようい"
+    }
   },
   "CET46:N5_361" : {
-    "TEXT" : [ "教える", "教，传授；告诉", "おしえる", null ]
+    "TEXT" : [ "教える", "教，传授；告诉", "おしえる", "教える" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あしえる|おそえる|おちえる"
+    }
   },
   "CET46:N5_362" : {
-    "TEXT" : [ "教室", "教室；培训班", "きょうしつ", null ]
+    "TEXT" : [ "教室", "教室；培训班", "きょうしつ", "教室" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こうしつ|きょしつ|きょうしつう|きょうしち"
+    }
   },
   "CET46:N5_363" : {
-    "TEXT" : [ "狭い", "窄的，狭小的", "せまい", null ]
+    "TEXT" : [ "狭い", "窄的，狭小的", "せまい", "狭い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さまい|せもい|せまっい"
+    }
   },
   "CET46:N5_364" : {
-    "TEXT" : [ "近い", "近的，靠近的", "ちかい", null ]
+    "TEXT" : [ "近い", "近的，靠近的", "ちかい", "近い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つかい|ちこい|ちかあい"
+    }
   },
   "CET46:N5_365" : {
-    "TEXT" : [ "近く", "附近；接近", "ちかく", null ]
+    "TEXT" : [ "近く", "附近；接近", "ちかく", "近く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つかく|てかく|ちきく"
+    }
   },
   "CET46:N5_366" : {
-    "TEXT" : [ "金", "金钱，钱", "かね", null ]
+    "TEXT" : [ "金", "金钱，钱", "かね", "金" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かな|かの|こね"
+    }
   },
   "CET46:N5_367" : {
-    "TEXT" : [ "金曜日", "周五", "きんようび", null ]
+    "TEXT" : [ "金曜日", "周五", "きんようび", "金曜日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きんんようび|きんようおび|きんようぴ|きんようぶ"
+    }
   },
   "CET46:N5_368" : {
-    "TEXT" : [ "銀", "银", "ぎん", null ]
+    "TEXT" : [ "銀", "银", "ぎん", "銀" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぎんん|ぎいん|ぎんう|ぎんい"
+    }
   },
   "CET46:N5_369" : {
-    "TEXT" : [ "銀行", "银行", "ぎんこう", null ]
+    "TEXT" : [ "銀行", "银行", "ぎんこう", "銀行" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きんこう|じんこう|ぎんこうう|ぎんこ"
+    }
   },
   "CET46:N5_370" : {
-    "TEXT" : [ "銀行員", "银行工作人员", "ぎんこういん", null ]
+    "TEXT" : [ "銀行員", "银行工作人员", "ぎんこういん", "銀行員" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぎんこうういん|ぎんこおいん|ぎんこういんん|ぎんこううん"
+    }
   },
   "CET46:N5_371" : {
-    "TEXT" : [ "九つ", "九个；九岁", "ここのつ", null ]
+    "TEXT" : [ "九つ", "九个；九岁", "ここのつ", "九つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ここおのつ|ここのんつ|ここのうつ|ごごのつ"
+    }
   },
   "CET46:N5_372" : {
-    "TEXT" : [ "九日", "九号；九天", "ここのか", null ]
+    "TEXT" : [ "九日", "九号；九天", "ここのか", "九日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ここおのか|ここのんか|ここのが|ここのかあ"
+    }
   },
   "CET46:N5_373" : {
-    "TEXT" : [ "空[そら]", "天空", "そら", null ]
+    "TEXT" : [ "空", "天空", "そら", "空" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "そらあ|そらん|そろ|すら"
+    }
   },
   "CET46:N5_374" : {
-    "TEXT" : [ "靴", "鞋子", "くつ", null ]
+    "TEXT" : [ "靴", "鞋子", "くつ", "靴" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "くっつ|くちゅ|くつう|くつん"
+    }
   },
   "CET46:N5_375" : {
-    "TEXT" : [ "靴下", "袜子", "くつした", null ]
+    "TEXT" : [ "靴下", "袜子", "くつした", "靴下" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "くっつした|くちゅした|くつしった|くつしいた"
+    }
   },
   "CET46:N5_376" : {
-    "TEXT" : [ "熊", "熊", "くま", null ]
+    "TEXT" : [ "熊", "熊", "くま", "熊" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "くまあ|くまん|くも|くめ"
+    }
   },
   "CET46:N5_377" : {
-    "TEXT" : [ "兄", "（自己的）哥哥，姐夫", "あに", null ]
+    "TEXT" : [ "兄", "（自己的）哥哥，姐夫", "あに", "兄" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あにい|あにん|あぬ|あね"
+    }
   },
   "CET46:N5_378" : {
-    "TEXT" : [ "兄弟", "兄弟姐妹", "きょうだい", "姉妹｜兄妹｜姉弟" ]
+    "TEXT" : [ "兄弟", "兄弟姐妹", "きょうだい", "姉妹｜兄妹｜姉弟" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きょおだい|きょうたい|きょうだいぃ|きょうだいん"
+    }
   },
   "CET46:N5_379" : {
-    "TEXT" : [ "経度", "经度", "けいど", null ]
+    "TEXT" : [ "経度", "经度", "けいど", "経度" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けえど|けいんど|けいと|けいどお"
+    }
   },
   "CET46:N5_380" : {
-    "TEXT" : [ "警官", "警察，警官", "けいかん", null ]
+    "TEXT" : [ "警官", "警察，警官", "けいかん", "警官" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かいかん|けうかん|けいがん|けいかむ"
+    }
   },
   "CET46:N5_381" : {
-    "TEXT" : [ "軽い", "轻的，轻巧的", "かるい", null ]
+    "TEXT" : [ "軽い", "轻的，轻巧的", "かるい", "軽い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きるい|かろい|がるい|からい"
+    }
   },
   "CET46:N5_382" : {
-    "TEXT" : [ "結構", "构造；非常；好的；满足；够", "けっこう", null ]
+    "TEXT" : [ "結構", "构造；非常；好的；满足；够", "けっこう", "結構" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けこう|げっこう|てっこう|こっこう"
+    }
   },
   "CET46:N5_383" : {
-    "TEXT" : [ "結婚", "结婚", "けっこん", null ]
+    "TEXT" : [ "結婚", "结婚", "けっこん", "結婚" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けつこん|けいっこん|けっこおん|けっこむ"
+    }
   },
   "CET46:N5_384" : {
-    "TEXT" : [ "月曜日", "周一", "げつようび", null ]
+    "TEXT" : [ "月曜日", "周一", "げつようび", "月曜日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けつようび|げつよおび|げつようぴ|げちゅようび"
+    }
   },
   "CET46:N5_385" : {
-    "TEXT" : [ "健康", "健康；健康的", "けんこう", null ]
+    "TEXT" : [ "健康", "健康；健康的", "けんこう", "健康" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けいこう|けんこお|けんこうう|げんこう"
+    }
   },
   "CET46:N5_386" : {
-    "TEXT" : [ "嫌", "讨厌的，反感的", "いや", null ]
+    "TEXT" : [ "嫌", "讨厌的，反感的", "いや", "嫌" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えや|いら|あや|いわ"
+    }
   },
   "CET46:N5_387" : {
-    "TEXT" : [ "嫌い", "讨厌，不喜欢", "きらい", null ]
+    "TEXT" : [ "嫌い", "讨厌，不喜欢", "きらい", "嫌い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぎらい|しらい|きだい|きりい"
+    }
   },
   "CET46:N5_388" : {
-    "TEXT" : [ "建物", "建筑物，房屋", "たてもの", null ]
+    "TEXT" : [ "建物", "建筑物，房屋", "たてもの", "建物" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "だてもの|かてもの|たでもの|たちもの"
+    }
   },
   "CET46:N5_389" : {
-    "TEXT" : [ "犬", "狗", "いぬ", null ]
+    "TEXT" : [ "犬", "狗", "いぬ", "犬" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あぬ|えぬ|きぬ|いの"
+    }
   },
   "CET46:N5_390" : {
-    "TEXT" : [ "見る", "看，观赏", "みる", null ]
+    "TEXT" : [ "見る", "看，观赏", "みる", "見る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まる|にる|ひる|りる"
+    }
   },
   "CET46:N5_391" : {
-    "TEXT" : [ "鍵", "钥匙；关键", "かぎ", null ]
+    "TEXT" : [ "鍵", "钥匙；关键", "かぎ", "鍵" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がぎ|かき|さぎ|かじ"
+    }
   },
   "CET46:N5_392" : {
-    "TEXT" : [ "元気", "精神，活力；有精神", "げんき", null ]
+    "TEXT" : [ "元気", "精神，活力；有精神", "げんき", "元気" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けんき|ぜんき|でんき|がんき"
+    }
   },
   "CET46:N5_393" : {
-    "TEXT" : [ "玄関", "玄关处，门口", "げんかん", null ]
+    "TEXT" : [ "玄関", "玄关处，门口", "げんかん", "玄関" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けんかん|ぜんかん|でんかん|がんかん"
+    }
   },
   "CET46:N5_394" : {
-    "TEXT" : [ "言う", "说话，告诉；叫作", "いう", null ]
+    "TEXT" : [ "言う", "说话，告诉；叫作", "いう", "言う" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あう|えう|きう|じう"
+    }
   },
   "CET46:N5_395" : {
-    "TEXT" : [ "言葉", "单词；话语", "ことば", null ]
+    "TEXT" : [ "言葉", "单词；话语", "ことば", "言葉" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ごとば|こどば|こたば|そとば"
+    }
   },
   "CET46:N5_396" : {
-    "TEXT" : [ "古い", "古老的；旧的", "ふるい", null ]
+    "TEXT" : [ "古い", "古老的；旧的", "ふるい", "古い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぶるい|くるい|ふりい|ふろい"
+    }
   },
   "CET46:N5_397" : {
-    "TEXT" : [ "呼ぶ", "叫作；呼唤", "よぶ", null ]
+    "TEXT" : [ "呼ぶ", "叫作；呼唤", "よぶ", "呼ぶ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やぶ|ゆぶ|ろぶ|ごぶ"
+    }
   },
   "CET46:N5_398" : {
-    "TEXT" : [ "五つ", "五个；五岁", "いつつ", null ]
+    "TEXT" : [ "五つ", "五个；五岁", "いつつ", "五つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いちつ|ごつ|よっつ"
+    }
   },
   "CET46:N5_399" : {
-    "TEXT" : [ "五十音", "五十音", "ごじゅうおん", null ]
+    "TEXT" : [ "五十音", "五十音", "ごじゅうおん", "五十音" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ごじゅうおんず|ごじゅうおんひょう|ごじゅうおんじゅん"
+    }
   },
   "CET46:N5_400" : {
-    "TEXT" : [ "五日", "五号；五天", "いつか", null ]
+    "TEXT" : [ "五日", "五号；五天", "いつか", "五日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いづか|いつが|えつか|いすか"
+    }
   },
   "CET46:N5_401" : {
-    "TEXT" : [ "午後", "下午，午后", "ごご", null ]
+    "TEXT" : [ "午後", "下午，午后", "ごご", "午後" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ごこ|ここ|ぞご|がご"
+    }
   },
   "CET46:N5_402" : {
-    "TEXT" : [ "午前", "上午", "ごぜん", null ]
+    "TEXT" : [ "午前", "上午", "ごぜん", "午前" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こぜん|ぞぜん|ごせン|ぜごん"
+    }
   },
   "CET46:N5_403" : {
-    "TEXT" : [ "後[あと]", "后面；之后", "あと", null ]
+    "TEXT" : [ "後", "后面；之后", "あと", "後" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "うと|おと|あつ|とお"
+    }
   },
   "CET46:N5_404" : {
-    "TEXT" : [ "後ろ", "后面；背后", "うしろ", null ]
+    "TEXT" : [ "後ろ", "后面；背后", "うしろ", "後ろ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おしろ|いしろ|うすろ|うちろ"
+    }
   },
   "CET46:N5_405" : {
-    "TEXT" : [ "語", "单词，词语", "ご", null ]
+    "TEXT" : [ "語", "单词，词语", "ご", "語" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こ|ぞ|ぼ|ぽ"
+    }
   },
   "CET46:N5_406" : {
-    "TEXT" : [ "交差点", "十字路口", "こうさてん", null ]
+    "TEXT" : [ "交差点", "十字路口", "こうさてん", "交差点" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こうさでん|こうざてん|そうさてん|こおさてん"
+    }
   },
   "CET46:N5_407" : {
-    "TEXT" : [ "交番", "警亭，派出所", "こうばん", null ]
+    "TEXT" : [ "交番", "警亭，派出所", "こうばん", "交番" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こうぱん|こうがん|そうばん|こおばん"
+    }
   },
   "CET46:N5_408" : {
-    "TEXT" : [ "公園", "公园", "こうえん", null ]
+    "TEXT" : [ "公園", "公园", "こうえん", "公園" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こうげん|こうてん|そうえん|こおえん"
+    }
   },
   "CET46:N5_409" : {
-    "TEXT" : [ "厚い", "厚的；（人情）深厚的", "あつい", null ]
+    "TEXT" : [ "厚い", "厚的；（人情）深厚的", "あつい", "厚い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あづい|かつい|あすい|たつい"
+    }
   },
   "CET46:N5_410" : {
-    "TEXT" : [ "口", "嘴；出入口", "くち", null ]
+    "TEXT" : [ "口", "嘴；出入口", "くち", "口" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こち|かち|くつ|くし"
+    }
   },
   "CET46:N5_411" : {
-    "TEXT" : [ "向こう", "正面；对面；对方；（远处看不到的）那边", "むこう", null ]
+    "TEXT" : [ "向こう", "正面；对面；对方；（远处看不到的）那边", "むこう", "向こう" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぬこう|ふこう|ぶこう|ぷこう"
+    }
   },
   "CET46:N5_412" : {
-    "TEXT" : [ "喉", "咽喉，嗓子", "のど", null ]
+    "TEXT" : [ "喉", "咽喉，嗓子", "のど", "喉" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "のうど|など|のと|のぞ"
+    }
   },
   "CET46:N5_413" : {
-    "TEXT" : [ "好き", "喜欢", "すき", null ]
+    "TEXT" : [ "好き", "喜欢", "すき", "好き" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しき|つき|ふき"
+    }
   },
   "CET46:N5_414" : {
-    "TEXT" : [ "広い", "宽广的；广泛的", "ひろい", null ]
+    "TEXT" : [ "広い", "宽广的；广泛的", "ひろい", "広い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しろい|ひらい|ふろい|ひどい"
+    }
   },
   "CET46:N5_415" : {
-    "TEXT" : [ "紅茶", "红茶", "こうちゃ", null ]
+    "TEXT" : [ "紅茶", "红茶", "こうちゃ", "紅茶" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こうじゃ|こおちゃ|そうちゃ|こうちゅ"
+    }
   },
   "CET46:N5_416" : {
-    "TEXT" : [ "行く", "去，往，到", "いく", null ]
+    "TEXT" : [ "行く", "去，往，到", "いく", "行く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えく|うく|りく"
+    }
   },
   "CET46:N5_417" : {
-    "TEXT" : [ "降りる", "下降；下（车）", "おりる", null ]
+    "TEXT" : [ "降りる", "下降；下（车）", "おりる", "降りる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こりる|そりる|とりる|ありる"
+    }
   },
   "CET46:N5_418" : {
-    "TEXT" : [ "降る", "下（雨、雪等）；飘落", "ふる", null ]
+    "TEXT" : [ "降る", "下（雨、雪等）；飘落", "ふる", "降る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぶる|ぷる|ほる|へる"
+    }
   },
   "CET46:N5_419" : {
-    "TEXT" : [ "高い", "高的；贵的", "たかい", null ]
+    "TEXT" : [ "高い", "高的；贵的", "たかい", "高い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "だかい|ただい|たがい|たさい"
+    }
   },
   "CET46:N5_420" : {
-    "TEXT" : [ "国", "国家；家乡", "くに", null ]
+    "TEXT" : [ "国", "国家；家乡", "くに", "国" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こに|ぐに|くにー|くにっ"
+    }
   },
   "CET46:N5_421" : {
-    "TEXT" : [ "黒", "黑色；有犯罪嫌疑", "くろ", null ]
+    "TEXT" : [ "黒", "黑色；有犯罪嫌疑", "くろ", "黒" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かろ|ぐろ|くら|くど"
+    }
   },
   "CET46:N5_422" : {
-    "TEXT" : [ "黒い", "黑色的，黝黑的", "くろい", null ]
+    "TEXT" : [ "黒い", "黑色的，黝黑的", "くろい", "黒い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かろい|ぐろい|くらい|くどい"
+    }
   },
   "CET46:N5_423" : {
-    "TEXT" : [ "頃", "时候，时期", "ころ", null ]
+    "TEXT" : [ "頃", "时候，时期", "ころ", "頃" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こる|ごろ|ころー|こうろ"
+    }
   },
   "CET46:N5_424" : {
-    "TEXT" : [ "今", "现在，当前", "いま", null ]
+    "TEXT" : [ "今", "现在，当前", "いま", "今" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えま|あま|いは|いな"
+    }
   },
   "CET46:N5_425" : {
-    "TEXT" : [ "今まで", "至今为止", "いままで", null ]
+    "TEXT" : [ "今まで", "至今为止", "いままで", "今まで" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えままで|あままで|いはまで|いなまで"
+    }
   },
   "CET46:N5_426" : {
-    "TEXT" : [ "今月", "这个月", "こんげつ", null ]
+    "TEXT" : [ "今月", "这个月", "こんげつ", "今月" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かんげつ|きんげつ|こんけつ|こんぜつ"
+    }
   },
   "CET46:N5_427" : {
-    "TEXT" : [ "今週", "这周", "こんしゅう", null ]
+    "TEXT" : [ "今週", "这周", "こんしゅう", "今週" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かんしゅう|きんしゅう|こんじゅう|こんしゅ"
+    }
   },
   "CET46:N5_428" : {
-    "TEXT" : [ "今朝", "今天早上", "けさ", null ]
+    "TEXT" : [ "今朝", "今天早上", "けさ", "今朝" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きさ|こさ|けざ|けさー"
+    }
   },
   "CET46:N5_429" : {
-    "TEXT" : [ "今日[きょう]", "今天", "きょう", null ]
+    "TEXT" : [ "今日", "今天", "きょう", "今日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きょ|きょうー|けよう|きょうっ"
+    }
   },
   "CET46:N5_430" : {
-    "TEXT" : [ "今年", "今年", "ことし", null ]
+    "TEXT" : [ "今年", "今年", "ことし", "今年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こどし|こたち|こつし|かとし"
+    }
   },
   "CET46:N5_431" : {
-    "TEXT" : [ "今晩", "今晚，今夜", "こんばん", null ]
+    "TEXT" : [ "今晩", "今晚，今夜", "こんばん", "今晩" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ごんばん|こんぱん|こんはん|とんばん"
+    }
   },
   "CET46:N5_432" : {
-    "TEXT" : [ "困る", "感到困难，为难", "こまる", null ]
+    "TEXT" : [ "困る", "感到困难，为难", "こまる", "困る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ごまる|とまる|こばる|こなる"
+    }
   },
   "CET46:N5_433" : {
-    "TEXT" : [ "左", "左，左边", "ひだり", null ]
+    "TEXT" : [ "左", "左，左边", "ひだり", "左" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひだりじ|ひたり|ひだりゆ|ぴだり"
+    }
   },
   "CET46:N5_434" : {
-    "TEXT" : [ "左手", "左手", "ひだりて", null ]
+    "TEXT" : [ "左手", "左手", "ひだりて", "左手" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひだりじ|ひたりて|ひだりゆ|ぴだりて"
+    }
   },
   "CET46:N5_435" : {
-    "TEXT" : [ "砂糖", "砂糖", "さとう", null ]
+    "TEXT" : [ "砂糖", "砂糖", "さとう", "砂糖" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しとう|すとう|ざとう|さたう"
+    }
   },
   "CET46:N5_436" : {
-    "TEXT" : [ "座る", "坐", "すわる", null ]
+    "TEXT" : [ "座る", "坐", "すわる", "座る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "すばる|すがる|つわる|しわる"
+    }
   },
   "CET46:N5_437" : {
-    "TEXT" : [ "再来年", "后年", "さらいねん", null ]
+    "TEXT" : [ "再来年", "后年", "さらいねん", "再来年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さらいれん|たらいねん|さだいねん|さらえねん"
+    }
   },
   "CET46:N5_438" : {
-    "TEXT" : [ "祭り", "祭祀，庙会，节日", "まつり", null ]
+    "TEXT" : [ "祭り", "祭祀，庙会，节日", "まつり", "祭り" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばつり|なつり|ますり|まくり"
+    }
   },
   "CET46:N5_439" : {
-    "TEXT" : [ "細い", "细的，窄的；瘦的", "ほそい", null ]
+    "TEXT" : [ "細い", "细的，窄的；瘦的", "ほそい", "細い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ほぞい|ぼそい|ほしい|とそい"
+    }
   },
   "CET46:N5_440" : {
-    "TEXT" : [ "財布", "钱包", "さいふ", null ]
+    "TEXT" : [ "財布", "钱包", "さいふ", "財布" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さいぶ|さいぷ|かいふ|たいふ"
+    }
   },
   "CET46:N5_441" : {
-    "TEXT" : [ "咲く", "开花", "さく", null ]
+    "TEXT" : [ "咲く", "开花", "さく", "咲く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しく|たく|なく"
+    }
   },
   "CET46:N5_442" : {
-    "TEXT" : [ "作る", "制作；做", "つくる", null ]
+    "TEXT" : [ "作る", "制作；做", "つくる", "作る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つこる|つかる|つきる|てくる"
+    }
   },
   "CET46:N5_443" : {
-    "TEXT" : [ "作家", "作家", "さっか", null ]
+    "TEXT" : [ "作家", "作家", "さっか", "作家" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しっか|せっか|さか|さった"
+    }
   },
   "CET46:N5_444" : {
-    "TEXT" : [ "作文", "作文", "さくぶん", null ]
+    "TEXT" : [ "作文", "作文", "さくぶん", "作文" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さくぷん|さくぶむ|しくぶん|さくびん"
+    }
   },
   "CET46:N5_445" : {
-    "TEXT" : [ "撮る", "照相，摄像", "とる", null ]
+    "TEXT" : [ "撮る", "照相，摄像", "とる", "撮る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "どる|たる|ちる|てる"
+    }
   },
   "CET46:N5_446" : {
-    "TEXT" : [ "雑誌", "杂志", "ざっし", null ]
+    "TEXT" : [ "雑誌", "杂志", "ざっし", "雑誌" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さっし|だっし|ざし|ざっち"
+    }
   },
   "CET46:N5_447" : {
-    "TEXT" : [ "皿", "盘子，碟子", "さら", null ]
+    "TEXT" : [ "皿", "盘子，碟子", "さら", "皿" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しら|せら|さり|さる"
+    }
   },
   "CET46:N5_448" : {
-    "TEXT" : [ "三つ", "三个；三岁", "みっつ", null ]
+    "TEXT" : [ "三つ", "三个；三岁", "みっつ", "三つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まっつ|むっつ|みつつ|みちつ"
+    }
   },
   "CET46:N5_449" : {
-    "TEXT" : [ "三日", "三号，三日；三天", "みっか", null ]
+    "TEXT" : [ "三日", "三号，三日；三天", "みっか", "三日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まっか|むっか|みか|みった"
+    }
   },
   "CET46:N5_450" : {
-    "TEXT" : [ "傘", "雨伞", "かさ", null ]
+    "TEXT" : [ "傘", "雨伞", "かさ", "傘" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がさ|かざ|きさ|かせ"
+    }
   },
   "CET46:N5_451" : {
-    "TEXT" : [ "山", "山", "やま", null ]
+    "TEXT" : [ "山", "山", "やま", "山" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やめ|やも|たま|はま"
+    }
   },
   "CET46:N5_452" : {
-    "TEXT" : [ "散歩", "散步", "さんぽ", null ]
+    "TEXT" : [ "散歩", "散步", "さんぽ", "散歩" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さんぼ|さむぽ|さんほ|しんぽ"
+    }
   },
   "CET46:N5_453" : {
-    "TEXT" : [ "仕事", "工作，职业", "しごと", null ]
+    "TEXT" : [ "仕事", "工作，职业", "しごと", "仕事" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちごと|すごと|せごと|そごと"
+    }
   },
   "CET46:N5_454" : {
-    "TEXT" : [ "使い方", "用法", "つかいかた", null ]
+    "TEXT" : [ "使い方", "用法", "つかいかた", "使い方" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちかいかた|てかいかた|とかいかた|すかいかた"
+    }
   },
   "CET46:N5_455" : {
-    "TEXT" : [ "使う", "使用；花费", "つかう", null ]
+    "TEXT" : [ "使う", "使用；花费", "つかう", "使う" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちかう|てかう|とかう|すかう"
+    }
   },
   "CET46:N5_456" : {
-    "TEXT" : [ "四つ", "四个；四岁", "よっつ", null ]
+    "TEXT" : [ "四つ", "四个；四岁", "よっつ", "四つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "よつ|やっつ|ゆっつ|えっつ"
+    }
   },
   "CET46:N5_457" : {
-    "TEXT" : [ "四日", "四天；四号", "よっか", null ]
+    "TEXT" : [ "四日", "四天；四号", "よっか", "四日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "よつか|やっか|ゆっか|えっか"
+    }
   },
   "CET46:N5_458" : {
-    "TEXT" : [ "始まる", "开始", "はじまる", null ]
+    "TEXT" : [ "始まる", "开始", "はじまる", "始まる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "はちまる|はしまる|はづまる|ばじまる"
+    }
   },
   "CET46:N5_459" : {
-    "TEXT" : [ "子供", "孩子，儿童", "こども", null ]
+    "TEXT" : [ "子供", "孩子，儿童", "こども", "子供" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かども|きども|くども|けども"
+    }
   },
   "CET46:N5_460" : {
-    "TEXT" : [ "止まる", "停止", "とまる", null ]
+    "TEXT" : [ "止まる", "停止", "とまる", "止まる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たまる|ちまる|てまる|どまる"
+    }
   },
   "CET46:N5_461" : {
-    "TEXT" : [ "死ぬ", "死亡", "しぬ", null ]
+    "TEXT" : [ "死ぬ", "死亡", "しぬ", "死ぬ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちぬ|すぬ|せぬ|そぬ"
+    }
   },
   "CET46:N5_462" : {
-    "TEXT" : [ "私[わたし]", "我", "わたし", null ]
+    "TEXT" : [ "私", "我", "わたし", "私" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あたし|わたち|わだし|わてし"
+    }
   },
   "CET46:N5_463" : {
-    "TEXT" : [ "歯", "牙，牙齿", "は", null ]
+    "TEXT" : [ "歯", "牙，牙齿", "は", "歯" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひ|ふ|へ|ほ"
+    }
   },
   "CET46:N5_464" : {
-    "TEXT" : [ "持つ", "拿；带着；拥有，持有", "もつ", null ]
+    "TEXT" : [ "持つ", "拿；带着；拥有，持有", "もつ", "持つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まつ|むつ|めつ"
+    }
   },
   "CET46:N5_465" : {
-    "TEXT" : [ "時", "时候；时间", "とき", null ]
+    "TEXT" : [ "時", "时候；时间", "とき", "時" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たき|てき|とけ"
+    }
   },
   "CET46:N5_466" : {
-    "TEXT" : [ "時々", "有时，偶尔", "ときどき", null ]
+    "TEXT" : [ "時々", "有时，偶尔", "ときどき", "時々" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ときとき|とこどき|ときどけ"
+    }
   },
   "CET46:N5_467" : {
-    "TEXT" : [ "時間", "时间，时刻", "じかん", null ]
+    "TEXT" : [ "時間", "时间，时刻", "じかん", "時間" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じけん|じこん|じかんん"
+    }
   },
   "CET46:N5_468" : {
-    "TEXT" : [ "時計", "钟，表", "とけい", null ]
+    "TEXT" : [ "時計", "钟，表", "とけい", "時計" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たけい|ちけい|とかい|とこい"
+    }
   },
   "CET46:N5_469" : {
-    "TEXT" : [ "次に", "接着，其次", "つぎに", null ]
+    "TEXT" : [ "次に", "接着，其次", "つぎに", "次に" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つきに|つじに|すぎに|ちぎに"
+    }
   },
   "CET46:N5_470" : {
-    "TEXT" : [ "耳", "耳朵；听力；边角", "みみ", null ]
+    "TEXT" : [ "耳", "耳朵；听力；边角", "みみ", "耳" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まみ|むみ|みむ"
+    }
   },
   "CET46:N5_471" : {
-    "TEXT" : [ "自転車", "自行车", "じてんしゃ", null ]
+    "TEXT" : [ "自転車", "自行车", "じてんしゃ", "自転車" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じてんじゃ|じてんしゅ|じてんしゃあ"
+    }
   },
   "CET46:N5_472" : {
-    "TEXT" : [ "自動車", "汽车", "じどうしゃ", null ]
+    "TEXT" : [ "自動車", "汽车", "じどうしゃ", "自動車" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じどうじゃ|じどうしゅ|じどうしゃあ"
+    }
   },
   "CET46:N5_473" : {
-    "TEXT" : [ "自分", "自己，本人", "じぶん", null ]
+    "TEXT" : [ "自分", "自己，本人", "じぶん", "自分" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じふん|じぼん|じぶむ"
+    }
   },
   "CET46:N5_474" : {
-    "TEXT" : [ "辞書", "词典，辞书", "じしょ", null ]
+    "TEXT" : [ "辞書", "词典，辞书", "じしょ", "辞書" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じじょ|じそ|じゅしょ"
+    }
   },
   "CET46:N5_475" : {
-    "TEXT" : [ "七つ", "七个；七岁", "ななつ", null ]
+    "TEXT" : [ "七つ", "七个；七岁", "ななつ", "七つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なのつ|なにつ|ぬぬつ"
+    }
   },
   "CET46:N5_476" : {
-    "TEXT" : [ "七日", "七号；七天", "なのか", null ]
+    "TEXT" : [ "七日", "七号；七天", "なのか", "七日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なにか|なぬか|なのこ"
+    }
   },
   "CET46:N5_477" : {
-    "TEXT" : [ "質問", "问题，提问", "しつもん", null ]
+    "TEXT" : [ "質問", "问题，提问", "しつもん", "質問" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しちもん|しつぼん|しつむん"
+    }
   },
   "CET46:N5_478" : {
-    "TEXT" : [ "写真", "照片", "しゃしん", null ]
+    "TEXT" : [ "写真", "照片", "しゃしん", "写真" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しゃせん|しゃじん|さしん"
+    }
   },
   "CET46:N5_479" : {
-    "TEXT" : [ "社員", "公司职员", "しゃいん", null ]
+    "TEXT" : [ "社員", "公司职员", "しゃいん", "社員" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しゃえん|しゃおん|さいん"
+    }
   },
   "CET46:N5_480" : {
-    "TEXT" : [ "車", "车，汽车", "くるま", null ]
+    "TEXT" : [ "車", "车，汽车", "くるま", "車" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かるま|きゅるま|くろま"
+    }
   },
   "CET46:N5_481" : {
-    "TEXT" : [ "借りる", "借；租", "かりる", null ]
+    "TEXT" : [ "借りる", "借；租", "かりる", "借りる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きりる|こりる|がりる|さりる"
+    }
   },
   "CET46:N5_482" : {
-    "TEXT" : [ "若い", "年轻的，年幼的", "わかい", null ]
+    "TEXT" : [ "若い", "年轻的，年幼的", "わかい", "若い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "わこい|わけい|わきい"
+    }
   },
   "CET46:N5_483" : {
-    "TEXT" : [ "弱い", "微弱的；脆弱的；不擅长的", "よわい", null ]
+    "TEXT" : [ "弱い", "微弱的；脆弱的；不擅长的", "よわい", "弱い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やわい|ゆわい|わわい"
+    }
   },
   "CET46:N5_484" : {
-    "TEXT" : [ "主人", "一家之主；丈夫", "しゅじん", null ]
+    "TEXT" : [ "主人", "一家之主；丈夫", "しゅじん", "主人" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しゅしん|しゅじゅん|しゅぜん"
+    }
   },
   "CET46:N5_485" : {
-    "TEXT" : [ "取る", "拿，获得；订", "とる", null ]
+    "TEXT" : [ "取る", "拿，获得；订", "とる", "取る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たる|てる|つる"
+    }
   },
   "CET46:N5_486" : {
-    "TEXT" : [ "守る", "遵守；保护；保持", "まもる", null ]
+    "TEXT" : [ "守る", "遵守；保护；保持", "まもる", "守る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ももる|ままる|ばもる|まぼる"
+    }
   },
   "CET46:N5_487" : {
-    "TEXT" : [ "手", "手，手臂；……的人", "て", null ]
+    "TEXT" : [ "手", "手，手臂；……的人", "て", "手" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "た|と|ち|で"
+    }
   },
   "CET46:N5_488" : {
-    "TEXT" : [ "手紙", "书信", "てがみ", null ]
+    "TEXT" : [ "手紙", "书信", "てがみ", "手紙" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たがみ|てかみ|でがみ|てがめ"
+    }
   },
   "CET46:N5_489" : {
-    "TEXT" : [ "手洗い", "洗手间；用手洗", "てあらい", null ]
+    "TEXT" : [ "手洗い", "洗手间；用手洗", "てあらい", "手洗い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たあらい|てあろい|であらい|てありい"
+    }
   },
   "CET46:N5_490" : {
-    "TEXT" : [ "種類", "种类", "しゅるい", null ]
+    "TEXT" : [ "種類", "种类", "しゅるい", "種類" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しょるい|しゅろい|じゅるい|しゅるえ"
+    }
   },
   "CET46:N5_491" : {
-    "TEXT" : [ "酒", "酒；酒量", "さけ", null ]
+    "TEXT" : [ "酒", "酒；酒量", "さけ", "酒" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しけ|さこ|ざけ|さき"
+    }
   },
   "CET46:N5_492" : {
-    "TEXT" : [ "すし", "寿司", "すし", "鮨｜寿司" ]
+    "TEXT" : [ "すし", "寿司", "すし", "鮨｜寿司" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_493" : {
-    "TEXT" : [ "授業", "课；上课", "じゅぎょう", null ]
+    "TEXT" : [ "授業", "课；上课", "じゅぎょう", "授業" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じょぎょう|じゅごう|じゅぎょお|じゅぎゃう"
+    }
   },
   "CET46:N5_494" : {
-    "TEXT" : [ "秋", "秋天", "あき", null ]
+    "TEXT" : [ "秋", "秋天", "あき", "秋" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おき|あけ|あち|かき"
+    }
   },
   "CET46:N5_495" : {
-    "TEXT" : [ "終わる", "完，结束；完结", "おわる", null ]
+    "TEXT" : [ "終わる", "完，结束；完结", "おわる", "終わる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あわる|こわる|をわる|うわる"
+    }
   },
   "CET46:N5_496" : {
-    "TEXT" : [ "習う", "学习；练习", "ならう", null ]
+    "TEXT" : [ "習う", "学习；练习", "ならう", "習う" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にらう|なろう|のらう|なれう"
+    }
   },
   "CET46:N5_497" : {
-    "TEXT" : [ "週", "周，礼拜", "しゅう", null ]
+    "TEXT" : [ "週", "周，礼拜", "しゅう", "週" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しょおう|しゅお|じゅう|しゅい"
+    }
   },
   "CET46:N5_498" : {
-    "TEXT" : [ "週末", "周末", "しゅうまつ", null ]
+    "TEXT" : [ "週末", "周末", "しゅうまつ", "週末" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しょうまつ|しゅおまつ|しゅうみつ|じゅうまつ"
+    }
   },
   "CET46:N5_499" : {
-    "TEXT" : [ "住む", "居住；栖息", "すむ", null ]
+    "TEXT" : [ "住む", "居住；栖息", "すむ", "住む" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しむ|せむ|つむ|ずむ"
+    }
   },
   "CET46:N5_500" : {
-    "TEXT" : [ "十日", "十号；十天", "とおか", null ]
+    "TEXT" : [ "十日", "十号；十天", "とおか", "十日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "とうか|とおが|とか|どおか"
+    }
   },
   "CET46:N5_501" : {
-    "TEXT" : [ "縦", "竖", "たて", null ]
+    "TEXT" : [ "縦", "竖", "たて", "縦" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "だて|たで|たって|たてえ"
+    }
   },
   "CET46:N5_502" : {
-    "TEXT" : [ "重い", "重的，沉重的", "おもい", null ]
+    "TEXT" : [ "重い", "重的，沉重的", "おもい", "重い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あもい|おぼい|おむい|おっもい"
+    }
   },
   "CET46:N5_503" : {
-    "TEXT" : [ "宿題", "作业", "しゅくだい", null ]
+    "TEXT" : [ "宿題", "作业", "しゅくだい", "宿題" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じゅくだい|しゅぐだい|しゅくたい|しゅだい"
+    }
   },
   "CET46:N5_504" : {
-    "TEXT" : [ "出かける", "出门，出发", "でかける", null ]
+    "TEXT" : [ "出かける", "出门，出发", "でかける", "出かける" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "だかける|どかける|てかける|じかける"
+    }
   },
   "CET46:N5_505" : {
-    "TEXT" : [ "出す", "拿出，取出；上交，提出；邮寄", "だす", null ]
+    "TEXT" : [ "出す", "拿出，取出；上交，提出；邮寄", "だす", "出す" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たす|ざす|がす"
+    }
   },
   "CET46:N5_506" : {
-    "TEXT" : [ "出る", "出去；参加；接电话", "でる", null ]
+    "TEXT" : [ "出る", "出去；参加；接电话", "でる", "出る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "てる|ぜる|げる"
+    }
   },
   "CET46:N5_507" : {
-    "TEXT" : [ "出口", "出口", "でぐち", null ]
+    "TEXT" : [ "出口", "出口", "でぐち", "出口" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "てぐち|ぜぐち|げぐち|でくち"
+    }
   },
   "CET46:N5_508" : {
-    "TEXT" : [ "出張", "出差", "しゅっちょう", null ]
+    "TEXT" : [ "出張", "出差", "しゅっちょう", "出張" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じゅっちょう|ちゅっちょう|すゅっちょう|しゅつちょう"
+    }
   },
   "CET46:N5_509" : {
-    "TEXT" : [ "春", "春天，春季", "はる", null ]
+    "TEXT" : [ "春", "春天，春季", "はる", "春" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばる|はろ|はるう|はっる"
+    }
   },
   "CET46:N5_510" : {
-    "TEXT" : [ "春休み", "春假", "はるやすみ", null ]
+    "TEXT" : [ "春休み", "春假", "はるやすみ", "春休み" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばるやすみ|ぱるやすみ|わるやすみ|はづやすみ"
+    }
   },
   "CET46:N5_511" : {
-    "TEXT" : [ "初めて", "初次，第一次", "はじめて", "始めて" ]
+    "TEXT" : [ "初めて", "初次，第一次", "はじめて", "始めて" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばじめて|ぱじめて|わじめて|はしめて"
+    }
   },
   "CET46:N5_512" : {
-    "TEXT" : [ "所", "场所，地方", "ところ", null ]
+    "TEXT" : [ "所", "场所，地方", "ところ", "所" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "どころ|そころ|こころ|てころ"
+    }
   },
   "CET46:N5_513" : {
-    "TEXT" : [ "暑い", "（天气）热的", "あつい", null ]
+    "TEXT" : [ "暑い", "（天气）热的", "あつい", "暑い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いつい|うつい|あづい|あすい"
+    }
   },
   "CET46:N5_514" : {
-    "TEXT" : [ "書き方", "写法", "かきかた", null ]
+    "TEXT" : [ "書き方", "写法", "かきかた", "書き方" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がきかた|たきかた|さきかた"
+    }
   },
   "CET46:N5_515" : {
-    "TEXT" : [ "書く", "写，画", "かく", null ]
+    "TEXT" : [ "書く", "写，画", "かく", "書く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がく|たく|さく"
+    }
   },
   "CET46:N5_516" : {
-    "TEXT" : [ "書類", "文件，资料", "しょるい", null ]
+    "TEXT" : [ "書類", "文件，资料", "しょるい", "書類" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "そるい|しゃるい|しょろい|しょるえ"
+    }
   },
   "CET46:N5_517" : {
-    "TEXT" : [ "女", "女性，女人", "おんな", null ]
+    "TEXT" : [ "女", "女性，女人", "おんな", "女" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おんあ|おな|あんあ|おとこ"
+    }
   },
   "CET46:N5_518" : {
-    "TEXT" : [ "女の子", "女孩子", "おんなのこ", null ]
+    "TEXT" : [ "女の子", "女孩子", "おんなのこ", "女の子" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おんあのこ|おなのこ|あんあのこ|おとこのこ"
+    }
   },
   "CET46:N5_519" : {
-    "TEXT" : [ "小〜", "小……；少……", "こ〜", null ]
+    "TEXT" : [ "小〜", "小……；少……", "こ〜", "小〜" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "か〜|き〜|く〜|け〜"
+    }
   },
   "CET46:N5_520" : {
-    "TEXT" : [ "小さい", "小的；微弱的", "ちいさい", null ]
+    "TEXT" : [ "小さい", "小的；微弱的", "ちいさい", "小さい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちさい|しいさい|きいさい|じいさい"
+    }
   },
   "CET46:N5_521" : {
-    "TEXT" : [ "小さな", "小，微小的", "ちいさな", null ]
+    "TEXT" : [ "小さな", "小，微小的", "ちいさな", "小さな" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちさな|しいさな|きいさな|じいさな"
+    }
   },
   "CET46:N5_522" : {
-    "TEXT" : [ "小学生", "小学生", "しょうがくせい", null ]
+    "TEXT" : [ "小学生", "小学生", "しょうがくせい", "小学生" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しょがくせい|しょうかくせい|しょうがくせ|じょうがくせい"
+    }
   },
   "CET46:N5_523" : {
-    "TEXT" : [ "少し", "很少，一点点", "すこし", null ]
+    "TEXT" : [ "少し", "很少，一点点", "すこし", "少し" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "すくし|そこし|すごし"
+    }
   },
   "CET46:N5_524" : {
-    "TEXT" : [ "少ない", "少量的，少的", "すくない", null ]
+    "TEXT" : [ "少ない", "少量的，少的", "すくない", "少ない" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "すけない|すこない|すかない|すきない"
+    }
   },
   "CET46:N5_525" : {
-    "TEXT" : [ "消える", "消失；熄灭", "きえる", null ]
+    "TEXT" : [ "消える", "消失；熄灭", "きえる", "消える" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けえる|こえる|かえる|くえる"
+    }
   },
   "CET46:N5_526" : {
-    "TEXT" : [ "消す", "熄灭，关掉（电源）；抹去", "けす", null ]
+    "TEXT" : [ "消す", "熄灭，关掉（电源）；抹去", "けす", "消す" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "げす|せす|てす|こす"
+    }
   },
   "CET46:N5_527" : {
-    "TEXT" : [ "焼酎", "烧酒", "しょうちゅう", null ]
+    "TEXT" : [ "焼酎", "烧酒", "しょうちゅう", "焼酎" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しょちゅう|しょうちゅ|じょうちゅう|しょうじゅう"
+    }
   },
   "CET46:N5_528" : {
-    "TEXT" : [ "象", "大象", "ぞう", null ]
+    "TEXT" : [ "象", "大象", "ぞう", "象" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "そう|どう|ぼう|じょう"
+    }
   },
   "CET46:N5_529" : {
-    "TEXT" : [ "上", "上面；表面；前面；（程度、地位、等级等）高；（年龄）大", "うえ", null ]
+    "TEXT" : [ "上", "上面；表面；前面；（程度、地位、等级等）高；（年龄）大", "うえ", "上" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ええ|うい|おえ|うあ"
+    }
   },
   "CET46:N5_530" : {
-    "TEXT" : [ "上げる", "举高；提高", "あげる", null ]
+    "TEXT" : [ "上げる", "举高；提高", "あげる", "上げる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かげる|さげる|たげる|なげる"
+    }
   },
   "CET46:N5_531" : {
-    "TEXT" : [ "上手", "擅长，高明", "じょうず", null ]
+    "TEXT" : [ "上手", "擅长，高明", "じょうず", "上手" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じょず|じゅうず|じょうつ|じょうす"
+    }
   },
   "CET46:N5_532" : {
-    "TEXT" : [ "丈夫", "健康，强壮；坚固，结实", "じょうぶ", null ]
+    "TEXT" : [ "丈夫", "健康，强壮；坚固，结实", "じょうぶ", "丈夫" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じょうぶう|じょうぶい|じょうぶえ"
+    }
   },
   "CET46:N5_533" : {
-    "TEXT" : [ "乗る", "乘坐，搭乘", "のる", null ]
+    "TEXT" : [ "乗る", "乘坐，搭乘", "のる", "乗る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "のるる|のるい|のるう"
+    }
   },
   "CET46:N5_534" : {
-    "TEXT" : [ "色", "颜色；色泽", "いろ", null ]
+    "TEXT" : [ "色", "颜色；色泽", "いろ", "色" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えろ|いり|うろ|いも"
+    }
   },
   "CET46:N5_535" : {
-    "TEXT" : [ "食べる", "吃", "たべる", null ]
+    "TEXT" : [ "食べる", "吃", "たべる", "食べる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "だべる|かべる|ちべる|つべる"
+    }
   },
   "CET46:N5_536" : {
-    "TEXT" : [ "食べ物", "食物，食品", "たべもの", null ]
+    "TEXT" : [ "食べ物", "食物，食品", "たべもの", "食べ物" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かべもの|さべもの|ちべもの|てべもの"
+    }
   },
   "CET46:N5_537" : {
-    "TEXT" : [ "食堂", "食堂，餐厅", "しょくどう", null ]
+    "TEXT" : [ "食堂", "食堂，餐厅", "しょくどう", "食堂" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しょっどう|しょくとう|ちょくどう|きょくどう"
+    }
   },
   "CET46:N5_538" : {
-    "TEXT" : [ "信じる", "相信，信赖；信仰", "しんじる", null ]
+    "TEXT" : [ "信じる", "相信，信赖；信仰", "しんじる", "信じる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんんじる|しんいじる|しんうじる"
+    }
   },
   "CET46:N5_539" : {
-    "TEXT" : [ "信号", "红绿灯；信号", "しんごう", null ]
+    "TEXT" : [ "信号", "红绿灯；信号", "しんごう", "信号" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんごうう|しんごうい|しんごうえ"
+    }
   },
   "CET46:N5_540" : {
-    "TEXT" : [ "寝る", "睡觉；躺着", "ねる", null ]
+    "TEXT" : [ "寝る", "睡觉；躺着", "ねる", "寝る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ねるる|ねるい|ねるう"
+    }
   },
   "CET46:N5_541" : {
-    "TEXT" : [ "新しい", "新的", "あたらしい", null ]
+    "TEXT" : [ "新しい", "新的", "あたらしい", "新しい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かたらしい|あだらしい|あたらさしい|あんたらしい"
+    }
   },
   "CET46:N5_542" : {
-    "TEXT" : [ "新鮮", "新鲜，鲜活", "しんせん", null ]
+    "TEXT" : [ "新鮮", "新鲜，鲜活", "しんせん", "新鮮" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんせんん|しんせむ|しんぜん|ちんせん"
+    }
   },
   "CET46:N5_543" : {
-    "TEXT" : [ "新年", "新年", "しんねん", null ]
+    "TEXT" : [ "新年", "新年", "しんねん", "新年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんねんん|しんねむ|しんめん|ちんねん"
+    }
   },
   "CET46:N5_544" : {
-    "TEXT" : [ "新聞", "报纸", "しんぶん", null ]
+    "TEXT" : [ "新聞", "报纸", "しんぶん", "新聞" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんぶんん|しんぶむ|しんぷん|ちんぶん"
+    }
   },
   "CET46:N5_545" : {
-    "TEXT" : [ "辛[から]い", "辣的；烈的", "からい", null ]
+    "TEXT" : [ "辛い", "辣的；烈的", "からい", "辛[から]い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かりい|かるい|かれい"
+    }
   },
   "CET46:N5_546" : {
-    "TEXT" : [ "人", "人；某人；人品", "ひと", null ]
+    "TEXT" : [ "人", "人；某人；人品", "ひと", "人" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひいと|ひっと|ひろ"
+    }
   },
   "CET46:N5_547" : {
-    "TEXT" : [ "人間", "人，人类", "にんげん", null ]
+    "TEXT" : [ "人間", "人，人类", "にんげん", "人間" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にんけん|にんげんん|にんげ"
+    }
   },
   "CET46:N5_548" : {
-    "TEXT" : [ "図書館", "图书馆", "としょかん", null ]
+    "TEXT" : [ "図書館", "图书馆", "としょかん", "図書館" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "としょかんん|としかん|としょけん"
+    }
   },
   "CET46:N5_549" : {
-    "TEXT" : [ "吹く", "吹风；吹，喷", "ふく", null ]
+    "TEXT" : [ "吹く", "吹风；吹，喷", "ふく", "吹く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぶく|ぷく|つく|すく"
+    }
   },
   "CET46:N5_550" : {
-    "TEXT" : [ "水", "水", "みず", null ]
+    "TEXT" : [ "水", "水", "みず", "水" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ます|むず|みつ|みじ"
+    }
   },
   "CET46:N5_551" : {
-    "TEXT" : [ "水曜日", "周三", "すいようび", null ]
+    "TEXT" : [ "水曜日", "周三", "すいようび", "水曜日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ずいようび|ついようび|くいようび|しいようび"
+    }
   },
   "CET46:N5_552" : {
-    "TEXT" : [ "数字", "数字", "すうじ", null ]
+    "TEXT" : [ "数字", "数字", "すうじ", "数字" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しうじ|すうち|つうじ"
+    }
   },
   "CET46:N5_553" : {
-    "TEXT" : [ "晴れ", "晴天", "はれ", null ]
+    "TEXT" : [ "晴れ", "晴天", "はれ", "晴れ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひれ|ふれ|ほれ|かれ"
+    }
   },
   "CET46:N5_554" : {
-    "TEXT" : [ "晴れる", "天气放晴；心情愉快", "はれる", null ]
+    "TEXT" : [ "晴れる", "天气放晴；心情愉快", "はれる", "晴れる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひれる|ふれる|ほれる|かれる"
+    }
   },
   "CET46:N5_555" : {
-    "TEXT" : [ "生まれる", "出生；产生，创立", "うまれる", null ]
+    "TEXT" : [ "生まれる", "出生；产生，创立", "うまれる", "生まれる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あまれる|いまれる|えまれる|おまれる"
+    }
   },
   "CET46:N5_556" : {
-    "TEXT" : [ "生徒", "（初中或高中的）学生", "せいと", null ]
+    "TEXT" : [ "生徒", "（初中或高中的）学生", "せいと", "生徒" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さいと|せいど|せいち"
+    }
   },
   "CET46:N5_557" : {
-    "TEXT" : [ "西", "西方", "にし", null ]
+    "TEXT" : [ "西", "西方", "にし", "西" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "みなみ|ひがし|きた"
+    }
   },
   "CET46:N5_558" : {
-    "TEXT" : [ "西口", "西侧的出入口", "にしぐち", null ]
+    "TEXT" : [ "西口", "西侧的出入口", "にしぐち", "西口" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にしくち|みしぐち|なしぐち"
+    }
   },
   "CET46:N5_559" : {
-    "TEXT" : [ "青", "蓝色；青色；绿色；不成熟；绿灯", "あお", null ]
+    "TEXT" : [ "青", "蓝色；青色；绿色；不成熟；绿灯", "あお", "青" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いお|あえ|かお"
+    }
   },
   "CET46:N5_560" : {
-    "TEXT" : [ "青い", "蓝色的，绿色的", "あおい", null ]
+    "TEXT" : [ "青い", "蓝色的，绿色的", "あおい", "青い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あうい|かおい|さおい|たおい"
+    }
   },
   "CET46:N5_561" : {
-    "TEXT" : [ "静か", "安静；文静", "しずか", null ]
+    "TEXT" : [ "静か", "安静；文静", "しずか", "静か" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しすか|しつか|すずか|じずか"
+    }
   },
   "CET46:N5_562" : {
-    "TEXT" : [ "赤", "红色；完全", "あか", null ]
+    "TEXT" : [ "赤", "红色；完全", "あか", "赤" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いか|あき|あけ|おか"
+    }
   },
   "CET46:N5_563" : {
-    "TEXT" : [ "赤い", "红色的", "あかい", null ]
+    "TEXT" : [ "赤い", "红色的", "あかい", "赤い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あきい|あこい|あかあい|あかかい"
+    }
   },
   "CET46:N5_564" : {
-    "TEXT" : [ "切る", "切，割；中断，关闭", "きる", null ]
+    "TEXT" : [ "切る", "切，割；中断，关闭", "きる", "切る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ける|くる|かる|こる"
+    }
   },
   "CET46:N5_565" : {
-    "TEXT" : [ "切手", "邮票", "きって", null ]
+    "TEXT" : [ "切手", "邮票", "きって", "切手" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かって|くって|きってえ|きってい"
+    }
   },
   "CET46:N5_566" : {
-    "TEXT" : [ "切符", "（车、船等的）票", "きっぷ", null ]
+    "TEXT" : [ "切符", "（车、船等的）票", "きっぷ", "切符" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かっぷ|くっぷ|きっふ|きっぷう"
+    }
   },
   "CET46:N5_567" : {
-    "TEXT" : [ "雪", "雪；雪白", "ゆき", null ]
+    "TEXT" : [ "雪", "雪；雪白", "ゆき", "雪" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "よき|ゆく|ゆけ|ゆし"
+    }
   },
   "CET46:N5_568" : {
-    "TEXT" : [ "先々月", "上上个月", "せんせんげつ", null ]
+    "TEXT" : [ "先々月", "上上个月", "せんせんげつ", "先々月" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さんせんげつ|せんせんけつ|せんせんがつ|ぜんせんげつ"
+    }
   },
   "CET46:N5_569" : {
-    "TEXT" : [ "先々週", "上上周", "せんせんしゅう", null ]
+    "TEXT" : [ "先々週", "上上周", "せんせんしゅう", "先々週" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんせんしゅう|さんせんしゅう|せんしんしゅう|せんさんしゅう"
+    }
   },
   "CET46:N5_570" : {
-    "TEXT" : [ "先に", "之前，以前", "さきに", null ]
+    "TEXT" : [ "先に", "之前，以前", "さきに", "先に" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さけに|さこに|さきいに|さききに"
+    }
   },
   "CET46:N5_571" : {
-    "TEXT" : [ "先月", "上个月", "せんげつ", null ]
+    "TEXT" : [ "先月", "上个月", "せんげつ", "先月" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんげつ|さんげつ|せんけつ|せんげつう"
+    }
   },
   "CET46:N5_572" : {
-    "TEXT" : [ "先週", "上周", "せんしゅう", null ]
+    "TEXT" : [ "先週", "上周", "せんしゅう", "先週" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんしゅう|さんしゅう|せんしゅうう|せんしゅうい"
+    }
   },
   "CET46:N5_573" : {
-    "TEXT" : [ "先生", "对老师、医生、律师等的敬称", "せんせい", null ]
+    "TEXT" : [ "先生", "对老师、医生、律师等的敬称", "せんせい", "先生" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんせい|さんせい|せんさい|せんせえ"
+    }
   },
   "CET46:N5_574" : {
-    "TEXT" : [ "千", "千", "せん", null ]
+    "TEXT" : [ "千", "千", "せん", "千" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さん|しん|ぜん|てん"
+    }
   },
   "CET46:N5_575" : {
-    "TEXT" : [ "千円", "一千日元", "せんえん", null ]
+    "TEXT" : [ "千円", "一千日元", "せんえん", "千円" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さんえん|ぜんえん|せんあん|せんいん"
+    }
   },
   "CET46:N5_576" : {
-    "TEXT" : [ "川", "河川，河流", "かわ", null ]
+    "TEXT" : [ "川", "河川，河流", "かわ", "川" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がわ|きわ|こわ|けわ"
+    }
   },
   "CET46:N5_577" : {
-    "TEXT" : [ "洗う", "清洗，冲洗", "あらう", null ]
+    "TEXT" : [ "洗う", "清洗，冲洗", "あらう", "洗う" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いらう|えらう|あるう|あろう"
+    }
   },
   "CET46:N5_578" : {
-    "TEXT" : [ "洗濯", "洗衣服", "せんたく", null ]
+    "TEXT" : [ "洗濯", "洗衣服", "せんたく", "洗濯" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しんたく|さんたく|せんたき|せんたつ"
+    }
   },
   "CET46:N5_579" : {
-    "TEXT" : [ "洗濯機", "洗衣机", "せんたくき", null ]
+    "TEXT" : [ "洗濯機", "洗衣机", "せんたくき", "洗濯機" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さんたくき|ぜんたくき|せんだくき|せんたくか"
+    }
   },
   "CET46:N5_580" : {
-    "TEXT" : [ "前", "前面；以前；份", "まえ", null ]
+    "TEXT" : [ "前", "前面；以前；份", "まえ", "前" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まい|まお|めえ|もえ"
+    }
   },
   "CET46:N5_581" : {
-    "TEXT" : [ "全員", "全体成员", "ぜんいん", null ]
+    "TEXT" : [ "全員", "全体成员", "ぜんいん", "全員" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ざんいん|でんいん|せんいん|ぜんうん"
+    }
   },
   "CET46:N5_582" : {
-    "TEXT" : [ "全部", "全部", "ぜんぶ", null ]
+    "TEXT" : [ "全部", "全部", "ぜんぶ", "全部" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ざんぶ|でんぶ|ぜんば|ぜんぷ"
+    }
   },
   "CET46:N5_583" : {
-    "TEXT" : [ "祖父母", "祖父母", "そふぼ", null ]
+    "TEXT" : [ "祖父母", "祖父母", "そふぼ", "祖父母" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さふぼ|そはぼ|そふば|そふぶ"
+    }
   },
   "CET46:N5_584" : {
-    "TEXT" : [ "掃除", "打扫", "そうじ", null ]
+    "TEXT" : [ "掃除", "打扫", "そうじ", "掃除" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さうじ|ぞうじ|そうざ|そうち"
+    }
   },
   "CET46:N5_585" : {
-    "TEXT" : [ "早い", "早的", "はやい", null ]
+    "TEXT" : [ "早い", "早的", "はやい", "早い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ほやい|ひやい|はらい|はよい"
+    }
   },
   "CET46:N5_586" : {
-    "TEXT" : [ "相撲", "相扑（运动）", "すもう", null ]
+    "TEXT" : [ "相撲", "相扑（运动）", "すもう", "相撲" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "すもー|すまう"
+    }
   },
   "CET46:N5_587" : {
-    "TEXT" : [ "窓", "窗户", "まど", null ]
+    "TEXT" : [ "窓", "窗户", "まど", "窓" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まと|まぞ"
+    }
   },
   "CET46:N5_588" : {
-    "TEXT" : [ "走る", "奔跑；行驶", "はしる", null ]
+    "TEXT" : [ "走る", "奔跑；行驶", "はしる", "走る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ほしる|ひしる|はせる|はちる"
+    }
   },
   "CET46:N5_589" : {
-    "TEXT" : [ "側", "一侧，一方", "がわ", null ]
+    "TEXT" : [ "側", "一侧，一方", "がわ", "側" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かわ|ざわ|だわ"
+    }
   },
   "CET46:N5_590" : {
-    "TEXT" : [ "村", "村庄，农村", "むら", null ]
+    "TEXT" : [ "村", "村庄，农村", "むら", "村" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "もら|むろ|むらあ|むらっ"
+    }
   },
   "CET46:N5_591" : {
-    "TEXT" : [ "多い", "多的", "おおい", null ]
+    "TEXT" : [ "多い", "多的", "おおい", "多い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あおい|おうい|おつい"
+    }
   },
   "CET46:N5_592" : {
-    "TEXT" : [ "太い", "胖的；粗的", "ふとい", null ]
+    "TEXT" : [ "太い", "胖的；粗的", "ふとい", "太い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふたい|ほとい|ふどい|ふつい"
+    }
   },
   "CET46:N5_593" : {
-    "TEXT" : [ "太陽", "太阳", "たいよう", null ]
+    "TEXT" : [ "太陽", "太阳", "たいよう", "太陽" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : ""
+    }
   },
   "CET46:N5_594" : {
-    "TEXT" : [ "駄目", "不行，没用，不可以", "だめ", null ]
+    "TEXT" : [ "駄目", "不行，没用，不可以", "だめ", "駄目" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : ""
+    }
   },
   "CET46:N5_595" : {
-    "TEXT" : [ "待つ", "等待", "まつ", null ]
+    "TEXT" : [ "待つ", "等待", "まつ", "待つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "もつ|めつ|なつ|みつ"
+    }
   },
   "CET46:N5_596" : {
-    "TEXT" : [ "貸す", "借出；租借；提供", "かす", null ]
+    "TEXT" : [ "貸す", "借出；租借；提供", "かす", "貸す" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こす|きす|かっす"
+    }
   },
   "CET46:N5_597" : {
-    "TEXT" : [ "大きい", "大的；年长的", "おおきい", null ]
+    "TEXT" : [ "大きい", "大的；年长的", "おおきい", "大きい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あおきい|おうきい|おきい"
+    }
   },
   "CET46:N5_598" : {
-    "TEXT" : [ "大みそか", "除夕（在日本指12月31日）", "おおみそか", "大晦日" ]
+    "TEXT" : [ "大みそか", "除夕（在日本指12月31日）", "おおみそか", "大晦日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あおみそか|おうみそか|おっみそか"
+    }
   },
   "CET46:N5_599" : {
-    "TEXT" : [ "大学", "大学", "だいがく", null ]
+    "TEXT" : [ "大学", "大学", "だいがく", "大学" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいがく|でいがく|だいがくう|だいがくか"
+    }
   },
   "CET46:N5_600" : {
-    "TEXT" : [ "大学院生", "硕士生", "だいがくいんせい", null ]
+    "TEXT" : [ "大学院生", "硕士生", "だいがくいんせい", "大学院生" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいがくいんせい|だいかくいいんせい|だいがくうんせい|だいがくいんぜい"
+    }
   },
   "CET46:N5_601" : {
-    "TEXT" : [ "大嫌い", "非常讨厌，最讨厌", "だいきらい", null ]
+    "TEXT" : [ "大嫌い", "非常讨厌，最讨厌", "だいきらい", "大嫌い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいきらい|だえきらい|だいけらい|だいからい"
+    }
   },
   "CET46:N5_602" : {
-    "TEXT" : [ "大丈夫", "没问题，不要紧", "だいじょうぶ", null ]
+    "TEXT" : [ "大丈夫", "没问题，不要紧", "だいじょうぶ", "大丈夫" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいじょうぶ|だいじょぶ|だいしょうぶ|だいじょうぷ"
+    }
   },
   "CET46:N5_603" : {
-    "TEXT" : [ "大人", "成人，大人", "おとな", null ]
+    "TEXT" : [ "大人", "成人，大人", "おとな", "大人" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あとな|ことな|おとに|おとの"
+    }
   },
   "CET46:N5_604" : {
-    "TEXT" : [ "大切", "重要，关键；宝贵", "たいせつ", null ]
+    "TEXT" : [ "大切", "重要，关键；宝贵", "たいせつ", "大切" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たえせつ|だいせつ|たいぜつ|たいせち"
+    }
   },
   "CET46:N5_605" : {
-    "TEXT" : [ "大変", "麻烦，够呛；非常", "たいへん", null ]
+    "TEXT" : [ "大変", "麻烦，够呛；非常", "たいへん", "大変" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たえへん|ていへん|だいへん|たいべん"
+    }
   },
   "CET46:N5_606" : {
-    "TEXT" : [ "卓球", "乒乓球", "たっきゅう", null ]
+    "TEXT" : [ "卓球", "乒乓球", "たっきゅう", "卓球" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たきゅう|だっきゅう|たっしゅう"
+    }
   },
   "CET46:N5_607" : {
-    "TEXT" : [ "脱ぐ", "摘掉，脱掉", "ぬぐ", null ]
+    "TEXT" : [ "脱ぐ", "摘掉，脱掉", "ぬぐ", "脱ぐ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "のぐ|ねぐ|なぐ"
+    }
   },
   "CET46:N5_608" : {
-    "TEXT" : [ "誰", "谁", "だれ", null ]
+    "TEXT" : [ "誰", "谁", "だれ", "誰" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たれ|どれ|だろ"
+    }
   },
   "CET46:N5_609" : {
-    "TEXT" : [ "誰か", "（不确定的指代）某人", "だれか", null ]
+    "TEXT" : [ "誰か", "（不确定的指代）某人", "だれか", "誰か" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たれか|どれか|だろか"
+    }
   },
   "CET46:N5_610" : {
-    "TEXT" : [ "短い", "短的；短暂的", "みじかい", null ]
+    "TEXT" : [ "短い", "短的；短暂的", "みじかい", "短い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "みちかい|みじがい|みずかい"
+    }
   },
   "CET46:N5_611" : {
-    "TEXT" : [ "誕生日", "生日", "たんじょうび", null ]
+    "TEXT" : [ "誕生日", "生日", "たんじょうび", "誕生日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "だんじょうび|たんちょじょうび|たんじょうぴ"
+    }
   },
   "CET46:N5_612" : {
-    "TEXT" : [ "弾[ひ]く", "用手演奏乐器", "ひく", null ]
+    "TEXT" : [ "弾く", "用手演奏乐器", "ひく", "弾[ひ]く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "びく|しく|ちく"
+    }
   },
   "CET46:N5_613" : {
-    "TEXT" : [ "暖かい", "（天气）暖和的", "あたたかい", null ]
+    "TEXT" : [ "暖かい", "（天气）暖和的", "あたたかい", "暖かい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あだたかい|あつたかい|おたたかい"
+    }
   },
   "CET46:N5_614" : {
-    "TEXT" : [ "男", "男性，男人", "おとこ", null ]
+    "TEXT" : [ "男", "男性，男人", "おとこ", "男" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おどこ|おとご|だん"
+    }
   },
   "CET46:N5_615" : {
-    "TEXT" : [ "男の子", "男孩子", "おとこのこ", null ]
+    "TEXT" : [ "男の子", "男孩子", "おとこのこ", "男の子" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おどこのこ|おつこのこ|おとごのこ"
+    }
   },
   "CET46:N5_616" : {
-    "TEXT" : [ "知る", "知道，认识", "しる", null ]
+    "TEXT" : [ "知る", "知道，认识", "しる", "知る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちる|じる|する"
+    }
   },
   "CET46:N5_617" : {
-    "TEXT" : [ "地下鉄", "地铁", "ちかてつ", null ]
+    "TEXT" : [ "地下鉄", "地铁", "ちかてつ", "地下鉄" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じかてつ|ちがてつ|ちかでつ"
+    }
   },
   "CET46:N5_618" : {
-    "TEXT" : [ "地図", "地图", "ちず", null ]
+    "TEXT" : [ "地図", "地图", "ちず", "地図" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じず|しず|ちつ"
+    }
   },
   "CET46:N5_619" : {
-    "TEXT" : [ "置く", "放，搁", "おく", null ]
+    "TEXT" : [ "置く", "放，搁", "おく", "置く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あく|うく|えく"
+    }
   },
   "CET46:N5_620" : {
-    "TEXT" : [ "遅い", "晚的；迟的", "おそい", null ]
+    "TEXT" : [ "遅い", "晚的；迟的", "おそい", "遅い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あそい|おぞい|おしょい|おとい"
+    }
   },
   "CET46:N5_621" : {
-    "TEXT" : [ "茶色", "茶色，褐色", "ちゃいろ", null ]
+    "TEXT" : [ "茶色", "茶色，褐色", "ちゃいろ", "茶色" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちやいろ|ちゃあいろ|ちゃえろ|ちゃりょ"
+    }
   },
   "CET46:N5_622" : {
-    "TEXT" : [ "茶 碗[わん]", "碗，茶杯，茶碗", "ちゃわん", null ]
+    "TEXT" : [ "茶 碗", "碗，茶杯，茶碗", "ちゃわん", "茶 碗" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちやわん|ちゃあわん|ちゃばん|ちゃわむ"
+    }
   },
   "CET46:N5_623" : {
-    "TEXT" : [ "着く", "到达，送达", "つく", null ]
+    "TEXT" : [ "着く", "到达，送达", "つく", "着く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "づく|すく|ちゅく|とく"
+    }
   },
   "CET46:N5_624" : {
-    "TEXT" : [ "着る", "穿（衣服等）", "きる", null ]
+    "TEXT" : [ "着る", "穿（衣服等）", "きる", "着る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぎる|ちる|くる|ける"
+    }
   },
   "CET46:N5_625" : {
-    "TEXT" : [ "中", "内部，里面；其中", "なか", null ]
+    "TEXT" : [ "中", "内部，里面；其中", "なか", "中" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にゃか|なが|なこ|なっか"
+    }
   },
   "CET46:N5_626" : {
-    "TEXT" : [ "中華街", "唐人街", "ちゅうかがい", null ]
+    "TEXT" : [ "中華街", "唐人街", "ちゅうかがい", "中華街" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちゅかがい|ちゅうががい|ちゅうかかい|ちゅうかざい"
+    }
   },
   "CET46:N5_627" : {
-    "TEXT" : [ "中華料理", "中国菜", "ちゅうかりょうり", null ]
+    "TEXT" : [ "中華料理", "中国菜", "ちゅうかりょうり", "中華料理" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちゅうがりょうり|ちゅかりょうり|ちゅうかりょうるい|ちゅうかりょうらい"
+    }
   },
   "CET46:N5_628" : {
-    "TEXT" : [ "中学", "中学；初中", "ちゅうがく", null ]
+    "TEXT" : [ "中学", "中学；初中", "ちゅうがく", "中学" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちゅうかく|ちゅうぎゃく|ちゅうごく|ちゅんがく"
+    }
   },
   "CET46:N5_629" : {
-    "TEXT" : [ "中学生", "初中生", "ちゅうがくせい", null ]
+    "TEXT" : [ "中学生", "初中生", "ちゅうがくせい", "中学生" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちゅうかくせい|ちゅうがくさい|ちゅうがくぜい|ちょうがくせい"
+    }
   },
   "CET46:N5_630" : {
-    "TEXT" : [ "中国", "中国", "ちゅうごく", null ]
+    "TEXT" : [ "中国", "中国", "ちゅうごく", "中国" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しゅうごく|ちゆうごく|ちゅうこく|ちゅうごけ"
+    }
   },
   "CET46:N5_631" : {
-    "TEXT" : [ "昼", "白天；中午", "ひる", null ]
+    "TEXT" : [ "昼", "白天；中午", "ひる", "昼" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちる|みる|ひつ|るひ"
+    }
   },
   "CET46:N5_632" : {
-    "TEXT" : [ "昼ご飯", "午饭", "ひるごはん", null ]
+    "TEXT" : [ "昼ご飯", "午饭", "ひるごはん", "昼ご飯" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちるごはん|ひつごはん|ひるごばん"
+    }
   },
   "CET46:N5_633" : {
-    "TEXT" : [ "貼る", "贴，张贴", "はる", null ]
+    "TEXT" : [ "貼る", "贴，张贴", "はる", "貼る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひる|ふる|ばる|まる"
+    }
   },
   "CET46:N5_634" : {
-    "TEXT" : [ "朝", "早晨，早上", "あさ", null ]
+    "TEXT" : [ "朝", "早晨，早上", "あさ", "朝" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "うさ|おさ|あか|さあ"
+    }
   },
   "CET46:N5_635" : {
-    "TEXT" : [ "朝ご飯", "早饭", "あさごはん", null ]
+    "TEXT" : [ "朝ご飯", "早饭", "あさごはん", "朝ご飯" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "うさごはん|あかごはん|あさごばん"
+    }
   },
   "CET46:N5_636" : {
-    "TEXT" : [ "町", "城镇", "まち", null ]
+    "TEXT" : [ "町", "城镇", "まち", "町" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "はち|なち|まつ|ちま"
+    }
   },
   "CET46:N5_637" : {
-    "TEXT" : [ "長い", "长的；悠长的；长久的", "ながい", null ]
+    "TEXT" : [ "長い", "长的；悠长的；长久的", "ながい", "長い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たがい|かがい|なかい|がない"
+    }
   },
   "CET46:N5_638" : {
-    "TEXT" : [ "鳥", "鸟；鸡", "とり", null ]
+    "TEXT" : [ "鳥", "鸟；鸡", "とり", "鳥" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "そり|こり|とち|りとり"
+    }
   },
   "CET46:N5_639" : {
-    "TEXT" : [ "痛い", "疼痛的；痛苦的", "いたい", null ]
+    "TEXT" : [ "痛い", "疼痛的；痛苦的", "いたい", "痛い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えたい|あたい|いちい|たいい"
+    }
   },
   "CET46:N5_640" : {
-    "TEXT" : [ "低い", "低的；矮的；（声音等）小的", "ひくい", null ]
+    "TEXT" : [ "低い", "低的；矮的；（声音等）小的", "ひくい", "低い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちくい|みくい|ひけい|くひい"
+    }
   },
   "CET46:N5_641" : {
-    "TEXT" : [ "庭", "庭院，院子", "にわ", null ]
+    "TEXT" : [ "庭", "庭院，院子", "にわ", "庭" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちわ|みわ|にが|わに"
+    }
   },
   "CET46:N5_642" : {
-    "TEXT" : [ "弟", "（自己的）弟弟", "おとうと", null ]
+    "TEXT" : [ "弟", "（自己的）弟弟", "おとうと", "弟" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おとうど|おとと|いとうと|おどうと"
+    }
   },
   "CET46:N5_643" : {
-    "TEXT" : [ "天気", "天气", "てんき", null ]
+    "TEXT" : [ "天気", "天气", "てんき", "天気" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "でんき|てんぎ|たんき|てんし"
+    }
   },
   "CET46:N5_644" : {
-    "TEXT" : [ "店", "商店，店铺", "みせ", null ]
+    "TEXT" : [ "店", "商店，店铺", "みせ", "店" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にせ|ひせ|みけ|せみ"
+    }
   },
   "CET46:N5_645" : {
-    "TEXT" : [ "電気", "电；电灯", "でんき", null ]
+    "TEXT" : [ "電気", "电；电灯", "でんき", "電気" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "てんき|ぜんき|でんか|んでき"
+    }
   },
   "CET46:N5_646" : {
-    "TEXT" : [ "電車", "电车", "でんしゃ", null ]
+    "TEXT" : [ "電車", "电车", "でんしゃ", "電車" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "てんしゃ|ぜんしゃ|でんちや|んでしゃ"
+    }
   },
   "CET46:N5_647" : {
-    "TEXT" : [ "電話", "电话", "でんわ", null ]
+    "TEXT" : [ "電話", "电话", "でんわ", "電話" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "てんわ|ぜんわ|でんが|んでわ"
+    }
   },
   "CET46:N5_648" : {
-    "TEXT" : [ "渡す", "交，给；渡过", "わたす", null ]
+    "TEXT" : [ "渡す", "交，给；渡过", "わたす", "渡す" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "わだす|あたす|わつす|がたす"
+    }
   },
   "CET46:N5_649" : {
-    "TEXT" : [ "渡る", "渡过，通过；遍及", "わたる", null ]
+    "TEXT" : [ "渡る", "渡过，通过；遍及", "わたる", "渡る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "わだる|あたる|わつる|がたる"
+    }
   },
   "CET46:N5_650" : {
-    "TEXT" : [ "登る", "登上", "のぼる", null ]
+    "TEXT" : [ "登る", "登上", "のぼる", "登る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "のぽる|のどる|そぼる|のばる"
+    }
   },
   "CET46:N5_651" : {
-    "TEXT" : [ "都会", "都市，城市", "とかい", null ]
+    "TEXT" : [ "都会", "都市，城市", "とかい", "都会" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "とがい|とかえ|こかい|とさい"
+    }
   },
   "CET46:N5_652" : {
-    "TEXT" : [ "都市", "都市，城市", "とし", null ]
+    "TEXT" : [ "都市", "都市，城市", "とし", "都市" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "どし|そし|とち|とじ"
+    }
   },
   "CET46:N5_653" : {
-    "TEXT" : [ "土曜日", "周六", "どようび", null ]
+    "TEXT" : [ "土曜日", "周六", "どようび", "土曜日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "とようび|ぞようび|ぼようび|ぽようび"
+    }
   },
   "CET46:N5_654" : {
-    "TEXT" : [ "冬", "冬天，冬季", "ふゆ", null ]
+    "TEXT" : [ "冬", "冬天，冬季", "ふゆ", "冬" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぶゆ|ぷゆ|ふう|ふよ"
+    }
   },
   "CET46:N5_655" : {
-    "TEXT" : [ "冬休み", "寒假", "ふゆやすみ", null ]
+    "TEXT" : [ "冬休み", "寒假", "ふゆやすみ", "冬休み" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つゆやすみ|ふゆらすみ|ふゅやすみ"
+    }
   },
   "CET46:N5_656" : {
-    "TEXT" : [ "唐揚げ", "油炸；油炸物", "からあげ", null ]
+    "TEXT" : [ "唐揚げ", "油炸；油炸物", "からあげ", "唐揚げ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がらあげ|かりあげ|からおげ"
+    }
   },
   "CET46:N5_657" : {
-    "TEXT" : [ "東", "东", "ひがし", null ]
+    "TEXT" : [ "東", "东", "ひがし", "東" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひかし|ひがじ|びがし|ひがす"
+    }
   },
   "CET46:N5_658" : {
-    "TEXT" : [ "答える", "回答，应答", "こたえる", null ]
+    "TEXT" : [ "答える", "回答，应答", "こたえる", "答える" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こだえる|かたえる|こつえる|ことえる"
+    }
   },
   "CET46:N5_659" : {
-    "TEXT" : [ "頭[あたま]", "头；顶部；头脑", "あたま", null ]
+    "TEXT" : [ "頭", "头；顶部；头脑", "あたま", "頭" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いたま|あだま|あたた|あたまあ"
+    }
   },
   "CET46:N5_660" : {
-    "TEXT" : [ "働く", "工作", "はたらく", null ]
+    "TEXT" : [ "働く", "工作", "はたらく", "働く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばたらく|はだらく|はたざく|はたらあく"
+    }
   },
   "CET46:N5_661" : {
-    "TEXT" : [ "動物", "动物", "どうぶつ", null ]
+    "TEXT" : [ "動物", "动物", "どうぶつ", "動物" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "どううぶつ|どぶつ|とうぶつ|どうふつ"
+    }
   },
   "CET46:N5_662" : {
-    "TEXT" : [ "同じ", "相同，一样", "おなじ", null ]
+    "TEXT" : [ "同じ", "相同，一样", "おなじ", "同じ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あなじ|おにじ|おまじ|かなじ"
+    }
   },
   "CET46:N5_663" : {
-    "TEXT" : [ "道", "道路", "みち", null ]
+    "TEXT" : [ "道", "道路", "みち", "道" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "みちー|みちっ|みぢ|みつ"
+    }
   },
   "CET46:N5_664" : {
-    "TEXT" : [ "読む", "读，看", "よむ", null ]
+    "TEXT" : [ "読む", "读，看", "よむ", "読む" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ろむ|もむ|こむ"
+    }
   },
   "CET46:N5_665" : {
-    "TEXT" : [ "豚肉", "猪肉", "ぶたにく", null ]
+    "TEXT" : [ "豚肉", "猪肉", "ぶたにく", "豚肉" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぶたにくー|ぶたにくっ|ぶたにぐ|ぶたにき"
+    }
   },
   "CET46:N5_666" : {
-    "TEXT" : [ "曇る", "阴天；朦胧不清，模糊", "くもる", null ]
+    "TEXT" : [ "曇る", "阴天；朦胧不清，模糊", "くもる", "曇る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こもる|かもる|くほる|くのる"
+    }
   },
   "CET46:N5_667" : {
-    "TEXT" : [ "内容", "内容", "ないよう", null ]
+    "TEXT" : [ "内容", "内容", "ないよう", "内容" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なうよう|なえよう|ないゆう|ないょ"
+    }
   },
   "CET46:N5_668" : {
-    "TEXT" : [ "南", "南方", "みなみ", null ]
+    "TEXT" : [ "南", "南方", "みなみ", "南" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まなみ|みにみ|みなま|みなに"
+    }
   },
   "CET46:N5_669" : {
-    "TEXT" : [ "難しい", "难的；不容易的", "むずかしい", null ]
+    "TEXT" : [ "難しい", "难的；不容易的", "むずかしい", "難しい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "もずかしい|むつかしい|むずがしい|まずかしい"
+    }
   },
   "CET46:N5_670" : {
-    "TEXT" : [ "二つ", "两个；两岁", "ふたつ", null ]
+    "TEXT" : [ "二つ", "两个；两岁", "ふたつ", "二つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふつつ|ぶたつ|ふだつ|へたつ"
+    }
   },
   "CET46:N5_671" : {
-    "TEXT" : [ "二十", "二十", "にじゅう", null ]
+    "TEXT" : [ "二十", "二十", "にじゅう", "二十" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にじゅうー|にじゅ|にちゅう|なじゅう"
+    }
   },
   "CET46:N5_672" : {
-    "TEXT" : [ "二十歳", "二十岁", "はたち", "にじゅっさい" ]
+    "TEXT" : [ "二十歳", "二十岁", "はたち", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "はたちー|はたし|はだち|はたっ"
+    }
   },
   "CET46:N5_673" : {
-    "TEXT" : [ "二十日", "20号；20天", "はつか", null ]
+    "TEXT" : [ "二十日", "20号；20天", "はつか", "二十日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "はつが|ばつか|はすか|はつた"
+    }
   },
   "CET46:N5_674" : {
-    "TEXT" : [ "二人", "两个人", "ふたり", null ]
+    "TEXT" : [ "二人", "两个人", "ふたり", "二人" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふたじ|ぶたり|ふだり|ふたゆ"
+    }
   },
   "CET46:N5_675" : {
-    "TEXT" : [ "二日", "二号，二日；两天", "ふつか", null ]
+    "TEXT" : [ "二日", "二号，二日；两天", "ふつか", "二日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふつた|ふつが|ぶつか|ふすか"
+    }
   },
   "CET46:N5_676" : {
-    "TEXT" : [ "肉", "肉，肉类", "にく", null ]
+    "TEXT" : [ "肉", "肉，肉类", "にく", "肉" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "につ|にぐ|みく|ちく"
+    }
   },
   "CET46:N5_677" : {
-    "TEXT" : [ "日本", "日本", "にほん", "にっぽん" ]
+    "TEXT" : [ "日本", "日本", "にほん", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ねほん|のほん|にはん|にへん"
+    }
   },
   "CET46:N5_678" : {
-    "TEXT" : [ "日本語", "日语", "にほんご", null ]
+    "TEXT" : [ "日本語", "日语", "にほんご", "日本語" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にはんご|にほんこ|にほんぞ|にほんど"
+    }
   },
   "CET46:N5_679" : {
-    "TEXT" : [ "日本人", "日本人", "にほんじん", null ]
+    "TEXT" : [ "日本人", "日本人", "にほんじん", "日本人" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にほんしん|にぼんじん|みほんじん|にほんぎん"
+    }
   },
   "CET46:N5_680" : {
-    "TEXT" : [ "日曜日", "周日", "にちようび", null ]
+    "TEXT" : [ "日曜日", "周日", "にちようび", "日曜日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にちようぴ|にちよおび|にじようび|にちようひ"
+    }
   },
   "CET46:N5_681" : {
-    "TEXT" : [ "入る", "进入；含有；加入", "はいる", null ]
+    "TEXT" : [ "入る", "进入；含有；加入", "はいる", "入る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばいる|ぱいる|まいる|はえる"
+    }
   },
   "CET46:N5_682" : {
-    "TEXT" : [ "入れる", "放进；沏（茶等）", "いれる", null ]
+    "TEXT" : [ "入れる", "放进；沏（茶等）", "いれる", "入れる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "えれる|うれる|りれる"
+    }
   },
   "CET46:N5_683" : {
-    "TEXT" : [ "入学式", "开学典礼", "にゅうがくしき", null ]
+    "TEXT" : [ "入学式", "开学典礼", "にゅうがくしき", "入学式" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にゅうがくじき|にゅうかくしき|にゅうぎゃくしき|みゅうがくしき"
+    }
   },
   "CET46:N5_684" : {
-    "TEXT" : [ "猫", "猫", "ねこ", null ]
+    "TEXT" : [ "猫", "猫", "ねこ", "猫" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "のこ|れこ|ねか|ねご"
+    }
   },
   "CET46:N5_685" : {
-    "TEXT" : [ "熱い", "热的，烫的", "あつい", null ]
+    "TEXT" : [ "熱い", "热的，烫的", "あつい", "熱い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あたい|あちい|あとい|かつい"
+    }
   },
   "CET46:N5_686" : {
-    "TEXT" : [ "年[とし]", "年；年龄", "とし", null ]
+    "TEXT" : [ "年", "年；年龄", "とし", "年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たし|ちし|とさ|とち"
+    }
   },
   "CET46:N5_687" : {
-    "TEXT" : [ "年[ねん]", "年，一年", "ねん", null ]
+    "TEXT" : [ "年", "年，一年", "ねん", "年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ねむ|のん|れん|めん"
+    }
   },
   "CET46:N5_688" : {
-    "TEXT" : [ "濃い", "（颜色）深的；浓的；密的", "こい", null ]
+    "TEXT" : [ "濃い", "（颜色）深的；浓的；密的", "こい", "濃い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かい|ごい|とい|そい"
+    }
   },
   "CET46:N5_689" : {
-    "TEXT" : [ "背", "个子；脊背", "せ", null ]
+    "TEXT" : [ "背", "个子；脊背", "せ", "背" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "し|す|ぜ|て"
+    }
   },
   "CET46:N5_690" : {
-    "TEXT" : [ "背広", "西服", "せびろ", null ]
+    "TEXT" : [ "背広", "西服", "せびろ", "背広" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さびろ|しびろ|すびろ|そびろ"
+    }
   },
   "CET46:N5_691" : {
-    "TEXT" : [ "梅雨", "（从六月到七月持续下雨）梅雨（季节）", "つゆ", null ]
+    "TEXT" : [ "梅雨", "（从六月到七月持续下雨）梅雨（季节）", "つゆ", "梅雨" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つよ|つや|ちゆ|すゆ"
+    }
   },
   "CET46:N5_692" : {
-    "TEXT" : [ "買い物", "买东西", "かいもの", null ]
+    "TEXT" : [ "買い物", "买东西", "かいもの", "買い物" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がいもの|こいもの|かいもろ|さいもの"
+    }
   },
   "CET46:N5_693" : {
-    "TEXT" : [ "買う", "购买", "かう", null ]
+    "TEXT" : [ "買う", "购买", "かう", "買う" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がう|こう|きう|くう"
+    }
   },
   "CET46:N5_694" : {
-    "TEXT" : [ "売る", "出售；出卖", "うる", null ]
+    "TEXT" : [ "売る", "出售；出卖", "うる", "売る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おる|える|いる"
+    }
   },
   "CET46:N5_695" : {
-    "TEXT" : [ "博物館", "博物馆", "はくぶつかん", null ]
+    "TEXT" : [ "博物館", "博物馆", "はくぶつかん", "博物館" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひくぶつかん|ふくぶつかん|へくぶつかん|ほくぶつかん"
+    }
   },
   "CET46:N5_696" : {
-    "TEXT" : [ "白", "白，白色；没有关系，清白", "しろ", null ]
+    "TEXT" : [ "白", "白，白色；没有关系，清白", "しろ", "白" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しる|しれ|しら|ちろ"
+    }
   },
   "CET46:N5_697" : {
-    "TEXT" : [ "白い", "白色的，洁白的", "しろい", null ]
+    "TEXT" : [ "白い", "白色的，洁白的", "しろい", "白い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しるい|しれい|しらい|ちろい"
+    }
   },
   "CET46:N5_698" : {
-    "TEXT" : [ "薄い", "薄的；（颜色、味道等）淡的", "うすい", null ]
+    "TEXT" : [ "薄い", "薄的；（颜色、味道等）淡的", "うすい", "薄い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おすい|かすい|くすい|さすい"
+    }
   },
   "CET46:N5_699" : {
-    "TEXT" : [ "箸", "筷子", "はし", null ]
+    "TEXT" : [ "箸", "筷子", "はし", "箸" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひし|ふし|へし|ほし"
+    }
   },
   "CET46:N5_700" : {
-    "TEXT" : [ "八つ", "八个；八岁", "やっつ", null ]
+    "TEXT" : [ "八つ", "八个；八岁", "やっつ", "八つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やつ|やちつ|かっつ|たっつ"
+    }
   },
   "CET46:N5_701" : {
-    "TEXT" : [ "八日", "八天；八号", "ようか", null ]
+    "TEXT" : [ "八日", "八天；八号", "ようか", "八日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ようが|ゆうか|よか|よっか"
+    }
   },
   "CET46:N5_702" : {
-    "TEXT" : [ "半", "半，一半", "はん", null ]
+    "TEXT" : [ "半", "半，一半", "はん", "半" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばん|ぱん|まん|ひん"
+    }
   },
   "CET46:N5_703" : {
-    "TEXT" : [ "半分", "一半", "はんぶん", null ]
+    "TEXT" : [ "半分", "一半", "はんぶん", "半分" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばんぶん|はんぷん|ほんぶん|はんびん"
+    }
   },
   "CET46:N5_704" : {
-    "TEXT" : [ "晩", "夜晚，晚上", "ばん", null ]
+    "TEXT" : [ "晩", "夜晚，晚上", "ばん", "晩" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "はん|ぱん|まん|びん"
+    }
   },
   "CET46:N5_705" : {
-    "TEXT" : [ "晩ご飯", "晚饭", "ばんごはん", null ]
+    "TEXT" : [ "晩ご飯", "晚饭", "ばんごはん", "晩ご飯" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "はんごはん|ぱんごはん|ばんごほん|ばんごあん"
+    }
   },
   "CET46:N5_706" : {
-    "TEXT" : [ "番号", "号码", "ばんごう", null ]
+    "TEXT" : [ "番号", "号码", "ばんごう", "番号" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばんこう|はんごう|ばんぞう|ばんごーう"
+    }
   },
   "CET46:N5_707" : {
-    "TEXT" : [ "疲れる", "疲倦，累", "つかれる", null ]
+    "TEXT" : [ "疲れる", "疲倦，累", "つかれる", "疲れる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "づかれる|すかれる|たかれる|ちかれる"
+    }
   },
   "CET46:N5_708" : {
-    "TEXT" : [ "皮", "皮，表皮", "かわ", null ]
+    "TEXT" : [ "皮", "皮，表皮", "かわ", "皮" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がわ|たわ|さは|かさ"
+    }
   },
   "CET46:N5_709" : {
-    "TEXT" : [ "被る", "戴，盖；蒙受", "かぶる", null ]
+    "TEXT" : [ "被る", "戴，盖；蒙受", "かぶる", "被る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がぶる|たぶる|さぶる|はぶる"
+    }
   },
   "CET46:N5_710" : {
-    "TEXT" : [ "飛ぶ", "飞翔；飞跑，飞奔", "とぶ", null ]
+    "TEXT" : [ "飛ぶ", "飞翔；飞跑，飞奔", "とぶ", "飛ぶ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たぶ|どぶ|つぶ|こぶ"
+    }
   },
   "CET46:N5_711" : {
-    "TEXT" : [ "飛行機", "飞机", "ひこうき", null ]
+    "TEXT" : [ "飛行機", "飞机", "ひこうき", "飛行機" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "びこうき|ぴこうき|ちこうき|きこうき"
+    }
   },
   "CET46:N5_712" : {
-    "TEXT" : [ "百", "百", "ひゃく", null ]
+    "TEXT" : [ "百", "百", "ひゃく", "百" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "びゃく|きゃく|ひゃき|ひゃつ"
+    }
   },
   "CET46:N5_713" : {
-    "TEXT" : [ "病院", "医院（拥有20张或以上床位）", "びょういん", null ]
+    "TEXT" : [ "病院", "医院（拥有20张或以上床位）", "びょういん", "病院" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぴょういん|じょういん|きょういん|ひょういん"
+    }
   },
   "CET46:N5_714" : {
-    "TEXT" : [ "病気", "疾病", "びょうき", null ]
+    "TEXT" : [ "病気", "疾病", "びょうき", "病気" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "びようき|びょうぎ|ぴょうき|ぼうき"
+    }
   },
   "CET46:N5_715" : {
-    "TEXT" : [ "付ける", "安上；穿上；写上；定价；涂上；附上；打分", "つける", null ]
+    "TEXT" : [ "付ける", "安上；穿上；写上；定价；涂上；附上；打分", "つける", "付ける" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つうける|てける|とける|ずける"
+    }
   },
   "CET46:N5_716" : {
-    "TEXT" : [ "父", "（跟别人提及时）爸爸", "ちち", null ]
+    "TEXT" : [ "父", "（跟别人提及时）爸爸", "ちち", "父" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちちち|ちじ|つち|とち"
+    }
   },
   "CET46:N5_717" : {
-    "TEXT" : [ "部屋", "房间", "へや", null ]
+    "TEXT" : [ "部屋", "房间", "へや", "部屋" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やへ|ほや|べや|へよ"
+    }
   },
   "CET46:N5_718" : {
-    "TEXT" : [ "封筒", "信封", "ふうとう", null ]
+    "TEXT" : [ "封筒", "信封", "ふうとう", "封筒" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふとう|ふうどう|ほうとう|ふうてう"
+    }
   },
   "CET46:N5_719" : {
-    "TEXT" : [ "風", "风", "かぜ", null ]
+    "TEXT" : [ "風", "风", "かぜ", "風" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かせ|かぞ|かで|こぜ"
+    }
   },
   "CET46:N5_720" : {
-    "TEXT" : [ "風邪", "感冒", "かぜ", null ]
+    "TEXT" : [ "風邪", "感冒", "かぜ", "風邪" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かせ|かぞ|かで|こぜ"
+    }
   },
   "CET46:N5_721" : {
-    "TEXT" : [ "風呂", "澡堂；洗澡盆，洗澡水", "ふろ", null ]
+    "TEXT" : [ "風呂", "澡堂；洗澡盆，洗澡水", "ふろ", "風呂" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふうろ|ほろ|ぶろ|ふら"
+    }
   },
   "CET46:N5_722" : {
-    "TEXT" : [ "服", "衣服", "ふく", null ]
+    "TEXT" : [ "服", "衣服", "ふく", "服" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ふうく|ほく|ぶく|ふけ"
+    }
   },
   "CET46:N5_723" : {
-    "TEXT" : [ "物", "东西，物品", "もの", null ]
+    "TEXT" : [ "物", "东西，物品", "もの", "物" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "もお|もん|もろ|まの"
+    }
   },
   "CET46:N5_724" : {
-    "TEXT" : [ "分かる", "明白，懂，知道", "わかる", null ]
+    "TEXT" : [ "分かる", "明白，懂，知道", "わかる", "分かる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "わあかる|はかる|ばかる|まかる"
+    }
   },
   "CET46:N5_725" : {
-    "TEXT" : [ "聞く", "听；询问", "きく", null ]
+    "TEXT" : [ "聞く", "听；询问", "きく", "聞く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けく|こく|かく|ぎく"
+    }
   },
   "CET46:N5_726" : {
-    "TEXT" : [ "平仮名", "平假名", "ひらがな", null ]
+    "TEXT" : [ "平仮名", "平假名", "ひらがな", "平仮名" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひらなまな|ひらかまな|ひらがだ|びらがな"
+    }
   },
   "CET46:N5_727" : {
-    "TEXT" : [ "並ぶ", "排列", "ならぶ", null ]
+    "TEXT" : [ "並ぶ", "排列", "ならぶ", "並ぶ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なろぶ|なれぶ|にらぶ|のらぶ"
+    }
   },
   "CET46:N5_728" : {
-    "TEXT" : [ "並べる", "并肩，排列", "ならべる", null ]
+    "TEXT" : [ "並べる", "并肩，排列", "ならべる", "並べる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "なろべる|なれべる|にらべる|のらべる"
+    }
   },
   "CET46:N5_729" : {
-    "TEXT" : [ "閉まる", "关闭；打烊", "しまる", null ]
+    "TEXT" : [ "閉まる", "关闭；打烊", "しまる", "閉まる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "せまる|そまる|さまる|じまる"
+    }
   },
   "CET46:N5_730" : {
-    "TEXT" : [ "閉める", "关上；合上（书本等）；打烊", "しめる", null ]
+    "TEXT" : [ "閉める", "关上；合上（书本等）；打烊", "しめる", "閉める" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "じめる|すめる|ちめる|っしめる"
+    }
   },
   "CET46:N5_731" : {
-    "TEXT" : [ "片仮名", "片假名", "かたかな", null ]
+    "TEXT" : [ "片仮名", "片假名", "かたかな", "片仮名" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がたかな|かだかな|かたがな|かたかだ"
+    }
   },
   "CET46:N5_732" : {
-    "TEXT" : [ "返す", "归还；翻", "かえす", null ]
+    "TEXT" : [ "返す", "归还；翻", "かえす", "返す" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かいす|かおす|きえす|こえす"
+    }
   },
   "CET46:N5_733" : {
-    "TEXT" : [ "便利", "方便，便利", "べんり", null ]
+    "TEXT" : [ "便利", "方便，便利", "べんり", "便利" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "べんりい|べんる|べんび|べんち"
+    }
   },
   "CET46:N5_734" : {
-    "TEXT" : [ "勉強", "学习", "べんきょう", null ]
+    "TEXT" : [ "勉強", "学习", "べんきょう", "勉強" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "べんきょ|べんきよう|べんちょう|ぼんきょう"
+    }
   },
   "CET46:N5_735" : {
-    "TEXT" : [ "弁当", "便当，盒饭", "べんとう", null ]
+    "TEXT" : [ "弁当", "便当，盒饭", "べんとう", "弁当" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "べんどう|べんてう|べんつう|ぼんとう"
+    }
   },
   "CET46:N5_736" : {
-    "TEXT" : [ "歩く", "步行", "あるく", null ]
+    "TEXT" : [ "歩く", "步行", "あるく", "歩く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おるく|あっるく|かるく|ありく"
+    }
   },
   "CET46:N5_737" : {
-    "TEXT" : [ "方[かた]", "（“人”的尊他语）……位，……人", "かた", null ]
+    "TEXT" : [ "方", "（“人”的尊他语）……位，……人", "かた", "方" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "がた|かだ|かった|かたあ"
+    }
   },
   "CET46:N5_738" : {
-    "TEXT" : [ "方[ほう]", "方向；方面；（比起来）……还是", "ほう", null ]
+    "TEXT" : [ "方", "方向；方面；（比起来）……还是", "ほう", "方" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぼう|ほお|ほ|ほうう"
+    }
   },
   "CET46:N5_739" : {
-    "TEXT" : [ "帽子", "帽子", "ぼうし", null ]
+    "TEXT" : [ "帽子", "帽子", "ぼうし", "帽子" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ほうし|ぼおし|ぼうじ|ぼし"
+    }
   },
   "CET46:N5_740" : {
-    "TEXT" : [ "忘れる", "忘记，遗忘", "わすれる", null ]
+    "TEXT" : [ "忘れる", "忘记，遗忘", "わすれる", "忘れる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばすれる|わしゅれる|わっすれる|わすうれる"
+    }
   },
   "CET46:N5_741" : {
-    "TEXT" : [ "忙しい", "忙碌的", "いそがしい", null ]
+    "TEXT" : [ "忙しい", "忙碌的", "いそがしい", "忙しい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いそかしい|いっそがしい|えそがしい|いしょがしい"
+    }
   },
   "CET46:N5_742" : {
-    "TEXT" : [ "北", "北方，北面", "きた", null ]
+    "TEXT" : [ "北", "北方，北面", "きた", "北" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぎた|きだ|きった|きたあ"
+    }
   },
   "CET46:N5_743" : {
-    "TEXT" : [ "北側", "北方，北侧", "きたがわ", null ]
+    "TEXT" : [ "北側", "北方，北侧", "きたがわ", "北側" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぎたがわ|きだがわ|きたかわ|きたがば"
+    }
   },
   "CET46:N5_744" : {
-    "TEXT" : [ "本", "书本，书籍", "ほん", null ]
+    "TEXT" : [ "本", "书本，书籍", "ほん", "本" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぼん|ほむ|ほ|ほんん"
+    }
   },
   "CET46:N5_745" : {
-    "TEXT" : [ "本屋", "书店", "ほんや", null ]
+    "TEXT" : [ "本屋", "书店", "ほんや", "本屋" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぼんや|ほむや|ほんよ|ほや"
+    }
   },
   "CET46:N5_746" : {
-    "TEXT" : [ "本棚", "书柜，书架", "ほんだな", null ]
+    "TEXT" : [ "本棚", "书柜，书架", "ほんだな", "本棚" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぼんだな|ほむだな|ほなたな|ほんだだ"
+    }
   },
   "CET46:N5_747" : {
-    "TEXT" : [ "本当", "真实，事实；真的", "ほんとう", null ]
+    "TEXT" : [ "本当", "真实，事实；真的", "ほんとう", "本当" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぼんとう|ほんどう|ほんとお|ほんと"
+    }
   },
   "CET46:N5_748" : {
-    "TEXT" : [ "磨く", "磨，刷；磨练", "みがく", null ]
+    "TEXT" : [ "磨く", "磨，刷；磨练", "みがく", "磨く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "びがく|ぴがく|みかく|みざく"
+    }
   },
   "CET46:N5_749" : {
-    "TEXT" : [ "妹", "（自己的）妹妹", "いもうと", null ]
+    "TEXT" : [ "妹", "（自己的）妹妹", "いもうと", "妹" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あもうと|うもうと|えもうと|いのうと"
+    }
   },
   "CET46:N5_750" : {
-    "TEXT" : [ "毎回", "每次，每回", "まいかい", null ]
+    "TEXT" : [ "毎回", "每次，每回", "まいかい", "毎回" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいかい|ないかい|まうかい|まえかい"
+    }
   },
   "CET46:N5_751" : {
-    "TEXT" : [ "毎月", "每个月", "まいつき", null ]
+    "TEXT" : [ "毎月", "每个月", "まいつき", "毎月" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいつき|ないつき|まうつき|まえつき"
+    }
   },
   "CET46:N5_752" : {
-    "TEXT" : [ "毎週", "每周", "まいしゅう", null ]
+    "TEXT" : [ "毎週", "每周", "まいしゅう", "毎週" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいしゅう|ないしゅう|まうしゅう|まえしゅう"
+    }
   },
   "CET46:N5_753" : {
-    "TEXT" : [ "毎朝", "每天早上", "まいあさ", null ]
+    "TEXT" : [ "毎朝", "每天早上", "まいあさ", "毎朝" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいあさ|ないあさ|まうあさ|まえあさ"
+    }
   },
   "CET46:N5_754" : {
-    "TEXT" : [ "毎日", "每天", "まいにち", null ]
+    "TEXT" : [ "毎日", "每天", "まいにち", "毎日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいにち|ないにち|まうにち|まえにち"
+    }
   },
   "CET46:N5_755" : {
-    "TEXT" : [ "毎年", "每年", "まいとし", null ]
+    "TEXT" : [ "毎年", "每年", "まいとし", "毎年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいとし|ないとし|まうとし|まえとし"
+    }
   },
   "CET46:N5_756" : {
-    "TEXT" : [ "毎晩", "每晚", "まいばん", null ]
+    "TEXT" : [ "毎晩", "每晚", "まいばん", "毎晩" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいばん|ないばん|まうばん|まえばん"
+    }
   },
   "CET46:N5_757" : {
-    "TEXT" : [ "万", "（数量）万", "まん", null ]
+    "TEXT" : [ "万", "（数量）万", "まん", "万" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たん|なん|まう|まむ"
+    }
   },
   "CET46:N5_758" : {
-    "TEXT" : [ "万年筆", "钢笔", "まんねんひつ", null ]
+    "TEXT" : [ "万年筆", "钢笔", "まんねんひつ", "万年筆" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "みんねんひつ|まんのんひつ|まんねんふつ|まんねんひち"
+    }
   },
   "CET46:N5_759" : {
-    "TEXT" : [ "みかん", "橘子，柑橘", "みかん", "蜜柑" ]
+    "TEXT" : [ "みかん", "橘子，柑橘", "みかん", "蜜柑" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_760" : {
-    "TEXT" : [ "名前", "名字", "なまえ", null ]
+    "TEXT" : [ "名前", "名字", "なまえ", "名前" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にまえ|ぬまえ|たまえ|なまい"
+    }
   },
   "CET46:N5_761" : {
-    "TEXT" : [ "明るい", "明亮的；快活的", "あかるい", null ]
+    "TEXT" : [ "明るい", "明亮的；快活的", "あかるい", "明るい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あがるい|あさるい|あまるい|あきるい"
+    }
   },
   "CET46:N5_762" : {
-    "TEXT" : [ "明日[あした]", "明天", "あした", null ]
+    "TEXT" : [ "明日", "明天", "あした", "明日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あちた|あしだ|かした|あさた"
+    }
   },
   "CET46:N5_763" : {
-    "TEXT" : [ "面白い", "有趣的；快乐的，愉快的", "おもしろい", null ]
+    "TEXT" : [ "面白い", "有趣的；快乐的，愉快的", "おもしろい", "面白い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "うもいろい|おもしるい|おもしょい|おもじろい"
+    }
   },
   "CET46:N5_764" : {
-    "TEXT" : [ "木", "树，树木；木材", "き", null ]
+    "TEXT" : [ "木", "树，树木；木材", "き", "木" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ち|く|け|ぎ"
+    }
   },
   "CET46:N5_765" : {
-    "TEXT" : [ "木曜日", "周四", "もくようび", null ]
+    "TEXT" : [ "木曜日", "周四", "もくようび", "木曜日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まくようび|みくようび|もくゆようび|もくよおび"
+    }
   },
   "CET46:N5_766" : {
-    "TEXT" : [ "目", "眼睛", "め", null ]
+    "TEXT" : [ "目", "眼睛", "め", "目" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ま|み|む|も"
+    }
   },
   "CET46:N5_767" : {
-    "TEXT" : [ "問題", "问题，题目；麻烦事", "もんだい", null ]
+    "TEXT" : [ "問題", "问题，题目；麻烦事", "もんだい", "問題" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まんだい|みんだい|もんたい|もんざい"
+    }
   },
   "CET46:N5_768" : {
-    "TEXT" : [ "夜", "晚上，夜间", "よる", null ]
+    "TEXT" : [ "夜", "晚上，夜间", "よる", "夜" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ろる|より|やる|よれ"
+    }
   },
   "CET46:N5_769" : {
-    "TEXT" : [ "野球", "棒球", "やきゅう", null ]
+    "TEXT" : [ "野球", "棒球", "やきゅう", "野球" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やきゅ|やぎゅう|よきゅう|やしゅう"
+    }
   },
   "CET46:N5_770" : {
-    "TEXT" : [ "野菜", "蔬菜", "やさい", null ]
+    "TEXT" : [ "野菜", "蔬菜", "やさい", "野菜" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "よさい|やざい|やさう|やたい"
+    }
   },
   "CET46:N5_771" : {
-    "TEXT" : [ "友達", "朋友", "ともだち", null ]
+    "TEXT" : [ "友達", "朋友", "ともだち", "友達" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "どもだち|とこだち|ともたち|ともだつ"
+    }
   },
   "CET46:N5_772" : {
-    "TEXT" : [ "有名", "有名的", "ゆうめい", null ]
+    "TEXT" : [ "有名", "有名的", "ゆうめい", "有名" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ゆめい|ようめい|いうめい|ゆうまい"
+    }
   },
   "CET46:N5_773" : {
-    "TEXT" : [ "遊ぶ", "玩耍", "あそぶ", null ]
+    "TEXT" : [ "遊ぶ", "玩耍", "あそぶ", "遊ぶ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あぞぶ|あとぶ|あこぶ|あほぶ"
+    }
   },
   "CET46:N5_774" : {
-    "TEXT" : [ "郵便局", "邮局", "ゆうびんきょく", null ]
+    "TEXT" : [ "郵便局", "邮局", "ゆうびんきょく", "郵便局" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ゆびんきょく|ゆうぴんきょく|ゆうびんこく|ようびんきょく"
+    }
   },
   "CET46:N5_775" : {
-    "TEXT" : [ "夕方", "傍晚", "ゆうがた", null ]
+    "TEXT" : [ "夕方", "傍晚", "ゆうがた", "夕方" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ゆうがたあ|ゆうがたい|ゆうがたう"
+    }
   },
   "CET46:N5_776" : {
-    "TEXT" : [ "洋服", "西服；衣服", "ようふく", null ]
+    "TEXT" : [ "洋服", "西服；衣服", "ようふく", "洋服" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ゆうふく|ようぷく|ようぶく|よおふく"
+    }
   },
   "CET46:N5_777" : {
-    "TEXT" : [ "葉書", "明信片", "はがき", null ]
+    "TEXT" : [ "葉書", "明信片", "はがき", "葉書" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばがき|はかき|はがち|わがき"
+    }
   },
   "CET46:N5_778" : {
-    "TEXT" : [ "欲しい", "想要", "ほしい", null ]
+    "TEXT" : [ "欲しい", "想要", "ほしい", "欲しい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぼしい|ぽしい|こしい|そしい"
+    }
   },
   "CET46:N5_779" : {
-    "TEXT" : [ "来る", "来，到来", "くる", null ]
+    "TEXT" : [ "来る", "来，到来", "くる", "来る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぐる|つる|する|たる"
+    }
   },
   "CET46:N5_780" : {
-    "TEXT" : [ "来月", "下个月", "らいげつ", null ]
+    "TEXT" : [ "来月", "下个月", "らいげつ", "来月" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "らいげつう|らいげつい|らいげつえ"
+    }
   },
   "CET46:N5_781" : {
-    "TEXT" : [ "来週", "下周", "らいしゅう", null ]
+    "TEXT" : [ "来週", "下周", "らいしゅう", "来週" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "らいしゅうう|らいしゅうい|らいしゅうえ"
+    }
   },
   "CET46:N5_782" : {
-    "TEXT" : [ "来年", "明年", "らいねん", null ]
+    "TEXT" : [ "来年", "明年", "らいねん", "来年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "らいねんん|らいねんい|らいねんう"
+    }
   },
   "CET46:N5_783" : {
-    "TEXT" : [ "頼む", "请求，依赖", "たのむ", null ]
+    "TEXT" : [ "頼む", "请求，依赖", "たのむ", "頼む" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かのむ|さのむ|だのむ|たなむ"
+    }
   },
   "CET46:N5_784" : {
-    "TEXT" : [ "卵", "（同“玉子”）蛋，鸡蛋；未成熟者", "たまご", null ]
+    "TEXT" : [ "卵", "（同“玉子”）蛋，鸡蛋；未成熟者", "たまご", "卵" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たまこ|たまぞ|たまごん|たばご"
+    }
   },
   "CET46:N5_785" : {
-    "TEXT" : [ "履く", "穿（鞋、袜）", "はく", null ]
+    "TEXT" : [ "履く", "穿（鞋、袜）", "はく", "履く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かく|さく|ばく|ぱく"
+    }
   },
   "CET46:N5_786" : {
-    "TEXT" : [ "立つ", "站立；离开，动身", "たつ", null ]
+    "TEXT" : [ "立つ", "站立；离开，动身", "たつ", "立つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かつ|さつ|だつ|なつ"
+    }
   },
   "CET46:N5_787" : {
-    "TEXT" : [ "立派", "优秀的，出色的", "りっぱ", null ]
+    "TEXT" : [ "立派", "优秀的，出色的", "りっぱ", "立派" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "りっぱあ|りっぱい|りっぱう"
+    }
   },
   "CET46:N5_788" : {
-    "TEXT" : [ "留学", "留学", "りゅうがく", null ]
+    "TEXT" : [ "留学", "留学", "りゅうがく", "留学" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "りゅうがくう|りゅうがくか|りゅうがくき"
+    }
   },
   "CET46:N5_789" : {
-    "TEXT" : [ "留学生", "留学生", "りゅうがくせい", null ]
+    "TEXT" : [ "留学生", "留学生", "りゅうがくせい", "留学生" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "りゅうがくせいん|りゅうがくせいり|りゅうがくせ"
+    }
   },
   "CET46:N5_790" : {
-    "TEXT" : [ "旅行", "旅游", "りょこう", null ]
+    "TEXT" : [ "旅行", "旅游", "りょこう", "旅行" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きょこう|ろこう|りょこお|りょこうん"
+    }
   },
   "CET46:N5_791" : {
-    "TEXT" : [ "両親", "双亲，父母", "りょうしん", null ]
+    "TEXT" : [ "両親", "双亲，父母", "りょうしん", "両親" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きょうしん|ろうしん|りょうちん|りょうしむ"
+    }
   },
   "CET46:N5_792" : {
-    "TEXT" : [ "寮", "宿舍", "りょう", null ]
+    "TEXT" : [ "寮", "宿舍", "りょう", "寮" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きょう|ろう|りょうん|りょお"
+    }
   },
   "CET46:N5_793" : {
-    "TEXT" : [ "料理", "菜肴；做菜", "りょうり", null ]
+    "TEXT" : [ "料理", "菜肴；做菜", "りょうり", "料理" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "きょうり|ろうり|りょうる|りょうい"
+    }
   },
   "CET46:N5_794" : {
-    "TEXT" : [ "涼しい", "凉爽的，凉快的", "すずしい", null ]
+    "TEXT" : [ "涼しい", "凉爽的，凉快的", "すずしい", "涼しい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しずしい|すづしい|つずしい"
+    }
   },
   "CET46:N5_795" : {
-    "TEXT" : [ "良い", "好的；优秀的；善良的", "よい", null ]
+    "TEXT" : [ "良い", "好的；优秀的；善良的", "よい", "良い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やい|ゆい|えい|おい"
+    }
   },
   "CET46:N5_796" : {
-    "TEXT" : [ "緑", "绿色", "みどり", null ]
+    "TEXT" : [ "緑", "绿色", "みどり", "緑" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まどり|みとり|みどろ|みどる"
+    }
   },
   "CET46:N5_797" : {
-    "TEXT" : [ "隣", "旁边；邻居", "となり", null ]
+    "TEXT" : [ "隣", "旁边；邻居", "となり", "隣" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たなり|とにり|となれ|どなり"
+    }
   },
   "CET46:N5_798" : {
-    "TEXT" : [ "涙", "眼泪", "なみだ", null ]
+    "TEXT" : [ "涙", "眼泪", "なみだ", "涙" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "まみだ|なにだ|あせ"
+    }
   },
   "CET46:N5_799" : {
-    "TEXT" : [ "冷たい", "冰凉的；冷淡的", "つめたい", null ]
+    "TEXT" : [ "冷たい", "冰凉的；冷淡的", "つめたい", "冷たい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "すめたい|つまたい|てめたい"
+    }
   },
   "CET46:N5_800" : {
-    "TEXT" : [ "冷蔵庫", "冰箱", "れいぞうこ", null ]
+    "TEXT" : [ "冷蔵庫", "冰箱", "れいぞうこ", "冷蔵庫" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "れいぞうこー|れいぞうこっ|れいぞうご|れいぞうく"
+    }
   },
   "CET46:N5_801" : {
-    "TEXT" : [ "零", "零", "れい", null ]
+    "TEXT" : [ "零", "零", "れい", "零" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "らい|れえ|れう|れいー"
+    }
   },
   "CET46:N5_802" : {
-    "TEXT" : [ "練習", "练习，训练", "れんしゅう", null ]
+    "TEXT" : [ "練習", "练习，训练", "れんしゅう", "練習" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "らんしゅう|れんしゅ|れんしゅうう|れんしゅううう"
+    }
   },
   "CET46:N5_803" : {
-    "TEXT" : [ "廊下", "走廊", "ろうか", null ]
+    "TEXT" : [ "廊下", "走廊", "ろうか", "廊下" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ろうが|ろか|ろうっか|ろうかあ"
+    }
   },
   "CET46:N5_804" : {
-    "TEXT" : [ "六つ", "六个；六岁", "むっつ", null ]
+    "TEXT" : [ "六つ", "六个；六岁", "むっつ", "六つ" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "むつつ|むうつ|もっつ|まっつ"
+    }
   },
   "CET46:N5_805" : {
-    "TEXT" : [ "六日", "六天；六号", "むいか", null ]
+    "TEXT" : [ "六日", "六天；六号", "むいか", "六日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "むいっか|むか|むつか|むいかあ"
+    }
   },
   "CET46:N5_806" : {
-    "TEXT" : [ "話", "话；话题；事情", "はなし", null ]
+    "TEXT" : [ "話", "话；话题；事情", "はなし", "話" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ひなし|ばなし|はなす|なはし"
+    }
   },
   "CET46:N5_807" : {
-    "TEXT" : [ "話す", "说，谈论", "はなす", null ]
+    "TEXT" : [ "話す", "说，谈论", "はなす", "話す" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばなす|ひなす|なはす|はねす"
+    }
   },
   "CET46:N5_808" : {
-    "TEXT" : [ "会", "（表示组织或活动）……会", "かい", null ]
+    "TEXT" : [ "会", "（表示组织或活动）……会", "かい", "会" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "けい|がい|きい|かう"
+    }
   },
   "CET46:N5_809" : {
-    "TEXT" : [ "〜方", "……方法", "〜かた", null ]
+    "TEXT" : [ "〜方", "……方法", "〜かた", "〜方" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜かだ|〜かつ|〜きた|〜たか"
+    }
   },
   "CET46:N5_810" : {
-    "TEXT" : [ "いかが", "怎样，如何", "いかが", null ]
+    "TEXT" : [ "いかが", "怎样，如何", "いかが", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_811" : {
-    "TEXT" : [ "カレンダー", "日历，年历", "(英) calendar", null ]
+    "TEXT" : [ "カレンダー", "日历，年历", "カレンダー", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_812" : {
-    "TEXT" : [ "バター", "黄油", "(英) butter", null ]
+    "TEXT" : [ "バター", "黄油", "バター", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_813" : {
-    "TEXT" : [ "やる", "做；（上级给下级，人给动物等）给", "やる", "遣る" ]
+    "TEXT" : [ "やる", "做；（上级给下级，人给动物等）给", "やる", "遣る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_814" : {
-    "TEXT" : [ "良[よ]く", "好好地；经常；非常", "よく", null ]
+    "TEXT" : [ "良く", "好好地；经常；非常", "よく", "良[よ]く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "よっく|よくう|らく|ろく"
+    }
   },
   "CET46:N5_815" : {
-    "TEXT" : [ "休み", "休息；假日", "やすみ", null ]
+    "TEXT" : [ "休み", "休息；假日", "やすみ", "休み" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "やさみ|やしみ|よすみ|やっすみ"
+    }
   },
   "CET46:N5_816" : {
-    "TEXT" : [ "勤める", "工作，任职", "つとめる", null ]
+    "TEXT" : [ "勤める", "工作，任职", "つとめる", "勤める" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "つためる|つどめる|つてめる|つとっめる"
+    }
   },
   "CET46:N5_817" : {
-    "TEXT" : [ "見せる", "给……看，展现", "みせる", null ]
+    "TEXT" : [ "見せる", "给……看，展现", "みせる", "見せる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ませる|むせる|めせる|みいせる"
+    }
   },
   "CET46:N5_818" : {
-    "TEXT" : [ "姉", "（自己的）姐姐，嫂子", "あね", null ]
+    "TEXT" : [ "姉", "（自己的）姐姐，嫂子", "あね", "姉" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おね|あに|あねえ|あんね"
+    }
   },
   "CET46:N5_819" : {
-    "TEXT" : [ "上着", "外套，上衣", "うわぎ", null ]
+    "TEXT" : [ "上着", "外套，上衣", "うわぎ", "上着" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "うえぎ|うわき|おわぎ|うわぎい"
+    }
   },
   "CET46:N5_820" : {
-    "TEXT" : [ "星", "星星；星号；明星", "ほし", null ]
+    "TEXT" : [ "星", "星星；星号；明星", "ほし", "星" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ぼし|へし|ふし"
+    }
   },
   "CET46:N5_821" : {
-    "TEXT" : [ "足", "脚，腿", "あし", null ]
+    "TEXT" : [ "足", "脚，腿", "あし", "足" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いし|うし|おし"
+    }
   },
   "CET46:N5_822" : {
-    "TEXT" : [ "台所", "厨房", "だいどころ", null ]
+    "TEXT" : [ "台所", "厨房", "だいどころ", "台所" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいどころ|じどころ|だいどこ"
+    }
   },
   "CET46:N5_823" : {
-    "TEXT" : [ "箱", "箱子，匣子", "はこ", null ]
+    "TEXT" : [ "箱", "箱子，匣子", "はこ", "箱" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばこ|ひこ|ふこ"
+    }
   },
   "CET46:N5_824" : {
-    "TEXT" : [ "文章", "文章，作品", "ぶんしょう", null ]
+    "TEXT" : [ "文章", "文章，作品", "ぶんしょう", "文章" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ほんしょう|ぷんしょう|ぶんじょう|ぶんそう"
+    }
   },
   "CET46:N5_825" : {
-    "TEXT" : [ "無くす", "丢掉；丧失；消灭", "なくす", null ]
+    "TEXT" : [ "無くす", "丢掉；丧失；消灭", "なくす", "無くす" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にくす|のくす|ねくす"
+    }
   },
   "CET46:N5_826" : {
-    "TEXT" : [ "鳴く", "鸣叫，叫", "なく", null ]
+    "TEXT" : [ "鳴く", "鸣叫，叫", "なく", "鳴く" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にく|のく|ねく"
+    }
   },
   "CET46:N5_827" : {
-    "TEXT" : [ "夕飯", "晚饭", "ゆうはん", null ]
+    "TEXT" : [ "夕飯", "晚饭", "ゆうはん", "夕飯" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ゆうばん|ゆうめし|ゆうげ"
+    }
   },
   "CET46:N5_828" : {
-    "TEXT" : [ "要る", "需要，必要", "いる", null ]
+    "TEXT" : [ "要る", "需要，必要", "いる", "要る" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "える|ある|うる|おる"
+    }
   },
   "CET46:N5_829" : {
-    "TEXT" : [ "浴びる", "淋，沐浴；晒，照", "あびる", null ]
+    "TEXT" : [ "浴びる", "淋，沐浴；晒，照", "あびる", "浴びる" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いびる|うびる|えびる|おびる"
+    }
   },
   "CET46:N5_830" : {
-    "TEXT" : [ "エレベーター", "电梯，升降电梯", "(英) elevator", null ]
+    "TEXT" : [ "エレベーター", "电梯，升降电梯", "エレベーター", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_831" : {
-    "TEXT" : [ "お巡りさん", "（对巡警的亲切称呼）警察，巡警", "おまわりさん", null ]
+    "TEXT" : [ "お巡りさん", "（对巡警的亲切称呼）警察，巡警", "おまわりさん", "お巡りさん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おもわりさん|おまばりさん|おわまりさん|おたわりさん"
+    }
   },
   "CET46:N5_832" : {
-    "TEXT" : [ "ペット", "宠物", "(英) pet", null ]
+    "TEXT" : [ "ペット", "宠物", "ペット", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_833" : {
-    "TEXT" : [ "絵葉書", "美术明信片", "えはがき", null ]
+    "TEXT" : [ "絵葉書", "美术明信片", "えはがき", "絵葉書" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "あはがき|えばがき|えはかき|はえがき"
+    }
   },
   "CET46:N5_834" : {
-    "TEXT" : [ "覚える", "记住；掌握；感到", "おぼえる", null ]
+    "TEXT" : [ "覚える", "记住；掌握；感到", "おぼえる", "覚える" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おほえる|おぽえる|あぼえる|こぼえる"
+    }
   },
   "CET46:N5_835" : {
-    "TEXT" : [ "昨日", "昨日，昨天", "さくじつ", null ]
+    "TEXT" : [ "昨日", "昨日，昨天", "さくじつ", "昨日" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さけじつ|しゃくじつ|さくしつ|さくび"
+    }
   },
   "CET46:N5_836" : {
-    "TEXT" : [ "締める", "系紧，勒紧；节约", "しめる", null ]
+    "TEXT" : [ "締める", "系紧，勒紧；节约", "しめる", "締める" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちめる|すめる|せめる"
+    }
   },
   "CET46:N5_837" : {
-    "TEXT" : [ "八百屋", "蔬菜水果店", "やおや", null ]
+    "TEXT" : [ "八百屋", "蔬菜水果店", "やおや", "八百屋" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "よおや|やゆや|やおよ|あおや"
+    }
   },
   "CET46:N5_838" : {
-    "TEXT" : [ "お子さん", "您孩子，令郎，令爱", "おこさん", null ]
+    "TEXT" : [ "お子さん", "您孩子，令郎，令爱", "おこさん", "お子さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おごさん|おそさん|おとさん|おもさん"
+    }
   },
   "CET46:N5_839" : {
-    "TEXT" : [ "どのぐらい", "多少（表示数量、程度）", "どのぐらい", null ]
+    "TEXT" : [ "どのぐらい", "多少（表示数量、程度）", "どのぐらい", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_840" : {
-    "TEXT" : [ "花瓶", "花瓶", "かびん", null ]
+    "TEXT" : [ "花瓶", "花瓶", "かびん", "花瓶" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こびん|きびん|かぴん|かひん"
+    }
   },
   "CET46:N5_841" : {
-    "TEXT" : [ "牛", "牛", "うし", null ]
+    "TEXT" : [ "牛", "牛", "うし", "牛" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "おし|うせ|うち"
+    }
   },
   "CET46:N5_842" : {
-    "TEXT" : [ "航空便", "空运；航空信", "こうくうびん", null ]
+    "TEXT" : [ "航空便", "空运；航空信", "こうくうびん", "航空便" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こおくうびん|こくうびん|こうくうぴん|こうくうひん"
+    }
   },
   "CET46:N5_843" : {
-    "TEXT" : [ "残業", "加班", "ざんぎょう", null ]
+    "TEXT" : [ "残業", "加班", "ざんぎょう", "残業" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "さんぎょう|たんぎょう|ざんきょう|ざんごう"
+    }
   },
   "CET46:N5_844" : {
-    "TEXT" : [ "市役所", "市政府", "しやくしょ", null ]
+    "TEXT" : [ "市役所", "市政府", "しやくしょ", "市役所" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちやくしょ|しやけしょ|しやくじょ|しやくそ"
+    }
   },
   "CET46:N5_845" : {
-    "TEXT" : [ "自己紹介", "自我介绍", "じこしょうかい", null ]
+    "TEXT" : [ "自己紹介", "自我介绍", "じこしょうかい", "自己紹介" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しこしょうかい|じごしょうかい|じこしょかい|じこしょうがい"
+    }
   },
   "CET46:N5_846" : {
-    "TEXT" : [ "ほか", "其他；别处", "ほか", "他｜外" ]
+    "TEXT" : [ "ほか", "其他；别处", "ほか", "他｜外" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_847" : {
-    "TEXT" : [ "大使館", "大使馆", "たいしかん", null ]
+    "TEXT" : [ "大使館", "大使馆", "たいしかん", "大使館" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たえしかん|だいしかん|たいちかん|たいしがん"
+    }
   },
   "CET46:N5_848" : {
-    "TEXT" : [ "辺", "附近，左右", "へん", null ]
+    "TEXT" : [ "辺", "附近，左右", "へん", "辺" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "べん|えん|あたり"
+    }
   },
   "CET46:N5_849" : {
-    "TEXT" : [ "そうして", "（同“そして”）然后，于是", "そうして", null ]
+    "TEXT" : [ "そうして", "（同“そして”）然后，于是", "そうして", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_850" : {
-    "TEXT" : [ "マッチ", "比赛；协调；火柴", "(英) match", null ]
+    "TEXT" : [ "マッチ", "比赛；协调；火柴", "マッチ", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_851" : {
-    "TEXT" : [ "ください", "请给（我）；请……", "ください", "下さい" ]
+    "TEXT" : [ "ください", "请给（我）；请……", "ください", "下さい" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_852" : {
-    "TEXT" : [ "より(助)", "与……相比", "より", null ]
+    "TEXT" : [ "より(助)", "与……相比", "より", "より(助)" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_853" : {
-    "TEXT" : [ "一", "一；第一；最初；全部", "いち", null ]
+    "TEXT" : [ "一", "一；第一；最初；全部", "いち", "一" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "いし|いつ|ひと"
+    }
   },
   "CET46:N5_854" : {
-    "TEXT" : [ "九", "九", "きゅう", null ]
+    "TEXT" : [ "九", "九", "きゅう", "九" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "く|ぎゅう|しゅう"
+    }
   },
   "CET46:N5_855" : {
-    "TEXT" : [ "五", "五", "ご", null ]
+    "TEXT" : [ "五", "五", "ご", "五" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "こ|ぞ|いつつ"
+    }
   },
   "CET46:N5_856" : {
-    "TEXT" : [ "三", "三", "さん", null ]
+    "TEXT" : [ "三", "三", "さん", "三" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ざん|たん|みっつ"
+    }
   },
   "CET46:N5_857" : {
-    "TEXT" : [ "四", "四", "よん", "し｜よ" ]
+    "TEXT" : [ "四", "四", "よん", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "し|よっつ|よんつ"
+    }
   },
   "CET46:N5_858" : {
-    "TEXT" : [ "七", "七", "なな", "しち" ]
+    "TEXT" : [ "七", "七", "なな", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しち|ななつ|はな"
+    }
   },
   "CET46:N5_859" : {
-    "TEXT" : [ "十", "十", "じゅう", "とお" ]
+    "TEXT" : [ "十", "十", "じゅう", null ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "しゅう|ちゅう|じゅ"
+    }
   },
   "CET46:N5_860" : {
-    "TEXT" : [ "大好き", "非常喜欢", "だいすき", null ]
+    "TEXT" : [ "大好き", "非常喜欢", "だいすき", "大好き" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "たいすき|ないすき|だいずき|だいしゅき"
+    }
   },
   "CET46:N5_861" : {
-    "TEXT" : [ "二", "二", "に", null ]
+    "TEXT" : [ "二", "二", "に", "二" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "にい|にゃ|ぬ|み"
+    }
   },
   "CET46:N5_862" : {
-    "TEXT" : [ "おばさん", "婶婶，阿姨；对其他成年女性的昵称", "おばさん", "伯母さん｜叔母さん" ]
+    "TEXT" : [ "おばさん", "婶婶，阿姨；对其他成年女性的昵称", "おばさん", "伯母さん｜叔母さん" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : null
   },
   "CET46:N5_863" : {
-    "TEXT" : [ "八", "八", "はち", null ]
+    "TEXT" : [ "八", "八", "はち", "八" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばち|はじ|はき|はっち"
+    }
   },
   "CET46:N5_864" : {
-    "TEXT" : [ "門", "大门", "もん", null ]
+    "TEXT" : [ "門", "大门", "もん", "門" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "もおん|まん|みょん|もむ"
+    }
   },
   "CET46:N5_865" : {
-    "TEXT" : [ "六", "六", "ろく", null ]
+    "TEXT" : [ "六", "六", "ろく", "六" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "らく|りょく|ろぐ|ろっく"
+    }
   },
   "CET46:N5_866" : {
-    "TEXT" : [ "〜年", "……年", "〜ねん", null ]
+    "TEXT" : [ "〜年", "……年", "〜ねん", "〜年" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜めん|〜のん|〜ねむ|〜ねんね"
+    }
   },
   "CET46:N5_867" : {
-    "TEXT" : [ "〜 人[じん]", "……人", "〜じん", null ]
+    "TEXT" : [ "〜 人", "……人", "〜じん", "〜 人" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "〜ちん|〜しん|〜じむ|〜じょん"
+    }
   },
   "CET46:N5_868" : {
-    "TEXT" : [ "鹿", "鹿", "しか", null ]
+    "TEXT" : [ "鹿", "鹿", "しか", "鹿" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ちか|しが|しこ|しっか"
+    }
   },
   "CET46:N5_869" : {
-    "TEXT" : [ "韓国", "韩国", "かんこく", null ]
+    "TEXT" : [ "韓国", "韩国", "かんこく", "韓国" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "かむこく|かんごく|かんこくう|かんんこく"
+    }
   },
   "CET46:N5_870" : {
-    "TEXT" : [ "速い", "快的，迅速的", "はやい", null ]
+    "TEXT" : [ "速い", "快的，迅速的", "はやい", "速い" ],
+    "EXTRA_TEXT" : null,
+    "TEXT_DICT" : {
+      "ConfusedFurigana" : "ばやい|かやい|はらい|はいい"
+    }
   }
 }
