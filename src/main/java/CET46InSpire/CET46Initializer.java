@@ -3,7 +3,7 @@ package CET46InSpire;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.QuizCommand;
 import CET46InSpire.relics.TestCET;
-import CET46InSpire.relics.TestJLPT;
+import CET46InSpire.relics.JLPTRelic;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.ui.ModConfigPanel;
@@ -55,7 +55,7 @@ public class CET46Initializer implements
     static {
         // test
         allBooks.put(BookEnum.JLPT, new BookConfig(BookEnum.JLPT,
-                Arrays.asList(LexiconEnum.N1, LexiconEnum.N2, LexiconEnum.N3, LexiconEnum.N4, LexiconEnum.N5), () -> new TestJLPT()));
+                Arrays.asList(LexiconEnum.N1, LexiconEnum.N2, LexiconEnum.N3, LexiconEnum.N4, LexiconEnum.N5), () -> new JLPTRelic()));
         allBooks.put(BookEnum.CET, new BookConfig(BookEnum.CET, Arrays.asList(LexiconEnum.CET4, LexiconEnum.CET6), () -> new TestCET()));
 //        allBooks.put(BookEnum.CET4, new BookConfig(BookEnum.CET4, new ArrayList<>(), () -> new BookOfCET4()));
 //        allBooks.put(BookEnum.CET6, new BookConfig(BookEnum.CET6, Arrays.asList(BookEnum.CET4), () -> new BookOfCET6()));
