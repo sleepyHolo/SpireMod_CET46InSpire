@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.Aggregate;
 import com.megacrit.cardcrawl.cards.colorless.TheBomb;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -131,14 +132,24 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         }
         card.damage *= card.damage > 0 ? this.scoreCounter : 1;
         card.block *= card.block > 0 ? this.scoreCounter : 1;
-        card.magicNumber *= card.magicNumber > 0 ? this.scoreCounter : 1;
+        boolean useCommonChangeForMN = true;
         // fix: 炸弹的逻辑问题
         if (card instanceof TheBomb) {
-            card.magicNumber = this.scoreCounter == 0 ? 0 : card.baseMagicNumber;
+            card.magicNumber = this.scoreCounter == 0 ? 0 : card.magicNumber;
             for (int i = 1; i < this.scoreCounter; i++) {
                 this.addToBot(new ApplyPowerAction(AbstractDungeon.player, null,
                         new TheBombPower(AbstractDungeon.player, 3, card.magicNumber)));
             }
+            useCommonChangeForMN = false;
+        }
+        // fix: 汇集的逻辑问题. 由于采用 int 不能保证严格准确
+        if (card instanceof Aggregate) {
+            card.magicNumber = this.scoreCounter == 0 ? 99 : (card.magicNumber / this.scoreCounter);
+            card.magicNumber = Math.max(card.magicNumber, 1);
+            useCommonChangeForMN = false;
+        }
+        if (useCommonChangeForMN) {
+            card.magicNumber *= card.magicNumber > 0 ? this.scoreCounter : 1;
         }
         logger.info("Change Card: {}: D: {}, B: {}, M: {}", card, card.damage, card.block, card.magicNumber);
         this.quizzed = false;
