@@ -30,8 +30,6 @@ public class CallOfCETEvent extends AbstractImageEvent {
     private static final String OPTION_REFUSE;
     private static final String OPTION_EXIT;
     private static final String OPTION_STUDY;
-    private static final LocalDateTime NEXT_CET;
-    private static final LocalDateTime NEXT_NEXT_CET;
     private ArrayList<BookEnum> validBooks;
     private EventState state;
     private boolean tomorrowCET;
@@ -107,23 +105,28 @@ public class CallOfCETEvent extends AbstractImageEvent {
     }
 
     private void initBodies() {
+        // 使用2025年的考试时间作参考, 可以自动调整时间预测而不必每半年更新
+        // 2025考试时间: 上半年 2025/6/14, 下半年 2025/12/13
         LocalDateTime today = LocalDateTime.now();
-        LocalDateTime next = NEXT_CET;
-        String duration_data = eventStrings.DESCRIPTIONS[2];
-        if (today.isAfter(NEXT_CET)) {
-            next = NEXT_NEXT_CET;
+        int year = today.getYear();
+        LocalDateTime next = LocalDateTime.of(year, 6, 14, 0, 0, 0);
+        if (today.isAfter(next)) {
+            next = LocalDateTime.of(year, 12, 13, 0, 0, 0);
         }
-        if (next != null) {
-            Duration duration = Duration.between(today, next);
-            long duration_ = duration.toDays();
-            if (duration_ < 1) {
-                duration_ = 1;
-            }
-            duration_data = String.valueOf(duration_);
-            if (duration_ == 1) {
-                this.tomorrowCET = true;
-            }
+        if (today.isAfter(next)) {
+            next = LocalDateTime.of(year + 1, 6, 14, 0, 0, 0);
         }
+
+        Duration duration = Duration.between(today, next);
+        long duration_ = duration.toDays();
+        if (duration_ < 1) {
+            duration_ = 1;
+        }
+        String duration_data = String.valueOf(duration_);
+        if (duration_ == 1) {
+            this.tomorrowCET = true;
+        }
+
         if (this.tomorrowCET) {
             duration_data = eventStrings.DESCRIPTIONS[6];
         } else {
@@ -195,9 +198,6 @@ public class CallOfCETEvent extends AbstractImageEvent {
         OPTION_EXIT = eventStrings.OPTIONS[0];
         OPTION_REFUSE = eventStrings.OPTIONS[1];
         OPTION_STUDY = eventStrings.OPTIONS[2];
-
-        NEXT_CET = LocalDateTime.of(2025, 6, 14, 0, 0, 0);
-        NEXT_NEXT_CET = null;
     }
 
     public enum EventState {
