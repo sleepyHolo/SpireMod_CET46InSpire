@@ -5,8 +5,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.TimeWarpPower;
 
 /**
  * 各种原生 STS 行动的补丁, 主要是针对输入为 0 的特殊情况
@@ -20,12 +20,12 @@ public class STSActionPatches {
     public static class ApplyPowerActionPatch {
         @SpirePrefixPatch
         public static SpireReturn<Void> Prefix(ApplyPowerAction __instance, AbstractPower ___powerToApply) {
+            if (__instance.source != AbstractDungeon.player) {
+                // 仅更改来自玩家的能力
+                return SpireReturn.Continue();
+            }
             // 检查增加的能力是不是原版能力, 原版能力应该不会出现 0 层(无层数是 -1 层)
             if (__instance.amount == 0 && underPackage(___powerToApply.getClass(), "com.megacrit.cardcrawl.powers")) {
-                // 艹了这个补丁把老头能力橄榄了
-                if (___powerToApply instanceof TimeWarpPower) {
-                    return SpireReturn.Continue();
-                }
                 __instance.isDone = true;
                 return SpireReturn.Return();
             }
