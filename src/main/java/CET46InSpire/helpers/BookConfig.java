@@ -2,6 +2,7 @@ package CET46InSpire.helpers;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
+import CET46InSpire.relics.BuildQuizDataRequest.FSRSFactory;
 import CET46InSpire.ui.ModConfigPanel;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -43,6 +44,11 @@ public class BookConfig {
     }
 
     // --- 代替原 CET46Settings 管理的数据 ---
+
+
+    /**
+     * 含义同CET46Initializer.needLoadBooks
+     */
     public static Map<LexiconEnum, Integer> VOCABULARY_MAP = new HashMap<>();
 
     public static void init_map() {
@@ -50,7 +56,8 @@ public class BookConfig {
         CET46Initializer.needLoadBooks.forEach(lexiconEnum -> {
             VOCABULARY_MAP.put(lexiconEnum, Integer.parseInt(CardCrawlGame.languagePack.getUIString(CET46Initializer.JSON_MOD_KEY + lexiconEnum.name() + "_info").TEXT[0]));
         });
-        logger.info("CET46Settings init called");
+        FSRSFactory.INSTANCE.initMap(VOCABULARY_MAP);
+        logger.info("CET46Settings init called, VOCABULARY_MAP = {}", VOCABULARY_MAP);
     }
 
 

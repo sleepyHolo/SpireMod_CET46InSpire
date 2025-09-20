@@ -3,6 +3,7 @@ package CET46InSpire.relics;
 import CET46InSpire.actions.QuizAction.QuizData;
 import CET46InSpire.events.CallOfCETEvent;
 import CET46InSpire.helpers.BookConfig;
+import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.helpers.JapaneseCharacterTool;
 import CET46InSpire.helpers.JapaneseKanaConfuser;
 import com.badlogic.gdx.math.MathUtils;
@@ -98,7 +99,8 @@ public class JLPTRelic extends QuizRelic {
     }
 
     /**
-     * 若无法生成错误答案，则correctOptions和allOptions不变；
+     * 向correctOptions和allOptions里添加基于Kana的答案;
+     * 若无法生成错误答案，则放弃添加，这两list不变；
      */
     private void addAskKana(List<String> correctOptions, List<String> allOptions, UIStrings wordUiStrings, int choice_num, BuildQuizDataRequest request) {
         String kana = wordUiStrings.TEXT[KANA_UISTRINGS_INDEX];
@@ -118,7 +120,8 @@ public class JLPTRelic extends QuizRelic {
     }
 
     /**
-     * 若无法生成错误答案，则correctOptions和allOptions不变；
+     * 向correctOptions和allOptions里添加基于Meaning的答案;
+     * 若无法生成错误答案，则放弃添加，这两list不变；
      */
     private void addAskMeaning(List<String> correctOptions, List<String> allOptions, UIStrings wordUiStrings, int choice_num, BuildQuizDataRequest request) {
         String meaning = wordUiStrings.TEXT[MEANING_UISTRINGS_INDEX];

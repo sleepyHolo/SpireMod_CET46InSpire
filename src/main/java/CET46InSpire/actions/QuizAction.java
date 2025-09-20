@@ -2,6 +2,8 @@ package CET46InSpire.actions;
 
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.relics.BuildQuizDataRequest;
+import CET46InSpire.relics.BuildQuizDataRequest.FSRSFactory;
+import CET46InSpire.relics.BuildQuizDataRequest.IFactory;
 import CET46InSpire.relics.QuizRelic;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -29,7 +31,7 @@ public abstract class QuizAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FASTER) {
-            QuizData quizData = quizRelic.buildQuizData(BuildQuizDataRequest.Factory.fromRandom(lexicon));
+            QuizData quizData = quizRelic.buildQuizData(quizRelic.getFactory().fromRandom(lexicon));
             logger.info("quizData = {}", quizData);
             BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.show, lexicon.name(),
                     quizData.correctOptions, quizData.allOptions, quizData.getWordUiStringsId(), false);

@@ -55,6 +55,9 @@ public class QuizScreen extends CustomScreen {
     private String lexicon;
     private ArrayList<String> right_ans_list;
     private ArrayList<String> meaning_list;
+    /**
+     * true表示这个Screen是用于回顾错题的
+     */
     private boolean correction;
     private final CheckButton checkButton;
     private final ReturnButton returnButton;
@@ -152,6 +155,7 @@ public class QuizScreen extends CustomScreen {
                 if (!this.correction) {
                     newScore = this.score;
                     quizRelic.changeCardAfterQuiz(newScore, this.isPerfect);
+                    quizRelic.afterQuiz(this.isPerfect);
                 } else {
                     // TODO 错题回顾现在似乎没有更新分数的意义了? 因为分数现在不会影响开药之类的效果
                     quizRelic.scoreCounter = Math.max(quizRelic.scoreCounter, this.score);
