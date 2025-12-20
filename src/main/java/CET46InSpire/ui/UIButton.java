@@ -57,6 +57,13 @@ public class UIButton {
             return;
         }
         this.hb.update();
+
+        // 手柄点击反馈 (直接播放音效，不修改 clickStarted 以保持高亮)
+        boolean isControllerSelect = this.hb.hovered && CInputActionSet.select.isJustPressed();
+        if (isControllerSelect) {
+            CardCrawlGame.sound.play("UI_CLICK_1");
+        }
+
         if (InputHelper.justClickedLeft && this.hb.hovered) {
             this.hb.clickStarted = true;
             CardCrawlGame.sound.play("UI_CLICK_1");
@@ -64,7 +71,7 @@ public class UIButton {
         if (this.hb.justHovered) {
             CardCrawlGame.sound.play("UI_HOVER");
         }
-        if (this.hb.clicked || ((InputHelper.pressedEscape || CInputActionSet.cancel.isJustPressed()) && this.current_y != hide_y)) {
+        if (this.hb.clicked || isControllerSelect || ((InputHelper.pressedEscape || CInputActionSet.cancel.isJustPressed()) && this.current_y != hide_y)) {
             AbstractDungeon.screenSwap = false;
             InputHelper.pressedEscape = false;
             this.hb.clicked = false;
