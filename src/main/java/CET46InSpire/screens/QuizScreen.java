@@ -14,6 +14,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.Hitbox; // 导入Hitbox
+import com.megacrit.cardcrawl.helpers.controller.CInputHelper; // 必须是 controller
+import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -70,7 +73,7 @@ public class QuizScreen extends CustomScreen {
     private boolean isPerfect = false;
     private BitmapFont titleFont = CNFontHelper.charTitleFont;
     private BitmapFont descFont = CNFontHelper.charDescFont;
-
+    private int selectionIndex = -1; // 手柄导航索引
     public QuizScreen() {
         this.checkButton = new CheckButton(BOTTOM_BUT_X,FRAME_Y + BOTTOM_BUT_Y);
         this.checkButton.attached = true;
@@ -143,6 +146,8 @@ public class QuizScreen extends CustomScreen {
         this.wrong_ans_num = 0;
         this.score = 0;
 
+        // 重置手柄选中位置到第一个选项
+        this.selectionIndex = 0;
     }
 
     @Override
@@ -188,6 +193,7 @@ public class QuizScreen extends CustomScreen {
 
     @Override
     public void update() {
+        updateControllerInput(); // 调用手柄处理逻辑 
         updateFrame();
         if (this.ans_checked) {
             this.returnButton.attachedUpdate(FRAME_Y + BOTTOM_BUT_Y + this.delta_y);
@@ -199,6 +205,112 @@ public class QuizScreen extends CustomScreen {
             if (!w.isHidden) {
                 w.attachedRelUpdate(FRAME_Y + this.delta_y);
             }
+        }
+    }
+
+    // 手柄逻辑
+    private void updateControllerInput() {
+        // 如果不是手柄模式（玩家动了鼠标），则不进行虚拟导航
+        if (!Settings.isControllerMode) {
+            return;
+        }
+        
+        // 计算当前有的有效按钮数（没隐藏的按钮数）
+        int totalItems = 0;
+        for (WordButton w : this.wordButtons) {
+            if (!w.isHidden) totalItems++;
+        }
+        if (totalItems == 0) return; // 如果全部隐藏就退出
+
+        // 最下面的确认按钮编号为最后一个，单词索引为 0 ~ totalItems-1
+        final int BOTTOM_BUTTON_INDEX = totalItems;
+        final int COLUMNS = WORD_COL_MAX; // 一般为3，也可以适应未来的更改
+
+        boolean isDown = CInputActionSet.down.isJustPressed() || CInputActionSet.altDown.isJustPressed();
+        boolean isUp = CInputActionSet.up.isJustPressed() || CInputActionSet.altUp.isJustPressed();
+        boolean isLeft = CInputActionSet.left.isJustPressed() || CInputActionSet.altLeft.isJustPressed();
+        boolean isRight = CInputActionSet.right.isJustPressed() || CInputActionSet.altRight.isJustPressed();
+        boolean isSelect = CInputActionSet.select.isJustPressed();
+
+        // 焦点初始化 (如果刚从鼠标模式切换过来，光标可能不在任何按钮上)
+        if (this.selectionIndex < 0 || this.selectionIndex > BOTTOM_BUTTON_INDEX) {
+            if (isDown || isUp || isLeft || isRight || isSelect) {
+                this.selectionIndex = 0;
+            }
+        }
+
+        // 导航逻辑
+        if (isDown && !this.ans_checked) {
+            if (this.selectionIndex == BOTTOM_BUTTON_INDEX) {
+                this.selectionIndex = 0; // 底部 -> 顶部循环
+            } else {
+                int nextIndex = this.selectionIndex + COLUMNS;
+                if (nextIndex < totalItems) {
+                    this.selectionIndex = nextIndex; // 下移一行
+                } else {
+                    this.selectionIndex = BOTTOM_BUTTON_INDEX; // 下方无单词 -> 底部按钮
+                }
+            }
+        } else if (isUp && !this.ans_checked) {
+            if (this.selectionIndex == BOTTOM_BUTTON_INDEX) {
+                // 底部 -> 单词区域最后一行
+                this.selectionIndex = totalItems - (COLUMNS + 1) / 2; // 回到倒数第二个有效单词，视觉上在一行中心
+            } else {
+                int nextIndex = this.selectionIndex - COLUMNS;
+                if (nextIndex >= 0) {
+                    this.selectionIndex = nextIndex; // 上移一行
+                } else {
+                    this.selectionIndex = BOTTOM_BUTTON_INDEX; // 顶部 -> 底部循环
+                }
+            }
+        } else if (isLeft && !this.ans_checked) {
+            if (this.selectionIndex!= BOTTOM_BUTTON_INDEX) {
+                if (this.selectionIndex % COLUMNS!= 0) {
+                    this.selectionIndex--; // 左移
+                } else {
+                    // 行首 -> 跳到该行行尾 (注意不要越界)
+                    int rowStart = (this.selectionIndex / COLUMNS) * COLUMNS;
+                    int rowEnd = rowStart + COLUMNS - 1;
+                    this.selectionIndex = Math.min(rowEnd, totalItems - 1);
+                }
+            }
+        } else if (isRight && !this.ans_checked) {
+            if (this.selectionIndex!= BOTTOM_BUTTON_INDEX) {
+                // 检查是否是行尾，或者是最后一个元素
+                boolean isRightEdge = (this.selectionIndex % COLUMNS == COLUMNS - 1);
+                boolean isLastItem = (this.selectionIndex == totalItems - 1);
+
+                if (!isRightEdge &&!isLastItem) {
+                    this.selectionIndex++; // 右移
+                } else {
+                    // 行尾 -> 跳到该行行首
+                    int rowStart = (this.selectionIndex / COLUMNS) * COLUMNS;
+                    this.selectionIndex = rowStart;
+                }
+            }
+        }
+        // 视觉同步：将游戏光标移动到选中的物体上
+        Hitbox targetHb = null;
+        if (this.selectionIndex == BOTTOM_BUTTON_INDEX) {
+            // 检查当前显示的是 Return 还是 Check 按钮
+            if (this.ans_checked) {
+                targetHb = this.returnButton.hb;
+            } else {
+                targetHb = this.checkButton.hb;
+            }
+        } else {
+            // 单词按钮，防止越界   
+            if (this.selectionIndex >= 0 && this.selectionIndex < this.wordButtons.size()) {
+                WordButton btn = this.wordButtons.get(this.selectionIndex);
+                if (!btn.isHidden) { // 确保按钮是可见的
+                    targetHb = btn.hb;
+                }
+            }
+        }
+
+        if (targetHb!= null) {
+            // 强制移动光标，这会触发 button 的 hovered 状态和高亮逻辑
+            CInputHelper.setCursor(targetHb);
         }
     }
 
