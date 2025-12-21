@@ -236,7 +236,7 @@ public class QuizScreen extends CustomScreen {
         }
 
         // 导航逻辑
-        if (isDown) {
+        if (isDown && !this.ans_checked) {
             if (this.selectionIndex == BOTTOM_BUTTON_INDEX) {
                 this.selectionIndex = 0; // 底部 -> 顶部循环
             } else {
@@ -247,7 +247,7 @@ public class QuizScreen extends CustomScreen {
                     this.selectionIndex = BOTTOM_BUTTON_INDEX; // 下方无单词 -> 底部按钮
                 }
             }
-        } else if (isUp) {
+        } else if (isUp && !this.ans_checked) {
             if (this.selectionIndex == BOTTOM_BUTTON_INDEX) {
                 // 底部 -> 单词区域最后一行
                 this.selectionIndex = totalItems - (COLUMNS + 1) / 2; // 回到倒数第二个有效单词，视觉上在一行中心
@@ -259,7 +259,7 @@ public class QuizScreen extends CustomScreen {
                     this.selectionIndex = BOTTOM_BUTTON_INDEX; // 顶部 -> 底部循环
                 }
             }
-        } else if (isLeft) {
+        } else if (isLeft && !this.ans_checked) {
             if (this.selectionIndex!= BOTTOM_BUTTON_INDEX) {
                 if (this.selectionIndex % COLUMNS!= 0) {
                     this.selectionIndex--; // 左移
@@ -270,7 +270,7 @@ public class QuizScreen extends CustomScreen {
                     this.selectionIndex = Math.min(rowEnd, totalItems - 1);
                 }
             }
-        } else if (isRight) {
+        } else if (isRight && !this.ans_checked) {
             if (this.selectionIndex!= BOTTOM_BUTTON_INDEX) {
                 // 检查是否是行尾，或者是最后一个元素
                 boolean isRightEdge = (this.selectionIndex % COLUMNS == COLUMNS - 1);
