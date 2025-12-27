@@ -122,7 +122,7 @@ public class QuizCommand extends ConsoleCommand {
             logger.error("Unknown Error: relic is not QuizRelic: {}", relic);
             return;
         }
-        QuizAction.QuizData quizData = ((QuizRelic) relic).buildQuizData(BuildQuizDataRequest.Factory.fromTargetId(lexicon, id));
+        QuizAction.QuizData quizData = ((QuizRelic) relic).buildQuizData(BuildQuizDataRequest.Factory.fromTargetIndex(lexicon, id));
         logger.info("quizData = {}", quizData);
         BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.getShow(), lexicon.name(),
                 quizData.getCorrectOptions(), quizData.getAllOptions(), quizData.getWordUiStringsId(), false);

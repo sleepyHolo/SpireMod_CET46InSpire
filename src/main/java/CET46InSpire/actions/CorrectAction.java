@@ -32,7 +32,7 @@ public class CorrectAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FASTER) {
-            QuizData quizData = quizRelic.buildQuizData(BuildQuizDataRequest.Factory.fromTargetId(lexicon, target_id));
+            QuizData quizData = quizRelic.buildQuizData(BuildQuizDataRequest.Factory.fromTargetIndex(lexicon, target_id));
             logger.info("quizData = {}", quizData);
             BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.getShow(), LEXICON,
                     quizData.getCorrectOptions(), quizData.getAllOptions(), quizData.getWordUiStringsId(), true);

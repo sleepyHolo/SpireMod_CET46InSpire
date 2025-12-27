@@ -12,6 +12,8 @@ import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import CET46InSpire.helpers.ImageElements;
 import CET46InSpire.patches.AbstractPlayerPatch;
 import CET46InSpire.powers.PerfectAnsPower;
+import CET46InSpire.relics.BuildQuizDataRequest.FSRSFactory;
+import CET46InSpire.relics.BuildQuizDataRequest.IFactory;
 import CET46InSpire.savedata.CorrectionNote;
 import CET46InSpire.screens.QuizScreen;
 import CET46InSpire.ui.ModConfigPanel;
@@ -36,6 +38,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.TheBombPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import lombok.Getter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -46,12 +49,18 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CET46:RelicUI");
     public int preScoreCounter;
     public int scoreCounter;
+    /**
+     * true表示当前处理中的牌已经不再需要答题（已经答过/诅咒牌不答题）
+     */
     public boolean quizzed = false;
     protected final BookEnum book;
     public CorrectionNote notebook;
     private boolean isGivenPotion;
 
 
+    // FIXME for test
+    @Getter
+    private final IFactory factory;
 
     public QuizRelic(BookEnum b, RelicTier tier, LandingSound sfx) {
         super(toId(b), "", tier, sfx);
@@ -64,6 +73,7 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         // init的时候是在receiveEditRelics, 这个时候似乎会找不到数据; 不过这个地方是为了防止maeCopy的时候数据没有更新.
         this.resetTexture();
         this.resetDescription();
+        this.factory = FSRSFactory.INSTANCE;
     }
 
     public QuizRelic(BookEnum b) {
@@ -276,4 +286,8 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
      * 根据request及Relic策略，构造QuizData
      */
     public abstract QuizData buildQuizData(BuildQuizDataRequest request);
+
+    public void afterQuiz(boolean isPerfect) {
+        factory.afterQuiz(isPerfect);
+    }
 }
