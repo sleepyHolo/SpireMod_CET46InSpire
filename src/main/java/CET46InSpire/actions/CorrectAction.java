@@ -3,7 +3,7 @@ package CET46InSpire.actions;
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.actions.QuizAction.QuizData;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
-import CET46InSpire.relics.BuildQuizDataRequest.FactoryUtils;
+import CET46InSpire.helpers.BuildQuizDataRequest.FactoryUtils;
 import CET46InSpire.relics.QuizRelic;
 import CET46InSpire.screens.QuizScreen;
 import basemod.BaseMod;

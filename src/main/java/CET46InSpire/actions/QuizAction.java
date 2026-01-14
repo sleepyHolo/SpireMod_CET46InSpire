@@ -1,9 +1,6 @@
 package CET46InSpire.actions;
 
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
-import CET46InSpire.relics.BuildQuizDataRequest;
-import CET46InSpire.relics.BuildQuizDataRequest.FSRSFactory;
-import CET46InSpire.relics.BuildQuizDataRequest.IFactory;
 import CET46InSpire.relics.QuizRelic;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

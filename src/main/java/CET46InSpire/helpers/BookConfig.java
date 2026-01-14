@@ -2,7 +2,7 @@ package CET46InSpire.helpers;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
-import CET46InSpire.relics.BuildQuizDataRequest.FSRSFactory;
+import CET46InSpire.helpers.BuildQuizDataRequest.FSRSFactory;
 import CET46InSpire.relics.QuizRelic;
 import CET46InSpire.ui.ModConfigPanel;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

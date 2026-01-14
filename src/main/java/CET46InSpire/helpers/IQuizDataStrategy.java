@@ -1,9 +1,7 @@
-package CET46InSpire.relics;
+package CET46InSpire.helpers;
 
 import CET46InSpire.actions.QuizAction.QuizData;
-import CET46InSpire.helpers.JapaneseCharacterTool;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

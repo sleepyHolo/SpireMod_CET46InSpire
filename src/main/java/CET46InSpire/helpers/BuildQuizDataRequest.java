@@ -1,7 +1,6 @@
-package CET46InSpire.relics;
+package CET46InSpire.helpers;
 
 import CET46InSpire.CET46Initializer;
-import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
 import com.badlogic.gdx.math.MathUtils;
 import com.stemlaur.anki.domain.catalog.CardDetail;

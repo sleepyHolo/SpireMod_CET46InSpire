@@ -1,8 +1,11 @@
-package CET46InSpire.relics;
+package CET46InSpire.helpers;
 
+import CET46InSpire.relics.QuizRelic;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.InputStreamReader;
 import java.lang.reflect.Type;
@@ -11,7 +14,7 @@ import java.util.Map;
 import java.util.Objects;
 
 public class LocalUIStringGetter implements UIStringGetter {
-
+    protected static final Logger logger = LogManager.getLogger(QuizRelic.class.getName());
     Map<String, UIStrings> resultMap;
 
     public LocalUIStringGetter(String fileName) {
@@ -30,7 +33,7 @@ public class LocalUIStringGetter implements UIStringGetter {
             // 3. 执行反序列化
             this.resultMap = gson.fromJson(reader, mapType);
         } catch (Exception e) {
-            QuizRelic.logger.error(e);
+            logger.error(e);
         }
     }
 

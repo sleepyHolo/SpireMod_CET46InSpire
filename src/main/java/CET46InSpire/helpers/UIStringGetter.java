@@ -1,4 +1,4 @@
-package CET46InSpire.relics;
+package CET46InSpire.helpers;
 
 import com.megacrit.cardcrawl.localization.UIStrings;
 

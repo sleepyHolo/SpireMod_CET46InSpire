@@ -5,7 +5,7 @@ import CET46InSpire.actions.QuizAction;
 import CET46InSpire.events.CallOfCETEvent;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
-import CET46InSpire.relics.BuildQuizDataRequest.FactoryUtils;
+import CET46InSpire.helpers.BuildQuizDataRequest.FactoryUtils;
 import CET46InSpire.relics.QuizRelic;
 import CET46InSpire.screens.QuizScreen;
 import basemod.BaseMod;

@@ -3,7 +3,10 @@ package CET46InSpire.relics;
 import CET46InSpire.actions.QuizAction.QuizData;
 import CET46InSpire.events.CallOfCETEvent;
 import CET46InSpire.helpers.BookConfig;
-import CET46InSpire.relics.IQuizDataStrategy.JlptQuizDataStrategy;
+import CET46InSpire.helpers.BuildQuizDataRequest;
+import CET46InSpire.helpers.IQuizDataStrategy.JlptQuizDataStrategy;
+import CET46InSpire.helpers.JlptQuizType;
+import CET46InSpire.helpers.UIStringGetter;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
