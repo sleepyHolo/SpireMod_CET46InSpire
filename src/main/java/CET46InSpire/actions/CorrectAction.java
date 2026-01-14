@@ -3,8 +3,8 @@ package CET46InSpire.actions;
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.actions.QuizAction.QuizData;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
+import CET46InSpire.relics.BuildQuizDataRequest.FactoryUtils;
 import CET46InSpire.relics.QuizRelic;
-import CET46InSpire.relics.BuildQuizDataRequest;
 import CET46InSpire.screens.QuizScreen;
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -32,7 +32,7 @@ public class CorrectAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FASTER) {
-            QuizData quizData = quizRelic.buildQuizData(BuildQuizDataRequest.Factory.fromTargetIndex(lexicon, target_id));
+            QuizData quizData = quizRelic.buildQuizData(FactoryUtils.fromTargetIndex(lexicon, target_id));
             logger.info("quizData = {}", quizData);
             BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.getShow(), LEXICON,
                     quizData.getCorrectOptions(), quizData.getAllOptions(), quizData.getWordUiStringsId(), true);

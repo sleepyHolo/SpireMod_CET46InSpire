@@ -7,6 +7,7 @@ vocabulary/*.json
 vocabulary/__pycache__/
 vocabulary/*.anki2
 vocabulary/*.anki21
+sendToDevs
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
