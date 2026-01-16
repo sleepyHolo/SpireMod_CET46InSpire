@@ -67,7 +67,6 @@ public class BookConfig {
     public enum LexiconEnum {
         CET4,
         CET6,
-        N5,
         N4,
         N3,
         N2,

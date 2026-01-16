@@ -42,8 +42,6 @@ public class JLPTRelic extends QuizRelic {
                 return DESCRIPTIONS[2];
             case N4:
                 return DESCRIPTIONS[3];
-            case N5:
-                return DESCRIPTIONS[4];
         }
         return "???";
     }
