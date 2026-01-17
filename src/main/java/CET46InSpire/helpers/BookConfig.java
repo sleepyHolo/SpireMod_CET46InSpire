@@ -2,10 +2,10 @@ package CET46InSpire.helpers;
 
 import CET46InSpire.CET46Initializer;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
-import CET46InSpire.relics.BuildQuizDataRequest.FSRSFactory;
+import CET46InSpire.helpers.BuildQuizDataRequest.FSRSFactory;
+import CET46InSpire.relics.QuizRelic;
 import CET46InSpire.ui.ModConfigPanel;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
@@ -21,9 +21,9 @@ public class BookConfig {
     private static final Logger logger = LogManager.getLogger(BookConfig.class.getName());
     public BookEnum bookEnum;
     public List<LexiconEnum> lexicons;
-    public Supplier<AbstractRelic> relicSupplier;
+    public Supplier<QuizRelic> relicSupplier;
 
-    public BookConfig(BookEnum bookEnum, List lexicons, Supplier<AbstractRelic> relicSupplier) {
+    public BookConfig(BookEnum bookEnum, List lexicons, Supplier<QuizRelic> relicSupplier) {
         this.bookEnum = bookEnum;
         // TODO 临时处理一下, 后续需要直接使用List<LexiconEnum>赋值
         this.lexicons = new ArrayList<>();
@@ -67,7 +67,6 @@ public class BookConfig {
     public enum LexiconEnum {
         CET4,
         CET6,
-        N5,
         N4,
         N3,
         N2,

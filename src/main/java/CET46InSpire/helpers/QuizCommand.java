@@ -5,7 +5,7 @@ import CET46InSpire.actions.QuizAction;
 import CET46InSpire.events.CallOfCETEvent;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
-import CET46InSpire.relics.BuildQuizDataRequest;
+import CET46InSpire.helpers.BuildQuizDataRequest.FactoryUtils;
 import CET46InSpire.relics.QuizRelic;
 import CET46InSpire.screens.QuizScreen;
 import basemod.BaseMod;
@@ -122,7 +122,7 @@ public class QuizCommand extends ConsoleCommand {
             logger.error("Unknown Error: relic is not QuizRelic: {}", relic);
             return;
         }
-        QuizAction.QuizData quizData = ((QuizRelic) relic).buildQuizData(BuildQuizDataRequest.Factory.fromTargetIndex(lexicon, id));
+        QuizAction.QuizData quizData = ((QuizRelic) relic).buildQuizData(FactoryUtils.fromTargetIndex(lexicon, id));
         logger.info("quizData = {}", quizData);
         BaseMod.openCustomScreen(QuizScreen.Enum.WORD_SCREEN, quizData.getShow(), lexicon.name(),
                 quizData.getCorrectOptions(), quizData.getAllOptions(), quizData.getWordUiStringsId(), false);

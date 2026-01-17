@@ -6,18 +6,17 @@ import CET46InSpire.actions.CorrectAction;
 import CET46InSpire.actions.QuizAction;
 import CET46InSpire.actions.QuizAction.QuizData;
 import CET46InSpire.events.CallOfCETEvent.BookEnum;
-import CET46InSpire.helpers.ArrayListHelper;
 import CET46InSpire.helpers.BookConfig;
 import CET46InSpire.helpers.BookConfig.LexiconEnum;
+import CET46InSpire.helpers.BuildQuizDataRequest;
 import CET46InSpire.helpers.ImageElements;
 import CET46InSpire.patches.AbstractPlayerPatch;
 import CET46InSpire.powers.PerfectAnsPower;
-import CET46InSpire.relics.BuildQuizDataRequest.FSRSFactory;
-import CET46InSpire.relics.BuildQuizDataRequest.IFactory;
+import CET46InSpire.helpers.BuildQuizDataRequest.FSRSFactory;
+import CET46InSpire.helpers.BuildQuizDataRequest.IFactory;
 import CET46InSpire.savedata.CorrectionNote;
 import CET46InSpire.screens.QuizScreen;
 import CET46InSpire.ui.ModConfigPanel;
-import basemod.TopPanelGroup;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -74,6 +73,7 @@ public abstract class QuizRelic extends AbstractRelic implements ClickableRelic 
         this.resetTexture();
         this.resetDescription();
         this.factory = FSRSFactory.INSTANCE;
+
     }
 
     public QuizRelic(BookEnum b) {

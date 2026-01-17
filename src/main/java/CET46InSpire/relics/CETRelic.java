@@ -4,6 +4,7 @@ import CET46InSpire.actions.QuizAction.QuizData;
 import CET46InSpire.events.CallOfCETEvent;
 import CET46InSpire.helpers.ArrayListHelper;
 import CET46InSpire.helpers.BookConfig;
+import CET46InSpire.helpers.BuildQuizDataRequest;
 import CET46InSpire.ui.ModConfigPanel;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,8 +14,8 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class TestCET extends QuizRelic {
-    public TestCET() {
+public class CETRelic extends QuizRelic {
+    public CETRelic() {
         super(
                 CallOfCETEvent.BookEnum.CET
         );
@@ -22,7 +23,7 @@ public class TestCET extends QuizRelic {
 
     @Override
     public AbstractRelic makeCopy() {
-        return new TestCET();
+        return new CETRelic();
     }
 
     @Override
@@ -62,7 +63,7 @@ public class TestCET extends QuizRelic {
         }
         for (int i = meaning_list.size(); i < choice_num;) {
             int target_word = MathUtils.random(0, request.getVocabularySize()- 1);
-            if (target_word == request.targetId) {
+            if (target_word == request.getTargetId()) {
                 continue;
             }
             tmp = CardCrawlGame.languagePack.getUIString(request.getUiStringsIdStart() + target_word);
