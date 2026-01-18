@@ -3,7 +3,7 @@
   "name": "CET46 In Spire",
   "author_list": ["__name__", "Dim", " jnjnnj"],
   "description": "Do not forget CET46! Also JLPT.\n别忘了四六级！当然还有日本语能力测试。",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "sts_version": "12-18-2022",
   "mts_version": "3.30.0",
   "dependencies": ["basemod", "stslib"],
