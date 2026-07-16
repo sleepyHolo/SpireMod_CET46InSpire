@@ -5,7 +5,8 @@
             "我记住了",
             "得分：",
             "词库-",
-            "错题本"
+            "错题本",
+            "显示选项"
         ]
     },
     "CET46:ConfigPanel": {
@@ -26,7 +27,8 @@
             "showLexicon": "测验界面显示词库",
             "maxAnsNum": "最大正确答案数目",
             "loadCET": "加载CET词库（须重启游戏以更改）",
-            "loadJLPT": "加载JLPT词库（须重启游戏以更改）"
+            "loadJLPT": "加载JLPT词库（须重启游戏以更改）",
+            "initHideOption": "初始隐藏选项"
         }
     },
     "CET46:InfoTip": {

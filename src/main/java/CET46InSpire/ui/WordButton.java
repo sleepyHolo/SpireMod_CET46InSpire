@@ -1,5 +1,6 @@
 package CET46InSpire.ui;
 
+import basemod.BaseMod;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -29,7 +30,7 @@ public class WordButton extends UIButton {
 
     @Override
     public void update() {
-        if (this.isHidden) {
+        if (this.isHidden || ((QuizScreen) BaseMod.getCustomScreen(QuizScreen.Enum.WORD_SCREEN)).options_hided) {
             return;
         }
         this.updateGlow();
@@ -38,6 +39,9 @@ public class WordButton extends UIButton {
 
     @Override
     public void render(SpriteBatch sb, BitmapFont font) {
+        if (((QuizScreen) BaseMod.getCustomScreen(QuizScreen.Enum.WORD_SCREEN)).options_hided) {
+            return; // pseudo-hide
+        }
         if (this.glowing) {
             sb.setColor(glowColor);
             sb.draw(ImageElements.WORD_BUTTON_OUTLINE, this.current_x - DELTA_X, this.current_y - DELTA_Y, IMG_W, IMG_H);
@@ -65,6 +69,9 @@ public class WordButton extends UIButton {
 
     @Override
     public void buttonClicked() {
+        if (((QuizScreen) BaseMod.getCustomScreen(QuizScreen.Enum.WORD_SCREEN)).options_hided) {
+            return; // pseudo-hide
+        }
         if (!this.lockGlowState) {
             this.glowing = !this.glowing;
         }

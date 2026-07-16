@@ -66,6 +66,7 @@ public class QuizScreen extends CustomScreen {
     private final ReturnButton returnButton;
     private final ArrayList<WordButton> wordButtons;
     private final InfoTip infoTip;
+    public boolean options_hided;
     public boolean ans_checked;
     public int right_ans_num;
     public int wrong_ans_num;
@@ -74,6 +75,7 @@ public class QuizScreen extends CustomScreen {
     private BitmapFont titleFont = CNFontHelper.charTitleFont;
     private BitmapFont descFont = CNFontHelper.charDescFont;
     private int selectionIndex = -1; // 手柄导航索引
+
     public QuizScreen() {
         this.checkButton = new CheckButton(BOTTOM_BUT_X,FRAME_Y + BOTTOM_BUT_Y);
         this.checkButton.attached = true;
@@ -133,7 +135,13 @@ public class QuizScreen extends CustomScreen {
         this.delta_y = Settings.HEIGHT;
 
         this.infoTip.show("text");
-        this.checkButton.show(TEXT[0]);
+
+        this.options_hided = ModConfigPanel.initHideOption;
+        if (this.options_hided) {
+            this.checkButton.show(TEXT[5]);
+        } else {
+            this.checkButton.show(TEXT[0]);
+        }
         for (WordButton w: this.wordButtons) {
             w.reset();
         }

@@ -3,11 +3,19 @@ package CET46InSpire.ui;
 import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import CET46InSpire.helpers.ImageElements;
 import CET46InSpire.screens.QuizScreen;
+import com.megacrit.cardcrawl.localization.UIStrings;
 
+/**
+ * 现在此类同时用于检查答案和修改选项隐藏状态
+ */
 public class CheckButton extends UIButton {
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("CET46:WordScreen");
+    private static final String[] TEXT = uiStrings.TEXT;
+
     public static final float IMG_W;
     public static final float IMG_H;
     private static final Color HOVER_BLEND_COLOR;
@@ -31,6 +39,11 @@ public class CheckButton extends UIButton {
 
     @Override
     public void buttonClicked() {
+        if (((QuizScreen)BaseMod.getCustomScreen(QuizScreen.Enum.WORD_SCREEN)).options_hided) {
+            ((QuizScreen)BaseMod.getCustomScreen(QuizScreen.Enum.WORD_SCREEN)).options_hided = false;
+            this.show(TEXT[0]);
+            return;
+        }
         this.hide();
         ((QuizScreen)BaseMod.getCustomScreen(QuizScreen.Enum.WORD_SCREEN)).checkAns();
     }

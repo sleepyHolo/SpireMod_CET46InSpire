@@ -5,7 +5,8 @@
             "Get it",
             "Score: ",
             "Lexicon-",
-            "Correction\nNotebook"
+            "Correction\nNotebook",
+            "Show Options"
         ]
     },
     "CET46:ConfigPanel": {
@@ -26,7 +27,8 @@
             "showLexicon": "Show lexicon on quiz panel",
             "maxAnsNum": "Max number of right answer(s)",
             "loadCET": "Load CET lexicons (restart game to apply)",
-            "loadJLPT": "Load JLPT lexicons (restart game to apply)"
+            "loadJLPT": "Load JLPT lexicons (restart game to apply)",
+            "initHideOption": "Hide options initially"
         }
     },
     "CET46:InfoTip": {
